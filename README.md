@@ -1,6 +1,6 @@
 # Pleatwright
 
-[![Pleatwright demo video](https://img.youtube.com/vi/8e9vlsNsiY0/hqdefault.jpg)](https://www.youtube.com/watch?v=8e9vlsNsiY0)
+[[Pleatwright demo video]](https://www.youtube.com/watch?v=8e9vlsNsiY0)
 
 Pleatwright is AI-native CAD software for origami design. You type a subject
 ("a dog"), and it designs a model that folds from **one uncut square sheet**:
