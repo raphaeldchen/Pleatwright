@@ -1,0 +1,128 @@
+{
+ "roll": "guinea_pig_2",
+ "subject": "guinea_pig",
+ "subject_guess": "guinea pig (cavy) - compact rounded rodent body, no external tail",
+ "nodes": [
+  {
+   "name": "hip",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "back",
+   "parent": "hip",
+   "length": 17,
+   "direction": [
+    0,
+    0.94,
+    0.35
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "back",
+   "length": 17,
+   "direction": [
+    0,
+    -0.92,
+    0.4
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "length": 9,
+   "direction": [
+    0,
+    0.94,
+    0.35
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 7,
+   "direction": [
+    0,
+    0.89,
+    0.45
+   ]
+  },
+  {
+   "name": "hind_leg_L",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    -0.6,
+    -0.8,
+    0
+   ]
+  },
+  {
+   "name": "hind_leg_R",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    0.6,
+    -0.8,
+    0
+   ]
+  },
+  {
+   "name": "front_leg_L",
+   "parent": "chest",
+   "length": 5,
+   "direction": [
+    -0.6,
+    -0.8,
+    0
+   ]
+  },
+  {
+   "name": "front_leg_R",
+   "parent": "chest",
+   "length": 5,
+   "direction": [
+    0.6,
+    -0.8,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hind_leg_L",
+   "hind_leg_R"
+  ],
+  [
+   "front_leg_L",
+   "front_leg_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "hind_leg_L",
+  "hind_leg_R",
+  "front_leg_L",
+  "front_leg_R"
+ ],
+ "readings": [
+  "head at +z: fur/ear tuft sits at ZY z=16-24,y=4-10 (right side of profile); XZ panel shows the same tuft at screen-tick z=0-4 which flips to frame z=20-24 (top view, flip z_frame=24-tick) confirming +z is the head end -> ZY panel is the PROFILE, XY panel is the FRONT (face) view",
+  "crown of head (XY) at tick y=0-2 -> frame y=22-24, x=10-14 (centre)",
+  "four paw nubs (XY) at tick y=20-24 -> frame y=0-4; left pair x=8-9,10-11, right pair x=14-15,16-17",
+  "front paws (ZY) at z tick 14-20 (near head side), y tick 20-24 -> frame y=0-4",
+  "hind paws (ZY) at z tick 0-6 (near tail/rump side), y tick 20-24 -> frame y=0-4",
+  "highest point of back/arch (ZY) at z tick 8-14, y tick 2-4 -> frame y=20-22",
+  "chest/shoulder region (ZY) roughly z tick 14-18, y tick 18-20 -> frame y=4-6 (belly line low, body very rounded)",
+  "hip/rump region (ZY) roughly z tick 2-6, y tick 18-20 -> frame y=4-6",
+  "no external tail visible past rump in ZY panel (body simply ends rounded at low-z end)",
+  "ear flaps visible as small notches in XY (x=6-10 and x=16-20, y=4-8) and XZ (tick z=4-8) - counted as sub-flap detail, not leaves"
+ ],
+ "notes": "Guinea pigs have no external tail, so no tail leaf was authored. Ears are small flaps fused close to the head profile and are treated as sub-flap detail (not counted as leaves) per the protrusion-test convention. The legs are extremely short and almost entirely hidden beneath the rounded body; only stub paws are visible in all three panels with no discernible knee/elbow break, so each leg was authored as a single segment (hip/shoulder -> paw) rather than a multi-joint chain - this single-segment simplification is the main inferred split. Spine was split into hip (root, rump/hind-leg attach), back (top-of-arch, the highest silhouette point), chest (front-leg attach, chest/shoulder line), neck, and head, following the rounded dorsal curve visible in the ZY profile. Left/right legs are each authored as independent chains from their respective spine node (hip or chest) to their own paw leaf, never sharing a joint.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

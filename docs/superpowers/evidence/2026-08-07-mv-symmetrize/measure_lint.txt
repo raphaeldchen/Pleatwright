@@ -1,0 +1,55 @@
+==============================================================================
+1. SPACE-SIZE ASSERTION  -- every enumerated point must be symmetric
+==============================================================================
+subject                          orbits(sw/pr/fx)          space   walked  symmetric  mode
+mesh-humanoid__seeded_1          13 (1/6/6)        2^13             8192       8192  EXHAUSTIVE OK
+mesh-bird__seeded_3              12 (2/5/5)        2^12             4096       4096  EXHAUSTIVE OK
+template-bird__CONTROL           19 (1/10/8)        2^19             2048       2048  SAMPLED(2048) OK
+template-quadruped__CONTROL      19 (1/10/8)        2^19             2048       2048  SAMPLED(2048) OK
+mesh-insect__CONTROL             28 (3/17/8)        2^28             2048       2048  SAMPLED(2048) OK
+
+==============================================================================
+2. TARGET COUNTS, WITH INTERMEDIATES
+==============================================================================
+subject                                 space  maekawa   audit  layer  lint     nodes       s  mism
+mesh-humanoid__seeded_1          2^13               72       8      8     8      1856    1.78     0
+mesh-bird__seeded_3              2^12               60       6      6     0      1224    1.16     0
+template-bird__CONTROL           2^19              576       8      8     4     19420    1.98     0
+template-quadruped__CONTROL      2^19              576       8      0     0     19420    0.68     0
+mesh-insect__CONTROL             2^28             8640      72      0     0    167100   19.26     0
+
+==============================================================================
+3. REQUIRED-FAIL INPUT -- template-quadruped flips {17, 27}
+==============================================================================
+  conjunct 1  mirror_verdict.symmetric = True   (mv_swapped 0, mv_mismatched 0)
+  conjunct 2  cp_audit.clean           = False  <-- maekawa 1, kawasaki 0, arrangement 0
+  conjunct 3  layer_order              = contradiction: taco-taco (1, 3)x(0, 3)
+  GATE VERDICT                         = REJECTED
+    maekawa offender: vertex 3 degree 4 M=2 V=2 |M-V|=0 (Maekawa wants 2)
+
+==============================================================================
+4. BASE INVARIANCE -- bit-identical, on every surviving candidate
+==============================================================================
+mesh-humanoid__seeded_1          8 candidate(s), faces 18, closure 1.934e-09  ->  ALL BIT-IDENTICAL
+mesh-bird__seeded_3              no candidate to check
+template-bird__CONTROL           4 candidate(s), faces 24, closure 5.146e-10  ->  ALL BIT-IDENTICAL
+template-quadruped__CONTROL      no candidate to check
+mesh-insect__CONTROL             no candidate to check
+
+==============================================================================
+5. THE RANKED WINNER PER SUBJECT
+==============================================================================
+mesh-humanoid__seeded_1          weight 5  lint_rank 0  (base 0)  weights [5, 7, 9, 9, 11, 11, 13, 15]
+                                   flips [8, 9, 17, 18, 21]
+mesh-bird__seeded_3              NO TARGET  (audit 6 -> layer 6)
+template-bird__CONTROL           weight 11  lint_rank 0  (base 0)  weights [11, 15, 15, 19]
+                                   flips [8, 9, 10, 13, 17, 24, 25, 26, 27, 40, 45]
+                                   dropped by conjunct 4: [[0, 1, 2, 5, 19, 20, 22, 28, 29, 34, 37], [0, 1, 2, 5, 11, 12, 14, 15, 19, 20, 22, 28, 29, 34, 37], [3, 4, 6, 7, 8, 9, 10, 13, 17, 24, 25, 26, 27, 40, 45], [3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 24, 25, 26, 27, 40, 45]]
+template-quadruped__CONTROL      NO TARGET  (audit 8 -> layer 0)
+mesh-insect__CONTROL             NO TARGET  (audit 72 -> layer 0)
+
+==============================================================================
+6. M/V CENSUS -- how much of the pattern the winner relabels
+==============================================================================
+mesh-humanoid__seeded_1          M7/V13 -> M10/V10   5 of 20 M/V creases (25.0%), 38 edges total
+template-bird__CONTROL           M11/V19 -> M16/V14   11 of 30 M/V creases (36.7%), 50 edges total

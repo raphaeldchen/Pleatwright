@@ -1,0 +1,51 @@
+{"roll": "ant_0", "stage": "TIMEOUT"}
+{"roll": "ant_1", "stage": "TIMEOUT"}
+{"roll": "ant_2", "stage": "TIMEOUT"}
+{"roll": "bat_0", "stage": "TIMEOUT"}
+{"roll": "bat_2", "stage": "contours", "fail": "ContourFail(kind='collision', site=((0, 14), Fraction(0, 1), Fraction(1, 1)))", "N": 32, "emit": false, "secs": 0.5, "timings": {"tree": 0.0, "pack": 0.4467, "skeleton": 0.0028, "contours": 0.0072}}
+{"roll": "bat_3", "stage": "emit", "fail": "None", "N": 44, "emit": true, "secs": 25.1, "timings": {"tree": 0.0, "pack": 1.4237, "skeleton": 0.0075, "contours": 0.0367, "assign": 23.2708, "layers": 0.3141, "emit": 0.0}}
+{"roll": "bird_0", "stage": "TIMEOUT"}
+{"roll": "bird_1", "stage": "TIMEOUT"}
+{"roll": "bird_2", "stage": "TIMEOUT"}
+{"roll": "cat_1", "stage": "contours", "fail": "ContourFail(kind='collision', site=((2, 92), Fraction(0, 1), Fraction(1, 1)))", "N": 46, "emit": false, "secs": 3.4, "timings": {"tree": 0.0001, "pack": 3.3542, "skeleton": 0.0074, "contours": 0.0193}}
+{"roll": "cat_2", "stage": "TIMEOUT"}
+{"roll": "cat_3", "stage": "contours", "fail": "ContourFail(kind='collision', site=((14, 0), Fraction(0, 1), Fraction(1, 1)))", "N": 50, "emit": false, "secs": 4.6, "timings": {"tree": 0.0001, "pack": 4.6106, "skeleton": 0.01, "contours": 0.0172}}
+{"roll": "crab_0", "stage": "TIMEOUT"}
+{"roll": "crab_1", "stage": "TIMEOUT"}
+{"roll": "crab_3", "stage": "TIMEOUT"}
+{"roll": "dog_0", "stage": "TIMEOUT"}
+{"roll": "dog_1", "stage": "TIMEOUT"}
+{"roll": "dog_2", "stage": "TIMEOUT"}
+{"roll": "dolphin_0", "stage": "contours", "fail": "ContourFail(kind='collision', site=((18, 0), Fraction(0, 1), Fraction(1, 1)))", "N": 50, "emit": false, "secs": 7.5, "timings": {"tree": 0.0001, "pack": 7.4746, "skeleton": 0.0066, "contours": 0.0273}}
+{"roll": "dolphin_1", "stage": "TIMEOUT"}
+{"roll": "dolphin_2", "stage": "emit", "fail": "None", "N": 44, "emit": true, "secs": 16.7, "timings": {"tree": 0.0001, "pack": 4.3061, "skeleton": 0.0039, "contours": 0.0611, "assign": 11.9065, "layers": 0.4492, "emit": 0.0}}
+{"roll": "elephant_0", "stage": "TIMEOUT"}
+{"roll": "elephant_1", "stage": "TIMEOUT"}
+{"roll": "elephant_3", "stage": "tree", "fail": "AsymmetricPair('pair (9, 12): r 17 vs 16, hub 1 vs 1')", "N": null, "emit": false, "secs": 0.0, "timings": {"tree": 0.0001}}
+{"roll": "frog_0", "stage": "TIMEOUT"}
+{"roll": "frog_1", "stage": "TIMEOUT"}
+{"roll": "frog_2", "stage": "TIMEOUT"}
+{"roll": "guinea_pig_0", "stage": "TIMEOUT"}
+{"roll": "guinea_pig_1", "stage": "emit", "fail": "None", "N": 22, "emit": true, "secs": 12.0, "timings": {"tree": 0.0001, "pack": 0.0411, "skeleton": 0.0023, "contours": 0.0191, "assign": 11.8956, "layers": 0.055, "emit": 0.0}}
+{"roll": "guinea_pig_2", "stage": "TIMEOUT"}
+{"roll": "horse_0", "stage": "emit", "fail": "None", "N": 70, "emit": true, "secs": 24.6, "timings": {"tree": 0.0001, "pack": 1.7305, "skeleton": 0.015, "contours": 0.1132, "assign": 21.4228, "layers": 1.2787, "emit": 0.0}}
+{"roll": "horse_1", "stage": "contours", "fail": "ContourFail(kind='collision', site=((22, 0), Fraction(0, 1), Fraction(1, 1)))", "N": 60, "emit": false, "secs": 20.5, "timings": {"tree": 0.0001, "pack": 20.4179, "skeleton": 0.0118, "contours": 0.0248}}
+{"roll": "horse_2", "stage": "emit", "fail": "None", "N": 54, "emit": true, "secs": 66.7, "timings": {"tree": 0.0001, "pack": 8.0583, "skeleton": 0.0094, "contours": 0.0725, "assign": 57.8536, "layers": 0.6677, "emit": 0.0}}
+{"roll": "lizard_0", "stage": "TIMEOUT"}
+{"roll": "lizard_1", "stage": "tree", "fail": "AsymmetricPair('pair (8, 10): r 11 vs 10, hub 1 vs 1')", "N": null, "emit": false, "secs": 0.0, "timings": {"tree": 0.0001}}
+{"roll": "lizard_2", "stage": "TIMEOUT"}
+{"roll": "octopus_0", "stage": "pack", "fail": "PackFail(stage='leaf', N_tried=16, detail='no tip for leaf 7 after placing 6 leaves')", "N": null, "emit": false, "secs": 0.1, "timings": {"tree": 0.0001, "pack": 0.0876}}
+{"roll": "octopus_2", "stage": "contours", "fail": "ContourFail(kind='collision', site=((18, 0), Fraction(0, 1), Fraction(1, 1)))", "N": 66, "emit": false, "secs": 3.8, "timings": {"tree": 0.0001, "pack": 3.7293, "skeleton": 0.0152, "contours": 0.0459}}
+{"roll": "octopus_3", "stage": "TIMEOUT"}
+{"roll": "rabbit_0", "stage": "TIMEOUT"}
+{"roll": "rabbit_1", "stage": "TIMEOUT"}
+{"roll": "rabbit_3", "stage": "TIMEOUT"}
+{"roll": "scorpion_0", "stage": "emit", "fail": "None", "N": 78, "emit": true, "secs": 205.7, "timings": {"tree": 0.0001, "pack": 0.5575, "skeleton": 0.024, "contours": 0.1576, "assign": 203.8882, "layers": 1.1002, "emit": 0.0}}
+{"roll": "scorpion_1", "stage": "contours", "fail": "ContourFail(kind='collision', site=((0, 2), Fraction(0, 1), Fraction(1, 1)))", "N": 84, "emit": false, "secs": 8.7, "timings": {"tree": 0.0001, "pack": 8.5602, "skeleton": 0.0212, "contours": 0.1032}}
+{"roll": "scorpion_2", "stage": "TIMEOUT"}
+{"roll": "spider_0", "stage": "TIMEOUT"}
+{"roll": "spider_1", "stage": "pack", "fail": "PackFail(stage='gap_fill', N_tried=80, detail='budget 200000 exhausted (cell (11, 0) has no admissible polygon)')", "N": null, "emit": false, "secs": 227.0, "timings": {"tree": 0.0001, "pack": 227.0451}}
+{"roll": "spider_2", "stage": "TIMEOUT"}
+{"roll": "starfish_0", "stage": "tree", "fail": "AsymmetricPair('pair (2, 3): r 12 vs 10, hub 0 vs 0')", "N": null, "emit": false, "secs": 0.0, "timings": {"tree": 0.0001}}
+{"roll": "starfish_1", "stage": "tree", "fail": "AsymmetricPair('pair (2, 3): r 12 vs 11, hub 0 vs 0')", "N": null, "emit": false, "secs": 0.0, "timings": {"tree": 0.0001}}
+{"roll": "starfish_2", "stage": "emit", "fail": "None", "N": 44, "emit": true, "secs": 7.4, "timings": {"tree": 0.0001, "pack": 0.1861, "skeleton": 0.0105, "contours": 0.0527, "assign": 7.1049, "layers": 0.0587, "emit": 0.0}}

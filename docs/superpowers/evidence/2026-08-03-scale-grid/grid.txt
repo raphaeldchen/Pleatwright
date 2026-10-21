@@ -1,0 +1,78 @@
+
+
+
+=== insect v64 p0.3  longest=0.4217  clamp_factor=0.9486 ===
+  scale 1.0000: 0/8 pack   (none)
+  scale 0.9800: 0/8 pack   (none)
+  scale 0.9600: 1/8 pack   order:seeded_0
+  scale 0.9486: 0/8 pack   (none)  <-- CLAMP
+  scale 0.9400: 0/8 pack   (none)
+  scale 0.9200: 0/8 pack   (none)
+  scale 0.9000: 1/8 pack   order:seeded_0
+  scale 0.8500: 1/8 pack   order:seeded_2
+  scale 0.8000: 2/8 pack   exact:caller, order:seeded_2
+
+
+
+=== insect v64 p0.4  longest=0.4217  clamp_factor=0.9486 ===
+  scale 1.0000: 0/8 pack   (none)
+  scale 0.9800: 0/8 pack   (none)
+  scale 0.9600: 1/8 pack   order:seeded_0
+  scale 0.9486: 0/8 pack   (none)  <-- CLAMP
+  scale 0.9400: 0/8 pack   (none)
+  scale 0.9200: 0/8 pack   (none)
+  scale 0.9000: 1/8 pack   order:seeded_0
+  scale 0.8500: 1/8 pack   order:seeded_2
+  scale 0.8000: 2/8 pack   exact:caller, order:seeded_2
+
+
+
+=== insect v64 p0.5  longest=0.4217  clamp_factor=0.9486 ===
+  scale 1.0000: 0/8 pack   (none)
+  scale 0.9800: 0/8 pack   (none)
+  scale 0.9600: 1/8 pack   order:seeded_0
+  scale 0.9486: 0/8 pack   (none)  <-- CLAMP
+  scale 0.9400: 0/8 pack   (none)
+  scale 0.9200: 0/8 pack   (none)
+  scale 0.9000: 1/8 pack   order:seeded_0
+  scale 0.8500: 1/8 pack   order:seeded_2
+  scale 0.8000: 2/8 pack   exact:caller, order:seeded_2
+
+
+
+=== insect v64 p0.6  longest=0.4217  clamp_factor=0.9486 ===
+  scale 1.0000: 0/8 pack   (none)
+  scale 0.9800: 0/8 pack   (none)
+  scale 0.9600: 1/8 pack   order:seeded_0
+  scale 0.9486: 0/8 pack   (none)  <-- CLAMP
+  scale 0.9400: 0/8 pack   (none)
+  scale 0.9200: 0/8 pack   (none)
+  scale 0.9000: 1/8 pack   order:seeded_0
+  scale 0.8500: 1/8 pack   order:seeded_2
+  scale 0.8000: 2/8 pack   exact:caller, order:seeded_2
+
+=== summary: does any scale rescue at attempt-0 (exact only)? ===
+  v64 p0.3: exact packs at scales [0.8]
+  v64 p0.4: exact packs at scales [0.8]
+  v64 p0.5: exact packs at scales [0.8]
+  v64 p0.6: exact packs at scales [0.8]
+
+=== summary: cheapest family that packs, per (config, scale) ===
+  v64 p0.3 scale 0.9600: ['order']
+  v64 p0.3 scale 0.9000: ['order']
+  v64 p0.3 scale 0.8500: ['order']
+  v64 p0.3 scale 0.8000: ['exact', 'order']
+  v64 p0.4 scale 0.9600: ['order']
+  v64 p0.4 scale 0.9000: ['order']
+  v64 p0.4 scale 0.8500: ['order']
+  v64 p0.4 scale 0.8000: ['exact', 'order']
+  v64 p0.5 scale 0.9600: ['order']
+  v64 p0.5 scale 0.9000: ['order']
+  v64 p0.5 scale 0.8500: ['order']
+  v64 p0.5 scale 0.8000: ['exact', 'order']
+  v64 p0.6 scale 0.9600: ['order']
+  v64 p0.6 scale 0.9000: ['order']
+  v64 p0.6 scale 0.8500: ['order']
+  v64 p0.6 scale 0.8000: ['exact', 'order']
+
+wrote <scratch>/2a06b89a-c289-4d2a-b77f-f68d32e6f208/scratchpad/scale_grid.json

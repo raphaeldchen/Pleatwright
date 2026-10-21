@@ -1,0 +1,37 @@
+{
+ "certify": {
+  "free": 72,
+  "kind": "CERTIFIED",
+  "nodes": 2
+ },
+ "cp_audit": {
+  "WITNESS": {
+   "closure_bad_edges": 0,
+   "closure_max_error": 3.1401849173675502e-15,
+   "kawasaki_tol_deg": 0.001
+  },
+  "candidate (refuted)": {
+   "closure_bad_edges": 0,
+   "closure_max_error": 3.1401849173675502e-15,
+   "kawasaki_tol_deg": 0.001
+  }
+ },
+ "creased_edges_not_in_witness": 0,
+ "fold_path": "<scratch>/9681b5fb-8510-4f03-86c1-4e4b6d0a887a/scratchpad/seed-witness.fold",
+ "fold_stats": {
+  "edges": 759,
+  "vertices": 380
+ },
+ "label_independence": {
+  "faces_a": 380,
+  "faces_b": 380,
+  "max_position_dev": 0.0,
+  "same_face_count": true
+ },
+ "labels_roundtrip": {
+  "matched": 745,
+  "total": 745
+ },
+ "propagate": null,
+ "relabelled": 745
+}

@@ -1,0 +1,176 @@
+[
+ {
+  "subject": "starfish",
+  "sparse_compile_secs": 0.1,
+  "N": 4,
+  "ridge_pieces": 32,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 18,
+  "vars_spanning_multiple_orientations": 12,
+  "vars_spanning_multiple_orientations_pct": 66.67,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 12,
+   "((0, 1),)": 4,
+   "((1, 0),)": 2
+  },
+  "pairs_parallel": 5,
+  "pairs_perpendicular": 1,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 26,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "lizard",
+  "sparse_compile_secs": 6.5,
+  "N": 34,
+  "ridge_pieces": 156,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 88,
+  "vars_spanning_multiple_orientations": 68,
+  "vars_spanning_multiple_orientations_pct": 77.27,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 68,
+   "((0, 1),)": 20
+  },
+  "pairs_parallel": 18,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 134,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "frog",
+  "sparse_compile_secs": 54.5,
+  "N": 38,
+  "ridge_pieces": 212,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 114,
+  "vars_spanning_multiple_orientations": 74,
+  "vars_spanning_multiple_orientations_pct": 64.91,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 74,
+   "((1, 0),)": 24,
+   "((0, 1),)": 16
+  },
+  "pairs_parallel": 61,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 151,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "horse",
+  "sparse_compile_secs": 14.7,
+  "N": 46,
+  "ridge_pieces": 346,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 182,
+  "vars_spanning_multiple_orientations": 126,
+  "vars_spanning_multiple_orientations_pct": 69.23,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 126,
+   "((1, 0),)": 32,
+   "((0, 1),)": 24
+  },
+  "pairs_parallel": 87,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 265,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "bird",
+  "sparse_compile_secs": 3.6,
+  "N": 54,
+  "ridge_pieces": 476,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 238,
+  "vars_spanning_multiple_orientations": 186,
+  "vars_spanning_multiple_orientations_pct": 78.15,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 186,
+   "((0, 1),)": 52
+  },
+  "pairs_parallel": 100,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 383,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "guinea_pig",
+  "sparse_compile_secs": 279.7,
+  "N": 64,
+  "ridge_pieces": 370,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 204,
+  "vars_spanning_multiple_orientations": 126,
+  "vars_spanning_multiple_orientations_pct": 61.76,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 126,
+   "((1, 0),)": 40,
+   "((0, 1),)": 38
+  },
+  "pairs_parallel": 115,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 255,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "octopus",
+  "sparse_compile_secs": 35.6,
+  "N": 74,
+  "ridge_pieces": 708,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 364,
+  "vars_spanning_multiple_orientations": 276,
+  "vars_spanning_multiple_orientations_pct": 75.82,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 276,
+   "((1, 0),)": 46,
+   "((0, 1),)": 42
+  },
+  "pairs_parallel": 149,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 568,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ },
+ {
+  "subject": "dog",
+  "sparse_compile_secs": 502.7,
+  "N": 74,
+  "ridge_pieces": 798,
+  "ridge_pieces_without_a_variable": 0,
+  "ridge_variables": 424,
+  "vars_spanning_multiple_orientations": 244,
+  "vars_spanning_multiple_orientations_pct": 57.55,
+  "orientation_class_hist": {
+   "((1, -1), (1, 1))": 244,
+   "((1, 0),)": 130,
+   "((0, 1),)": 50
+  },
+  "pairs_parallel": 300,
+  "pairs_perpendicular": 0,
+  "pairs_oblique": 0,
+  "pairs_skipped_incoherent_variable": 513,
+  "rule_coverage_pct": 100.0,
+  "parity_conflicts": 0,
+  "consistent": true
+ }
+]

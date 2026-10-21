@@ -1,0 +1,174 @@
+{
+ "roll": "lizard_2",
+ "subject": "lizard",
+ "n": 2,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.177778
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.177778
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.311111
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 6,
+   "parent_id": 5,
+   "length": 0.133333
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.133333
+  },
+  {
+   "id": 8,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 9,
+   "parent_id": 8,
+   "length": 0.133333
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.133333
+  },
+  {
+   "id": 11,
+   "parent_id": 3,
+   "length": 0.133333
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.133333
+  },
+  {
+   "id": 13,
+   "parent_id": 12,
+   "length": 0.133333
+  },
+  {
+   "id": 14,
+   "parent_id": 3,
+   "length": 0.133333
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.133333
+  },
+  {
+   "id": 16,
+   "parent_id": 15,
+   "length": 0.133333
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.177778
+  },
+  {
+   "id": 7,
+   "parent_id": 0,
+   "length": 0.399999
+  },
+  {
+   "id": 10,
+   "parent_id": 0,
+   "length": 0.399999
+  },
+  {
+   "id": 13,
+   "parent_id": 3,
+   "length": 0.399999
+  },
+  {
+   "id": 16,
+   "parent_id": 3,
+   "length": 0.399999
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.577778
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.311111
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   7,
+   10
+  ],
+  [
+   13,
+   16
+  ]
+ ],
+ "names": {
+  "0": "root",
+  "1": "neck",
+  "2": "head",
+  "3": "hip",
+  "4": "tail",
+  "5": "shoulder_L",
+  "6": "elbow_L",
+  "7": "foot_L_front",
+  "8": "shoulder_R",
+  "9": "elbow_R",
+  "10": "foot_R_front",
+  "11": "hip_L",
+  "12": "knee_L",
+  "13": "foot_L_hind",
+  "14": "hip_R",
+  "15": "knee_R",
+  "16": "foot_R_hind"
+ },
+ "leaves": [
+  "head",
+  "tail",
+  "foot_L_front",
+  "foot_R_front",
+  "foot_L_hind",
+  "foot_R_hind"
+ ],
+ "served_stage": "flatten",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.656660) [ide: rescued by lossless chain collapse: the exact tree did not pack, so the backend collapsed its pass-through joints ('flatten+canonical') and recompiled. A joint with exactly one child carries no flap and no branch, so merging it into its parent edge is LOSSLESS: every flap you asked for is present, every bilateral pair is intact, and the distance between any two flap tips is exactly what you specified. What changed is that intermediate joints along a limb no longer appear as separate nodes, so an edge length in this base may be the SUM of two you sent]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.543049167, 0.652717054], [0.652717054, 0.543049167], [0.597883111, 0.597883111], [0.552777077, 0.552777077], [0.620596074, 0.620596074], [0.433670538, 0.109283511], [0.109283511, 0.433670538], [0.271477025, 0.271477025], [0.468650424, 0.468650424], [0.204294272, 0.204294272], [0.357932572, 0.999999997], [1e-09, 0.466957772], [0.211505711, 0.781937417], [0.146426862, 0.685020352], [1e-09, 1e-09], [1e-09, 0.204294272], [0.466957772, 1e-09], [0.204294272, 1e-09], [0.999999997, 0.357932572], [0.781937417, 0.211505711], [0.685020352, 0.146426862], [1.0, 1.0], [0.999999998, 0.620596072], [0.620596072, 0.999999998]], \"edges_vertices\": [[2, 3], [1, 3], [3, 0], [0, 2], [2, 1], [2, 4], [0, 4], [4, 1], [7, 8], [6, 8], [8, 5], [5, 7], [7, 6], [7, 9], [5, 9], [9, 6], [12, 3], [13, 8], [15, 9], [17, 9], [19, 3], [20, 8], [22, 4], [23, 4], [10, 0], [3, 8], [6, 11], [10, 12], [12, 13], [13, 11], [9, 14], [14, 15], [15, 11], [5, 16], [14, 17], [17, 16], [1, 18], [18, 19], [19, 20], [20, 16], [4, 21], [21, 22], [22, 18], [21, 23], [23, 10]], \"edges_assignment\": [\"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"M\", \"M\", \"F\", \"M\", \"M\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

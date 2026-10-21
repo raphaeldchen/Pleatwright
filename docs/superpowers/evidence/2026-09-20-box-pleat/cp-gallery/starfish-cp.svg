@@ -1,0 +1,86 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='-12 -12 544 544' width='544' height='544'>
+<rect x='-12' y='-12' width='544' height='544' fill='#fbfaf7'/>
+<line x1='0.00' y1='0' x2='0.00' y2='520' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0' y1='0.00' x2='520' y2='0.00' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='130.00' y1='0' x2='130.00' y2='520' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0' y1='130.00' x2='520' y2='130.00' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='260.00' y1='0' x2='260.00' y2='520' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0' y1='260.00' x2='520' y2='260.00' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='390.00' y1='0' x2='390.00' y2='520' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0' y1='390.00' x2='520' y2='390.00' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='520.00' y1='0' x2='520.00' y2='520' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0' y1='520.00' x2='520' y2='520.00' stroke='#e3ded2' stroke-width='0.4'/>
+<line x1='0.00' y1='520.00' x2='0.00' y2='390.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='520.00' x2='65.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='0.00' y1='520.00' x2='130.00' y2='520.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='390.00' x2='0.00' y2='325.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='390.00' x2='65.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='0.00' y1='390.00' x2='65.00' y2='325.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='0.00' y1='325.00' x2='0.00' y2='260.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='325.00' x2='65.00' y2='325.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='0.00' y1='260.00' x2='0.00' y2='130.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='260.00' x2='130.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='0.00' y1='130.00' x2='0.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+<line x1='0.00' y1='130.00' x2='130.00' y2='260.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='0.00' y1='130.00' x2='130.00' y2='130.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='0.00' y1='130.00' x2='130.00' y2='0.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='0.00' y1='0.00' x2='130.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+<line x1='65.00' y1='455.00' x2='65.00' y2='390.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='65.00' y1='455.00' x2='130.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='65.00' y1='455.00' x2='130.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='65.00' y1='390.00' x2='65.00' y2='325.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='65.00' y1='390.00' x2='130.00' y2='390.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='65.00' y1='325.00' x2='130.00' y2='260.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='130.00' y1='520.00' x2='130.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='130.00' y1='520.00' x2='260.00' y2='520.00' stroke='#111' stroke-width='2.0'/>
+<line x1='130.00' y1='455.00' x2='130.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='455.00' x2='260.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='130.00' y1='390.00' x2='130.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='390.00' x2='260.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='390.00' x2='260.00' y2='260.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='130.00' y1='260.00' x2='130.00' y2='130.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='260.00' x2='260.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='130.00' x2='130.00' y2='0.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='130.00' x2='260.00' y2='130.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='130.00' y1='0.00' x2='260.00' y2='130.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='130.00' y1='0.00' x2='260.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+<line x1='260.00' y1='520.00' x2='260.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='520.00' x2='390.00' y2='520.00' stroke='#111' stroke-width='2.0'/>
+<line x1='260.00' y1='455.00' x2='260.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='260.00' y1='455.00' x2='390.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='390.00' x2='260.00' y2='260.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='390.00' x2='390.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='260.00' y1='260.00' x2='260.00' y2='130.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='260.00' x2='390.00' y2='390.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='260.00' x2='390.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='260.00' y1='130.00' x2='260.00' y2='0.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='130.00' x2='390.00' y2='130.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='260.00' y1='130.00' x2='390.00' y2='0.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='260.00' y1='0.00' x2='390.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+<line x1='390.00' y1='520.00' x2='390.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='520.00' x2='520.00' y2='520.00' stroke='#111' stroke-width='2.0'/>
+<line x1='390.00' y1='455.00' x2='390.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='455.00' x2='455.00' y2='455.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='390.00' x2='390.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='390.00' x2='455.00' y2='455.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='390.00' x2='455.00' y2='390.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='260.00' x2='390.00' y2='130.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='260.00' x2='455.00' y2='325.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='260.00' x2='520.00' y2='260.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='260.00' x2='520.00' y2='130.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='130.00' x2='390.00' y2='0.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='130.00' x2='520.00' y2='130.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='390.00' y1='0.00' x2='520.00' y2='130.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='390.00' y1='0.00' x2='520.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+<line x1='455.00' y1='455.00' x2='455.00' y2='390.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='455.00' y1='455.00' x2='520.00' y2='520.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='455.00' y1='390.00' x2='455.00' y2='325.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='455.00' y1='390.00' x2='520.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='455.00' y1='325.00' x2='520.00' y2='390.00' stroke='#c62828' stroke-width='1.0'/>
+<line x1='455.00' y1='325.00' x2='520.00' y2='325.00' stroke='#1565c0' stroke-width='1.0' stroke-dasharray='5 3'/>
+<line x1='520.00' y1='520.00' x2='520.00' y2='390.00' stroke='#111' stroke-width='2.0'/>
+<line x1='520.00' y1='390.00' x2='520.00' y2='325.00' stroke='#111' stroke-width='2.0'/>
+<line x1='520.00' y1='325.00' x2='520.00' y2='260.00' stroke='#111' stroke-width='2.0'/>
+<line x1='520.00' y1='260.00' x2='520.00' y2='130.00' stroke='#111' stroke-width='2.0'/>
+<line x1='520.00' y1='130.00' x2='520.00' y2='0.00' stroke='#111' stroke-width='2.0'/>
+</svg>

@@ -1,0 +1,279 @@
+{
+ "roll": "ant_2",
+ "subject": "ant",
+ "subject_guess": "ant",
+ "nodes": [
+  {
+   "name": "prothorax",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "prothorax",
+   "length": 7,
+   "direction": [
+    -7,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "mesothorax",
+   "parent": "prothorax",
+   "length": 3,
+   "direction": [
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "metathorax",
+   "parent": "mesothorax",
+   "length": 2,
+   "direction": [
+    2,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "petiole",
+   "parent": "metathorax",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "gaster",
+   "parent": "petiole",
+   "length": 5,
+   "direction": [
+    5,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "front_hip_R",
+   "parent": "prothorax",
+   "length": 6,
+   "direction": [
+    -1,
+    -3,
+    -5
+   ]
+  },
+  {
+   "name": "front_knee_R",
+   "parent": "front_hip_R",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "front_foot_R",
+   "parent": "front_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "front_hip_L",
+   "parent": "prothorax",
+   "length": 6,
+   "direction": [
+    -1,
+    -3,
+    5
+   ]
+  },
+  {
+   "name": "front_knee_L",
+   "parent": "front_hip_L",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "front_foot_L",
+   "parent": "front_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "mid_hip_R",
+   "parent": "mesothorax",
+   "length": 7,
+   "direction": [
+    -1,
+    -4,
+    -6
+   ]
+  },
+  {
+   "name": "mid_knee_R",
+   "parent": "mid_hip_R",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "mid_foot_R",
+   "parent": "mid_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "mid_hip_L",
+   "parent": "mesothorax",
+   "length": 7,
+   "direction": [
+    -1,
+    -4,
+    6
+   ]
+  },
+  {
+   "name": "mid_knee_L",
+   "parent": "mid_hip_L",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "mid_foot_L",
+   "parent": "mid_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "hind_hip_R",
+   "parent": "metathorax",
+   "length": 6,
+   "direction": [
+    1,
+    -3,
+    -5
+   ]
+  },
+  {
+   "name": "hind_knee_R",
+   "parent": "hind_hip_R",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "hind_foot_R",
+   "parent": "hind_knee_R",
+   "length": 4,
+   "direction": [
+    1,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "hind_hip_L",
+   "parent": "metathorax",
+   "length": 6,
+   "direction": [
+    1,
+    -3,
+    5
+   ]
+  },
+  {
+   "name": "hind_knee_L",
+   "parent": "hind_hip_L",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "hind_foot_L",
+   "parent": "hind_knee_L",
+   "length": 4,
+   "direction": [
+    1,
+    -3,
+    2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_foot_L",
+   "front_foot_R"
+  ],
+  [
+   "mid_foot_L",
+   "mid_foot_R"
+  ],
+  [
+   "hind_foot_L",
+   "hind_foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "front_foot_L",
+  "front_foot_R",
+  "mid_foot_L",
+  "mid_foot_R",
+  "hind_foot_L",
+  "hind_foot_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (head-to-gaster spans the full 0-24 axis), ZY panel is the front view (head-on, legs splay left/right), XZ panel is the dorsal/top view (legs splay up/down in-panel = animal's left/right)",
+  "XY: mandible tip (0,8), head fuzz top (4,4), head center (4,9), pronotum top (9,6), mesonotum hump top (12,6), thorax underside/front-leg root (9,10-11), mid-leg root (12,9), petiole (15,12), gaster front (16,8), gaster rear tip (24,12), gaster ventral curl (19,20)",
+  "ZY: body centerline z=12, front legs splay to z~5-19 at ground y~19-20, middle legs z~4-20, hind legs z~5-19; antennae fuzz at top center (12,4)",
+  "XZ: confirms three leg pairs projecting laterally (in-panel vertical) from thorax at three x-positions ~9, 12, 14, feet reaching |z-12|~7-10 units from centerline",
+  "ground plane read at y=19 across all leg feet in XY panel"
+ ],
+ "notes": "Ant body: prothorax chosen as root spine node (length 0), with head attached as a single leaf via a short neck-like joint (protrudes distinctly, so counted per rule). Thorax split into pro/meso/metathorax as three spine nodes since the three leg pairs clearly attach at three distinct x-positions in the XY panel (~9, 12, 14). Petiole and gaster continue the spine; the gaster's curved ventral tip is a trunk taper (metasoma), not a true external tail, so it is NOT counted as a leaf leaf per the tapering-body rule. Antennae (visible as fuzz/thin structures near the head in all panels) are explicitly excluded as sub-flap detail per the convention. Each of the 6 legs was split into hip->knee->foot(leaf), an anatomical inference from the two visible bends in the ZY panel (splay outward then down to the ground plane at y~19). Left/right assigned by z<12 vs z>12 in the ZY/XZ panels (mirrored, so only foot leaves are paired as required). All leg segment lengths are authored as equal in proportion across the three pairs' analogous joints where the mesh silhouette matched closely, per the \"proportion not pose\" rule, though front/mid/hind hips differ slightly reflecting their different attachment depths on the thorax. Verified a hip->foot chain (e.g. front_hip_R -> front_knee_R -> front_foot_R) has consistently negative dy, confirming legs descend correctly and the animal stands upright rather than upside-down.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

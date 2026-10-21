@@ -1,0 +1,216 @@
+{
+ "artifact_defect": {
+  "consequence_if_unfixed": "the sim bridge uses edges_foldAngle when present, so 352 creases would fold the wrong way -- a guaranteed false negative",
+  "contradicting_creases": 352,
+  "file": "../2026-10-02-witness-identity-113/witness.fold",
+  "finding": "edges_foldAngle is STALE from the refuted candidate: seed_witness.py rewrote only edges_assignment",
+  "open_question": "whether the Oriedita linter read edges_foldAngle when it returned Pass in section 15.3",
+  "total_creases": 745,
+  "why_it_hides": "the HISTOGRAMS nearly match (388 at -180 vs 384 M; 357 at +180 vs 361 V), so a count-based sanity check passes; only a per-edge comparison finds it"
+ },
+ "method": {
+  "instrument": "probe.js, evaluated in a headed browser pane against the vendored Origami Simulator at web/frontend/dist/simulator/index.html?embed=1",
+  "no_self_collision": "thickenModel/thickenOffset are RENDERING options; this solver has no self-intersection handling, so layers pass through each other and residual thickness is NOT paper thickness",
+  "planarity_definition": "smallest/largest principal standard deviation of the folded vertex cloud (symmetric 3x3 eigensolve of its covariance). A flat-folded sheet is a PLANE, so this goes to ~0.",
+  "protocol_replicated": "mcp_harness/sim_capture.py SimSession.capture: loadFold -> setFold(percent) -> settle -> getFoldedGeometry",
+  "renderer": "WebGL 1.0, ANGLE (Apple, ANGLE Metal Renderer: Apple M4)",
+  "solver_params": {
+   "axialStiffness": 20,
+   "creaseStiffness": 0.7,
+   "faceStiffness": 0.2,
+   "numSteps": 100,
+   "panelStiffness": 0.7,
+   "percentDamping": 0.45
+  },
+  "validation": "the anchor reproduced sim_capture.ANCHOR_DISP = 1.3109 EXACTLY, which is what licenses the other readings",
+  "why_not_playwright": "playwright is not installed in this venv and no browser cache exists; the protocol was replicated in a headed browser pane instead"
+ },
+ "runs": [
+  {
+   "creases": 8,
+   "drive": "jump to 100%",
+   "faces": 8,
+   "max_displacement": 1.3107,
+   "non_finite": 0,
+   "recorded_anchor_disp": 1.3109,
+   "settle_s": 20,
+   "source": "sim_capture.build_star4_base()",
+   "subject": "anchor star-4",
+   "verts": 9
+  },
+  {
+   "creases": 8,
+   "drive": "jump to 100%",
+   "flat_planarity": 0.00025,
+   "flat_sd": [
+    0.57735,
+    0.57735,
+    0.00015
+   ],
+   "folded_planarity": 2e-05,
+   "folded_sd": [
+    0.36185,
+    0.20471,
+    1e-05
+   ],
+   "max_displacement": 1.3109,
+   "non_finite": 0,
+   "recorded_anchor_disp": 1.3109,
+   "settle_s": 60,
+   "source": "sim_capture.build_star4_base()",
+   "subject": "anchor star-4",
+   "verts": 9
+  },
+  {
+   "creases": 27,
+   "drive": "jump to 100%",
+   "folded_planarity": 0.00586,
+   "folded_sd": [
+    0.21794,
+    0.17687,
+    0.00128
+   ],
+   "max_displacement": 1.1683,
+   "non_finite": 0,
+   "settle_s": 30,
+   "source": "compile_tree(lizard) default path, stage_reached=emit",
+   "subject": "sparse lizard",
+   "verts": 22
+  },
+  {
+   "creases": 745,
+   "drive": "jump to 100%",
+   "faces": 744,
+   "folded_planarity": 0.06484,
+   "folded_sd": [
+    0.20842,
+    0.04855,
+    0.01351
+   ],
+   "max_displacement": 1.1829,
+   "non_finite": 0,
+   "settle_s": 30,
+   "source": "witness.fold, edges_foldAngle dropped (see defect)",
+   "subject": "dense lizard (SAT witness)",
+   "verts": 380
+  },
+  {
+   "creases": 745,
+   "drive": "jump to 100%",
+   "folded_planarity": 0.06481,
+   "folded_sd": [
+    0.20842,
+    0.04855,
+    0.01351
+   ],
+   "max_displacement": 1.1829,
+   "non_finite": 0,
+   "settle_s": 60,
+   "subject": "dense lizard (SAT witness)",
+   "verts": 380
+  },
+  {
+   "creases": 745,
+   "drive": "jump to 100%",
+   "folded_planarity": 0.06482,
+   "folded_sd": [
+    0.20842,
+    0.04855,
+    0.01351
+   ],
+   "max_displacement": 1.1829,
+   "non_finite": 0,
+   "settle_s": 90,
+   "subject": "dense lizard (SAT witness)",
+   "verts": 380
+  },
+  {
+   "creases": 745,
+   "drive": "RAMP 10->100 in steps of 10, 4 s each",
+   "folded_planarity": 0.07254,
+   "folded_sd": [
+    0.31279,
+    0.0833,
+    0.02269
+   ],
+   "max_displacement": 0.8293,
+   "non_finite": 0,
+   "settle_s": 30,
+   "subject": "dense lizard (SAT witness)",
+   "verts": 380
+  }
+ ],
+ "seeding_attempt": {
+  "final_sd": [
+   0.33092,
+   0.07374,
+   0.02116
+  ],
+  "injected_not_committed": "run by evaluating the logic in-page; no file in this branch was modified",
+  "mechanism": "writes targetTheta * creasePercent into the solver's u_theta and u_lastTheta textures after the model syncs, so creases start on the branch of their target rather than at 0 where the sign is decided by sub-precision noise",
+  "non_finite": 0,
+  "non_zero_targets": 745,
+  "note_on_745": "exactly the fold's crease count; the other 364 are triangulation diagonals with targetTheta 0",
+  "prior_art": "seedTheta, taken VERBATIM from .claude/worktrees/origami-animal-models-a131b6/web/frontend/public/simulator/js/ide-bridge.js (not merged to this branch; the shipped dist bridge has only loadFold/setFold/getFoldedGeometry)",
+  "question": "does seeding each crease's unwrapped angle AT its target, instead of letting all 745 start at zero, let the solver reach the flat state?",
+  "seeded_creases": 1109,
+  "structural_finding": "seeding crease ANGLE BRANCHES is not seeding the LAYER ORDER. This solver has no self-collision, so layer order has no physical effect in it and no degree of freedom represents it. The SAT result is not consumable by this simulator at all -- not for want of effort, but because the state it constrains does not exist in this model.",
+  "texture_dim": 64,
+  "trajectory_max_disp": {
+   "t10s": 0.6698,
+   "t120s": 0.8269,
+   "t150s": 0.8315,
+   "t30s": 0.8062,
+   "t60s": 0.8149,
+   "t90s": 0.8235
+  },
+  "trajectory_planarity": {
+   "t10s": 0.1155,
+   "t120s": 0.06302,
+   "t150s": 0.06395,
+   "t30s": 0.0776,
+   "t60s": 0.06765,
+   "t90s": 0.06283
+  },
+  "unseeded_converged_planarity": 0.06482,
+  "verdict": "NO EFFECT ON THE ATTRACTOR. Seeded converges to ~0.063-0.064 against unseeded 0.06482 -- a different trajectory to the same destination. The non-flatness is NOT the solver starting creases on the wrong angular branch."
+ },
+ "solver_parameter_sweep": {
+  "METHODOLOGICAL_FAILURE": {
+   "cause": "the sweep helper called loadFold but never reloaded the page, so each run started from the previous config's relaxed positions. It measured config PLUS history, not config.",
+   "clean_retest": "0.08354, i.e. WORSE than the 0.06591 baseline, inverting the sign of the original claim",
+   "detection": "re-running faceStiffness 1.0 after a different predecessor gave 0.05556 instead of 0.03559 -- same config, different answer",
+   "what": "a first sweep reported faceStiffness 1.0 at planarity 0.03559, a 45% improvement over baseline. It was WRONG.",
+   "why_it_looked_sound": "this solver is DETERMINISTIC (its tie-break jitter is a Knuth hash, not random), so re-running an identical sequence reproduced bit-identical numbers. Stability was mistaken for validity."
+  },
+  "answer": "NO. Raising it makes the result WORSE.",
+  "clean_method": "full page reload per run; config set before loadFold; 30-60 s settle",
+  "clean_results": {
+   "faceStiffness_0.2_baseline": {
+    "max_disp": 1.1757,
+    "planarity": 0.06591
+   },
+   "faceStiffness_1.0": {
+    "max_disp": 0.8515,
+    "planarity": 0.08354,
+    "sd": [
+     0.32292,
+     0.05981,
+     0.02698
+    ]
+   }
+  },
+  "levers_tried_and_their_effect_on_the_attractor": {
+   "drive protocol (jump vs documented ramp)": "none (0.0648 vs 0.0725)",
+   "solver stiffness (faceStiffness 0.2 -> 1.0)": "worse (0.06591 -> 0.08354)",
+   "theta branch seeding (seedTheta)": "none (converges to ~0.063-0.064 vs 0.06482)"
+  },
+  "question": "the solver's faceStiffness defaults to 0.2, which is soft for paper (paper facets do not stretch). Does raising it let the relaxation reach flat?",
+  "robust_baseline_readings": [
+   0.06482,
+   0.06591,
+   0.06608
+  ],
+  "verdict": "three independent levers, none moves the attractor. The dense CP settles at planarity ~0.065 against sparse 0.00586 and the anchor 0.00002."
+ }
+}

@@ -1,0 +1,277 @@
+{
+ "roll": "elephant_3",
+ "subject": "elephant",
+ "subject_guess": "elephant",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_spine",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -4,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "hip_spine",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    4,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "neck_base",
+   "parent": "shoulder_spine",
+   "length": 3,
+   "direction": [
+    -3,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck_base",
+   "length": 3,
+   "direction": [
+    -3,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "hip_spine",
+   "length": 7,
+   "direction": [
+    4,
+    -6,
+    1
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 6,
+   "direction": [
+    2,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "shoulder_spine",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    4
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "shoulder_spine",
+   "length": 5,
+   "direction": [
+    0,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hip_spine",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    4
+   ]
+  },
+  {
+   "name": "knee_hL",
+   "parent": "hip_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_hL",
+   "parent": "knee_hL",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hip_spine",
+   "length": 5,
+   "direction": [
+    0,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "knee_hR",
+   "parent": "hip_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_hR",
+   "parent": "knee_hR",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "ear_L",
+   "parent": "head",
+   "length": 6,
+   "direction": [
+    2,
+    0,
+    6
+   ]
+  },
+  {
+   "name": "ear_R",
+   "parent": "head",
+   "length": 5,
+   "direction": [
+    2,
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "trunk_mid",
+   "parent": "head",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    3
+   ]
+  },
+  {
+   "name": "trunk_tip",
+   "parent": "trunk_mid",
+   "length": 9,
+   "direction": [
+    4,
+    -8,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L",
+   "foot_R"
+  ],
+  [
+   "foot_hL",
+   "foot_hR"
+  ],
+  [
+   "ear_L",
+   "ear_R"
+  ]
+ ],
+ "leaves": [
+  "foot_L",
+  "foot_R",
+  "foot_hL",
+  "foot_hR",
+  "ear_L",
+  "ear_R",
+  "tail_tip",
+  "trunk_tip"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (side view); ZY panel is the FRONT view (facing the trunk/tusks, ears spread left-right); XZ panel is the TOP view.",
+  "XY panel: withers (9,4), rump (17,4) -> back is nearly level, torso spans x=9..17",
+  "XY panel: neck_base (6,5), head (3,6) -> head sits slightly below withers, forward of body",
+  "XY panel: front shoulder (9,8), front knee (9,14), front foot (9,19) -> ground at y~19",
+  "XY panel: hind hip (17,8), hind knee (17,14), hind foot (17,19) -> matches front leg length",
+  "XY panel: tail_base (21,10), tail_tip (23,16) -> long thin tail hanging down-back",
+  "XY panel: trunk_mid (3,9), trunk_tip (7,17) -> trunk curls down and slightly forward, tip near ground",
+  "XY panel: ear tip visible ~(5,6), flap folded over back of head",
+  "ZY panel: ear tips at z=7 (right side, near screen-left) and z=18 (left side, near screen-right)",
+  "ZY panel: leg column at z=9 (right legs) and z=16 (left legs), body center z~12-13",
+  "ZY panel: trunk hanging centrally z~15, y=8..16; small tail shadow z~13, y=16..20",
+  "Facing direction -x with up +y gives animal-right = -z, animal-left = +z (right-hand rule), used to assign _L/_R from ZY z-values"
+ ],
+ "notes": "Head (fused with neck) is kept as an internal spine node rather than a leaf because it bears further terminal appendages (ears, trunk); only those distal flaps count as leaves, per the sub-flap rule applied to the head's own attachments. Leg chains were split into a proximal 'shoulder/hip' offset segment (scapula/pelvis bulge, inferred from where the leg silhouette departs from the torso outline) plus a knee joint and foot, a 3-segment simplification of thigh-knee-shank-foot since the mesh doesn't show a distinct hock. Neck was split into neck_base/head since withers (9,4) and head (3,6) differ in both x and y, ruling out a vertical neck. Trunk was split into a short base curve and a long tip since it visibly bends partway down in the XY panel. Left/right assignment used the ZY (front) panel z-values combined with the head-at -x facing direction and the right-hand rule (forward x up = right), giving animal-right at smaller z and animal-left at larger z; all four legs share the same z pairing since front/hind stance widths look equal.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

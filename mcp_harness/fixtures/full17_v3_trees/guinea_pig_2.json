@@ -1,0 +1,130 @@
+{
+ "roll": "guinea_pig_2",
+ "subject": "guinea_pig",
+ "n": 2,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 3,
+   "parent_id": 2,
+   "length": 0.211765
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.164706
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.117647
+  },
+  {
+   "id": 6,
+   "parent_id": 0,
+   "length": 0.117647
+  },
+  {
+   "id": 7,
+   "parent_id": 2,
+   "length": 0.117647
+  },
+  {
+   "id": 8,
+   "parent_id": 2,
+   "length": 0.117647
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 4,
+   "parent_id": null,
+   "length": 0
+  },
+  {
+   "id": 3,
+   "parent_id": 4,
+   "length": 0.164706
+  },
+  {
+   "id": 2,
+   "parent_id": 3,
+   "length": 0.211765
+  },
+  {
+   "id": 1,
+   "parent_id": 2,
+   "length": 0.4
+  },
+  {
+   "id": 7,
+   "parent_id": 2,
+   "length": 0.117647
+  },
+  {
+   "id": 8,
+   "parent_id": 2,
+   "length": 0.117647
+  },
+  {
+   "id": 0,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.117647
+  },
+  {
+   "id": 6,
+   "parent_id": 0,
+   "length": 0.117647
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   5,
+   6
+  ],
+  [
+   7,
+   8
+  ]
+ ],
+ "names": {
+  "0": "hip",
+  "1": "back",
+  "2": "chest",
+  "3": "neck",
+  "4": "head",
+  "5": "hind_leg_L",
+  "6": "hind_leg_R",
+  "7": "front_leg_L",
+  "8": "front_leg_R"
+ },
+ "leaves": [
+  "head",
+  "hind_leg_L",
+  "hind_leg_R",
+  "front_leg_L",
+  "front_leg_R"
+ ],
+ "served_stage": "none",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.958098) [ide: served a re-rooted tree: node 4] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.899476912, 0.899476912], [0.127686371, 0.173881117], [0.857743166, 0.860241097], [0.709921523, 0.72126717], [0.430703252, 0.458761228], [0.151484981, 0.196255285], [0.842195547, 0.876778548], [0.639303973, 0.796380556], [0.393951247, 0.497853034], [0.14859852, 0.199325513], [0.173881117, 0.127686371], [0.860241097, 0.857743166], [0.72126717, 0.709921523], [0.458761228, 0.430703252], [0.196255285, 0.151484981], [0.858953601, 0.858953601], [0.715419338, 0.715419338], [0.444299442, 0.444299442], [0.173179546, 0.173179546], [0.876778548, 0.842195547], [0.796380556, 0.639303973], [0.497853034, 0.393951247], [0.199325513, 0.14859852], [0.999999998, 0.999999998], [0.526586646, 1.0], [0.842195548, 0.999999999], [0.639303974, 1.0], [1e-09, 0.159406375], [0.466747278, 0.904478034], [0.263293324, 0.579703187], [0.05983937, 0.254928341], [0.159406375, 1e-09], [0.079703188, 0.079703188], [1.0, 0.526586646], [0.904478034, 0.466747278], [0.579703187, 0.263293324], [0.254928341, 0.05983937], [0.999999999, 0.842195548], [1.0, 0.639303974]], \"edges_vertices\": [[2, 6], [3, 7], [4, 8], [5, 9], [1, 9], [9, 8], [8, 7], [7, 6], [6, 0], [0, 2], [2, 3], [3, 4], [4, 5], [5, 1], [11, 15], [12, 16], [13, 17], [14, 18], [2, 15], [3, 16], [4, 17], [5, 18], [10, 18], [18, 17], [17, 16], [16, 15], [15, 0], [0, 11], [11, 12], [12, 13], [13, 14], [14, 10], [18, 1], [11, 19], [12, 20], [13, 21], [14, 22], [0, 19], [19, 20], [20, 21], [21, 22], [22, 10], [25, 6], [26, 7], [28, 7], [29, 8], [30, 9], [32, 18], [34, 20], [35, 21], [36, 22], [37, 19], [38, 20], [23, 0], [7, 24], [23, 25], [25, 26], [26, 24], [1, 27], [24, 28], [28, 29], [29, 30], [30, 27], [10, 31], [31, 32], [32, 27], [20, 33], [33, 34], [34, 35], [35, 36], [36, 31], [23, 37], [37, 38], [38, 33]], \"edges_assignment\": [\"F\", \"F\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"V\", \"F\", \"F\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"F\", \"M\", \"F\", \"F\", \"M\", \"M\", \"F\", \"F\", \"F\", \"F\", \"V\", \"V\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

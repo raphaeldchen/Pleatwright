@@ -1,0 +1,170 @@
+[
+ {
+  "subject": "starfish",
+  "sparse_compile_secs": 0.1,
+  "N": 4,
+  "ridge_pieces": 32,
+  "ridge_vertex_degree_hist": {
+   "1": 5,
+   "2": 24,
+   "3": 2,
+   "5": 1
+  },
+  "y_vertices": 2,
+  "x_vertices": 1,
+  "ridge_components": 1,
+  "component_size_hist": {
+   "32": 1
+  },
+  "anchored_components": 1,
+  "ridge_pieces_in_anchored_components": 32,
+  "reach_pct": 100.0
+ },
+ {
+  "subject": "lizard",
+  "sparse_compile_secs": 6.5,
+  "N": 34,
+  "ridge_pieces": 156,
+  "ridge_vertex_degree_hist": {
+   "1": 6,
+   "2": 150,
+   "3": 2
+  },
+  "y_vertices": 2,
+  "x_vertices": 0,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "78": 2
+  },
+  "anchored_components": 2,
+  "ridge_pieces_in_anchored_components": 156,
+  "reach_pct": 100.0
+ },
+ {
+  "subject": "frog",
+  "sparse_compile_secs": 54.4,
+  "N": 38,
+  "ridge_pieces": 212,
+  "ridge_vertex_degree_hist": {
+   "1": 9,
+   "2": 200,
+   "3": 5
+  },
+  "y_vertices": 5,
+  "x_vertices": 0,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "60": 1,
+   "152": 1
+  },
+  "anchored_components": 1,
+  "ridge_pieces_in_anchored_components": 152,
+  "reach_pct": 71.7
+ },
+ {
+  "subject": "horse",
+  "sparse_compile_secs": 14.9,
+  "N": 46,
+  "ridge_pieces": 346,
+  "ridge_vertex_degree_hist": {
+   "1": 15,
+   "2": 322,
+   "3": 11
+  },
+  "y_vertices": 11,
+  "x_vertices": 0,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "164": 1,
+   "182": 1
+  },
+  "anchored_components": 2,
+  "ridge_pieces_in_anchored_components": 346,
+  "reach_pct": 100.0
+ },
+ {
+  "subject": "bird",
+  "sparse_compile_secs": 3.6,
+  "N": 54,
+  "ridge_pieces": 476,
+  "ridge_vertex_degree_hist": {
+   "1": 6,
+   "2": 459,
+   "3": 8,
+   "4": 1
+  },
+  "y_vertices": 8,
+  "x_vertices": 1,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "60": 1,
+   "416": 1
+  },
+  "anchored_components": 1,
+  "ridge_pieces_in_anchored_components": 416,
+  "reach_pct": 87.39
+ },
+ {
+  "subject": "guinea_pig",
+  "sparse_compile_secs": 283.1,
+  "N": 64,
+  "ridge_pieces": 370,
+  "ridge_vertex_degree_hist": {
+   "1": 9,
+   "2": 358,
+   "3": 5
+  },
+  "y_vertices": 5,
+  "x_vertices": 0,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "80": 1,
+   "290": 1
+  },
+  "anchored_components": 1,
+  "ridge_pieces_in_anchored_components": 290,
+  "reach_pct": 78.38
+ },
+ {
+  "subject": "octopus",
+  "sparse_compile_secs": 35.8,
+  "N": 74,
+  "ridge_pieces": 708,
+  "ridge_vertex_degree_hist": {
+   "1": 13,
+   "2": 680,
+   "3": 13,
+   "4": 1
+  },
+  "y_vertices": 13,
+  "x_vertices": 1,
+  "ridge_components": 1,
+  "component_size_hist": {
+   "708": 1
+  },
+  "anchored_components": 1,
+  "ridge_pieces_in_anchored_components": 708,
+  "reach_pct": 100.0
+ },
+ {
+  "subject": "dog",
+  "sparse_compile_secs": 502.3,
+  "N": 74,
+  "ridge_pieces": 798,
+  "ridge_vertex_degree_hist": {
+   "1": 15,
+   "2": 762,
+   "3": 19
+  },
+  "y_vertices": 19,
+  "x_vertices": 0,
+  "ridge_components": 2,
+  "component_size_hist": {
+   "252": 1,
+   "546": 1
+  },
+  "anchored_components": 2,
+  "ridge_pieces_in_anchored_components": 798,
+  "reach_pct": 100.0
+ }
+]

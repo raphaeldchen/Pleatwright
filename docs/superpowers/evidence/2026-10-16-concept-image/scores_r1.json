@@ -1,0 +1,688 @@
+{
+ "round": 1,
+ "checklist": {
+  "dog": [
+   {
+    "part": "legs",
+    "count": 4
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "cat": [
+   {
+    "part": "legs",
+    "count": 4
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "horse": [
+   {
+    "part": "legs",
+    "count": 4
+   },
+   {
+    "part": "head",
+    "count": 1,
+    "note": "on a neck"
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "lizard": [
+   {
+    "part": "legs",
+    "count": 4,
+    "note": "splayed to the sides"
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "frog": [
+   {
+    "part": "legs",
+    "count": 4,
+    "note": "2 long hind legs, 2 short front legs"
+   },
+   {
+    "part": "head",
+    "count": 1
+   }
+  ],
+  "bird": [
+   {
+    "part": "wings",
+    "count": 2
+   },
+   {
+    "part": "legs",
+    "count": 2
+   },
+   {
+    "part": "head",
+    "count": 1,
+    "note": "with a beak"
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "starfish": [
+   {
+    "part": "arms",
+    "count": 5,
+    "note": "radiating from a central disc"
+   }
+  ],
+  "spider": [
+   {
+    "part": "legs",
+    "count": 8,
+    "note": "4 per side"
+   },
+   {
+    "part": "abdomen",
+    "count": 1,
+    "note": "behind the leg-bearing front body"
+   }
+  ],
+  "octopus": [
+   {
+    "part": "arms",
+    "count": 8
+   },
+   {
+    "part": "mantle",
+    "count": 1,
+    "note": "the head and body the arms radiate from"
+   }
+  ],
+  "dolphin": [
+   {
+    "part": "pectoral flippers",
+    "count": 2
+   },
+   {
+    "part": "dorsal fin",
+    "count": 1
+   },
+   {
+    "part": "tail fluke",
+    "count": 1
+   },
+   {
+    "part": "head",
+    "count": 1,
+    "note": "with a beak"
+   }
+  ],
+  "guinea pig": [
+   {
+    "part": "legs",
+    "count": 4,
+    "note": "short"
+   },
+   {
+    "part": "head",
+    "count": 1
+   }
+  ],
+  "rabbit": [
+   {
+    "part": "legs",
+    "count": 4
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "ears",
+    "count": 2,
+    "note": "long"
+   },
+   {
+    "part": "tail",
+    "count": 1,
+    "note": "short"
+   }
+  ],
+  "bat": [
+   {
+    "part": "wings",
+    "count": 2
+   },
+   {
+    "part": "legs",
+    "count": 2
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "tail",
+    "count": 1,
+    "note": "inside the tail membrane"
+   }
+  ],
+  "elephant": [
+   {
+    "part": "legs",
+    "count": 4
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "trunk",
+    "count": 1
+   },
+   {
+    "part": "ears",
+    "count": 2
+   },
+   {
+    "part": "tail",
+    "count": 1
+   }
+  ],
+  "ant": [
+   {
+    "part": "legs",
+    "count": 6,
+    "note": "3 per side"
+   },
+   {
+    "part": "head",
+    "count": 1
+   },
+   {
+    "part": "gaster",
+    "count": 1,
+    "note": "the rear segment, behind a narrow waist"
+   },
+   {
+    "part": "antennae",
+    "count": 2
+   }
+  ],
+  "scorpion": [
+   {
+    "part": "walking legs",
+    "count": 8,
+    "note": "4 per side"
+   },
+   {
+    "part": "pincers",
+    "count": 2
+   },
+   {
+    "part": "tail",
+    "count": 1,
+    "note": "segmented, ending in a stinger"
+   }
+  ],
+  "crab": [
+   {
+    "part": "walking legs",
+    "count": 8,
+    "note": "4 per side"
+   },
+   {
+    "part": "pincers",
+    "count": 2
+   }
+  ]
+ },
+ "cells": {
+  "photo/dog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/dog/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/dog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/dog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/dog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/cat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/cat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "B/cat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/cat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/cat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/horse/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/horse/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/horse/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/horse/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/horse/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/lizard/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/lizard/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "B/lizard/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "C/lizard/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "D/lizard/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/frog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/frog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "B/frog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/frog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/frog/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/bird/r1": {
+   "mesh": "fail",
+   "image": "pass",
+   "note": ""
+  },
+  "A/bird/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/bird/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "C/bird/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "D/bird/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "photo/starfish/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/starfish/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/starfish/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/starfish/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/starfish/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/spider/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/spider/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/spider/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/spider/r1": {
+   "mesh": "fail",
+   "image": "pass",
+   "note": ""
+  },
+  "D/spider/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/octopus/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "A/octopus/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/octopus/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "C/octopus/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/octopus/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "photo/dolphin/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/dolphin/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "B/dolphin/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/dolphin/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/dolphin/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/guinea_pig/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "A/guinea_pig/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/guinea_pig/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/guinea_pig/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/guinea_pig/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "photo/rabbit/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "A/rabbit/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/rabbit/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/rabbit/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/rabbit/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/bat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/bat/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/bat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/bat/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/bat/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "photo/elephant/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "A/elephant/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "B/elephant/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "C/elephant/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "D/elephant/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/ant/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "A/ant/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/ant/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/ant/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/ant/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "photo/scorpion/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "A/scorpion/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  },
+  "B/scorpion/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/scorpion/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/scorpion/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "photo/crab/r1": {
+   "mesh": "fail",
+   "image": "pass",
+   "note": ""
+  },
+  "A/crab/r1": {
+   "mesh": "pass",
+   "image": "fail",
+   "note": ""
+  },
+  "B/crab/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "C/crab/r1": {
+   "mesh": "pass",
+   "image": "pass",
+   "note": ""
+  },
+  "D/crab/r1": {
+   "mesh": "fail",
+   "image": "fail",
+   "note": ""
+  }
+ }
+}

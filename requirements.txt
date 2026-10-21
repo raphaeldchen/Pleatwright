@@ -1,0 +1,14 @@
+# Pleatwright pipeline: text -> image -> mesh -> VLM tree -> box-pleated folded model.
+pytest                 # 9.x
+numpy
+matplotlib             # 3.11.2 -- overview renders
+python-sat==1.9.dev15  # pleatwright.certify SAT layer order
+trimesh                # vlm_render: mesh views for the VLM
+Pillow                 # vlm_render / concept images
+openai                 # llm_client: OpenAI-compatible Anthropic endpoint
+gradio_client          # mesh_acquire: HF text->image->mesh Spaces
+httpx                  # mesh_acquire: HF client timeouts (also arrives via openai/gradio_client)
+python-dotenv          # env_config: repo-root .env
+fastapi                # app server (app/server/pleatwright_app)
+uvicorn                # app server
+websockets             # app server: WebSocket transport for uvicorn

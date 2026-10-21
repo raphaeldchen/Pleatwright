@@ -1,0 +1,60 @@
+{
+ "dense": {
+  "audit": {
+   "arrangement": 0,
+   "closure_bad_edges": 0,
+   "closure_max_error": 3.1401849173675502e-15,
+   "interior": 366,
+   "kawasaki": 0,
+   "maekawa": 0
+  },
+  "failure": "None",
+  "fold": {
+   "edges": 759,
+   "vertices": 380
+  },
+  "peak_rss_mb": 1432.3,
+  "raw_triple_bound": 31314680,
+  "secs": 28.6,
+  "stage_reached": "emit",
+  "verdict": {
+   "build_secs": 12.443,
+   "clauses": 9678554,
+   "kind": "CERTIFIED",
+   "label_vars": 745,
+   "order_vars": 53754,
+   "solve_secs": 0.185
+  }
+ },
+ "max_clauses": 20000000,
+ "max_raw_triples": 100000000,
+ "rss_before_mb": 36.0,
+ "sparse": {
+  "audit": {
+   "arrangement": 0,
+   "closure_bad_edges": 0,
+   "closure_max_error": 2.482534153247273e-16,
+   "interior": 8,
+   "kawasaki": 0,
+   "maekawa": 0
+  },
+  "failure": "None",
+  "fold": {
+   "edges": 41,
+   "vertices": 22
+  },
+  "peak_rss_mb": 43.8,
+  "raw_triple_bound": 996,
+  "secs": 0.7,
+  "stage_reached": "emit",
+  "verdict": {
+   "build_secs": 0.002,
+   "clauses": 2402,
+   "kind": "CERTIFIED",
+   "label_vars": 27,
+   "order_vars": 158,
+   "solve_secs": 0.0
+  }
+ },
+ "subject": "lizard"
+}

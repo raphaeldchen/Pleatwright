@@ -1,0 +1,6081 @@
+{
+  "clause_census": {
+    "TOTAL": 4614726,
+    "equality": 28192,
+    "taco": 74602,
+    "transitivity": 4511932
+  },
+  "creases": 745,
+  "disagreements": [
+    {
+      "clauses": 22,
+      "clauses_admit": 154,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 10
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          11,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          10,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          10,
+          11,
+          6,
+          7
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          11
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        11
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 592,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          110
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          110,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          110
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          110,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          110,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          110
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        110,
+        2,
+        7,
+        6,
+        5,
+        10
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        110
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 224,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 14
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          13,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          13
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        13
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        13
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 388,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          156
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          156,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          156,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          156
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          156,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          156
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        156
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        156
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 592,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          111
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          111,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          111
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          111,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          111,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          111
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        111,
+        6,
+        5,
+        10
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        111
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 224,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 14
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          12,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          12
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        12
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        12
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 604,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 10
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          14,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          14
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        14
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        14
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 388,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          155
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          155,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          155,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          155
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          155,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          155
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        155
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        155
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          15,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          15
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        15
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          112
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          112,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          7,
+          112
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          112,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          112,
+          7,
+          11
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          112
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        11,
+        112
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        11,
+        112
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          7,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          16,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          11
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          16
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        11,
+        16
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        11,
+        16
+      ]
+    },
+    {
+      "clauses": 24,
+      "clauses_admit": 320,
+      "clauses_by_family": {
+        "equality": 10,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 10,
+        "clauses_admit": 3360,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          7,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          17,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          12
+        ]
+      ],
+      "oracle_admits": 3360,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          17
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        12,
+        17
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        12,
+        17
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          9,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          18,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          13
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          18
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        13,
+        18
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 154,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 10
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          14,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          13,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          13,
+          14
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          14
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        13,
+        14
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13,
+        14
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          19,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          19,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          19,
+          9,
+          14
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          19
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        14,
+        19
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        14,
+        19
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          154
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          154,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          154
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          154,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          154,
+          9,
+          14
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          154
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        14,
+        154
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        14,
+        154
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 308,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          16,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          15,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          15,
+          16,
+          6,
+          7
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          16
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        16,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        16
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          20
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          20,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          20
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          20,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          20,
+          7,
+          15
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          20
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        15,
+        20
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        20
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 384,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          17,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          15
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          17
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        17,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        17
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          113
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          113,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          113
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          113,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          113,
+          7,
+          16
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          113
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        113,
+        16
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        16,
+        113
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          21
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          21,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          21
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          21,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          21,
+          7,
+          16
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          21
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        16,
+        21
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        16,
+        21
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 600,
+      "clauses_by_family": {
+        "equality": 10,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 10,
+        "clauses_admit": 3360,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          22
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          22,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          22
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          22,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          22,
+          7,
+          17
+        ]
+      ],
+      "oracle_admits": 3360,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          22
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        17,
+        22
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        17,
+        22
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 384,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          17,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          17
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          17
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          17,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          18,
+          17
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          17,
+          18
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        18,
+        17
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 12,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          23
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          23,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          23
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          23,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          23,
+          9,
+          18
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          23
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        18,
+        23
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        18,
+        23
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 308,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          19,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          19,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          19,
+          18,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          18,
+          19
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          19
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        19,
+        18
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 12,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        18,
+        19
+      ]
+    }
+  ],
+  "elapsed_secs": 72.1,
+  "faces": {
+    "3": 16,
+    "4": 364,
+    "TOTAL": 380
+  },
+  "families_enumerated": [
+    "equality",
+    "taco"
+  ],
+  "families_independently_checked": [
+    "equality"
+  ],
+  "families_not_under_test": [
+    "transitivity"
+  ],
+  "gates": {
+    "active_sites_A": 25,
+    "active_sites_B": 0,
+    "candidate_subsets": 728,
+    "classify_A": 728,
+    "classify_B": 0,
+    "cover_fallback_seeds": 0,
+    "faces_usable": {
+      "duplicate_vertex_rings": 0,
+      "faces_checked": 380,
+      "non_convex": 0,
+      "non_rational": 0
+    },
+    "geometry_fidelity": {
+      "bitwise_identical": true,
+      "production_cells": 26,
+      "transcription_cells": 26
+    },
+    "oracle_refuses": {
+      "intruder_rejected": true,
+      "seeded_inversion_rejected": 1,
+      "seeded_inversion_witness": {
+        "certified_order": [
+          0,
+          1,
+          2,
+          7,
+          6,
+          5,
+          10,
+          11
+        ],
+        "rejected_transposition": [
+          0,
+          2,
+          1,
+          7,
+          6,
+          5,
+          10,
+          11
+        ],
+        "subset": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          11
+        ]
+      }
+    },
+    "population_A": 25,
+    "population_B": 0,
+    "sub_segments_cover_constant": 363
+  },
+  "geometric_clauses": 102794,
+  "headline_triple_comparison": {
+    "blocked_by_pairs_guard": 0,
+    "blocked_by_pairs_guard_witnesses": [],
+    "identical": true,
+    "only_oracle": 0,
+    "only_oracle_witnesses": [],
+    "only_production": 0,
+    "only_production_witnesses": [],
+    "oracle_triples": 28192,
+    "production_equality_clauses": 28192,
+    "production_triples": 28192
+  },
+  "headline_verdict": "identical",
+  "kernel": "exact",
+  "max_subset": 8,
+  "per_population": 25,
+  "python": "3.14.3",
+  "sat_verdict": "CERTIFIED",
+  "secondary_diagnosis": {
+    "note": "`only_clauses` empty on every row means the restricted clause set is STRICTLY STRONGER than the oracle on these subsets -- the oracle rejects no order production admits. The gap localises entirely to the `taco` family: on `equality` alone the two arms are identical. See README section 'The secondary comparison disagrees'.",
+    "rejecting_clauses_by_family": {
+      "taco": 164
+    },
+    "rejecting_taco_crease_pairs": {
+      "collinear": 164
+    },
+    "rows": 25,
+    "rows_identical": 0,
+    "rows_identical_on_equality_only": 25,
+    "rows_oracle_admits_superset": 25,
+    "rows_with_only_clauses": 0,
+    "rows_with_only_oracle": 25
+  },
+  "secondary_verdict": "DISAGREEMENT",
+  "shared_edges_by_assignment": {
+    "M": 384,
+    "TOTAL": 745,
+    "V": 361
+  },
+  "subject": "dense lizard (SAT-certified witness)",
+  "subsets": [
+    {
+      "clauses": 22,
+      "clauses_admit": 154,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 10
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          11,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          10,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          10,
+          11,
+          6,
+          7
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          11
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        11
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        11
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 592,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          110
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          110,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          110
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          110,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          110,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          110
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        110,
+        2,
+        7,
+        6,
+        5,
+        10
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        110
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 224,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 14
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          13,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          13
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        13
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        13
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 388,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          156
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          156,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          156,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          156
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          156,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          156
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        156
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        156
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 592,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          111
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          111,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          111
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          111,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          111,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          111
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        111,
+        6,
+        5,
+        10
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        111
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 224,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 14
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          12,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          12
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        12
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        12
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 604,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 10
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          14,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          14
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        14
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        14
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 388,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          155
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          155,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          155,
+          9,
+          12
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          12,
+          155
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          155,
+          12
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          12,
+          155
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        12,
+        155
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 16,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        12,
+        155
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          7,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          10,
+          15,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          10
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          10,
+          15
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        10,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        10,
+        15
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          112
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          112,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          7,
+          112
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          112,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          112,
+          7,
+          11
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          112
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        11,
+        112
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        11,
+        112
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          7,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          11,
+          16,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          11
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          11,
+          16
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        11,
+        16
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        11,
+        16
+      ]
+    },
+    {
+      "clauses": 24,
+      "clauses_admit": 320,
+      "clauses_by_family": {
+        "equality": 10,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 10,
+        "clauses_admit": 3360,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          12
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          7,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          12,
+          17,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          12
+        ]
+      ],
+      "oracle_admits": 3360,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          12,
+          17
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        12,
+        17
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 13,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        12,
+        17
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          9,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          18,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          13
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          18
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        13,
+        18
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13,
+        18
+      ]
+    },
+    {
+      "clauses": 22,
+      "clauses_admit": 154,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 10
+      },
+      "creases": 10,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          13
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          13,
+          14,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          13,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          13,
+          14
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 8
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 8
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          13,
+          14
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        13,
+        14
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13,
+        14
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 484,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 14
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          19,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          19,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          19,
+          9,
+          14
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          19
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        14,
+        19
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 14,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        14,
+        19
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 9,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          154
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          154,
+          14
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          9,
+          154
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          14,
+          154,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          154,
+          9,
+          14
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          14,
+          154
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        14,
+        154
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 17,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        14,
+        154
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 308,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          16,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          15,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          15,
+          16,
+          6,
+          7
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          16
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        16,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        16
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          20
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          20,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          20
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          20,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          20,
+          7,
+          15
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          20
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        15,
+        20
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        20
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 384,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          15
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          7,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          15,
+          17,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          15
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          15,
+          17
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        17,
+        15
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 12,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        15,
+        17
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 596,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          113
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          113,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          113
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          113,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          113,
+          7,
+          16
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          113
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        113,
+        16
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        16,
+        113
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          21
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          21,
+          16
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          7,
+          21
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          16,
+          21,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          21,
+          7,
+          16
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          16,
+          21
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        16,
+        21
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        16,
+        21
+      ]
+    },
+    {
+      "clauses": 18,
+      "clauses_admit": 600,
+      "clauses_by_family": {
+        "equality": 10,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 10,
+        "clauses_admit": 3360,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          22
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          22,
+          17
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          7,
+          22
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          17,
+          22,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          5,
+          6,
+          22,
+          7,
+          17
+        ]
+      ],
+      "oracle_admits": 3360,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (4, 5)x(4, 89)",
+          "taco-taco (4, 89)x(4, 5)",
+          "taco-taco (4, 5)x(5, 6)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7,
+          17,
+          22
+        ]
+      },
+      "shipped_order": [
+        0,
+        1,
+        2,
+        7,
+        6,
+        5,
+        17,
+        22
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 11,
+      "subset": [
+        0,
+        1,
+        2,
+        5,
+        6,
+        7,
+        17,
+        22
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 384,
+      "clauses_by_family": {
+        "equality": 8,
+        "taco": 12
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 8,
+        "clauses_admit": 4608,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          17,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          17
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          17
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          17,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          18,
+          17
+        ]
+      ],
+      "oracle_admits": 4608,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          17,
+          18
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        18,
+        17
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 12,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "clauses": 14,
+      "clauses_admit": 1232,
+      "clauses_by_family": {
+        "equality": 6,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 6,
+        "clauses_admit": 6720,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          23
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          23,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          9,
+          23
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          23,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          23,
+          9,
+          18
+        ]
+      ],
+      "oracle_admits": 6720,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          23
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        18,
+        23
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 2,
+      "sites_total": 15,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        18,
+        23
+      ]
+    },
+    {
+      "clauses": 20,
+      "clauses_admit": 308,
+      "clauses_by_family": {
+        "equality": 12,
+        "taco": 8
+      },
+      "creases": 8,
+      "equality_only": {
+        "clauses": 12,
+        "clauses_admit": 1680,
+        "identical": true,
+        "only_clauses": 0,
+        "only_oracle": 0
+      },
+      "identical": false,
+      "only_clauses": [],
+      "only_oracle": [
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          19
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          19,
+          18
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          18,
+          19,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          8,
+          19,
+          18,
+          9
+        ],
+        [
+          2,
+          3,
+          4,
+          7,
+          9,
+          8,
+          18,
+          19
+        ]
+      ],
+      "oracle_admits": 1680,
+      "orders": 40320,
+      "population": "A",
+      "rejecting_clauses": {
+        "by_family": {
+          "taco": 6
+        },
+        "sample_provs": [
+          "taco-taco (5, 6)x(6, 7)",
+          "taco-taco (6, 7)x(5, 6)",
+          "taco-taco (5, 6)x(7, 132)"
+        ],
+        "taco_crease_pairs": {
+          "collinear": 6
+        },
+        "witness_order": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          18,
+          19
+        ]
+      },
+      "shipped_order": [
+        2,
+        3,
+        4,
+        9,
+        8,
+        7,
+        19,
+        18
+      ],
+      "shipped_order_pointwise_ok": true,
+      "sites_active": 3,
+      "sites_total": 12,
+      "subset": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        18,
+        19
+      ]
+    }
+  ],
+  "sys_platform": "darwin",
+  "validation_failures": [],
+  "verdict": "DISAGREEMENT"
+}

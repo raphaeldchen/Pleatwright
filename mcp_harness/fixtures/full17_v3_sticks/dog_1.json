@@ -1,0 +1,248 @@
+{
+ "roll": "dog_1",
+ "subject": "dog",
+ "subject_guess": "dog (generic quadruped, e.g. Labrador/hound type)",
+ "nodes": [
+  {
+   "name": "withers",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hips",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    2,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 5,
+   "direction": [
+    -5,
+    -0.5,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 11,
+   "direction": [
+    -10,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_shoulder_L",
+   "parent": "withers",
+   "length": 8,
+   "direction": [
+    -6,
+    -4.5,
+    -3
+   ]
+  },
+  {
+   "name": "foreleg_shoulder_R",
+   "parent": "withers",
+   "length": 8,
+   "direction": [
+    -6,
+    -4.5,
+    3
+   ]
+  },
+  {
+   "name": "foreleg_elbow_L",
+   "parent": "foreleg_shoulder_L",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_elbow_R",
+   "parent": "foreleg_shoulder_R",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_paw_L",
+   "parent": "foreleg_elbow_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -6.5,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_paw_R",
+   "parent": "foreleg_elbow_R",
+   "length": 7,
+   "direction": [
+    -1,
+    -6.5,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_hip_L",
+   "parent": "hips",
+   "length": 5,
+   "direction": [
+    -1,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "hindleg_hip_R",
+   "parent": "hips",
+   "length": 5,
+   "direction": [
+    -1,
+    -4,
+    3
+   ]
+  },
+  {
+   "name": "hindleg_stifle_L",
+   "parent": "hindleg_hip_L",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_stifle_R",
+   "parent": "hindleg_hip_R",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_hock_L",
+   "parent": "hindleg_stifle_L",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_hock_R",
+   "parent": "hindleg_stifle_R",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_paw_L",
+   "parent": "hindleg_hock_L",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_paw_R",
+   "parent": "hindleg_hock_R",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "hips",
+   "length": 1,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 7,
+   "direction": [
+    -2,
+    7,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foreleg_paw_L",
+   "foreleg_paw_R"
+  ],
+  [
+   "hindleg_paw_L",
+   "hindleg_paw_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "foreleg_paw_L",
+  "foreleg_paw_R",
+  "hindleg_paw_L",
+  "hindleg_paw_R",
+  "tail_tip"
+ ],
+ "readings": [
+  "head at -x (nose ~x=1,y=10): XY panel is the profile, ZY is the front/rear cross-section, XZ is the top view",
+  "nose tip (1,10)",
+  "head top/ear (6,4)",
+  "neck junction to withers (11,6)",
+  "withers, high point of back (16,5.5)",
+  "hips/rump top (19,7)",
+  "tail base at rump (20,8)",
+  "tail tip, curled (18,1)",
+  "front leg shoulder joint (10,10)",
+  "front leg elbow (10,14)",
+  "front paw on ground (9,20.5)",
+  "hind leg hip joint (18,11)",
+  "hind leg stifle/knee (17,14)",
+  "hind leg hock (19,17)",
+  "hind paw on ground (19,21)",
+  "ground line consistent ~y=20.5-21 for all four paws",
+  "ZY panel: front-leg lateral spread left z=9, right z=15 (center body z=12)",
+  "ZY panel: hind-leg lateral spread left z=9, right z=15",
+  "XZ panel confirms body z-width ~9 to 15, tapering at nose/tail, matching ZY readings"
+ ],
+ "notes": "Head faces -x (nose at x~1), so XY panel is the true profile; ZY panel shows the front/rear (z-y) silhouette and XZ the top-down view, both used only to recover lateral (z) spread and confirm left/right. Animal right = +z (computed from forward=-x, up=+y via right=up\u00d7forward), so larger z-tick in the ZY panel = animal's right side, and smaller z-tick (top) in the XZ panel = animal's right side (XZ vertical axis is flip-mapped like the y-axes). Spine simplified to two hub nodes (withers, hips) since the mesh has no distinct separate spine segments visible; neck+head treated as two segments off withers. Front leg simplified to shoulder-elbow-paw (2 segments); hind leg given 3 segments (hip-stifle-hock-paw) per standard hind-limb anatomy, inferred since only endpoints were directly measurable on the render. Tail modeled as base+curled tip (2 segments) to capture the visible curl. Lateral (z) leg spread (~\u00b13 from centerline) inferred equally for fore and hind legs from the ZY panel since exact per-leg z ticks were hard to separate at the small render scale; all four legs kept structurally proportional (not posed) per instructions. Ears/eyes not counted as leaves (sub-flap detail); head counted as a leaf since it clearly protrudes on a neck.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

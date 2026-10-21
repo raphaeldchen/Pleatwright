@@ -1,0 +1,206 @@
+{
+ "roll": "cat_3",
+ "subject": "cat",
+ "subject_guess": "cat",
+ "nodes": [
+  {
+   "name": "spine_root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "spine_root",
+   "length": 9,
+   "direction": [
+    8,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 6,
+   "direction": [
+    4,
+    5,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 6,
+   "direction": [
+    4,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "spine_root",
+   "length": 8,
+   "direction": [
+    -7,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 2,
+   "direction": [
+    -1,
+    -1,
+    2
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_L",
+   "parent": "knee_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 2,
+   "direction": [
+    -1,
+    -1,
+    -2
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_R",
+   "parent": "knee_R",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "spine_root",
+   "length": 3,
+   "direction": [
+    1,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "hind_knee_L",
+   "parent": "hip_L",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hind_paw_L",
+   "parent": "hind_knee_L",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "spine_root",
+   "length": 3,
+   "direction": [
+    1,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "hind_knee_R",
+   "parent": "hip_R",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hind_paw_R",
+   "parent": "hind_knee_R",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "paw_L",
+   "paw_R"
+  ],
+  [
+   "hind_paw_L",
+   "hind_paw_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "paw_L",
+  "paw_R",
+  "hind_paw_L",
+  "hind_paw_R"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile, ZY is the front view, XZ is the top view",
+  "XY: nose (24,7), ear-base/head-top (20,3), withers (16,8), mid-back (12,8), hip/rump (8,11), tail-base (8,11), tail-tip (1,8)",
+  "XY: front shoulder (15,9), front knee (14,15), front paw (14,20)",
+  "XY: hind hip (9,13), hind knee (8,17), hind paw (9,20)",
+  "ground line at y=20-21 in XY panel, so leg lengths = shoulder(9)->paw(20) and hip(13)->paw(20)",
+  "ZY panel confirms two front legs at different z (one straight z~8, one bent z~13-15) and ear tips near z=10-14,y=2-3, used only to set left/right z-offsets, not lengths",
+  "XZ top panel: tail at -x, head at +x, body width narrow, no clear leg data (legs hidden under body silhouette) so not used for limb lengths"
+ ],
+ "notes": "Head at +x in the XY panel identifies it as the profile view; ZY is the front (facing) view and XZ is the top view. Spine chain (spine_root=hip region -> withers -> neck -> head) and tail were read directly from XY-panel landmarks. Front and hind legs were each split into a proximal segment (shoulder/hip) and two limb segments (upper+lower) based on the visible knee bend in the XY panel; the small lateral (z) offset used to separate left/right legs at the shoulder/hip joints was inferred from the ZY (front) panel, since the XY profile only shows one leg silhouette per pair. All four legs and both front paws/hind paws were authored with equal proportional lengths despite the mid-stride pose shown (one front leg bent, one straight) per the proportion-not-pose rule. XZ (top) panel did not add usable limb data since legs are hidden under the body outline from above; it was used only to confirm head/tail placement along x.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

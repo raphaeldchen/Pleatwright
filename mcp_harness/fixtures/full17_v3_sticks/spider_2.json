@@ -1,0 +1,266 @@
+{
+ "roll": "spider_2",
+ "subject": "spider",
+ "subject_guess": "tarantula-type spider (8 legs, fused cephalothorax+abdomen, no separate head or tail)",
+ "nodes": [
+  {
+   "name": "abdomen",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "pedicel",
+   "parent": "abdomen",
+   "length": 4,
+   "direction": [
+    4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "cephalo_rear",
+   "parent": "pedicel",
+   "length": 3,
+   "direction": [
+    2,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "cephalo_mid1",
+   "parent": "cephalo_rear",
+   "length": 3,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cephalo_mid2",
+   "parent": "cephalo_mid1",
+   "length": 4,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cephalo_front",
+   "parent": "cephalo_mid2",
+   "length": 3,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "knee1_R",
+   "parent": "cephalo_front",
+   "length": 8,
+   "direction": [
+    -3,
+    4,
+    -6
+   ]
+  },
+  {
+   "name": "foot1_R",
+   "parent": "knee1_R",
+   "length": 10,
+   "direction": [
+    2,
+    -10,
+    -2
+   ]
+  },
+  {
+   "name": "knee1_L",
+   "parent": "cephalo_front",
+   "length": 8,
+   "direction": [
+    -3,
+    4,
+    6
+   ]
+  },
+  {
+   "name": "foot1_L",
+   "parent": "knee1_L",
+   "length": 10,
+   "direction": [
+    2,
+    -10,
+    2
+   ]
+  },
+  {
+   "name": "knee2_R",
+   "parent": "cephalo_mid2",
+   "length": 10,
+   "direction": [
+    -3,
+    5,
+    -8
+   ]
+  },
+  {
+   "name": "foot2_R",
+   "parent": "knee2_R",
+   "length": 11,
+   "direction": [
+    -1,
+    -11,
+    -2
+   ]
+  },
+  {
+   "name": "knee2_L",
+   "parent": "cephalo_mid2",
+   "length": 10,
+   "direction": [
+    -3,
+    5,
+    8
+   ]
+  },
+  {
+   "name": "foot2_L",
+   "parent": "knee2_L",
+   "length": 11,
+   "direction": [
+    -1,
+    -11,
+    2
+   ]
+  },
+  {
+   "name": "knee3_R",
+   "parent": "cephalo_mid1",
+   "length": 11,
+   "direction": [
+    -4,
+    5,
+    -9
+   ]
+  },
+  {
+   "name": "foot3_R",
+   "parent": "knee3_R",
+   "length": 12,
+   "direction": [
+    -3,
+    -11,
+    -2
+   ]
+  },
+  {
+   "name": "knee3_L",
+   "parent": "cephalo_mid1",
+   "length": 11,
+   "direction": [
+    -4,
+    5,
+    9
+   ]
+  },
+  {
+   "name": "foot3_L",
+   "parent": "knee3_L",
+   "length": 12,
+   "direction": [
+    -3,
+    -11,
+    2
+   ]
+  },
+  {
+   "name": "knee4_R",
+   "parent": "cephalo_rear",
+   "length": 9,
+   "direction": [
+    -5,
+    4,
+    -6
+   ]
+  },
+  {
+   "name": "foot4_R",
+   "parent": "knee4_R",
+   "length": 11,
+   "direction": [
+    -5,
+    -10,
+    -2
+   ]
+  },
+  {
+   "name": "knee4_L",
+   "parent": "cephalo_rear",
+   "length": 9,
+   "direction": [
+    -5,
+    4,
+    6
+   ]
+  },
+  {
+   "name": "foot4_L",
+   "parent": "knee4_L",
+   "length": 11,
+   "direction": [
+    -5,
+    -10,
+    2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot1_L",
+   "foot1_R"
+  ],
+  [
+   "foot2_L",
+   "foot2_R"
+  ],
+  [
+   "foot3_L",
+   "foot3_R"
+  ],
+  [
+   "foot4_L",
+   "foot4_R"
+  ]
+ ],
+ "leaves": [
+  "foot1_R",
+  "foot1_L",
+  "foot2_R",
+  "foot2_L",
+  "foot3_R",
+  "foot3_L",
+  "foot4_R",
+  "foot4_L"
+ ],
+ "readings": [
+  "head/mouth end at +x (cephalothorax tip near x=22-24); abdomen (rear, no legs) at -x, centered ~x=6: XY panel is the PROFILE (side view showing leg arches), ZY panel is the FRONT/rear view, XZ panel is the TOP view (shows leg splay in x-z)",
+  "XY panel: abdomen bulb spans x=2-10,y=8-16 -> center (6,12); cephalothorax spans x=10-24,y=8-15",
+  "XY panel: pedicel (waist) junction ~ (10,11)",
+  "XY panel: dorsal body line ~y=9, knee peaks rise to y~4-6, feet/ground contact ~y=15",
+  "XZ panel: leg spread across z=0 (top) to z=24 (bottom), body centerline z=12; hind-leg feet reach toward x=2, mid legs reach z=0/24 near x=8-15, front-leg hips near x=22 with feet curling back to x~21",
+  "ZY panel confirms legs symmetric about z=12 with same knee-height (y~4-6) and foot-height (y~15) as XY panel",
+  "cephalothorax attachment points for the four leg pairs read along x = 12 (rear), 15, 19, 22 (front) from XZ/XY panels"
+ ],
+ "notes": "Spider anatomy: cephalothorax (prosoma) is fused with the mouthparts/eyes so the head does NOT get its own leaf (protrusion test fails - it's trunk, not a flap); abdomen (opisthosoma) is trunk too, no external tail. Only the 4 leg pairs (8 legs total) count as leaves; small pedipalps/chelicerae visible in the renders are sub-flap detail per the spider-leg rule and are omitted. Spine was subdivided into pedicel + 3 cephalothorax segments purely to give each leg pair its own distinct, correctly-positioned attachment point along the carapace (read from the x=12/15/19/22 hip positions in the XZ/XY panels), matching the crab-style guidance that multiple leg pairs must not all hang off one hub. Each leg was split into 2 inferred segments (coxa/femur -> knee -> foot) since the render shows a clear knee bend but the intermediate joints between coxa/femur/patella/tibia are not separately distinguishable at this resolution. Left/right leg chains are fully independent, each rooted at its own spine node, joined only at the leaf level via the symmetric pairs list. y-values were flipped (frame dy = -(screen tick delta)) so hip->knee is a positive (upward) dy and knee->foot is negative (downward) dy, matching the arched-leg, feet-on-ground pose.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

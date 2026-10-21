@@ -1,0 +1,114 @@
+{
+ "roll": "guinea_pig_1",
+ "subject": "guinea_pig",
+ "subject_guess": "guinea_pig",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck_base",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck_base",
+   "length": 6,
+   "direction": [
+    0,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "rump",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0,
+    1,
+    -2
+   ]
+  },
+  {
+   "name": "front_leg_L",
+   "parent": "neck_base",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "front_leg_R",
+   "parent": "neck_base",
+   "length": 5,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hind_leg_L",
+   "parent": "rump",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hind_leg_R",
+   "parent": "rump",
+   "length": 5,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_leg_L",
+   "front_leg_R"
+  ],
+  [
+   "hind_leg_L",
+   "hind_leg_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "front_leg_L",
+  "front_leg_R",
+  "hind_leg_L",
+  "hind_leg_R"
+ ],
+ "readings": [
+  "Head at +z: ZY panel is the profile (nose-to-tail along z, ~24 units), XY panel is the front (face-on) view, XZ is the top-down view",
+  "ZY panel: ear/head tuft near (z=17,y=5); rump edge near (z=3,y=6); body-center reference ~(z=12,y=12) -- head lies forward(+z) and slightly up(frame +y) from center, rump lies backward(-z) and slightly up as well (arched back)",
+  "ZY panel: front foot nub at (z=18,y=22) -- descends sharply from chest area, confirming short legs",
+  "XY panel: left cheek edge (x=3,y=9), right cheek edge (x=21,y=9), top of head (x=12,y=2), left front foot (x=7,y=23), right front foot (x=17,y=23) -- gives lateral leg spread of about \u00b15 units from midline",
+  "XZ panel: ear fur at screen-top (small z reading, ~2-4) confirms head is at high frame-z (forward), consistent with ZY reading; body oval spans x=2-22, z=4-24 matching torso width/length",
+  "Hind foot position inferred symmetric to front foot near rump (z=6,y=22) since hind legs are occluded by the long fur in this breed"
+ ],
+ "notes": "Guinea pigs lack an external tail, so no tail leaf was added (the 'rump' node is purely an internal spine joint for hind-leg attachment). Head counted as one leaf since it forms a distinct facial lobe even on a short neck. Ears/cheek fur are sub-flap detail per protocol and were not given leaves. Legs are rendered as single-segment stubs (attachment joint -> foot) rather than multi-joint chains because the heavy long-hair fur in this render occludes any visible knee/hock joints; this simplification is an inference, not a measured joint. Hind-foot position was inferred symmetric to the front foot (same relative offset from its spine node) since the fur hides the hind legs entirely in all three panels. Left/right assigned by animal's own orientation using the front (XY) view, with +x taken as the animal's right side.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

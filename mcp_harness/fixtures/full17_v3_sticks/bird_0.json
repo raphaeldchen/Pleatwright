@@ -1,0 +1,183 @@
+{
+ "roll": "bird_0",
+ "subject": "bird",
+ "subject_guess": "Perched songbird (cardinal-like), standing on a branch",
+ "nodes": [
+  {
+   "name": "chest",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    -3,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 7,
+   "direction": [
+    -3,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "back",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    3,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tailbase",
+   "parent": "back",
+   "length": 3,
+   "direction": [
+    3,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "tailbase",
+   "length": 9,
+   "direction": [
+    8,
+    -4.5,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "back",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    -1,
+    -2,
+    -3
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    -1,
+    -2,
+    3
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "wing_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    5,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "wing_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    5,
+    -1,
+    3
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "wing_L",
+   "wing_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "wing_L",
+  "wing_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile, ZY is the front (bird faces left/-x, tail trails to +x)",
+  "XY: beak tip (0,8), head crest top (5,2), neck front (7,8), chest (10,9), back (14,8), rump (16,9), tail base (17,11), tail tip (24,13.5), hip (12,15), leg bend (11,17), foot on branch (10,19-20)",
+  "ZY (front view): head top (12,1), head width z=7.5 to 16.5 at y=8, body width z=7 to 17 at y=12, left leg top (9,16) bottom (9,21), right leg top (13.5,16) bottom (13.5,21)",
+  "XZ (top view): beak tip (0,12), head z=8-16 at x=2-6, folded wing bulges at x~4-14 reaching z~6 and z~18, body core z=9-15, tail x=14-24 tapering"
+ ],
+ "notes": "Bird faces -x (beak at x=0 in XY panel), so XY is the profile view; ZY is the front view (shows both legs and wing-width symmetric about z=12); XZ is the top view (confirms folded wings as lateral bulges and head/tail at opposite x ends). Grid's vertical axis (and the XZ panel's z-axis, which stands in for 'up' per the frame convention) increases downward, so all such deltas were sign-flipped to get positive-up frame directions (e.g. hip->knee->foot legs correctly get negative dy, descending). Spine modeled as chest(root)->back->{hip,tailbase}; chest->neck->head; chest->shoulder_L/R->wing_L/R, each leg/wing its own full chain to the shared spine node (hip or chest) per the two-full-chains rule. Segment splits inferred anatomically: neck/head separated from a single fused head-blob in the render; leg split into hip->knee->foot (thigh hidden inside body plumage, only shank+foot clearly visible); wings modeled as a single shoulder->wingtip segment since the wing is folded flat against the body with no visible elbow bend in this pose; tail given a short 'tailbase' spine stub before the tail leaf to keep the tail as a distinct flap off the rear spine rather than off the hub. Left/right assigned by convention (smaller z = bird's right) since exact camera-facing orientation of the ZY/XZ panels is not otherwise determinable; all leg and wing pairs are geometrically mirror-symmetric about z=12 so the choice does not affect proportions.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

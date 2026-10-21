@@ -1,0 +1,2882 @@
+[
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "exact",
+  "variant": "caller",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.3,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "exact",
+  "variant": "caller",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.4,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "exact",
+  "variant": "caller",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.5,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 1.0,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.98,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.96,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9486,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": true
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.94,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.92,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.9,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "exact",
+  "variant": "caller",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.85,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "exact",
+  "variant": "caller",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "canonical",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_0",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_1",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_2",
+  "packs": true,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "order",
+  "variant": "seeded_3",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural",
+  "packs": false,
+  "is_clamp": false
+ },
+ {
+  "subject": "insect",
+  "voxel": 64,
+  "prune": 0.6,
+  "scale": 0.8,
+  "family": "placement",
+  "variant": "structural+canonical",
+  "packs": false,
+  "is_clamp": false
+ }
+]

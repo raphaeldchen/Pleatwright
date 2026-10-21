@@ -1,0 +1,1287 @@
+[
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 21,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.5405,
+  "fusion": [
+   [
+    "foot_front_L",
+    "foot_front_R",
+    0.5405
+   ],
+   [
+    "foot_rear_L",
+    "foot_rear_R",
+    0.5556
+   ]
+  ],
+  "drop": -5.07,
+  "leaf_labels": [
+   "head",
+   "tail_tip",
+   "foot_front_L",
+   "foot_front_R",
+   "foot_rear_L",
+   "foot_rear_R"
+  ],
+  "rf": 0.6876783708826455,
+  "subject": "dog",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 23,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.6176,
+   "fusion": [
+    [
+     "front_paw_R",
+     "front_paw_L",
+     0.6176
+    ],
+    [
+     "rear_paw_R",
+     "rear_paw_L",
+     0.72
+    ]
+   ],
+   "drop": -5.07,
+   "leaf_labels": [
+    "head",
+    "tail_tip",
+    "front_paw_R",
+    "front_paw_L",
+    "rear_paw_R",
+    "rear_paw_L"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 24,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.6087,
+  "fusion": [
+   [
+    "front_foot_L",
+    "front_foot_R",
+    0.6087
+   ],
+   [
+    "hind_foot_L",
+    "hind_foot_R",
+    0.6364
+   ]
+  ],
+  "drop": -4.57,
+  "leaf_labels": [
+   "head",
+   "tail_tip",
+   "front_foot_L",
+   "front_foot_R",
+   "hind_foot_L",
+   "hind_foot_R"
+  ],
+  "rf": 0.04714045207910316,
+  "subject": "cat",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 16,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.4091,
+   "fusion": [
+    [
+     "hind_paw_L",
+     "hind_paw_R",
+     0.4091
+    ],
+    [
+     "front_paw_L",
+     "front_paw_R",
+     0.6667
+    ]
+   ],
+   "drop": -5.57,
+   "leaf_labels": [
+    "head",
+    "tail_tip",
+    "front_paw_L",
+    "front_paw_R",
+    "hind_paw_L",
+    "hind_paw_R"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 27,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.6364,
+  "fusion": [
+   [
+    "hoof_hind_L",
+    "hoof_hind_R",
+    0.6364
+   ],
+   [
+    "hoof_L",
+    "hoof_R",
+    0.7857
+   ]
+  ],
+  "drop": -4.1,
+  "leaf_labels": [
+   "head",
+   "tail",
+   "hoof_L",
+   "hoof_R",
+   "hoof_hind_L",
+   "hoof_hind_R"
+  ],
+  "rf": 0.07401401222688499,
+  "subject": "horse",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 16,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.0645,
+   "fusion": [
+    [
+     "hind_hoof_L",
+     "hind_hoof_R",
+     0.0645
+    ],
+    [
+     "front_hoof_L",
+     "front_hoof_R",
+     0.0938
+    ]
+   ],
+   "drop": -4.29,
+   "leaf_labels": [
+    "tail",
+    "hind_hoof_L",
+    "hind_hoof_R",
+    "head",
+    "front_hoof_L",
+    "front_hoof_R"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 17,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.6,
+  "fusion": [
+   [
+    "foot_front_L",
+    "foot_front_R",
+    0.6
+   ],
+   [
+    "foot_rear_L",
+    "foot_rear_R",
+    0.6667
+   ]
+  ],
+  "drop": -4.46,
+  "leaf_labels": [
+   "head",
+   "tail",
+   "foot_front_L",
+   "foot_front_R",
+   "foot_rear_L",
+   "foot_rear_R"
+  ],
+  "rf": 0.0,
+  "subject": "rabbit",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 19,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.6207,
+   "fusion": [
+    [
+     "paw_front_L",
+     "paw_front_R",
+     0.6207
+    ],
+    [
+     "paw_hind_L",
+     "paw_hind_R",
+     0.75
+    ]
+   ],
+   "drop": -3.86,
+   "leaf_labels": [
+    "head",
+    "tail",
+    "paw_front_L",
+    "paw_front_R",
+    "paw_hind_L",
+    "paw_hind_R"
+   ]
+  }
+ },
+ {
+  "leaves": 5,
+  "exp": 5,
+  "delta": 0,
+  "nodes": 16,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": true,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.4444,
+  "fusion": [
+   [
+    "foot_L_hind",
+    "foot_R_hind",
+    0.4444
+   ],
+   [
+    "foot_L_front",
+    "foot_R_front",
+    0.625
+   ]
+  ],
+  "drop": -9.44,
+  "leaf_labels": [
+   "head",
+   "foot_L_front",
+   "foot_R_front",
+   "foot_L_hind",
+   "foot_R_hind"
+  ],
+  "rf": 0.017677669529663688,
+  "subject": "guinea_pig",
+  "prev": {
+   "leaves": 5,
+   "exp": 5,
+   "delta": 0,
+   "nodes": 26,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.2692,
+   "fusion": [
+    [
+     "hind_left_foot",
+     "hind_right_foot",
+     0.2692
+    ],
+    [
+     "front_left_foot",
+     "front_right_foot",
+     0.4667
+    ]
+   ],
+   "drop": -3.0,
+   "leaf_labels": [
+    "head",
+    "hind_left_foot",
+    "hind_right_foot",
+    "front_left_foot",
+    "front_right_foot"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 7,
+  "delta": -1,
+  "nodes": 18,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": false,
+  "coverage": 0.8571,
+  "min_fusion": 0.5714,
+  "fusion": [
+   [
+    "footH_R",
+    "footH_L",
+    0.5714
+   ],
+   [
+    "foot_R",
+    "foot_L",
+    0.6538
+   ]
+  ],
+  "drop": -6.5,
+  "leaf_labels": [
+   "head",
+   "tail",
+   "foot_R",
+   "foot_L",
+   "footH_R",
+   "footH_L"
+  ],
+  "rf": 0.4179268517284535,
+  "subject": "elephant",
+  "prev": {
+   "leaves": 7,
+   "exp": 7,
+   "delta": 0,
+   "nodes": 18,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.1429,
+   "fusion": [
+    [
+     "front_foot_L",
+     "front_foot_R",
+     0.1429
+    ],
+    [
+     "back_foot_L",
+     "back_foot_R",
+     0.16
+    ]
+   ],
+   "drop": -5.36,
+   "leaf_labels": [
+    "head",
+    "trunk_tip",
+    "tail_tip",
+    "front_foot_L",
+    "front_foot_R",
+    "back_foot_L",
+    "back_foot_R"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 18,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.6471,
+  "fusion": [
+   [
+    "foot_L_front",
+    "foot_R_front",
+    0.6471
+   ],
+   [
+    "foot_L_hind",
+    "foot_R_hind",
+    0.6471
+   ]
+  ],
+  "drop": -3.18,
+  "leaf_labels": [
+   "head",
+   "tail",
+   "foot_L_front",
+   "foot_R_front",
+   "foot_L_hind",
+   "foot_R_hind"
+  ],
+  "rf": 0.19174584681178472,
+  "subject": "lizard",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 13,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": true,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.4118,
+   "fusion": [
+    [
+     "front_foot_L",
+     "front_foot_R",
+     0.4118
+    ],
+    [
+     "hind_foot_L",
+     "hind_foot_R",
+     0.5
+    ]
+   ],
+   "drop": -2.36,
+   "leaf_labels": [
+    "head",
+    "tail_tip",
+    "front_foot_R",
+    "front_foot_L",
+    "hind_foot_R",
+    "hind_foot_L"
+   ]
+  }
+ },
+ {
+  "leaves": 5,
+  "exp": 5,
+  "delta": 0,
+  "nodes": 16,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": true,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.5,
+  "fusion": [
+   [
+    "foot_L",
+    "foot_R",
+    0.5
+   ],
+   [
+    "hand_L",
+    "hand_R",
+    0.6316
+   ]
+  ],
+  "drop": -3.86,
+  "leaf_labels": [
+   "head",
+   "hand_L",
+   "hand_R",
+   "foot_L",
+   "foot_R"
+  ],
+  "rf": 0.6475475521638234,
+  "subject": "frog",
+  "prev": {
+   "leaves": 5,
+   "exp": 5,
+   "delta": 0,
+   "nodes": 19,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.5641,
+   "fusion": [
+    [
+     "foot_L",
+     "foot_R",
+     0.5641
+    ],
+    [
+     "hand_L",
+     "hand_R",
+     0.6316
+    ]
+   ],
+   "drop": -1.87,
+   "leaf_labels": [
+    "head",
+    "hand_L",
+    "hand_R",
+    "foot_L",
+    "foot_R"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 15,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": true,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.4583,
+  "fusion": [
+   [
+    "foot_L",
+    "foot_R",
+    0.4583
+   ],
+   [
+    "wing_L",
+    "wing_R",
+    0.5769
+   ]
+  ],
+  "drop": -1.93,
+  "leaf_labels": [
+   "head",
+   "tail",
+   "wing_R",
+   "wing_L",
+   "foot_R",
+   "foot_L"
+  ],
+  "rf": 0.21606040536255622,
+  "subject": "bird",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 18,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": true,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.4762,
+   "fusion": [
+    [
+     "foot_L",
+     "foot_R",
+     0.4762
+    ],
+    [
+     "wingtip_L",
+     "wingtip_R",
+     0.5238
+    ]
+   ],
+   "drop": -1.76,
+   "leaf_labels": [
+    "beak_tip",
+    "tail_tip",
+    "wingtip_L",
+    "wingtip_R",
+    "foot_R",
+    "foot_L"
+   ]
+  }
+ },
+ {
+  "leaves": 6,
+  "exp": 6,
+  "delta": 0,
+  "nodes": 12,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": true,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.3529,
+  "fusion": [
+   [
+    "foot_L",
+    "foot_R",
+    0.3529
+   ],
+   [
+    "wingtip_L",
+    "wingtip_R",
+    0.6
+   ]
+  ],
+  "drop": -1.27,
+  "leaf_labels": [
+   "head",
+   "wingtip_L",
+   "wingtip_R",
+   "foot_L",
+   "foot_R",
+   "tail"
+  ],
+  "rf": 0.035934973411004316,
+  "subject": "bat",
+  "prev": {
+   "leaves": 6,
+   "exp": 6,
+   "delta": 0,
+   "nodes": 17,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.3529,
+   "fusion": [
+    [
+     "foot_L",
+     "foot_R",
+     0.3529
+    ],
+    [
+     "wingtip_L",
+     "wingtip_R",
+     0.6923
+    ]
+   ],
+   "drop": -2.77,
+   "leaf_labels": [
+    "head",
+    "tail_tip",
+    "foot_L",
+    "foot_R",
+    "wingtip_L",
+    "wingtip_R"
+   ]
+  }
+ },
+ {
+  "leaves": 5,
+  "exp": 4,
+  "delta": 1,
+  "nodes": 11,
+  "pairs": 1,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": false,
+  "coverage": 1.0,
+  "min_fusion": 0.5789,
+  "fusion": [
+   [
+    "flipper_L",
+    "flipper_R",
+    0.5789
+   ]
+  ],
+  "drop": -3.7,
+  "leaf_labels": [
+   "head",
+   "flipper_R",
+   "flipper_L",
+   "dorsal_fin",
+   "tail_fluke"
+  ],
+  "rf": 0.15361295119718976,
+  "subject": "dolphin",
+  "prev": {
+   "leaves": 5,
+   "exp": 4,
+   "delta": 1,
+   "nodes": 10,
+   "pairs": 1,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": false,
+   "coverage": 1.0,
+   "min_fusion": 0.3333,
+   "fusion": [
+    [
+     "pect_left",
+     "pect_right",
+     0.3333
+    ]
+   ],
+   "drop": -2.07,
+   "leaf_labels": [
+    "tail",
+    "head",
+    "dorsal_tip",
+    "pect_left",
+    "pect_right"
+   ]
+  }
+ },
+ {
+  "leaves": 5,
+  "exp": 5,
+  "delta": 0,
+  "nodes": 6,
+  "pairs": 2,
+  "contract_ok": true,
+  "packs": true,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.5,
+  "fusion": [
+   [
+    "arm_upper_left",
+    "arm_upper_right",
+    0.5
+   ],
+   [
+    "arm_lower_left",
+    "arm_lower_right",
+    0.5
+   ]
+  ],
+  "drop": -1.06,
+  "leaf_labels": [
+   "arm_top",
+   "arm_upper_left",
+   "arm_upper_right",
+   "arm_lower_left",
+   "arm_lower_right"
+  ],
+  "rf": 0.029462782549439483,
+  "subject": "starfish",
+  "prev": {
+   "leaves": 5,
+   "exp": 5,
+   "delta": 0,
+   "nodes": 7,
+   "pairs": 2,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.9167,
+   "fusion": [
+    [
+     "arm_left",
+     "arm_right",
+     0.9167
+    ],
+    [
+     "arm_rearleft",
+     "arm_rearright",
+     0.9167
+    ]
+   ],
+   "drop": -0.93,
+   "leaf_labels": [
+    "arm_anterior",
+    "arm_left",
+    "arm_right",
+    "arm_rearleft",
+    "arm_rearright"
+   ]
+  }
+ },
+ {
+  "leaves": 9,
+  "exp": 9,
+  "delta": 0,
+  "nodes": 11,
+  "pairs": 4,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.48,
+  "fusion": [
+   [
+    "arm1_L_base",
+    "arm1_R_base",
+    0.48
+   ],
+   [
+    "arm2_L_base",
+    "arm2_R_base",
+    0.52
+   ],
+   [
+    "arm3_L_base",
+    "arm3_R_base",
+    0.5556
+   ],
+   [
+    "arm4_L_base",
+    "arm4_R_base",
+    0.5556
+   ]
+  ],
+  "drop": -8.24,
+  "leaf_labels": [
+   "head",
+   "arm1_L_base",
+   "arm1_R_base",
+   "arm2_L_base",
+   "arm2_R_base",
+   "arm3_L_base",
+   "arm3_R_base",
+   "arm4_L_base",
+   "arm4_R_base"
+  ],
+  "rf": 0.7524042044667332,
+  "subject": "octopus",
+  "prev": {
+   "leaves": 9,
+   "exp": 9,
+   "delta": 0,
+   "nodes": 18,
+   "pairs": 4,
+   "contract_ok": true,
+   "packs": true,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.6,
+   "fusion": [
+    [
+     "arm1L_tip",
+     "arm1R_tip",
+     0.6
+    ],
+    [
+     "arm2L_tip",
+     "arm2R_tip",
+     0.6471
+    ],
+    [
+     "arm3L_tip",
+     "arm3R_tip",
+     0.6471
+    ],
+    [
+     "arm4L_tip",
+     "arm4R_tip",
+     0.6667
+    ]
+   ],
+   "drop": -4.31,
+   "leaf_labels": [
+    "head",
+    "arm1L_tip",
+    "arm1R_tip",
+    "arm2L_tip",
+    "arm2R_tip",
+    "arm3L_tip",
+    "arm3R_tip",
+    "arm4L_tip",
+    "arm4R_tip"
+   ]
+  }
+ },
+ {
+  "leaves": 10,
+  "exp": 10,
+  "delta": 0,
+  "nodes": 31,
+  "pairs": 5,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.5,
+  "fusion": [
+   [
+    "leg3_foot_L",
+    "leg3_foot_R",
+    0.5
+   ],
+   [
+    "leg4_foot_L",
+    "leg4_foot_R",
+    0.5
+   ],
+   [
+    "claw_hand_L",
+    "claw_hand_R",
+    0.52
+   ],
+   [
+    "leg1_foot_L",
+    "leg1_foot_R",
+    0.5714
+   ],
+   [
+    "leg2_foot_L",
+    "leg2_foot_R",
+    0.5714
+   ]
+  ],
+  "drop": -4.23,
+  "leaf_labels": [
+   "claw_hand_L",
+   "claw_hand_R",
+   "leg1_foot_L",
+   "leg1_foot_R",
+   "leg2_foot_L",
+   "leg2_foot_R",
+   "leg3_foot_L",
+   "leg3_foot_R",
+   "leg4_foot_L",
+   "leg4_foot_R"
+  ],
+  "rf": 0.3996192163318138,
+  "subject": "crab",
+  "prev": {
+   "leaves": 11,
+   "exp": 10,
+   "delta": 1,
+   "nodes": 34,
+   "pairs": 5,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": false,
+   "coverage": 1.0,
+   "min_fusion": 0.5385,
+   "fusion": [
+    [
+     "L4_foot",
+     "R4_foot",
+     0.5385
+    ],
+    [
+     "L2_foot",
+     "R2_foot",
+     0.6667
+    ],
+    [
+     "L3_foot",
+     "R3_foot",
+     0.6667
+    ],
+    [
+     "L_cheliped_claw",
+     "R_cheliped_claw",
+     0.8462
+    ],
+    [
+     "L1_foot",
+     "R1_foot",
+     0.875
+    ]
+   ],
+   "drop": -3.77,
+   "leaf_labels": [
+    "rostrum",
+    "L_cheliped_claw",
+    "R_cheliped_claw",
+    "L1_foot",
+    "R1_foot",
+    "L2_foot",
+    "R2_foot",
+    "L3_foot",
+    "R3_foot",
+    "L4_foot",
+    "R4_foot"
+   ]
+  }
+ },
+ {
+  "leaves": 9,
+  "exp": 9,
+  "delta": 0,
+  "nodes": 26,
+  "pairs": 4,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.6522,
+  "fusion": [
+   [
+    "leg1_L_foot",
+    "leg1_R_foot",
+    0.6522
+   ],
+   [
+    "leg2_L_foot",
+    "leg2_R_foot",
+    0.6522
+   ],
+   [
+    "leg3_L_foot",
+    "leg3_R_foot",
+    0.6522
+   ],
+   [
+    "leg4_L_foot",
+    "leg4_R_foot",
+    0.6522
+   ]
+  ],
+  "drop": -4.6,
+  "leaf_labels": [
+   "abdomen",
+   "leg1_L_foot",
+   "leg1_R_foot",
+   "leg2_L_foot",
+   "leg2_R_foot",
+   "leg3_L_foot",
+   "leg3_R_foot",
+   "leg4_L_foot",
+   "leg4_R_foot"
+  ],
+  "rf": 0.0,
+  "subject": "spider",
+  "prev": {
+   "leaves": 10,
+   "exp": 9,
+   "delta": 1,
+   "nodes": 36,
+   "pairs": 4,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": false,
+   "coverage": 1.0,
+   "min_fusion": 0.75,
+   "fusion": [
+    [
+     "leg2R_tarsus",
+     "leg2L_tarsus",
+     0.75
+    ],
+    [
+     "leg3R_tarsus",
+     "leg3L_tarsus",
+     0.75
+    ],
+    [
+     "leg4R_tarsus",
+     "leg4L_tarsus",
+     0.7727
+    ],
+    [
+     "leg1R_tarsus",
+     "leg1L_tarsus",
+     0.7826
+    ]
+   ],
+   "drop": -3.94,
+   "leaf_labels": [
+    "abdomen",
+    "head",
+    "leg1R_tarsus",
+    "leg1L_tarsus",
+    "leg2R_tarsus",
+    "leg2L_tarsus",
+    "leg3R_tarsus",
+    "leg3L_tarsus",
+    "leg4R_tarsus",
+    "leg4L_tarsus"
+   ]
+  }
+ },
+ {
+  "leaves": 11,
+  "exp": 9,
+  "delta": 2,
+  "nodes": 34,
+  "pairs": 5,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": false,
+  "coverage": 1.0,
+  "min_fusion": 0.3846,
+  "fusion": [
+   [
+    "claw_tip_L",
+    "claw_tip_R",
+    0.3846
+   ],
+   [
+    "foot_2L",
+    "foot_2R",
+    0.5
+   ],
+   [
+    "foot_3L",
+    "foot_3R",
+    0.5
+   ],
+   [
+    "foot_1L",
+    "foot_1R",
+    0.5455
+   ],
+   [
+    "foot_4L",
+    "foot_4R",
+    0.5455
+   ]
+  ],
+  "drop": -1.4,
+  "leaf_labels": [
+   "claw_tip_R",
+   "claw_tip_L",
+   "stinger_tip",
+   "foot_1R",
+   "foot_2R",
+   "foot_3R",
+   "foot_4R",
+   "foot_1L",
+   "foot_2L",
+   "foot_3L",
+   "foot_4L"
+  ],
+  "rf": 0.06588078458684124,
+  "subject": "scorpion",
+  "prev": {
+   "leaves": 11,
+   "exp": 9,
+   "delta": 2,
+   "nodes": 35,
+   "pairs": 5,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": false,
+   "coverage": 1.0,
+   "min_fusion": 0.4138,
+   "fusion": [
+    [
+     "pincer_L",
+     "pincer_R",
+     0.4138
+    ],
+    [
+     "foot_p2_L",
+     "foot_p2_R",
+     0.5
+    ],
+    [
+     "foot_p3_L",
+     "foot_p3_R",
+     0.5
+    ],
+    [
+     "foot_p1_L",
+     "foot_p1_R",
+     0.5417
+    ],
+    [
+     "foot_p4_L",
+     "foot_p4_R",
+     0.5417
+    ]
+   ],
+   "drop": -3.24,
+   "leaf_labels": [
+    "stinger",
+    "pincer_L",
+    "pincer_R",
+    "foot_p1_L",
+    "foot_p1_R",
+    "foot_p2_L",
+    "foot_p2_R",
+    "foot_p3_L",
+    "foot_p3_R",
+    "foot_p4_L",
+    "foot_p4_R"
+   ]
+  }
+ },
+ {
+  "leaves": 8,
+  "exp": 8,
+  "delta": 0,
+  "nodes": 22,
+  "pairs": 3,
+  "contract_ok": true,
+  "packs": false,
+  "label_exact": true,
+  "coverage": 1.0,
+  "min_fusion": 0.5652,
+  "fusion": [
+   [
+    "foot_mid_L",
+    "foot_mid_R",
+    0.5652
+   ],
+   [
+    "foot_front_L",
+    "foot_front_R",
+    0.5833
+   ],
+   [
+    "foot_hind_L",
+    "foot_hind_R",
+    0.6
+   ]
+  ],
+  "drop": -3.4,
+  "leaf_labels": [
+   "head",
+   "abdomen",
+   "foot_front_L",
+   "foot_front_R",
+   "foot_mid_L",
+   "foot_mid_R",
+   "foot_hind_L",
+   "foot_hind_R"
+  ],
+  "rf": 0.026352313834736497,
+  "subject": "ant",
+  "prev": {
+   "leaves": 8,
+   "exp": 8,
+   "delta": 0,
+   "nodes": 29,
+   "pairs": 3,
+   "contract_ok": true,
+   "packs": false,
+   "label_exact": true,
+   "coverage": 1.0,
+   "min_fusion": 0.6071,
+   "fusion": [
+    [
+     "front_left_foot",
+     "front_right_foot",
+     0.6071
+    ],
+    [
+     "mid_left_foot",
+     "mid_right_foot",
+     0.6071
+    ],
+    [
+     "hind_left_foot",
+     "hind_right_foot",
+     0.6071
+    ]
+   ],
+   "drop": -5.44,
+   "leaf_labels": [
+    "head",
+    "gaster",
+    "front_left_foot",
+    "front_right_foot",
+    "mid_left_foot",
+    "mid_right_foot",
+    "hind_left_foot",
+    "hind_right_foot"
+   ]
+  }
+ }
+]

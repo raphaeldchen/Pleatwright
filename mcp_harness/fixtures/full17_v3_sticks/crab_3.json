@@ -1,0 +1,311 @@
+{
+ "roll": "crab_3",
+ "subject": "crab",
+ "subject_guess": "crab",
+ "nodes": [
+  {
+   "name": "carapace",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "carapace_front",
+   "parent": "carapace",
+   "length": 3,
+   "direction": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "carapace_row1",
+   "parent": "carapace_front",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "carapace_row2",
+   "parent": "carapace_row1",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "carapace_row3",
+   "parent": "carapace_row2",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "carapace_row4",
+   "parent": "carapace_row3",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "claw_upper_L",
+   "parent": "carapace_front",
+   "length": 6,
+   "direction": [
+    -1,
+    1,
+    0.3
+   ]
+  },
+  {
+   "name": "claw_tip_L",
+   "parent": "claw_upper_L",
+   "length": 5,
+   "direction": [
+    -1,
+    0.5,
+    0.6
+   ]
+  },
+  {
+   "name": "claw_upper_R",
+   "parent": "carapace_front",
+   "length": 6,
+   "direction": [
+    1,
+    1,
+    0.3
+   ]
+  },
+  {
+   "name": "claw_tip_R",
+   "parent": "claw_upper_R",
+   "length": 5,
+   "direction": [
+    1,
+    0.5,
+    0.6
+   ]
+  },
+  {
+   "name": "leg1_knee_L",
+   "parent": "carapace_row1",
+   "length": 5,
+   "direction": [
+    -1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg1_foot_L",
+   "parent": "leg1_knee_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg1_knee_R",
+   "parent": "carapace_row1",
+   "length": 5,
+   "direction": [
+    1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg1_foot_R",
+   "parent": "leg1_knee_R",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg2_knee_L",
+   "parent": "carapace_row2",
+   "length": 5,
+   "direction": [
+    -1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg2_foot_L",
+   "parent": "leg2_knee_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg2_knee_R",
+   "parent": "carapace_row2",
+   "length": 5,
+   "direction": [
+    1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg2_foot_R",
+   "parent": "leg2_knee_R",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg3_knee_L",
+   "parent": "carapace_row3",
+   "length": 5,
+   "direction": [
+    -1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg3_foot_L",
+   "parent": "leg3_knee_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg3_knee_R",
+   "parent": "carapace_row3",
+   "length": 5,
+   "direction": [
+    1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg3_foot_R",
+   "parent": "leg3_knee_R",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg4_knee_L",
+   "parent": "carapace_row4",
+   "length": 5,
+   "direction": [
+    -1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg4_foot_L",
+   "parent": "leg4_knee_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg4_knee_R",
+   "parent": "carapace_row4",
+   "length": 5,
+   "direction": [
+    1,
+    -0.3,
+    0
+   ]
+  },
+  {
+   "name": "leg4_foot_R",
+   "parent": "leg4_knee_R",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_tip_L",
+   "claw_tip_R"
+  ],
+  [
+   "leg1_foot_L",
+   "leg1_foot_R"
+  ],
+  [
+   "leg2_foot_L",
+   "leg2_foot_R"
+  ],
+  [
+   "leg3_foot_L",
+   "leg3_foot_R"
+  ],
+  [
+   "leg4_foot_L",
+   "leg4_foot_R"
+  ]
+ ],
+ "leaves": [
+  "claw_tip_L",
+  "claw_tip_R",
+  "leg1_foot_L",
+  "leg1_foot_R",
+  "leg2_foot_L",
+  "leg2_foot_R",
+  "leg3_foot_L",
+  "leg3_foot_R",
+  "leg4_foot_L",
+  "leg4_foot_R"
+ ],
+ "readings": [
+  "Head/mouth is fused into the carapace (no neck, no head leaf). In the XZ (top) panel the two claws sit at tick_z\u22480-4 (top of that panel); because z is the UP axis in the XZ panel while ticks run downward, this flips to actual z\u224820-24 (large +z). The ZY (profile) panel confirms the raised claw/pincer sits at tick_z\u224813-24 (right side), i.e. large +z, matching. So the head/mouth end of the animal is at +z. Because the crab is widest across its claws (x-axis, tick 0 to 24 in the XY panel = its longest extent), the XY panel shows the FRONT of the animal and the ZY panel is the PROFILE (z=front/back axis, y=up/down).",
+  "Carapace bounding box: XY panel shows the carapace spanning tick x\u22484-20 (width ~16u, centered x\u224812). ZY panel shows the carapace spanning tick z\u22486-20 (depth ~14u) and tick y\u22486-16, i.e. actual y (24-tick) \u22488-18 (height ~10u).",
+  "Claw geometry (ZY panel): base attaches to carapace at tick (z=13,y=16) -> actual y=24-16=8; elbow bend at tick (z=16,y=9) -> actual y=15; tip/pincer at tick (z=20,y=2) -> actual y=22. So from base to tip the claw direction is +z (forward) and +y (upward) - it is a raised limb, not a leg.",
+  "Walking-leg attachment row (ZY panel): hip line runs along the carapace at tick y\u224814 (actual y=10), staggered across tick z\u22489,12,15,18 for the four leg pairs (pair 1 nearest the claws/front, pair 4 nearest the rear). Each leg's knee bends near tick y\u224819 (actual y=5) and the foot reaches tick y\u224824 (actual y=0, ground), so dy is negative from hip->knee->foot as required.",
+  "XY (front) panel: the eight leg feet and two claw tips spread laterally from tick x\u22480 (leftmost) to tick x\u224824 (rightmost), symmetric about the carapace center tick x\u224812, confirming legs/claws run along \u00b1x for the animal's left/right sides.",
+  "XZ (top) panel: legs occupy tick_z\u22488-20 (screen), i.e. actual z (24-tick) \u22484-16, confirming the four leg rows sit progressively further back (toward -z, low actual z) than the claw attachment which sits at actual z\u224820-24."
+ ],
+ "notes": "Crab: cephalothorax (carapace) is a single fused trunk with no separate head leaf (mouth/eyes do not protrude as a distinct lobe). Ten leaves total: 2 chelae (claws) + 8 walking legs (4 pairs), no external tail. Spine authored as a short front-to-back chain (carapace -> carapace_front -> row1..row4) so each of the four leg-pair rows and the claw pair attach at their own point along the body rather than at one hub, matching the mesh's actual attachment lines seen in the ZY/XZ panels. Each limb was split into two segments by inference: claws into upper-arm (merus-like) + tip (chela), legs into hip/knee + foot; the render only clearly shows one strong bend per limb so a 2-segment chain was used rather than over-splitting. All four leg pairs were authored with IDENTICAL segment lengths/directions (only their spine attachment point differs) even though the render shows them at different mid-stride phases, per the proportion-not-pose rule. Left/right assigned by animal's own sides given head/front established at +z; +x taken as the animal's right, -x as its left. Vertical (dy) sign was checked: hip->knee->foot for every leg is negative (goes down toward the ground), and root length is 0 with direction [0,0,0] as required.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

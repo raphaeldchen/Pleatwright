@@ -1,0 +1,248 @@
+{
+ "roll": "spider_0",
+ "subject": "spider",
+ "n": 0,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.355556
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 3,
+   "parent_id": 2,
+   "length": 0.311111
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.355556
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 6,
+   "parent_id": 5,
+   "length": 0.311111
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.355556
+  },
+  {
+   "id": 8,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 9,
+   "parent_id": 8,
+   "length": 0.311111
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.355556
+  },
+  {
+   "id": 11,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.311111
+  },
+  {
+   "id": 13,
+   "parent_id": 12,
+   "length": 0.355556
+  },
+  {
+   "id": 14,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.311111
+  },
+  {
+   "id": 16,
+   "parent_id": 15,
+   "length": 0.355556
+  },
+  {
+   "id": 17,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 18,
+   "parent_id": 17,
+   "length": 0.311111
+  },
+  {
+   "id": 19,
+   "parent_id": 18,
+   "length": 0.355556
+  },
+  {
+   "id": 20,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 21,
+   "parent_id": 20,
+   "length": 0.355556
+  },
+  {
+   "id": 22,
+   "parent_id": 21,
+   "length": 0.4
+  },
+  {
+   "id": 23,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 24,
+   "parent_id": 23,
+   "length": 0.355556
+  },
+  {
+   "id": 25,
+   "parent_id": 24,
+   "length": 0.4
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 7,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 10,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 13,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 16,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 19,
+   "parent_id": 0,
+   "length": 0.755556
+  },
+  {
+   "id": 22,
+   "parent_id": 0,
+   "length": 0.844445
+  },
+  {
+   "id": 25,
+   "parent_id": 0,
+   "length": 0.844445
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.355556
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   4,
+   7
+  ],
+  [
+   10,
+   13
+  ],
+  [
+   16,
+   19
+  ],
+  [
+   22,
+   25
+  ]
+ ],
+ "names": {
+  "0": "thorax",
+  "1": "abdomen",
+  "2": "hip1_L",
+  "3": "knee1_L",
+  "4": "foot1_L",
+  "5": "hip1_R",
+  "6": "knee1_R",
+  "7": "foot1_R",
+  "8": "hip2_L",
+  "9": "knee2_L",
+  "10": "foot2_L",
+  "11": "hip2_R",
+  "12": "knee2_R",
+  "13": "foot2_R",
+  "14": "hip3_L",
+  "15": "knee3_L",
+  "16": "foot3_L",
+  "17": "hip3_R",
+  "18": "knee3_R",
+  "19": "foot3_R",
+  "20": "hip4_L",
+  "21": "knee4_L",
+  "22": "foot4_L",
+  "23": "hip4_R",
+  "24": "knee4_R",
+  "25": "foot4_R"
+ },
+ "leaves": [
+  "foot1_L",
+  "foot1_R",
+  "foot2_L",
+  "foot2_R",
+  "foot3_L",
+  "foot3_R",
+  "foot4_L",
+  "foot4_R"
+ ],
+ "served_stage": "flatten",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.299267) [ide: rescued by lossless chain collapse: the exact tree did not pack, so the backend collapsed its pass-through joints ('flatten+canonical') and recompiled. A joint with exactly one child carries no flap and no branch, so merging it into its parent edge is LOSSLESS: every flap you asked for is present, every bilateral pair is intact, and the distance between any two flap tips is exactly what you specified. What changed is that intermediate joints along a limb no longer appear as separate nodes, so an edge length in this base may be the SUM of two you sent] [ide: mv-symmetrize-not-searched: the mirror-symmetry M/V search did NOT run on this base (orbit_space_too_large). 53 sigma-orbits (2**53) exceeds MAX_ORBITS=45; the search was NOT RUN. This is not a count of targets -- NOTHING is known about whether a symmetric relabel of this fold exists. Do not read it as the exhausted 0 that mesh-dog and mesh-bird report. This base's mountain/valley assignment is therefore the packer's, unexamined for mirror symmetry -- it is NOT a finding that no symmetric relabelling exists, and it must not be quoted as one]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.999999997, 0.680228315], [0.680228315, 0.999999997], [0.840114156, 0.840114156], [0.770334235, 0.770334235], [0.667716683, 0.667716683], [0.671720407, 0.774047391], [0.774047391, 0.671720407], [0.999999996, 4e-09], [0.697966955, 0.33657674], [0.848983476, 0.168288372], [0.773887271, 0.100899475], [0.357391908, 4e-09], [0.537139856, 0.177637731], [0.610106148, 0.103804647], [0.69199671, 0.137441931], [0.610106148, 4e-09], [0.69199671, 4e-09], [0.773887271, 4e-09], [0.70296299, 0.338755476], [0.994826472, 0.674856322], [0.850093555, 0.508186428], [0.912359839, 0.45411559], [0.869769991, 0.340114159], [0.777842587, 0.570927772], [0.913421238, 0.226112728], [0.677396775, 0.561751854], [0.999999996, 0.226112728], [0.999999996, 0.340114159], [0.999999996, 0.45411559], [0.338755476, 0.70296299], [0.674856322, 0.994826472], [0.508186428, 0.850093555], [0.45411559, 0.912359839], [0.340114159, 0.869769991], [0.570927772, 0.777842587], [4e-09, 0.999999996], [0.33657674, 0.697966955], [0.168288372, 0.848983476], [0.226112728, 0.913421238], [0.561751854, 0.677396775], [0.45411559, 0.999999996], [0.340114159, 0.999999996], [0.226112728, 0.999999996], [0.100899475, 0.773887271], [4e-09, 0.357391908], [0.177637731, 0.537139856], [0.103804647, 0.610106148], [0.137441931, 0.69199671], [4e-09, 0.773887271], [4e-09, 0.69199671], [4e-09, 0.610106148], [0.357617928, 0.640342578], [0.640342578, 0.357617928], [0.498980253, 0.498980253], [0.358450152, 0.358450157], [0.550125365, 0.550125365], [0.178695956, 0.178695956]], \"edges_vertices\": [[2, 3], [5, 3], [6, 3], [0, 3], [3, 1], [0, 2], [2, 1], [3, 4], [4, 5], [5, 1], [4, 6], [6, 0], [9, 10], [12, 13], [7, 10], [10, 14], [14, 8], [7, 9], [9, 8], [14, 13], [13, 11], [11, 12], [12, 8], [15, 13], [16, 14], [17, 10], [11, 15], [15, 16], [16, 17], [17, 7], [20, 21], [19, 21], [21, 22], [22, 18], [18, 20], [20, 19], [20, 23], [18, 23], [23, 19], [9, 24], [6, 23], [25, 23], [8, 18], [22, 24], [24, 7], [19, 0], [26, 24], [27, 22], [28, 21], [7, 26], [26, 27], [27, 28], [28, 0], [23, 4], [4, 25], [25, 8], [31, 32], [29, 33], [33, 32], [32, 30], [29, 31], [31, 30], [31, 34], [30, 34], [34, 29], [37, 38], [39, 34], [5, 34], [35, 38], [38, 33], [29, 36], [35, 37], [37, 36], [34, 4], [4, 39], [39, 36], [30, 1], [40, 32], [41, 33], [42, 38], [35, 42], [42, 41], [41, 40], [40, 1], [37, 43], [45, 46], [36, 47], [47, 43], [43, 35], [47, 46], [46, 44], [48, 43], [49, 47], [50, 46], [44, 50], [50, 49], [49, 48], [48, 35], [44, 45], [45, 36], [53, 54], [52, 54], [54, 51], [51, 53], [53, 52], [53, 55], [51, 55], [55, 52], [45, 54], [56, 54], [12, 54], [25, 55], [39, 55], [36, 51], [54, 44], [54, 11], [11, 56], [56, 44], [52, 8], [55, 4]], \"edges_assignment\": [\"V\", \"M\", \"M\", \"V\", \"V\", \"B\", \"B\", \"V\", \"M\", \"M\", \"V\", \"M\", \"V\", \"M\", \"V\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"M\", \"V\", \"V\", \"M\", \"M\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"B\", \"B\", \"B\", \"B\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"V\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"M\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"V\", \"B\", \"B\", \"B\", \"B\", \"M\", \"M\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"V\", \"V\", \"V\", \"B\", \"B\", \"V\", \"V\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

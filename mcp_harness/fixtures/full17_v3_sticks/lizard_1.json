@@ -1,0 +1,188 @@
+{
+ "roll": "lizard_1",
+ "subject": "lizard",
+ "subject_guess": "lizard (sprawling reptile, e.g. gecko/salamander-type)",
+ "nodes": [
+  {
+   "name": "torso",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shoulder",
+   "parent": "torso",
+   "length": 4,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "torso",
+   "length": 4,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "shoulder",
+   "length": 2,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 5,
+   "direction": [
+    -5,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "hip",
+   "length": 2,
+   "direction": [
+    2,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "tail_base",
+   "length": 7,
+   "direction": [
+    7,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "front_elbow_L",
+   "parent": "shoulder",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "front_paw_L",
+   "parent": "front_elbow_L",
+   "length": 6,
+   "direction": [
+    -3,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "front_elbow_R",
+   "parent": "shoulder",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "front_paw_R",
+   "parent": "front_elbow_R",
+   "length": 5,
+   "direction": [
+    -2,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "hind_knee_L",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "hind_paw_L",
+   "parent": "hind_knee_L",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "hind_knee_R",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "hind_paw_R",
+   "parent": "hind_knee_R",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    -4
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_paw_L",
+   "front_paw_R"
+  ],
+  [
+   "hind_paw_L",
+   "hind_paw_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "front_paw_L",
+  "front_paw_R",
+  "hind_paw_L",
+  "hind_paw_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (snout left, tail right); XZ panel is the dorsal/top view (legs splay in z); ZY panel is the front view (torso hump with legs projecting to both sides)",
+  "XY: snout (1,11), neck/head-junction (6,9) -> head length ~5-6",
+  "XY: withers/shoulder (8,9), hip (15,9) -> torso length ~7 (back is flat, both at y=9)",
+  "XY: rump/tail-base (17,10), tail tip (24,12) -> tail length ~7-8, slight downward droop",
+  "XY: belly/foot contact line around y=15 for both front and hind feet",
+  "XZ (top view): spine centerline z=12 through torso/head/tail; front paws at x~5-6, z~4 and z~20 (mirrored either side of spine) -> leg splay ~8 units in z",
+  "XZ: hind paws at x~14-15, z~4 and z~20, same splay as front legs (equal leg length enforced per proportion rule)",
+  "ZY (front view): torso hump z=8-16 centered on z=12, confirms leg splay magnitude used for XZ readings",
+  "Vertical(y) flip applied: screen-down = -dy in mesh frame, confirmed hip(9)->foot(15) descends so dy negative"
+ ],
+ "notes": "Head placed at -x based on XY panel (narrower snout end) and confirmed by XZ panel head/tail taper. XY is the profile view; XZ is the dorsal (top) view showing the characteristic sprawled-leg splay in z; ZY is the front view, used only to cross-check torso width/leg spread magnitude. Vertical axes (XY's y, XZ's z, ZY's y) all needed the down-is-negative flip described in the prompt; horizontal axes (x in XY/XZ, z in ZY) needed no flip. Elbow/knee joints were not separately labeled in the render but were inferred from the visible bend in the top-view leg silhouettes (upper limb angling down-and-out to a joint, then forearm angling further down-and-out to the paw) - a standard sprawling-reptile limb topology. Neck/head split inferred from the narrowing profile silhouette at x\u22486. Tail was given its own base node to capture the slight downward droop visible before it straightens out toward the tip. All four legs were authored with equal segment lengths (5,6 units) reflecting proportional symmetry regardless of the slightly asymmetric mid-stride pose visible in the top view. Left/right assigned by z-sign (paws at z-tick\u22484 called _L, z-tick\u224820 called _R) for internal consistency; exact biological left/right cannot be fully disambiguated from a dorsal-only reading but the pairing/topology is what matters for the tree.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

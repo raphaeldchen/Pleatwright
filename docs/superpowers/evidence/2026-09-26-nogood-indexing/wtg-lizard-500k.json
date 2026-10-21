@@ -1,0 +1,21 @@
+{
+ "subject": "lizard",
+ "assign_budget": 500000,
+ "outcome": {
+  "kind": "assign_returned",
+  "detail": "AssignFail(kind='budget', site=500000)"
+ },
+ "rejections": 113,
+ "total_secs": 930.19,
+ "global_check_secs": 178.15,
+ "hits_nogood_secs": 11.88,
+ "remainder_secs": 740.16,
+ "global_check_pct": 19.15,
+ "hits_nogood_pct": 1.28,
+ "remainder_pct": 79.57,
+ "hits_nogood_calls": 500831,
+ "hits_nogood_us_per_call": 23.724,
+ "per_candidate_layer_secs": 1.577,
+ "clause_size_median_creases": 2069,
+ "note": "hits_nogood_secs is an UPPER BOUND: the two perf_counter calls added per invocation are themselves counted inside it."
+}

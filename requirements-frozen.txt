@@ -1,0 +1,61 @@
+# Exact transitive closure of requirements.txt, read on 2026-10-07 from the
+# verified venv (Python 3.14, macOS arm64) by walking each requirement's
+# installed metadata (platform markers evaluated for darwin). The suite passes
+# against this set.
+#
+# This is a RECORD, not the install target -- use requirements.txt for that.
+# It exists so that a lost venv can be rebuilt to a known-good state without
+# reconstructing it from imports. The TreeMaker-era record (mcp, skeletor,
+# scikit-learn, ...) is on archive/treemaker-box-pleat.
+
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.13.0
+certifi==2026.5.20
+click==8.4.1
+contourpy==1.4.0
+cycler==0.12.1
+distro==1.9.0
+fastapi==0.138.1
+filelock==3.29.4
+fonttools==4.66.1
+fsspec==2026.6.0
+gradio_client==2.5.0
+h11==0.16.0
+hf-xet==1.5.1
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==1.21.0
+idna==3.18
+iniconfig==2.3.0
+jiter==0.15.0
+kiwisolver==1.5.1
+markdown-it-py==4.2.0
+matplotlib==3.11.2
+mdurl==0.1.2
+numpy==2.4.3
+openai==2.43.0
+packaging==26.2
+pillow==12.2.0
+pluggy==1.6.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+Pygments==2.20.0
+pyparsing==3.3.3
+pytest==9.0.3
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.2
+python-sat==1.9.dev15
+PyYAML==6.0.3
+rich==15.0.0
+shellingham==1.5.4
+six==1.17.0
+sniffio==1.3.1
+starlette==1.2.1
+tqdm==4.68.2
+trimesh==4.12.2
+typer==0.25.1
+typing_extensions==4.15.0
+typing-inspection==0.4.2
+uvicorn==0.49.0
+websockets==16.0

@@ -1,0 +1,58 @@
+{
+ "tag": "sonnet5",
+ "uri": "ws://127.0.0.1:8010/ws/chat",
+ "started": "2026-07-25T15:58:56.104+00:00",
+ "injections": 2,
+ "repair_turns": 1,
+ "errored_turns": 0,
+ "turns": [
+  {
+   "kind": "user:design",
+   "status": "turn_end",
+   "frames": 11
+  },
+  {
+   "kind": "autonomous:repair",
+   "status": "turn_end",
+   "frames": 6
+  },
+  {
+   "kind": "user:foldless",
+   "status": "turn_end",
+   "frames": 1
+  }
+ ],
+ "criteria": {
+  "echo_text": "[CP AUDIT] The compile backend exhausted its nudge ladder and the served base carries CONFIRMED interior defects -- [ide: cp-audit: 5 interior Maekawa + 0 interior Kawasaki violation(s), closure max error 1.5e-08 remain in the best of 3 packed nudge rung(s); real interior defects, NOT hull frontier -- served best-effort]\nConfirmed [real] vertices (paper frame):\n  Vertex paper(0.51867, 0.56511) [canvas (7.469, 26.042)] [real]: ANGLES (Kawasaki) \u2014 angles around this vertex don't alternate-sum to 180\u00b0; cannot be fixed by reassigning M/V \u2014 adjust crease positions. (re-audit: |M-V|=4, Kawasaki residual 1.16e-06 deg)\n  Vertex paper(0.61026, 0.35392) [canvas (44.103, -58.434)] [real]: ANGLES (Kawasaki) \u2014 angles around this vertex don't alternate-sum to 180\u00b0; cannot be fixed by reassigning M/V \u2014 adjust crease positions. (re-audit: |M-V|=0, Kawasaki residual 1.32e-06 deg)\n  Vertex paper(0.78724, 0.46685) [canvas (114.895, -13.261)] [real]: MAEKAWA \u2014 mountain/valley counts violate |M-V|=2 (EQUAL); adjust incident M/V assignments. (re-audit: |M-V|=0, Kawasaki residual 3.02e-07 deg)\n  Vertex paper(0.73016, 0.73267) [canvas (92.065, 93.067)] [real]: MAEKAWA \u2014 too many valleys here (Maekawa's theorem needs |M-V|=2); flip one incident V crease to M. (re-audit: |M-V|=4, Kawasaki residual 6.07e-07 deg)\n  Vertex paper(0.47773, 0.52826) [canvas (-8.906, 11.305)] [real]: MAEKAWA \u2014 mountain/valley counts violate |M-V|=2 (EQUAL); adjust incident M/V assignments. (re-audit: |M-V|=0, Kawasaki residual 9.64e-07 deg)\nRepair now: micro-adjust the tree's edge LENGTHS by a few percent, biasing the flaps nearest the listed paper-frame vertices; keep the topology and symmetric_pairs IDENTICAL. Recompiling an identical tree is a deterministic no-op -- change at least one length. Then recompile ONCE and re-lint; this recompile is exempt from the 3-compile HARD LIMIT. Report repaired-or-still-violating honestly and serve the better base.",
+  "second_echo_text": "[CP AUDIT] The compile backend exhausted its nudge ladder and the served base carries CONFIRMED interior defects -- [ide: cp-audit: 5 interior Maekawa + 0 interior Kawasaki violation(s), closure max error 1.8e-08 remain in the best of 2 packed nudge rung(s); real interior defects, NOT hull frontier -- served best-effort]\nConfirmed [real] vertices (paper frame):\n  Vertex paper(0.73110, 0.73361) [canvas (92.440, 93.446)] [real]: MAEKAWA \u2014 too many valleys here (Maekawa's theorem needs |M-V|=2); flip one incident V crease to M. (re-audit: |M-V|=4, Kawasaki residual 4.48e-07 deg)\n  Vertex paper(0.79483, 0.45876) [canvas (117.932, -16.497)] [real]: MAEKAWA \u2014 mountain/valley counts violate |M-V|=2 (EQUAL); adjust incident M/V assignments. (re-audit: |M-V|=0, Kawasaki residual 9.65e-08 deg)\n  Vertex paper(0.48501, 0.52114) [canvas (-5.995, 8.458)] [real]: ANGLES (Kawasaki) \u2014 angles around this vertex don't alternate-sum to 180\u00b0; cannot be fixed by reassigning M/V \u2014 adjust crease positions. (re-audit: |M-V|=0, Kawasaki residual 1.46e-06 deg)\n  Vertex paper(0.52323, 0.55653) [canvas (9.292, 22.610)] [real]: ANGLES (Kawasaki) \u2014 angles around this vertex don't alternate-sum to 180\u00b0; cannot be fixed by reassigning M/V \u2014 adjust crease positions. (re-audit: |M-V|=4, Kawasaki residual 2.23e-06 deg)\n  Vertex paper(0.62466, 0.34448) [canvas (49.865, -62.208)] [real]: MAEKAWA \u2014 mountain/valley counts violate |M-V|=2 (EQUAL); adjust incident M/V assignments. (re-audit: |M-V|=0, Kawasaki residual 6.93e-07 deg)\nNo autonomous repair budget remains for this compile (IDE_CP_REPAIR_RETRIES), so this notice is INFORM-ONLY: report the defects above to the user plainly and WAIT for their instruction. Do NOT recompile on your own for this notice, now or on a later turn.",
+  "stray_frame_after_run": null
+ },
+ "compile_args_user_turn": [
+  "{\"tree_nodes\": [{\"id\": 0, \"parent_id\": null, \"length\": 0}, {\"id\": 1, \"parent_id\": 0, \"length\": 0.33\u2026"
+ ],
+ "compile_args_repair_turn": [
+  "{\"tree_nodes\": [{\"id\": 0, \"parent_id\": null, \"length\": 0}, {\"id\": 1, \"parent_id\": 0, \"length\": 0.33\u2026"
+ ],
+ "repair_turn_lints": 1,
+ "assistant_texts_repair_turn": [
+  "The one exempt CP-AUDIT repair recompile is used. Here's the honest outcome:\n\n**Repair attempted:** micro-adjusted edge lengths (~3-5%) on the flaps nearest the flagged vertices while keeping topology and symmetric_pairs identical:\n- node 2 (neck/head hub): 0.4 \u2192 0.385\n- node 4 (tail): 0.381814 \u2192 0.365\n- node 5 (ear/head detail): 0.296637 \u2192 0.285\n- node 6 (ear/head detail): 0.274853 \u2192 0.265\n\n**Result: still FAILED [MIXED]**, 5 real interior defects remain (clustered in the same head/neck region, x\u22480.48\u20130.79, y\u22480.34\u20130.73):\n- (0.73110, 0.73361) \u2014 Maekawa, too many valleys (|M\u2212V|=4)\n- (0.79483, 0.45876) \u2014 Maekawa, equal M/V (|M\u2212V|=0)\n- (0.48501, 0.52114) \u2014 Kawasaki angle defect (|M\u2212V|=0)\n- (0.52323, 0.55653) \u2014 Kawasaki angle defect (|M\u2212V|=4)\n- (0.62466, 0.34448) \u2014 Maekawa, equal M/V (|M\u2212V|=0)\n\n(2 additional violations are benign numeric noise, safely ignorable.)\n\n**Verdict: the repair did not clear the defects.** The single permitted micro-adjustment recompile did not resolve the real interior violations \u2014 they persist at nearly the same locations, meaning this is a structural/topological issue in the reference candidate's head/neck hub (node 2 with its two children 5 and 6), not something a length nudge can fix.\n\nPer the CP-AUDIT exemption, this recompile is done and I'm serving the better of the two candidates \u2014 but neither is truly flat-foldable. **The base as measured from the reference mesh has a real, unresolved crease-pattern defect around the head/ear region.** To genuinely fix this would require a topology change (e.g., restructuring how nodes 5/6 attach to the neck hub, or re-hubbing per the known-good quadruped template), which goes beyond the scope of this repair step and beyond what you asked me to do (no redraft, no posing/shaping/filling).\n\nI'll stop here and report this honestly rather than continue adjusting \u2014 would you like me to attempt a topology restructuring toward the known-good quadruped template as a next step, or leave this reference-mesh candidate as the documented (partially defective) result?"
+ ],
+ "finished": "2026-07-25T16:01:40.527+00:00",
+ "folds": [
+  {
+   "id": 1,
+   "path": "docs/superpowers/evidence/2026-07-25-cp-audit-smoke/sonnet5-fold-1.json",
+   "frame_title": "TreeMaker crease pattern (scale=0.649835) [ide: compiled after nudging edge lengths up to +/-10% (11 attempt(s)) to clear a Universal-Molecule degeneracy; proportions differ slightly from the request, which did not pack exactly] [ide: cp-audit: 5 interior Maekawa + 0 interior Kawasaki violation(s), closure max error 1.5e-08 remain in the best of 3 packed nudge rung(s); real interior defects, NOT hull frontier -- served best-effort]",
+   "shaped": false,
+   "cp_audit_marker": true
+  },
+  {
+   "id": 2,
+   "path": "docs/superpowers/evidence/2026-07-25-cp-audit-smoke/sonnet5-fold-2.json",
+   "frame_title": "TreeMaker crease pattern (scale=0.647503) [ide: compiled after nudging edge lengths up to +/-10% (1 attempt(s)) to clear a Universal-Molecule degeneracy; proportions differ slightly from the request, which did not pack exactly] [ide: cp-audit: 5 interior Maekawa + 0 interior Kawasaki violation(s), closure max error 1.8e-08 remain in the best of 2 packed nudge rung(s); real interior defects, NOT hull frontier -- served best-effort]",
+   "shaped": false,
+   "cp_audit_marker": true
+  }
+ ],
+ "frames_logged": 25
+}

@@ -1,0 +1,240 @@
+{
+ "roll": "bird_1",
+ "subject": "bird",
+ "n": 1,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.35
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.25
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.4
+  },
+  {
+   "id": 6,
+   "parent_id": 3,
+   "length": 0.1
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.15
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.1
+  },
+  {
+   "id": 9,
+   "parent_id": 3,
+   "length": 0.1
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.15
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.1
+  },
+  {
+   "id": 12,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 13,
+   "parent_id": 12,
+   "length": 0.3
+  },
+  {
+   "id": 14,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.3
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 5,
+   "parent_id": null,
+   "length": 0,
+   "x": 0.5,
+   "y": 0.5
+  },
+  {
+   "id": 4,
+   "parent_id": 5,
+   "length": 0.4,
+   "x": 0.598995,
+   "y": 0.598995
+  },
+  {
+   "id": 3,
+   "parent_id": 4,
+   "length": 0.25,
+   "x": 0.660867,
+   "y": 0.660867
+  },
+  {
+   "id": 0,
+   "parent_id": 3,
+   "length": 0.4,
+   "x": 0.79451,
+   "y": 0.725214
+  },
+  {
+   "id": 6,
+   "parent_id": 3,
+   "length": 0.1,
+   "x": 0.676953,
+   "y": 0.694278
+  },
+  {
+   "id": 9,
+   "parent_id": 3,
+   "length": 0.1,
+   "x": 0.694278,
+   "y": 0.676953
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.15,
+   "x": 0.844626,
+   "y": 0.749344
+  },
+  {
+   "id": 12,
+   "parent_id": 0,
+   "length": 0.15,
+   "x": 0.81864,
+   "y": 0.77533
+  },
+  {
+   "id": 14,
+   "parent_id": 0,
+   "length": 0.15,
+   "x": 0.830484,
+   "y": 0.763486
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.15,
+   "x": 0.714077,
+   "y": 0.731401
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.15,
+   "x": 0.731401,
+   "y": 0.714077
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.35,
+   "x": 0.931247,
+   "y": 0.835964
+  },
+  {
+   "id": 13,
+   "parent_id": 12,
+   "length": 0.3,
+   "x": 0.95,
+   "y": 0.77533
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.3,
+   "x": 0.844626,
+   "y": 0.897836
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.1,
+   "x": 0.763574,
+   "y": 0.731401
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.1,
+   "x": 0.731401,
+   "y": 0.763574
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   8,
+   11
+  ],
+  [
+   13,
+   15
+  ]
+ ],
+ "names": {
+  "0": "root",
+  "1": "neck",
+  "2": "head",
+  "3": "pelvis",
+  "4": "tail_base",
+  "5": "tail",
+  "6": "hip_L",
+  "7": "knee_L",
+  "8": "foot_L",
+  "9": "hip_R",
+  "10": "knee_R",
+  "11": "foot_R",
+  "12": "shoulder_L",
+  "13": "wing_L",
+  "14": "shoulder_R",
+  "15": "wing_R"
+ },
+ "leaves": [
+  "head",
+  "tail",
+  "foot_L",
+  "foot_R",
+  "wing_L",
+  "wing_R"
+ ],
+ "served_stage": "placement",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.548498) [ide: rescued by placement seeding: the exact tree did not pack, so the backend seeded each node's initial x/y position ('structural' layout: root centred, bilateral partners mirrored about the paper diagonal) and recompiled. Only the packer's STARTING POSITIONS moved -- every edge length is exactly as requested] [ide: served a re-rooted tree: node 5] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.56066837, 0.794130257], [0.794130257, 0.56066837], [0.619222286, 0.735576341], [0.677399314, 0.677399314], [0.735576341, 0.619222286], [0.643476113, 0.759830167], [0.725750853, 0.725750853], [0.759830167, 0.643476113], [0.337304455, 0.402923676], [0.402923676, 0.337304455], [0.370114066, 0.370114066], [0.401970843, 0.401970843], [0.35652388, 0.35652388], [0.558917029, 0.675271084], [0.557176961, 0.557176961], [0.675271084, 0.558917029], [0.999999993, 0.478926631], [0.999999991, 0.999999991], [0.999999992, 0.643476113], [0.999999992, 0.725750854], [0.999999992, 0.808025595], [0.808025595, 0.808025595], [0.478926631, 0.999999993], [0.643476113, 0.999999992], [0.725750854, 0.999999992], [0.808025595, 0.999999992], [6e-09, 0.548498277], [0.039910558, 0.58612342], [0.099776386, 0.642561134], [0.139686938, 0.680186277], [0.299329147, 0.830686849], [0.359194975, 0.887124564], [0.127090108, 0.493648449], [0.317725262, 0.411373708], [4e-09, 4e-09], [4e-09, 0.219399313], [5e-09, 0.356523881], [5e-09, 0.411373709], [5e-09, 0.49364845], [0.219399312, 0.219399312], [0.548498277, 6e-09], [0.219399313, 4e-09], [0.356523881, 5e-09], [0.411373709, 5e-09], [0.49364845, 5e-09], [0.411373708, 0.317725262], [0.493648449, 0.127090108], [0.58612342, 0.039910558], [0.642561134, 0.099776386], [0.680186277, 0.139686938], [0.830686849, 0.299329147], [0.887124564, 0.359194975]], \"edges_vertices\": [[2, 5], [3, 6], [4, 7], [0, 5], [5, 6], [6, 7], [7, 1], [0, 2], [2, 3], [3, 4], [4, 1], [10, 11], [8, 11], [11, 9], [8, 10], [10, 9], [10, 12], [9, 12], [12, 8], [2, 13], [3, 14], [4, 15], [1, 15], [15, 14], [14, 13], [13, 0], [18, 7], [19, 6], [20, 21], [23, 5], [24, 6], [25, 21], [27, 32], [28, 33], [29, 11], [30, 14], [31, 13], [35, 39], [36, 12], [37, 33], [38, 32], [41, 39], [42, 12], [43, 45], [44, 46], [47, 46], [48, 45], [49, 11], [50, 14], [51, 15], [16, 1], [6, 21], [21, 17], [16, 18], [18, 19], [19, 20], [20, 17], [0, 22], [22, 23], [23, 24], [24, 25], [25, 17], [14, 11], [8, 33], [33, 32], [32, 26], [26, 27], [27, 28], [28, 29], [29, 30], [30, 31], [31, 22], [12, 39], [39, 34], [34, 35], [35, 36], [36, 37], [37, 38], [38, 26], [9, 45], [45, 46], [46, 40], [34, 41], [41, 42], [42, 43], [43, 44], [44, 40], [40, 47], [47, 48], [48, 49], [49, 50], [50, 51], [51, 16]], \"edges_assignment\": [\"F\", \"V\", \"F\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"V\", \"V\", \"F\", \"M\", \"F\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"F\", \"F\", \"M\", \"F\", \"F\", \"F\", \"M\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

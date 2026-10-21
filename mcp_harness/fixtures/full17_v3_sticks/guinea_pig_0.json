@@ -1,0 +1,208 @@
+{
+ "roll": "guinea_pig_0",
+ "subject": "guinea_pig",
+ "subject_guess": "guinea pig",
+ "nodes": [
+  {
+   "name": "body_mid",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rump",
+   "parent": "body_mid",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    -6
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "body_mid",
+   "length": 8,
+   "direction": [
+    0,
+    -2,
+    8
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "length": 4,
+   "direction": [
+    0,
+    -2,
+    4
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    1
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "chest",
+   "length": 2,
+   "direction": [
+    2,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    1
+   ]
+  },
+  {
+   "name": "front_paw_L",
+   "parent": "knee_L",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "chest",
+   "length": 2,
+   "direction": [
+    -2,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    1
+   ]
+  },
+  {
+   "name": "front_paw_R",
+   "parent": "knee_R",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "rump",
+   "length": 4,
+   "direction": [
+    4,
+    0,
+    2
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "hip_L",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    1
+   ]
+  },
+  {
+   "name": "hind_paw_L",
+   "parent": "hock_L",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "rump",
+   "length": 4,
+   "direction": [
+    -4,
+    0,
+    2
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "hip_R",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    1
+   ]
+  },
+  {
+   "name": "hind_paw_R",
+   "parent": "hock_R",
+   "length": 9,
+   "direction": [
+    0,
+    -9,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_paw_L",
+   "front_paw_R"
+  ],
+  [
+   "hind_paw_L",
+   "hind_paw_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "front_paw_L",
+  "front_paw_R",
+  "hind_paw_L",
+  "hind_paw_R"
+ ],
+ "readings": [
+  "head at +z: ZY panel is the profile (shows rump-to-nose length and leg contact with ground); XY panel is the front view (face-on, showing ears/nose/paws); XZ panel is the top-down view confirming body width and head-at-top (small z tick) orientation.",
+  "ZY panel: rear/rump edge at z=1, nose tip at z=23 -> full body length ~22 grid units (the longest-extent axis, matches 24-unit scale).",
+  "ZY panel: highest back point at (z=9, y=2); ground/paw-contact line at y=22 spanning z=13-20.",
+  "ZY panel: nose tip protrudes at (z=23, y=18), lower than the back line, confirming the snout points down/forward.",
+  "XY panel: nose centered at (x=12, y=18) -> mesh x=0, matches ZY nose y=18 reading (consistent).",
+  "XY panel: symmetric ear-fur zones at x=4-10 and x=14-20, y=4-10 (not counted as leaves per convention).",
+  "XY panel: four paw nubs at the bottom, y=20-22, at x\u22488,10 (inner pair, under chest) and x\u224814,16 (spread further, under rump/hind end) - read as two front paws and two hind paws.",
+  "ZY panel: front-leg attachment (chest) region at z\u224817-19, y\u22488; hind-leg attachment (rump) region at z\u22485-7, y\u22488.",
+  "No external tail is visible in any panel (rear end at z=1 is a smooth rounded terminus, not a flap) - guinea pigs lack a tail.",
+  "Grid vertical flip applied throughout: frame_y = 12 - tick_y so that the ground (large tick) becomes negative dy and the back (small tick) becomes positive dy."
+ ],
+ "notes": "Guinea pig body is very compact/rounded with almost no visible neck or tail. Head counted as a single leaf (distinct lobe with nose/face) attached via a short neck segment; ears and facial fur wisps are sub-flap detail and were not given leaves. No external tail exists on this animal, so only 5 leaves total (4 legs + head). Each leg was split into an upper (shoulder/hip) and lower (knee/hock) segment as an anatomical inference from the single stubby limb visible under the body in the ZY/XY panels - the render does not show a distinct joint, but guinea pig limbs anatomically have a knee/hock, so a 2-segment split was used for both front and hind legs. Front legs attach at the chest (higher z, forward) and hind legs at the rump (lower z, rearward), matching the two paw clusters seen in the XY panel (inner pair vs. outer/spread pair). Left/right assigned so that +x = animal's left, consistent with the XY panel being a front (face-on) view where screen-right maps to the animal's own left side. All vertical (dy) directions were sign-flipped from the raw screen ticks per the grid convention, verified on the hip->paw chain (large negative dy, i.e., legs go down to the ground).",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,225 @@
+{
+ "roll": "horse_1",
+ "subject": "horse",
+ "subject_guess": "horse (trotting)",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "root",
+   "length": 5,
+   "direction": [
+    5,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 10,
+   "direction": [
+    9,
+    5,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 4,
+   "direction": [
+    2,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "root",
+   "length": 7,
+   "direction": [
+    -4,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 5,
+   "direction": [
+    4,
+    -1,
+    2
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_L",
+   "parent": "knee_L",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_L",
+   "parent": "fetlock_L",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 5,
+   "direction": [
+    4,
+    -1,
+    -2
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_R",
+   "parent": "knee_R",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_R",
+   "parent": "fetlock_R",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "stifle_L",
+   "parent": "root",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    2
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "stifle_L",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_hind_L",
+   "parent": "hock_L",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "stifle_R",
+   "parent": "root",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    -2
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "stifle_R",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_hind_R",
+   "parent": "hock_R",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hoof_L",
+   "hoof_R"
+  ],
+  [
+   "hoof_hind_L",
+   "hoof_hind_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "hoof_L",
+  "hoof_R",
+  "hoof_hind_L",
+  "hoof_hind_R"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile (nose x=20,y=7; poll x=18,y=3); ZY panel is the front view; XZ confirms nose-forward orientation",
+  "withers (9,8), hip/pelvis (4,9) - XY panel",
+  "tail base (4,9)->tail tip (0,15) - XY panel",
+  "front leg: shoulder (13,9), knee (14,14), fetlock (15,18), hoof (16,20) - XY panel",
+  "hind leg: stifle (3,14), hock (2,18), hoof (1,21) - XY panel",
+  "ZY panel front view: right-side legs at z\u22489, left-side legs at z\u224813, body centerline z\u224811, used to split left/right leg pairs"
+ ],
+ "notes": "Head counts as a leaf since it protrudes on a distinct neck. Leg chains split into shoulder/knee/fetlock/hoof (front) and stifle/hock/hoof (hind) as anatomical inference from the single visible leg silhouette in the XY (profile) panel; all four legs authored with equal proportional segment lengths per instructions, ignoring the mid-stride pose asymmetry shown in the render. Left/right z-offsets (\u00b12) for leg pairs inferred from the ZY (front) panel, which shows the legs splayed left/right of a z\u224811 body centerline. Tail modeled as a single segment (no visible joints). Ears/muzzle detail omitted as sub-flap features of the head.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

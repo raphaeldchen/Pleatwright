@@ -1,0 +1,741 @@
+{
+  "_meta": {
+    "what": "Nine 3-D meshes generated from user-supplied photographs by tencent/Hunyuan3D-2 (/shape_generation), for testing a mesh -> metric-tree extraction pipeline.",
+    "why_these": "They are GENERATED meshes at 175k-599k faces, not hand-modelled low-poly assets. Extraction code is commonly calibrated on the latter and only ever fed the former; this set is the former.",
+    "generator": {
+      "space": "tencent/Hunyuan3D-2",
+      "api_name": "/shape_generation",
+      "params": {
+        "steps": 30,
+        "guidance_scale": 5.0,
+        "seed": 1234,
+        "randomize_seed": false,
+        "octree_resolution": 256,
+        "check_box_rembg": true,
+        "num_chunks": 8000
+      },
+      "note": "seed pinned and randomize_seed disabled, so these meshes are reproducible from the same photos"
+    },
+    "how_to_score": "Score leaf counts against anatomy_ground_truth.expected_feature_count. Do NOT score against any reference count your own pipeline derives from its own skeleton -- that closes a loop in which discarding half the animal RAISES the score.",
+    "convention": "One Metric Tree leaf per distinct TERMINAL APPENDAGE: each arm, leg, wing, tentacle or ray counts one; the head counts one; the tail counts one when the animal has an external tail. Sub-flap detail (digits, antennae, ears, eyes, fins that are not skeletal limbs) is NOT counted -- it is not a uniaxial-base flap at this scale. This is the convention the five committed subjects already follow (humanoid: 2 arms + 2 legs + head = 5; quadruped: 4 legs + head + tail = 6), restated here from anatomy rather than inherited from an extraction run.",
+    "ground_truth_source": "fixtures/anatomy_expectation.json from AI-Driven-Origami-IDE; human-authored from published anatomy, each row carrying its own derivation and citation. Nothing in it is computed from any extraction.",
+    "subjects": 17,
+    "cohorts": {
+      "original_9": "2026-09-06, the first photo set",
+      "s8_8": "2026-09-08, chosen so the NAIVE answer is wrong on every one (docs/superpowers/decisions/2026-09-08-s8-corpus-proposal.md)"
+    }
+  },
+  "meshes": [
+    {
+      "subject": "dog",
+      "mesh": {
+        "path": "meshes/dog.glb",
+        "sha256": "e2a905d6c30554d69b25f198bbec4e971af8ea4dd1c50fbd0de294ec7d7cd098",
+        "bytes": 6536092,
+        "n_faces": 422914,
+        "n_vertices": 121655,
+        "body_count": 5,
+        "n_parts_face_adjacency": 179629,
+        "largest_body_volume_frac": 0.999868,
+        "extent_max": 1.969615
+      },
+      "source_photo": {
+        "path": "photos/dog.png",
+        "original_filename": "dog.webp",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "4 legs + head + tail = 6. Ears are sub-flap detail under the convention above.",
+        "citation": "Wikipedia, 'Dog': Canis familiaris, a domesticated descendant of the grey wolf; a digitigrade quadruped carnivoran with an external tail."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 8,
+        "n_pairs": 2,
+        "voxel_res": 96,
+        "prune_fraction": 0.45,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 8,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "8": "left fore limb (pair 1)",
+          "10": "right fore limb (pair 1)",
+          "6": "right hind limb (pair 2)",
+          "7": "left hind limb (pair 2)",
+          "1": "likely tail",
+          "5": "mid-body appendage (unclassified)",
+          "2": "mid-body appendage (unclassified)",
+          "11": "likely head"
+        }
+      }
+    },
+    {
+      "subject": "cat",
+      "mesh": {
+        "path": "meshes/cat.glb",
+        "sha256": "9bfc449c2042c52659dd5f7486ebcc450ce8b98315ee48f085ff35b577be1d11",
+        "bytes": 5928436,
+        "n_faces": 383714,
+        "n_vertices": 110217,
+        "body_count": 38,
+        "n_parts_face_adjacency": 163423,
+        "largest_body_volume_frac": 0.999509,
+        "extent_max": 1.963232
+      },
+      "source_photo": {
+        "path": "photos/cat.png",
+        "original_filename": "cat.avif",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "4 legs + head + tail = 6.",
+        "citation": "Wikipedia, 'Cat': Felis catus, a small domesticated carnivorous mammal; quadrupedal with a long flexible tail."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 7,
+        "n_pairs": 3,
+        "voxel_res": 96,
+        "prune_fraction": 0.45,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 7,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "5": "right limb (pair 1)",
+          "6": "left limb (pair 1)",
+          "4": "right limb (pair 2)",
+          "10": "left limb (pair 2)",
+          "2": "right limb (pair 3)",
+          "8": "left limb (pair 3)",
+          "11": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "horse",
+      "mesh": {
+        "path": "meshes/horse.glb",
+        "sha256": "79fb6a84c3bd0a1af01732aec687c9d8e9c14d40f31c235dd9c141b309b7b144",
+        "bytes": 3371324,
+        "n_faces": 213160,
+        "n_vertices": 67679,
+        "body_count": 3,
+        "n_parts_face_adjacency": 77755,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.969746
+      },
+      "source_photo": {
+        "path": "photos/horse.png",
+        "original_filename": "horse.webp",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "4 legs + head + tail = 6.",
+        "citation": "Wikipedia, 'Horse': Equus ferus caballus, an odd-toed ungulate mammal; quadrupedal, single-toed, with a tailed hindquarter."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 5,
+        "n_pairs": 2,
+        "voxel_res": 96,
+        "prune_fraction": 0.5,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 5,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "1": "paired limb (pair 1)",
+          "4": "paired limb (pair 1)",
+          "6": "left limb (pair 2)",
+          "7": "right limb (pair 2)",
+          "5": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "lizard",
+      "mesh": {
+        "path": "meshes/lizard.glb",
+        "sha256": "df17e9cb6f9b69197826baa562101fb75b5c3ebb29ac96a8d2c08f67c5ee1225",
+        "bytes": 2746952,
+        "n_faces": 175460,
+        "n_vertices": 53348,
+        "body_count": 1,
+        "n_parts_face_adjacency": 68769,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.961273
+      },
+      "source_photo": {
+        "path": "photos/lizard.png",
+        "original_filename": "lizard.jpg",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "4 legs + head + tail = 6. Squamates in the lizard grade are tetrapods with an external tail; this is the same count the quadruped body plan uses.",
+        "citation": "Wikipedia, 'Lizard': a widely distributed group of squamate reptiles, most of which are four-legged with a long tail (limbless clades such as the slow-worm are the named exception and are NOT this row)."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 8,
+        "n_pairs": 1,
+        "voxel_res": 128,
+        "prune_fraction": 0.4,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 6,
+        "self_derived_fidelity": 0.6666666666666667,
+        "leaf_labels": {
+          "11": "paired hind limb (pair 1)",
+          "10": "paired hind limb (pair 1)",
+          "8": "likely tail",
+          "9": "mid-body appendage (unclassified)",
+          "1": "mid-body appendage (unclassified)",
+          "5": "mid-body appendage (unclassified)",
+          "12": "mid-body appendage (unclassified)",
+          "7": "likely head"
+        }
+      }
+    },
+    {
+      "subject": "frog",
+      "mesh": {
+        "path": "meshes/frog.glb",
+        "sha256": "5a29942e466f23c0116d69e5d17742c34e5945dddd55b7b40065500ab26eb0a0",
+        "bytes": 9164560,
+        "n_faces": 598972,
+        "n_vertices": 164636,
+        "body_count": 1,
+        "n_parts_face_adjacency": 269697,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.959277
+      },
+      "source_photo": {
+        "path": "photos/frog.png",
+        "original_filename": "frog.jpg",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 5,
+        "derivation": "4 legs + head = 5. An adult anuran has NO tail -- the order name Anura means 'without tail' -- which is why this row is 5 and every quadruped row is 6. A tadpole would be a different subject.",
+        "citation": "Wikipedia, 'Frog': order Anura, from Ancient Greek meaning 'without tail'; adults are tailless, with long hind limbs."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": false,
+        "leaf_count": 0,
+        "n_pairs": 0,
+        "voxel_res": 128,
+        "prune_fraction": 0.6,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 0,
+        "self_derived_fidelity": 0.0,
+        "leaf_labels": {}
+      }
+    },
+    {
+      "subject": "bird",
+      "mesh": {
+        "path": "meshes/bird.glb",
+        "sha256": "8e05a072e8cbcd23603f0890f0bd971c55ea079abbcdd4902065ddb249d2564c",
+        "bytes": 3621296,
+        "n_faces": 231560,
+        "n_vertices": 70110,
+        "body_count": 1,
+        "n_parts_face_adjacency": 91329,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.956343
+      },
+      "source_photo": {
+        "path": "photos/bird.png",
+        "original_filename": "bird.jpg",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "2 wings + 2 legs + head + tail = 6. This is the row that DISAGREES with fixtures/anatomy_reference.json (bird: reference_count 4) and the disagreement is the point -- 4 is what the extractor's prune plateau held, not what a bird has. The VLM judge reached 6 independently ('Four appendages where a bird needs six', fixtures/vlm_judge/replay.json). Settled in docs/superpowers/decisions/anatomy-ground-truth.md.",
+        "citation": "Wikipedia, 'Bird': class Aves, characterised by feathers, toothless beaked jaws, and a strong yet lightweight skeleton; forelimbs modified as wings, hindlimbs as legs, with a pygostyle-supported tail fan."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 4,
+        "n_pairs": 1,
+        "voxel_res": 96,
+        "prune_fraction": 0.4,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 4,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "2": "left fore limb (pair 1)",
+          "5": "right fore limb (pair 1)",
+          "4": "likely head",
+          "3": "likely tail"
+        }
+      }
+    },
+    {
+      "subject": "starfish",
+      "mesh": {
+        "path": "meshes/starfish.glb",
+        "sha256": "9f9a4c8355cabfba12ff67b1c3fed8022cdf7f183896100cd9e293e37f4cb4a1",
+        "bytes": 3479792,
+        "n_faces": 223744,
+        "n_vertices": 66134,
+        "body_count": 1,
+        "n_parts_face_adjacency": 91481,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.959203
+      },
+      "source_photo": {
+        "path": "photos/starfish.png",
+        "original_filename": "starfish.jpg",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 5,
+        "derivation": "5 arms = 5. No head and no tail -- a sea star is pentaradial, so every leaf is an arm and the central disc is the hub. The canonical five-armed form is the row; species with more arms are a different subject.",
+        "citation": "Wikipedia, 'Starfish': class Asteroidea, echinoderms typically with a central disc and five arms, showing pentaradial symmetry."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 5,
+        "n_pairs": 2,
+        "voxel_res": 96,
+        "prune_fraction": 0.4,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 5,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "7": "right limb (pair 1)",
+          "3": "left limb (pair 1)",
+          "6": "right limb (pair 2)",
+          "5": "left limb (pair 2)",
+          "4": "axial extremity (head or tail)"
+        }
+      }
+    },
+    {
+      "subject": "spider",
+      "mesh": {
+        "path": "meshes/spider.glb",
+        "sha256": "ec382220184624f717b50c080a368b8a262b2b2f9e9b688b8155afbd9b9bc37d",
+        "bytes": 3867900,
+        "n_faces": 238260,
+        "n_vertices": 83960,
+        "body_count": 1,
+        "n_parts_face_adjacency": 70337,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.960992
+      },
+      "source_photo": {
+        "path": "photos/spider.png",
+        "original_filename": "spider.webp",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 9,
+        "derivation": "8 legs + abdomen (opisthosoma) = 9. The abdomen, not the cephalothorax, is the single free axial flap: the cephalothorax is where the legs attach and becomes the hub, exactly as an octopus's arms hub on the mantle. Pedipalps are sub-flap detail.",
+        "citation": "Wikipedia, 'Spider': order Araneae, air-breathing arthropods with eight legs and a body divided into two tagmata, the cephalothorax and the abdomen."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 7,
+        "n_pairs": 3,
+        "voxel_res": 96,
+        "prune_fraction": 0.45,
+        "stub_flaps": 0,
+        "normalizer_repair": "contract",
+        "self_derived_reference_count": 7,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "11": "right limb (pair 1)",
+          "8": "left limb (pair 1)",
+          "10": "right limb (pair 2)",
+          "7": "left limb (pair 2)",
+          "4": "left limb (pair 3)",
+          "5": "right limb (pair 3)",
+          "3": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "octopus",
+      "mesh": {
+        "path": "meshes/octopus.glb",
+        "sha256": "0daec85f8d29f8dab6d5db94124b349ddde5bf100785a8cb493fddcd4fa21deb",
+        "bytes": 6025800,
+        "n_faces": 369884,
+        "n_vertices": 132161,
+        "body_count": 3,
+        "n_parts_face_adjacency": 105556,
+        "largest_body_volume_frac": 0.999977,
+        "extent_max": 1.954854
+      },
+      "source_photo": {
+        "path": "photos/octopus.png",
+        "original_filename": "octopus.webp",
+        "note": "user-supplied photograph, converted to PNG; this is the image fed to the generator, NOT a generated concept image"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 9,
+        "derivation": "8 arms + mantle/head = 9. No tail. The mantle is the single axial mass the arms radiate from and is the natural head flap.",
+        "citation": "Wikipedia, 'Octopus': order Octopoda, a soft-bodied eight-limbed mollusc; the arms surround a mouth at the centre point beneath the mantle."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "output of the AI-Driven-Origami-IDE extractor (mesh_to_tree.auto_mesh_to_metric_tree) at its shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 8,
+        "n_pairs": 4,
+        "voxel_res": 128,
+        "prune_fraction": 0.4,
+        "stub_flaps": 0,
+        "normalizer_repair": null,
+        "self_derived_reference_count": 8,
+        "self_derived_fidelity": 1.0,
+        "leaf_labels": {
+          "10": "right limb (pair 1)",
+          "11": "left limb (pair 1)",
+          "5": "left limb (pair 2)",
+          "6": "right limb (pair 2)",
+          "9": "left limb (pair 3)",
+          "1": "right limb (pair 3)",
+          "12": "right limb (pair 4)",
+          "13": "left limb (pair 4)"
+        }
+      }
+    },
+    {
+      "subject": "dolphin",
+      "file_stem": "dolphin",
+      "mesh": {
+        "path": "meshes/dolphin.glb",
+        "sha256": "d20d3dfc5f2470cbc6d1ab2451e8859f7ac30e7decb9856496862719b961f4f4",
+        "bytes": 3869604,
+        "n_faces": 247904,
+        "n_vertices": 74458,
+        "body_count": 1,
+        "n_parts_face_adjacency": 98993,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.947472
+      },
+      "source_photo": {
+        "path": "photos/dolphin.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 4,
+        "derivation": "2 pectoral flippers + tail fluke + head = 4. No hindlimbs and no external tail beyond the fluke. The DORSAL FIN is excluded by the convention's own words -- it carries no skeletal support and is not a limb -- which is what makes this row 4 rather than 5. This is the corpus's only subject at MIN_LEAVES.",
+        "citation": "Wikipedia, 'Dolphin' and 'Cetacea': forelimbs modified as flippers, hindlimbs absent, propulsion by a horizontal tail fluke; the dorsal fin is a fibrous structure without skeletal support."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 7,
+        "delta_vs_anatomy": 3,
+        "voxel_res": 128,
+        "prune_fraction": 0.45,
+        "leaf_labels": {
+          "6": "right fore limb (pair 1)",
+          "7": "left fore limb (pair 1)",
+          "10": "left hind limb (pair 2)",
+          "5": "right hind limb (pair 2)",
+          "1": "likely head",
+          "11": "mid-body appendage (unclassified)",
+          "9": "likely tail"
+        }
+      }
+    },
+    {
+      "subject": "guinea pig",
+      "file_stem": "guinea_pig",
+      "mesh": {
+        "path": "meshes/guinea_pig.glb",
+        "sha256": "76cb460b554ce158d394f34f1e2b013bed00de185de266a0d1167b3c7a39365d",
+        "bytes": 15373828,
+        "n_faces": 1009254,
+        "n_vertices": 271793,
+        "body_count": 121,
+        "n_parts_face_adjacency": 466121,
+        "largest_body_volume_frac": 0.999849,
+        "extent_max": 1.957689
+      },
+      "source_photo": {
+        "path": "photos/guinea_pig.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 5,
+        "derivation": "4 legs + head = 5. Cavia porcellus has NO external tail, so this row is 5 where every tailed quadruped row is 6. It exists to break the 4-legs-plus-head-plus-tail default that five of the original nine subjects shared.",
+        "citation": "Wikipedia, 'Guinea pig': Cavia porcellus, a stout-bodied rodent with short limbs and no external tail."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 5,
+        "delta_vs_anatomy": 0,
+        "voxel_res": 96,
+        "prune_fraction": 0.6,
+        "leaf_labels": {
+          "6": "right limb (pair 1)",
+          "2": "left limb (pair 1)",
+          "5": "axial extremity (head or tail)",
+          "7": "unpaired limb (mirror twin possibly lost in extraction)",
+          "3": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "rabbit",
+      "file_stem": "rabbit",
+      "mesh": {
+        "path": "meshes/rabbit.glb",
+        "sha256": "362ceeaeeefd0def04fb45e0ede7342525fcefb3e29105932f720d91a7d1d127",
+        "bytes": 11956896,
+        "n_faces": 772826,
+        "n_vertices": 223477,
+        "body_count": 19,
+        "n_parts_face_adjacency": 325320,
+        "largest_body_volume_frac": 0.999618,
+        "extent_max": 1.967456
+      },
+      "source_photo": {
+        "path": "photos/rabbit.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "4 legs + head + tail = 6. EARS ARE EXCLUDED -- the convention names ears as sub-flap detail -- on the one subject whose ears dominate its silhouette. Included precisely because that rule is easy to state and easy to violate.",
+        "citation": "Wikipedia, 'Rabbit': family Leporidae, four limbs, long ears and a short erect tail."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": false,
+        "leaf_count": 0,
+        "delta_vs_anatomy": -6,
+        "voxel_res": 128,
+        "prune_fraction": 0.6,
+        "leaf_labels": {}
+      }
+    },
+    {
+      "subject": "bat",
+      "file_stem": "bat",
+      "mesh": {
+        "path": "meshes/bat.glb",
+        "sha256": "0678f0d9e7f4f53e44f7f2fc79fdb8e6ca95d96aa0dca8b6b762aaf39c45d799",
+        "bytes": 2770760,
+        "n_faces": 163140,
+        "n_vertices": 67652,
+        "body_count": 1,
+        "n_parts_face_adjacency": 27841,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.961788
+      },
+      "source_photo": {
+        "path": "photos/bat.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 6,
+        "derivation": "2 wings + 2 legs + head + tail = 6. Chiropteran forelimbs ARE the wings, counted as limbs exactly as a bird's are, and most microbats carry an external tail within the uropatagium. Same count as 'bird' by a different body plan, which is the point: it tests wing-finding, not arithmetic.",
+        "citation": "Wikipedia, 'Bat': order Chiroptera, the only mammals capable of true flight, forelimbs adapted as wings; the tail membrane (uropatagium) encloses a tail in most families."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 7,
+        "delta_vs_anatomy": 1,
+        "voxel_res": 96,
+        "prune_fraction": 0.55,
+        "leaf_labels": {
+          "7": "right limb (pair 1)",
+          "2": "left limb (pair 1)",
+          "9": "right limb (pair 2)",
+          "11": "left limb (pair 2)",
+          "3": "axial extremity (head or tail)",
+          "10": "unpaired limb (mirror twin possibly lost in extraction)",
+          "5": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "elephant",
+      "file_stem": "elephant",
+      "mesh": {
+        "path": "meshes/elephant.glb",
+        "sha256": "af2ce44da4936391e7b359013de922ea172290873d50502afae0d76126d2e656",
+        "bytes": 6329364,
+        "n_faces": 406224,
+        "n_vertices": 121118,
+        "body_count": 1,
+        "n_parts_face_adjacency": 163993,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.963907
+      },
+      "source_photo": {
+        "path": "photos/elephant.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 7,
+        "derivation": "4 legs + head + tail + trunk = 7. THE TRUNK IS ITS OWN FLAP: it is a long terminal appendage, and it is not any of the things the convention excludes (digits, antennae, ears, eyes, non-skeletal fins). Ears ARE excluded, on an animal whose ears are enormous. Ruled by the repository owner 2026-09-08; proposal and the alternatives considered: docs/superpowers/decisions/2026-09-08-s8-corpus-proposal.md.",
+        "citation": "Wikipedia, 'Elephant': family Elephantidae, characterised by a long proboscis (trunk), columnar limbs, large ear flaps and a tail ending in a tuft."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 8,
+        "delta_vs_anatomy": 1,
+        "voxel_res": 96,
+        "prune_fraction": 0.5,
+        "leaf_labels": {
+          "1": "right limb (pair 1)",
+          "5": "left limb (pair 1)",
+          "3": "left limb (pair 2)",
+          "6": "right limb (pair 2)",
+          "9": "axial extremity (head or tail)",
+          "11": "axial extremity (head or tail)",
+          "10": "axial extremity (head or tail)",
+          "7": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "ant",
+      "file_stem": "ant",
+      "mesh": {
+        "path": "meshes/ant.glb",
+        "sha256": "365eb3b4bc58be42e441076fd0e52659a43d8f3e1708b5f183cc2524379ddea0",
+        "bytes": 5208904,
+        "n_faces": 319572,
+        "n_vertices": 114398,
+        "body_count": 320,
+        "n_parts_face_adjacency": 92210,
+        "largest_body_volume_frac": 0.99677,
+        "extent_max": 1.978099
+      },
+      "source_photo": {
+        "path": "photos/ant.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 8,
+        "derivation": "6 legs + head + gaster = 8. Applies the SPIDER PRECEDENT: the mass the legs attach to is the hub (there, the cephalothorax; here, the mesosoma) and the free axial mass is a flap (there, the opisthosoma; here, the gaster, joined by a narrow petiole and unambiguously free). That reasoning is topological, not taxonomic, so it carries from arachnid to insect. Antennae excluded. Ruled by the repository owner 2026-09-08; proposal and the alternatives considered: docs/superpowers/decisions/2026-09-08-s8-corpus-proposal.md.",
+        "citation": "Wikipedia, 'Ant': family Formicidae, six legs; the gaster is connected to the mesosoma by a narrow petiole."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 5,
+        "delta_vs_anatomy": -3,
+        "voxel_res": 96,
+        "prune_fraction": 0.55,
+        "leaf_labels": {
+          "7": "left limb (pair 1)",
+          "3": "right limb (pair 1)",
+          "6": "left limb (pair 2)",
+          "5": "right limb (pair 2)",
+          "4": "axial extremity (head or tail)"
+        }
+      }
+    },
+    {
+      "subject": "scorpion",
+      "file_stem": "scorpion",
+      "mesh": {
+        "path": "meshes/scorpion.glb",
+        "sha256": "c291086690cd9f2a90be759eaf71991c7b43b4c86ddea40657822c9d1132d6a8",
+        "bytes": 4435784,
+        "n_faces": 276048,
+        "n_vertices": 93496,
+        "body_count": 1,
+        "n_parts_face_adjacency": 89061,
+        "largest_body_volume_frac": 1.0,
+        "extent_max": 1.962165
+      },
+      "source_photo": {
+        "path": "photos/scorpion.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 9,
+        "derivation": "8 legs + metasoma (tail) = 9. The prosoma is the hub, exactly as the spider's cephalothorax, and scorpions have no head distinct from it. THE PINCERS ARE PEDIPALPS AND ARE EXCLUDED -- the spider row already rules pedipalps sub-flap detail, and consistency outranks how visually dominant they are. A reader who counts them reaches 11.",
+        "citation": "Wikipedia, 'Scorpion': order Scorpiones, eight legs, a pair of grasping pedipalps bearing chelae, and a narrow segmented metasoma ending in a telson."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 7,
+        "delta_vs_anatomy": -2,
+        "voxel_res": 64,
+        "prune_fraction": 0.4,
+        "leaf_labels": {
+          "5": "left hind limb (pair 1)",
+          "9": "right hind limb (pair 1)",
+          "4": "left hind limb (pair 2)",
+          "6": "right hind limb (pair 2)",
+          "7": "likely tail",
+          "3": "likely head",
+          "10": "unpaired limb (mirror twin possibly lost in extraction)"
+        }
+      }
+    },
+    {
+      "subject": "crab",
+      "file_stem": "crab",
+      "mesh": {
+        "path": "meshes/crab.glb",
+        "sha256": "d9d2a81e241998f272707978115c15900b5a65629302af176d1b869d5cfcee22",
+        "bytes": 7871728,
+        "n_faces": 497922,
+        "n_vertices": 157950,
+        "body_count": 3,
+        "n_parts_face_adjacency": 182036,
+        "largest_body_volume_frac": 0.99835,
+        "extent_max": 1.934205
+      },
+      "source_photo": {
+        "path": "photos/crab.png",
+        "note": "user-supplied photograph, converted to PNG; the image fed to the generator, NOT a generated concept"
+      },
+      "anatomy_ground_truth": {
+        "expected_feature_count": 10,
+        "derivation": "10 legs = 10. Decapods bear five pairs of pereiopods and THE CHELAE ARE THE FIRST PAIR -- modified walking legs, a different appendage from the pedipalps the spider row excludes. The cephalothorax is the hub and the abdomen is reduced and folded beneath it, so it is not a free axial flap; there is no distinct head and no external tail. Ruled by the repository owner 2026-09-08; proposal and the alternatives considered: docs/superpowers/decisions/2026-09-08-s8-corpus-proposal.md.",
+        "citation": "Wikipedia, 'Crab' and 'Decapoda': ten pereiopods, the first pair bearing chelae; in Brachyura the abdomen is reduced and folded under the cephalothorax."
+      },
+      "reference_extraction_NOT_ground_truth": {
+        "_what": "auto_mesh_to_metric_tree at shipped defaults. A COMPARISON POINT, not a target. Where it disagrees with anatomy_ground_truth, IT is the thing that is wrong.",
+        "packed": true,
+        "leaf_count": 8,
+        "delta_vs_anatomy": -2,
+        "voxel_res": 96,
+        "prune_fraction": 0.55,
+        "leaf_labels": {
+          "11": "left limb (pair 1)",
+          "7": "right limb (pair 1)",
+          "3": "right limb (pair 2)",
+          "12": "left limb (pair 2)",
+          "8": "paired limb (pair 3)",
+          "4": "paired limb (pair 3)",
+          "10": "left limb (pair 4)",
+          "9": "right limb (pair 4)"
+        }
+      }
+    }
+  ]
+}

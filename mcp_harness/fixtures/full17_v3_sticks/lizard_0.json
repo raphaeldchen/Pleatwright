@@ -1,0 +1,181 @@
+{
+ "roll": "lizard_0",
+ "subject": "lizard",
+ "subject_guess": "lizard (quadrupedal reptile, sprawling posture)",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine_front",
+   "parent": "pelvis",
+   "length": 9,
+   "direction": [
+    -9,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 4,
+   "direction": [
+    4,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "spine_front",
+   "length": 3,
+   "direction": [
+    -3,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 6,
+   "direction": [
+    -5,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "spine_front",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "front_foot_L",
+   "parent": "elbow_L",
+   "length": 5,
+   "direction": [
+    1,
+    -4,
+    -2
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "spine_front",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "front_foot_R",
+   "parent": "elbow_R",
+   "length": 5,
+   "direction": [
+    1,
+    -4,
+    2
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "hind_foot_L",
+   "parent": "knee_L",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    -1,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "hind_foot_R",
+   "parent": "knee_R",
+   "length": 4,
+   "direction": [
+    2,
+    -3,
+    2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_foot_L",
+   "front_foot_R"
+  ],
+  [
+   "hind_foot_L",
+   "hind_foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail_tip",
+  "front_foot_L",
+  "front_foot_R",
+  "hind_foot_L",
+  "hind_foot_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile, ZY is the front, XZ is the dorsal/top view (legs splayed in z)",
+  "snout tip (0,11) in XY panel",
+  "top of head (4,8)",
+  "spine_front/shoulder region (8,9)",
+  "pelvis/hip region (17,10)",
+  "tail_base (20,10)",
+  "tail_tip (24,11)",
+  "front elbow (7,12) with foot touching ground (8,16) in XY panel",
+  "hind knee (16,13) with foot (18,16) in XY panel",
+  "XZ top view: front legs splay to z=8 and z=16 at x=7-8 (elbow) and z=6/18 at x=8 (feet)",
+  "XZ top view: hind legs splay to z=8/16 at x=16 (knee) and z=6/18 at x=18 (feet)",
+  "ZY front view confirms body core centered z=8-16, legs extend to z~4-20"
+ ],
+ "notes": "Head is treated as a leaf since it protrudes on a distinct neck (reptile). Tail is a single leaf. Each leg is one leaf pair; single joint (elbow/knee) inferred midway between shoulder/hip and foot based on the bend visible in the XY profile and the lateral splay visible in the XZ top view. Left/right assigned by z-value (smaller z = _L, larger z = _R) per animal's own frame; this is an arbitrary but consistent convention since exact facing chirality isn't determinable from silhouettes alone. Root 'pelvis' chosen as central spine hub; spine_front (shoulder girdle) and tail_base are separate spine segments so the body is a multi-node spine, not a single hub. All leg z-splay values taken from the XZ (top) panel where front and hind legs both fan to about z=6-8 and z=16-18 from a central spine at z=12; the ZY (front) panel corroborates the overall body width. Screen-down positive-y coordinates were flipped in sign (dy = -(child_y - parent_y)) for every node so descending limbs get negative dy, verified on hind leg (knee->foot direction dy=-3, correctly negative).",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

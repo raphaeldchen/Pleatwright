@@ -1,0 +1,164 @@
+/* Pleatwright app. Form: folding diagram (mono, square corners, 1px rules, numbered steps).
+   Colours: pro-tool greys + one blue accent. Each themed token is defined once as
+   light-dark(<light>, <dark>), resolved by color-scheme: "light dark" on :root follows the OS
+   (System); data-theme="light"|"dark" pins it (set by src/theme.ts before first paint). */
+:root {
+  color-scheme:light dark;
+  --bg:light-dark(#f4f1e8, #1e1e1e); --panel:light-dark(#ece8dc, #252525); --raise:light-dark(#fbf9f3, #2c2c2c);
+  --line:light-dark(#1d1d1b, #3d3d3d); --text:light-dark(#1d1d1b, #e6e6e6); --muted:light-dark(#6d6a62, #8f8f8f);
+  --user:light-dark(#e4dfd0, #333333); --ok:light-dark(#1f8a4c, #3ecf7a);
+  --canvas:light-dark(#f4f1e8, #1a1a1a); --dot:light-dark(#e1dccd, #333333); --sheet-edge:light-dark(#1d1d1b, transparent);
+  --accent:#0d99ff; --accent-fg:#ffffff; --bad:#e33b2e; --mountain:#e33b2e; --valley:#2f55d4; --sheet:#ffffff;
+  --mono:"IBM Plex Mono", "SF Mono", Menlo, ui-monospace, monospace;
+  font:12px/1.5 var(--mono); color:var(--text); background:var(--bg);
+}
+:root[data-theme="light"] { color-scheme:light }
+:root[data-theme="dark"] { color-scheme:dark }
+
+* { box-sizing:border-box; border-radius:0 }
+body { margin:0; overflow:hidden }
+html, body, #root { height:100% }
+button { font:inherit; color:inherit; cursor:pointer }
+button:disabled { cursor:default }
+textarea { font:inherit }
+:focus-visible { outline:1px solid var(--accent); outline-offset:-1px }
+.muted { color:var(--muted) }
+.shell { display:flex; flex-direction:column; height:100% }
+.app { display:grid; grid-template-columns:220px 400px 1fr; grid-template-rows:minmax(0, 1fr); flex:1; min-height:0 }
+
+/* ── sidebar ── */
+.sidebar { min-height:0; display:flex; flex-direction:column; background:var(--panel); border-right:1px solid var(--line) }
+.sidebar .runs { flex:1; min-height:0; overflow:auto; padding:10px }
+.sidebar .new { display:flex; justify-content:space-between; width:100%; margin-bottom:4px; padding:6px 8px;
+                border:1px solid var(--line); background:var(--raise); text-align:left; text-transform:uppercase }
+.sidebar .new .hint { color:var(--muted) }
+.sidebar .day { margin:12px 0 3px; color:var(--muted); font-size:10px }
+.sidebar .run { display:flex; justify-content:space-between; gap:6px; width:100%; padding:4px 8px; border:none;
+                background:none; color:var(--muted); text-align:left; box-shadow:inset 2px 0 0 transparent }
+.sidebar .run:hover { color:var(--text) }
+.sidebar .row { display:flex; align-items:center }
+.sidebar .row .run { flex:1; min-width:0 }
+/* the delete control shows on the row's hover or keyboard focus (a hidden button is not focusable) */
+.sidebar .del { flex:none; visibility:hidden; padding:4px 6px; border:none; background:none; color:var(--muted);
+                font-size:10px; text-transform:uppercase }
+.sidebar .row:hover .del, .sidebar .row:focus-within .del { visibility:visible }
+.sidebar .del:hover, .sidebar .del:focus-visible { color:var(--bad) }
+.sidebar .run.on { background:var(--raise); color:var(--text); box-shadow:inset 2px 0 0 var(--accent) }
+.mark { flex:none; width:1.2em; text-align:center }
+.mark.done { color:var(--ok) } .mark.running, .mark.waiting { color:var(--accent) }
+.mark.failed { color:var(--bad) } .mark.new { color:var(--muted) }
+.sidebar-foot { flex:none; padding:8px 10px; border-top:1px solid var(--line) }
+.theme-toggle { width:100%; padding:4px 8px; border:1px solid var(--line); background:none; color:var(--muted);
+                text-align:left; text-transform:uppercase }
+.theme-toggle:hover { color:var(--text) }
+
+/* ── chat ── */
+.chat { min-height:0; min-width:0; overflow:hidden; display:flex; flex-direction:column; border-right:1px solid var(--line) }
+.msgs { flex:1; min-height:0; overflow:auto; padding:12px; display:flex; flex-direction:column; gap:8px }
+.user { align-self:flex-end; max-width:85%; padding:5px 10px; background:var(--user); border:1px solid var(--line); white-space:pre-wrap }
+.assistant { white-space:pre-wrap }
+.assistant::before { content:"● "; color:var(--accent) }
+.block { display:flex; align-items:center; gap:8px; width:100%; padding:5px 8px; border:1px solid var(--line);
+         background:var(--raise); color:var(--text); text-align:left }
+.block.sel { border-color:var(--accent); box-shadow:inset 2px 0 0 var(--accent) }
+.block .thumb { flex:none; width:40px; height:30px; display:flex; align-items:center; justify-content:center;
+                object-fit:contain; border:1px solid var(--line); background:var(--canvas); color:var(--muted); font-size:10px }
+.block img.thumb[src$=".svg"] { background:var(--sheet) }  /* CPs are transparent: show them on paper, as the viewer does */
+.block .num { flex:none; color:var(--muted) }
+.block .title { flex:none }
+.block .sum { margin-left:auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--muted) }
+.review { display:flex; align-items:center; gap:10px }
+.failed { padding:8px; border:1px solid var(--bad); box-shadow:inset 2px 0 0 var(--bad) }
+.failed .actions { margin-top:6px }
+.empty-run { margin:auto; text-align:center; color:var(--muted) }
+.empty-run h3 { margin:0 0 6px; color:var(--text); font-weight:600; text-transform:uppercase }
+.composer { margin:10px; display:flex; align-items:flex-start; gap:8px; padding:6px 8px; border:1px solid var(--line); background:var(--raise) }
+.composer:focus-within { border-color:var(--accent) }
+.composer .prompt { flex:none; padding-top:2px; color:var(--accent) }
+.model-pill { flex:none; align-self:center; padding:2px 8px; border:1px solid var(--line); background:none;
+              color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.04em; white-space:nowrap }
+.model-pill:hover { color:var(--text); border-color:var(--accent) }
+.composer textarea { flex:1; resize:none; border:none; outline:none; padding:2px 0; background:none; color:var(--text) }
+
+/* ── buttons, banner, toast ── */
+.btn { padding:4px 12px; border:1px solid var(--accent); background:var(--accent); color:var(--accent-fg);
+       font-weight:600; text-transform:uppercase; letter-spacing:.04em }
+.btn:disabled { opacity:.4 }
+.btn.ghost { border-color:var(--line); background:none; color:var(--text); font-weight:400 }
+.banner { padding:6px 12px; background:var(--bad); color:#fff }
+.toast { position:fixed; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:10px; align-items:center;
+         padding:8px 14px; border:1px solid var(--bad); background:var(--raise) }
+
+/* ── outputs: stepper ── */
+.out { min-height:0; min-width:0; overflow:hidden; display:flex; flex-direction:column }
+.stepper { flex:none; display:flex; border-top:1px solid var(--line); background:var(--panel) }
+.step { flex:1; min-width:0; padding:7px 4px; border:none; border-right:1px solid var(--line); background:none;
+        color:var(--muted); font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis }
+.step:last-child { border-right:none }
+.step .ic { margin-right:4px }
+.step.done, .step.running, .step.failed { color:var(--text) }
+.step.done .ic { color:var(--ok) } .step.failed .ic { color:var(--bad) }
+.step.waiting { background:var(--accent); color:var(--accent-fg); font-weight:600 }
+.step.skipped { text-decoration:line-through }
+.step.running::before { content:""; display:inline-block; width:9px; height:9px; margin-right:5px; vertical-align:-1px;
+                        border:2px solid transparent; border-top-color:currentColor; border-radius:50%; animation:spin .8s linear infinite }
+@keyframes spin { to { transform:rotate(360deg) } }
+@media (prefers-reduced-motion: reduce) { .step.running::before { animation-duration:3s } }
+
+/* ── viewer: header bar + dotted canvas ── */
+.viewer { flex:1; min-height:0; display:flex; flex-direction:column }
+.vhead { flex:none; height:32px; display:flex; align-items:center; gap:14px; padding-left:10px;
+         white-space:nowrap; border-bottom:1px solid var(--line); background:var(--panel) }
+.vh-info { flex:1; min-width:0; display:flex; gap:14px; overflow:hidden; text-overflow:ellipsis }
+.vh-title { font-weight:600 }
+.vh-pair .muted { margin-right:5px }
+.vh-follow { flex:none; padding:0; border:none; background:none; color:var(--accent) }
+.vh-tools { flex:none; display:flex; align-self:stretch; max-width:70%; overflow-x:auto }
+.vh-tools button { padding:0 10px; border:none; border-left:1px solid var(--line); background:none; color:var(--muted);
+                   font-size:11px; text-transform:uppercase }
+.vh-tools button:hover { color:var(--text) }
+.vh-tools button.on { background:var(--accent); color:var(--accent-fg) }
+.vh-tools a.dl { display:flex; align-items:center; padding:0 10px; border-left:1px solid var(--line); color:var(--accent);
+                 font-size:11px; text-decoration:none; white-space:nowrap }
+.vh-tools a.dl:hover { background:var(--accent); color:var(--accent-fg) }
+.canvas { flex:1; min-height:0; position:relative; overflow:hidden; background-color:var(--canvas);
+          background-image:radial-gradient(var(--dot) 1px, transparent 1px); background-size:12px 12px }
+.viewer-empty { display:flex; align-items:center; justify-content:center; height:100%; color:var(--muted) }
+.pz { width:100%; height:100%; overflow:hidden; cursor:grab }
+.pz > * { transform-origin:0 0 }
+/* The CP sheet is a square of paper centred on the dots, whatever the canvas's aspect. */
+.cp { display:flex; align-items:center; justify-content:center; container-type:size }
+.cp svg { width:min(100cqw, 100cqh); height:min(100cqw, 100cqh); background:var(--sheet); outline:1px solid var(--sheet-edge) }
+.cp line[stroke="red"] { stroke:var(--mountain) }
+.cp line[stroke="blue"] { stroke:var(--valley) }
+.cp.no-hinges line[stroke="green"] { display:none }
+.cp.mono line[stroke="red"], .cp.mono line[stroke="blue"] { stroke:#888 }
+.foldbar { position:absolute; left:12px; right:12px; bottom:10px; z-index:2; display:flex; gap:8px; align-items:center }
+.foldbar input[type="range"] { flex:1; accent-color:var(--accent) }
+.foldbar .pct { width:44px; text-align:right }
+
+/* ── layout choice: the card in the chat, the two packings in the viewer ── */
+.layout-card { display:flex; flex-direction:column; gap:8px }
+.lc-q { font-weight:600 }
+.lc-note { padding:6px 8px; border:1px solid var(--line); border-left:2px solid var(--bad); white-space:pre-wrap }
+.lc-why { white-space:pre-wrap; color:var(--muted) }
+.lc-opt { display:block; width:100%; padding:8px 10px; border:1px solid var(--line); background:var(--raise);
+          color:var(--text); text-align:left }
+.lc-opt:hover { border-color:var(--accent) }
+.lc-opt.rec { box-shadow:inset 2px 0 0 var(--accent) }
+.lc-title { font-weight:600 }
+.lc-badge { margin-left:6px; color:var(--accent); font-weight:400 }
+.lc-opt ul { margin:6px 0 0; padding-left:16px }
+.lc-opt li { margin:2px 0 }
+.compare { height:100%; overflow:auto; padding:12px; display:flex; flex-direction:column; gap:18px }
+.cmp-cps { display:flex; flex-wrap:wrap; gap:16px }
+.cmp-pane { flex:1 1 260px; min-width:0; max-width:520px; margin:0; text-align:center }
+.cmp-cp { position:relative; aspect-ratio:1 / 1; width:100% }
+.cmp-cp > .pz { position:absolute; inset:0 }
+.cmp-pane figcaption { margin-top:6px; font-weight:600 }
+.cmp-sizes-h { margin-bottom:8px; color:var(--muted) }
+.cmp-squares { display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end }
+.cmp-size { margin:0 }
+.cmp-box { position:relative; width:120px; height:120px; border:1px solid var(--line); background:var(--sheet) }
+.cmp-fill { position:absolute; left:0; bottom:0; background:var(--accent); opacity:.85 }
+.cmp-size figcaption { margin-top:4px; color:var(--muted) }

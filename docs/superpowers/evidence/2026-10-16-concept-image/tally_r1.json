@@ -1,0 +1,39 @@
+{
+ "by_arm": {
+  "photo": {
+   "round": 1,
+   "passed": 15,
+   "scored": 17
+  },
+  "A": {
+   "round": 1,
+   "passed": 11,
+   "scored": 17
+  },
+  "B": {
+   "round": 1,
+   "passed": 17,
+   "scored": 17
+  },
+  "C": {
+   "round": 1,
+   "passed": 16,
+   "scored": 17
+  },
+  "D": {
+   "round": 1,
+   "passed": 15,
+   "scored": 17
+  }
+ },
+ "photo_bar": 15,
+ "good_enough": {
+  "A": false,
+  "B": true,
+  "C": true,
+  "D": true
+ },
+ "unscored": [],
+ "unlifted": [],
+ "winner": "B"
+}

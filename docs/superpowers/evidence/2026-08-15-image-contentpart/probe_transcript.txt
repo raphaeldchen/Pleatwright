@@ -1,0 +1,96 @@
+$ cd mcp_harness
+$ RUN_AGENT_SMOKE=1 ./.venv/bin/python probe_image_contentpart.py \
+      --save-png ../docs/superpowers/evidence/2026-08-15-image-contentpart/three_circles.png
+
+========================================================================
+PROBE: does the OpenAI-compat endpoint accept image_url content-parts?
+========================================================================
+  provider   : claude
+  base_url   : https://api.anthropic.com/v1/
+  model      : claude-sonnet-5
+  max_tokens : 4096
+  api key    : present
+  image      : 128x128 PNG, 570 bytes, 3 circles (ground truth)
+  saved      : <repo>/docs/superpowers/evidence/2026-08-15-image-contentpart/three_circles.png
+
+--- request shape (base64 truncated) ---
+{
+  "model": "claude-sonnet-5",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a careful visual inspector. Count what you actually see in the image."
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "How many circles are in this image? Answer with the number only. Use the report_circle_count tool."
+        },
+        {
+          "type": "image_url",
+          "image_url": {
+            "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAI...<734 more chars>"
+          }
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "report_circle_count",
+        "description": "Report how many circles are visible in the image.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "description": "Number of circles seen."
+            }
+          },
+          "required": [
+            "count"
+          ]
+        }
+      }
+    }
+  ],
+  "tool_choice": "auto",
+  "max_tokens": 4096
+}
+
+--- ONE live call via LLMClient.run_turn ---
+  finish_reason : tool_calls
+  text          : ''
+  tool_call     : report_circle_count({"count": 3})
+
+========================================================================
+VERDICT: YES -- the compat endpoint ACCEPTED the image_url content-part (HTTP 200).
+         And the model READ the image: reported 3, ground truth 3.
+========================================================================
+
+(exit status 0)
+
+NOTE ON PROVENANCE: this is the unedited stdout of the single live call made on
+2026-08-15, captured from the terminal that ran it. Re-running the probe costs
+another paid call; the file is transcribed rather than regenerated so the
+committed record stays a record of the ONE call the slice was budgeted.
+
+NOTE ON TWO COSMETIC DRIFTS FROM WHAT A RE-RUN NOW PRINTS. Code review after
+the call landed two presentation changes, and the transcript was deliberately
+NOT re-generated to match them:
+
+  1. The request shape above was BUILT from the config for printing; the probe
+     now CAPTURES the kwargs actually handed to the SDK, and prints them after
+     the call under "request ACTUALLY sent (captured; ...)". The only field
+     that could have differed is `temperature`, which run_turn adds solely when
+     LLM_TEMPERATURE is set -- and the repo `.env` sets neither it nor
+     LLM_MAX_TOKENS nor LLM_BASE_URL (verified: 0 matches). So the JSON above
+     is field-for-field what went on the wire.
+  2. The reply lines now sit under a "--- reply ---" header.
+
+Both paths of the restructured main() -- accept and reject -- were re-verified
+offline with the SDK transport faked, spending no further calls.

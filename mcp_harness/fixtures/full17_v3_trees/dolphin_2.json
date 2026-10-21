@@ -1,0 +1,115 @@
+{
+ "roll": "dolphin_2",
+ "subject": "dolphin",
+ "n": 2,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.2
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.24
+  },
+  {
+   "id": 4,
+   "parent_id": 1,
+   "length": 0.24
+  },
+  {
+   "id": 5,
+   "parent_id": 2,
+   "length": 0.32
+  },
+  {
+   "id": 6,
+   "parent_id": 2,
+   "length": 0.2
+  },
+  {
+   "id": 7,
+   "parent_id": 2,
+   "length": 0.2
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 1,
+   "parent_id": null,
+   "length": 0
+  },
+  {
+   "id": 0,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 1,
+   "length": 0.24
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.2
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.24
+  },
+  {
+   "id": 5,
+   "parent_id": 2,
+   "length": 0.32
+  },
+  {
+   "id": 6,
+   "parent_id": 2,
+   "length": 0.2
+  },
+  {
+   "id": 7,
+   "parent_id": 2,
+   "length": 0.2
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   7,
+   6
+  ]
+ ],
+ "names": {
+  "0": "torso",
+  "1": "tail_base",
+  "2": "torso_front",
+  "3": "dorsal_fin",
+  "4": "tail_fluke",
+  "5": "head",
+  "6": "pectoral_R",
+  "7": "pectoral_L"
+ },
+ "leaves": [
+  "dorsal_fin",
+  "tail_fluke",
+  "head",
+  "pectoral_L",
+  "pectoral_R"
+ ],
+ "served_stage": "none",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.905035) [ide: served a re-rooted tree: node 1] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.28279161, 0.169519131], [0.551821425, 0.894168957], [0.307638156, 0.236444968], [0.433634788, 0.575825335], [0.496633105, 0.745515519], [0.285547436, 0.244646256], [0.299522207, 0.625615291], [0.43400802, 0.76876539], [0.726524404, 0.674105759], [0.668407537, 0.726524404], [0.699581643, 0.698406845], [0.680502105, 0.677253247], [0.710388746, 0.710388746], [0.329002156, 0.228513477], [0.563335455, 0.527673324], [0.221744712, 0.0], [0.0, 0.764938911], [0.161268881, 0.208619703], [0.06047583, 0.556319209], [1.0, 0.529381712], [0.401342086, 0.122165011], [0.700671043, 0.325773362], [0.850335522, 0.427577537], [1.0, 1.0], [1.0, 0.710388746], [0.529381712, 1.0], [0.710388746, 1.0], [0.198518143, 0.85308682], [0.363949928, 0.92654341]], \"edges_vertices\": [[2, 5], [3, 6], [4, 7], [0, 5], [5, 6], [6, 7], [7, 1], [0, 2], [2, 3], [3, 4], [4, 1], [10, 11], [8, 11], [11, 9], [8, 10], [10, 9], [10, 12], [9, 12], [12, 8], [2, 13], [3, 14], [4, 11], [1, 9], [11, 14], [14, 13], [13, 0], [17, 5], [18, 6], [20, 13], [21, 14], [22, 11], [24, 12], [26, 12], [27, 6], [28, 7], [16, 6], [0, 15], [15, 17], [17, 18], [18, 16], [8, 19], [15, 20], [20, 21], [21, 22], [22, 19], [12, 23], [19, 24], [24, 23], [1, 25], [25, 26], [26, 23], [16, 27], [27, 28], [28, 25]], \"edges_assignment\": [\"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"F\", \"F\", \"M\", \"M\", \"M\", \"F\", \"V\", \"V\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

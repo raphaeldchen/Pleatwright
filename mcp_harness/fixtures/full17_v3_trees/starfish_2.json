@@ -1,0 +1,97 @@
+{
+ "roll": "starfish_2",
+ "subject": "starfish",
+ "n": 2,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.307692
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.369231
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.369231
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.4
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.307692
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.369231
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.369231
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   2,
+   3
+  ],
+  [
+   4,
+   5
+  ]
+ ],
+ "names": {
+  "0": "disc",
+  "1": "arm_top",
+  "2": "arm_R",
+  "3": "arm_L",
+  "4": "arm_BR",
+  "5": "arm_BL"
+ },
+ "leaves": [
+  "arm_top",
+  "arm_R",
+  "arm_L",
+  "arm_BR",
+  "arm_BL"
+ ],
+ "served_stage": "none",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.860303) [ide: served a re-ranked attempt-0 ordering: 'seeded_1'] your node order packed, but a different attempt-0 ordering produced a strictly better base (by scale and/or mirror symmetry) with the exact same edge lengths, flaps, and pairs, so the backend served that ordering instead. Nothing about your requested anatomy changed -- only the packer's STARTING ORDER differed]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.83420764, 0.496487647], [0.496487647, 0.83420764], [0.665347644, 0.665347644], [0.512955444, 0.512955446], [0.735291744, 0.735291744], [0.486660693, 0.0], [0.0, 0.486660693], [0.243330347, 0.243330347], [1.0, 0.417641322], [0.753597053, 0.217173422], [1.0, 1.0], [1.0, 0.735291744], [0.417641322, 1.0], [0.735291744, 1.0], [0.217173422, 0.753597053]], \"edges_vertices\": [[2, 3], [0, 3], [3, 1], [0, 2], [2, 1], [2, 4], [1, 4], [4, 0], [7, 3], [9, 3], [11, 4], [13, 4], [14, 3], [6, 3], [3, 5], [5, 7], [7, 6], [0, 8], [8, 9], [9, 5], [4, 10], [8, 11], [11, 10], [1, 12], [12, 13], [13, 10], [12, 14], [14, 6]], \"edges_assignment\": [\"M\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"V\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

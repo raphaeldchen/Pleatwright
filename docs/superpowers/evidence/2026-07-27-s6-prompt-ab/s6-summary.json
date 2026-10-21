@@ -1,0 +1,230 @@
+{
+  "arm_a_prompt_sha256": "5bd6ac404a4689c4e33150843e5caca06e1f7161251c8bff95f255318c443a3e",
+  "arm_b_prompt_sha256": "18b2215e6c13455c2a53b20980ecc81262c772b9109af06884f492d5acce2532",
+  "by_run": [
+    {
+      "applicable": 11,
+      "arm": "A",
+      "compiles": 1,
+      "criteria": {
+        "benign_not_retried": true,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": true,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": true,
+        "rescue_relayed": true,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 11,
+      "steps": 5,
+      "subject": "quadruped_dog",
+      "tool_calls": 4,
+      "turn_error": null
+    },
+    {
+      "applicable": 11,
+      "arm": "B",
+      "compiles": 2,
+      "criteria": {
+        "benign_not_retried": true,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": false,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": true,
+        "rescue_relayed": true,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 10,
+      "steps": 8,
+      "subject": "quadruped_dog",
+      "tool_calls": 8,
+      "turn_error": null
+    },
+    {
+      "applicable": 6,
+      "arm": "A",
+      "compiles": 0,
+      "criteria": {
+        "benign_not_retried": null,
+        "compiles_within_limit": true,
+        "gate_before_compile": null,
+        "linted_served_fold": null,
+        "no_engine_crash": true,
+        "no_false_length_claim": null,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": false,
+        "reference_first": true,
+        "rescue_relayed": null,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 5,
+      "steps": 2,
+      "subject": "insect_beetle",
+      "tool_calls": 1,
+      "turn_error": null
+    },
+    {
+      "applicable": 6,
+      "arm": "B",
+      "compiles": 0,
+      "criteria": {
+        "benign_not_retried": null,
+        "compiles_within_limit": true,
+        "gate_before_compile": null,
+        "linted_served_fold": null,
+        "no_engine_crash": true,
+        "no_false_length_claim": null,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": false,
+        "reference_first": true,
+        "rescue_relayed": null,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 5,
+      "steps": 5,
+      "subject": "insect_beetle",
+      "tool_calls": 6,
+      "turn_error": null
+    },
+    {
+      "applicable": 9,
+      "arm": "A",
+      "compiles": 1,
+      "criteria": {
+        "benign_not_retried": null,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": true,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": false,
+        "rescue_relayed": null,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 8,
+      "steps": 5,
+      "subject": "template_bird",
+      "tool_calls": 4,
+      "turn_error": null
+    },
+    {
+      "applicable": 9,
+      "arm": "B",
+      "compiles": 1,
+      "criteria": {
+        "benign_not_retried": null,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": false,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": false,
+        "rescue_relayed": null,
+        "stub_disclosed": null
+      },
+      "errored_tool_results": 0,
+      "passed": 7,
+      "steps": 5,
+      "subject": "template_bird",
+      "tool_calls": 4,
+      "turn_error": null
+    },
+    {
+      "applicable": 11,
+      "arm": "A",
+      "compiles": 1,
+      "criteria": {
+        "benign_not_retried": true,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": false,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": null,
+        "rescue_relayed": true,
+        "stub_disclosed": true
+      },
+      "errored_tool_results": 0,
+      "passed": 10,
+      "steps": 4,
+      "subject": "direct_stub_385",
+      "tool_calls": 3,
+      "turn_error": null
+    },
+    {
+      "applicable": 11,
+      "arm": "B",
+      "compiles": 1,
+      "criteria": {
+        "benign_not_retried": true,
+        "compiles_within_limit": true,
+        "gate_before_compile": true,
+        "linted_served_fold": true,
+        "no_engine_crash": true,
+        "no_false_length_claim": false,
+        "no_forbidden_paper": true,
+        "no_path_mixing": true,
+        "reached_fold": true,
+        "reference_first": null,
+        "rescue_relayed": true,
+        "stub_disclosed": false
+      },
+      "errored_tool_results": 0,
+      "passed": 9,
+      "steps": 4,
+      "subject": "direct_stub_385",
+      "tool_calls": 4,
+      "turn_error": null
+    }
+  ],
+  "dry_run": false,
+  "subjects": [
+    {
+      "bucket": "quadruped.glb",
+      "key": "quadruped_dog",
+      "kind": "mesh"
+    },
+    {
+      "bucket": "insect.glb",
+      "key": "insect_beetle",
+      "kind": "mesh"
+    },
+    {
+      "bucket": "bird.glb",
+      "key": "template_bird",
+      "kind": "mesh"
+    },
+    {
+      "bucket": null,
+      "key": "direct_stub_385",
+      "kind": "direct"
+    }
+  ],
+  "when": "2026-07-27T20:36:43+00:00"
+}

@@ -1,0 +1,228 @@
+{
+ "roll": "octopus_2",
+ "subject": "octopus",
+ "subject_guess": "octopus",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mantle",
+   "parent": "body",
+   "length": 6,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "arm1_L_base",
+   "parent": "mantle",
+   "length": 6,
+   "direction": [
+    -3,
+    2,
+    3
+   ]
+  },
+  {
+   "name": "arm1_L_tip",
+   "parent": "arm1_L_base",
+   "length": 4,
+   "direction": [
+    -3,
+    2,
+    3
+   ]
+  },
+  {
+   "name": "arm1_R_base",
+   "parent": "mantle",
+   "length": 6,
+   "direction": [
+    -3,
+    2,
+    -3
+   ]
+  },
+  {
+   "name": "arm1_R_tip",
+   "parent": "arm1_R_base",
+   "length": 4,
+   "direction": [
+    -3,
+    2,
+    -3
+   ]
+  },
+  {
+   "name": "arm2_L_base",
+   "parent": "mantle",
+   "length": 8,
+   "direction": [
+    -7,
+    2,
+    5
+   ]
+  },
+  {
+   "name": "arm2_L_tip",
+   "parent": "arm2_L_base",
+   "length": 5,
+   "direction": [
+    -7,
+    2,
+    5
+   ]
+  },
+  {
+   "name": "arm2_R_base",
+   "parent": "mantle",
+   "length": 8,
+   "direction": [
+    -7,
+    2,
+    -5
+   ]
+  },
+  {
+   "name": "arm2_R_tip",
+   "parent": "arm2_R_base",
+   "length": 5,
+   "direction": [
+    -7,
+    2,
+    -5
+   ]
+  },
+  {
+   "name": "arm3_L_base",
+   "parent": "mantle",
+   "length": 9,
+   "direction": [
+    -4,
+    -6,
+    6
+   ]
+  },
+  {
+   "name": "arm3_L_tip",
+   "parent": "arm3_L_base",
+   "length": 6,
+   "direction": [
+    -4,
+    -6,
+    6
+   ]
+  },
+  {
+   "name": "arm3_R_base",
+   "parent": "mantle",
+   "length": 9,
+   "direction": [
+    -4,
+    -6,
+    -6
+   ]
+  },
+  {
+   "name": "arm3_R_tip",
+   "parent": "arm3_R_base",
+   "length": 6,
+   "direction": [
+    -4,
+    -6,
+    -6
+   ]
+  },
+  {
+   "name": "arm4_L_base",
+   "parent": "mantle",
+   "length": 11,
+   "direction": [
+    11,
+    4,
+    1
+   ]
+  },
+  {
+   "name": "arm4_L_tip",
+   "parent": "arm4_L_base",
+   "length": 7,
+   "direction": [
+    11,
+    4,
+    1
+   ]
+  },
+  {
+   "name": "arm4_R_base",
+   "parent": "mantle",
+   "length": 11,
+   "direction": [
+    11,
+    4,
+    -1
+   ]
+  },
+  {
+   "name": "arm4_R_tip",
+   "parent": "arm4_R_base",
+   "length": 7,
+   "direction": [
+    11,
+    4,
+    -1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "arm1_L_tip",
+   "arm1_R_tip"
+  ],
+  [
+   "arm2_L_tip",
+   "arm2_R_tip"
+  ],
+  [
+   "arm3_L_tip",
+   "arm3_R_tip"
+  ],
+  [
+   "arm4_L_tip",
+   "arm4_R_tip"
+  ]
+ ],
+ "leaves": [
+  "arm1_L_tip",
+  "arm1_R_tip",
+  "arm2_L_tip",
+  "arm2_R_tip",
+  "arm3_L_tip",
+  "arm3_R_tip",
+  "arm4_L_tip",
+  "arm4_R_tip"
+ ],
+ "readings": [
+  "Radially symmetric animal, no elongated head/tail: mantle (body sac) sits centered with eyes just markers, not a protruding head, so it is TRUNK not a leaf.",
+  "Arms spread widest and straightest in the XZ (top) panel -> XZ panel is the PROFILE for arm length/spread; XY and ZY panels show the same arms foreshortened by curling/drooping (droop = y).",
+  "Mantle: XY panel top of sac (12,9) vs arm-crown base (13,15) => mantle rises 6 units, so mantle direction = +y from arm base.",
+  "Dorsal-most (shortest) arm pair: XZ tip (4,3) vs base (13,12) => spread (-9,-9 on x,z-flip -> dz+9); XY tip y(8) vs base y(15) => rise +7. Direction ~ (-9,7,9)/(-9,7,-9) mirrored L/R.",
+  "Second arm pair: XZ tip (0,9ish) vs base (13,12); slightly less rise than pair1 in XY (~y11) => direction ~(-7,2,5)/(-7,2,-5).",
+  "Third arm pair: tips droop lower in XY (y~18-20) while XZ tip near (7,17-ish) relative to base => direction ~(-4,-6,6)/(-4,-6,-6).",
+  "Ventral-most (longest) arm pair: this is the arm that reaches the full 24-unit mark, defining the grid's longest extent. XZ tip (24,11) vs base (13,12) => dx=11, dz=1; XY tip y(11) vs base y(15) => dy=4. Direction ~(11,4,1)/(11,4,-1).",
+  "Eyes (two small dots near (13,11) in XY, and near center-top of head in ZY) are sub-flap detail, excluded from leaves per protocol.",
+  "No external tail or siphon-leaf identified; the pointed forward tip is simply the extended ventral arm pair, consistent across XY and XZ panels."
+ ],
+ "notes": "Octopus has a fused head/mantle (no neck-protruding head, so head is TRUNK not a leaf) and no external tail. Eight arms = eight leaves, grouped into four bilateral pairs (dorsal-most pair1, shortest, to ventral-most pair4, longest, matching real octopus arm-length gradient and matching the observed pose where one ventral arm is extended straight to the 24-unit mark). Each arm was split into two segments (base, tip) purely as an anatomical inference to allow the curling silhouette seen in all three panels; the raw mesh shows continuously curving arms rather than a distinct hinge, so segment directions were kept equal (straight) since no distinct bend landmark could be reliably read from the grid. Left/right assigned via the z-axis (ZY front panel), with +z taken as the animal's left. All four pairs attach to a single shared \"mantle\" trunk node, which is anatomically correct for an octopus (arms genuinely ring the single buccal mass) rather than being an erroneous shared-limb hub - each pair still has its own independent base->tip chain back to that spine node, never sharing a joint with its mirror partner.</notes>\n</invoke>\n",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

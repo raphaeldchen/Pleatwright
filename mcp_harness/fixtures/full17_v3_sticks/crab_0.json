@@ -1,0 +1,282 @@
+{
+ "roll": "crab_0",
+ "subject": "crab",
+ "subject_guess": "crab",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "front_body",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    0,
+    6,
+    5
+   ]
+  },
+  {
+   "name": "rear_body",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    -7
+   ]
+  },
+  {
+   "name": "claw_L_bend",
+   "parent": "front_body",
+   "length": 5,
+   "direction": [
+    -7,
+    2,
+    2
+   ]
+  },
+  {
+   "name": "claw_L_tip",
+   "parent": "claw_L_bend",
+   "length": 4,
+   "direction": [
+    -3,
+    2,
+    -2
+   ]
+  },
+  {
+   "name": "claw_R_bend",
+   "parent": "front_body",
+   "length": 5,
+   "direction": [
+    7,
+    2,
+    2
+   ]
+  },
+  {
+   "name": "claw_R_tip",
+   "parent": "claw_R_bend",
+   "length": 4,
+   "direction": [
+    3,
+    2,
+    -2
+   ]
+  },
+  {
+   "name": "leg1_L_knee",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -5,
+    3,
+    1
+   ]
+  },
+  {
+   "name": "leg1_L_foot",
+   "parent": "leg1_L_knee",
+   "length": 6,
+   "direction": [
+    -3,
+    -11,
+    -2
+   ]
+  },
+  {
+   "name": "leg1_R_knee",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    5,
+    3,
+    1
+   ]
+  },
+  {
+   "name": "leg1_R_foot",
+   "parent": "leg1_R_knee",
+   "length": 6,
+   "direction": [
+    3,
+    -11,
+    -2
+   ]
+  },
+  {
+   "name": "leg2_L_knee",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -6,
+    0,
+    -3
+   ]
+  },
+  {
+   "name": "leg2_L_foot",
+   "parent": "leg2_L_knee",
+   "length": 6,
+   "direction": [
+    -3,
+    -9,
+    -1
+   ]
+  },
+  {
+   "name": "leg2_R_knee",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    6,
+    0,
+    -3
+   ]
+  },
+  {
+   "name": "leg2_R_foot",
+   "parent": "leg2_R_knee",
+   "length": 6,
+   "direction": [
+    3,
+    -9,
+    -1
+   ]
+  },
+  {
+   "name": "leg3_L_knee",
+   "parent": "rear_body",
+   "length": 5,
+   "direction": [
+    -7,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "leg3_L_foot",
+   "parent": "leg3_L_knee",
+   "length": 6,
+   "direction": [
+    -3,
+    -6,
+    -1
+   ]
+  },
+  {
+   "name": "leg3_R_knee",
+   "parent": "rear_body",
+   "length": 5,
+   "direction": [
+    7,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "leg3_R_foot",
+   "parent": "leg3_R_knee",
+   "length": 6,
+   "direction": [
+    3,
+    -6,
+    -1
+   ]
+  },
+  {
+   "name": "leg4_L_knee",
+   "parent": "rear_body",
+   "length": 5,
+   "direction": [
+    -8,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "leg4_L_foot",
+   "parent": "leg4_L_knee",
+   "length": 6,
+   "direction": [
+    -3,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "leg4_R_knee",
+   "parent": "rear_body",
+   "length": 5,
+   "direction": [
+    8,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "leg4_R_foot",
+   "parent": "leg4_R_knee",
+   "length": 6,
+   "direction": [
+    3,
+    -2,
+    -1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_L_tip",
+   "claw_R_tip"
+  ],
+  [
+   "leg1_L_foot",
+   "leg1_R_foot"
+  ],
+  [
+   "leg2_L_foot",
+   "leg2_R_foot"
+  ],
+  [
+   "leg3_L_foot",
+   "leg3_R_foot"
+  ],
+  [
+   "leg4_L_foot",
+   "leg4_R_foot"
+  ]
+ ],
+ "leaves": [
+  "claw_L_tip",
+  "claw_R_tip",
+  "leg1_L_foot",
+  "leg1_R_foot",
+  "leg2_L_foot",
+  "leg2_R_foot",
+  "leg3_L_foot",
+  "leg3_R_foot",
+  "leg4_L_foot",
+  "leg4_R_foot"
+ ],
+ "readings": [
+  "Front at +z: claws/eye-nubs sit at high-z in the ZY and XZ panels (e.g. XZ eye nubs near grid (13,5) = high actual z), while legs trail toward low z; carapace is widest along x (claw-tip to claw-tip spans the full 0-24 grid in the XY and XZ panels), so XY panel is the FRONT view and ZY panel is the PROFILE (matches the wide-bodied-animal case).",
+  "Carapace bounds in XY: top edge (rostrum) ~(12,8), bottom/ventral ~(12,18); used as front_body/rear_body anchors.",
+  "Left claw (image-left, smaller x) in XY: shoulder (9,9), elbow (5,6), tip (2,4); in ZY the same claw sits at high z (~17-20), confirming it points forward and up.",
+  "Right claw mirrored in XY: shoulder (16,9), elbow (20,6), tip (23,4), same z-range as left claw.",
+  "Walking-leg attachment points read along the carapace side in XY, front-to-back: leg1 (7,11)/(17,11), leg2 (6,14)/(18,14), leg3 (5,17)/(19,17), leg4 (4,20)/(20,20); ZY panel shows these four pairs at decreasing z (leg1 most forward, leg4 most rear).",
+  "Feet/ground contacts in XY near the bottom of the grid, y=22-23 (e.g. leg1 foot (4,22)/(20,22), leg4 foot (1,22)/(23,22)), confirming ground is the LARGE y-grid value; hip(11)->foot(22) therefore gives a NEGATIVE dy as required.",
+  "z-depth for each leg pair taken from ZY panel horizontal axis: leg1 z~12-14, leg2 z~9-10, leg3 z~6-7, leg4 z~3-4, giving the front-to-rear stagger."
+ ],
+ "notes": "No head leaf: the crab's cephalothorax is fused into the carapace (trunk), not a protruding flap. No tail leaf: the abdominal flap is tucked flush under the body, not an external appendage. Body spine simplified to three nodes (body/front_body/rear_body) since the carapace is a single rigid shell; front_body anchors the claws (forward, high-z, raised), rear_body anchors the rearmost leg pairs (low-z). Each claw and each leg is modeled with one inferred bend joint (elbow / knee) between the body attachment and the terminal leaf, based on the visible flex in all three panels; finer joints (true crab coxa-merus-carpus-propodus-dactylus chain) were not separately inferred given render resolution. All four leg pairs and both claws are authored with equal proportional lengths (same length values reused per segment type) per the proportion-not-pose rule, even though the render shows them mid-stride at different phases. Left/right assigned by image-left(-x)/image-right(+x) after establishing the animal faces +z; symmetric pairs only join the two terminal leaf feet/claw-tips, never internal joints.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

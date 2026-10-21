@@ -1,0 +1,98 @@
+{
+ "roll": "starfish_1",
+ "subject": "starfish",
+ "subject_guess": "Starfish (5-armed sea star), viewed from its aboral (top) side; body is radially symmetric with no distinct head",
+ "nodes": [
+  {
+   "name": "disc",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_top",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "arm_L",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_R",
+   "parent": "disc",
+   "length": 11,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_BL",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    -4,
+    -11,
+    0
+   ]
+  },
+  {
+   "name": "arm_BR",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    5,
+    -11,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "arm_L",
+   "arm_R"
+  ],
+  [
+   "arm_BL",
+   "arm_BR"
+  ]
+ ],
+ "leaves": [
+  "arm_top",
+  "arm_L",
+  "arm_R",
+  "arm_BL",
+  "arm_BR"
+ ],
+ "readings": [
+  "Radially symmetric echinoderm: no head/neck exists, so 'profile' is not a single direction. The XY panel is the aboral PLAN view showing the full 5-arm star layout; z is the thin thickness/up-down axis of the flattened body.",
+  "Disc center read at (12,12) in XY panel (where all five arms converge).",
+  "Top arm tip at (12,0.5) in XY panel -> straight up from center, dx=0, screen dy=0.5-12=-11.5 => mesh dy=+11.5 (ascending, matches an arm pointing up-screen).",
+  "Left arm tip at (0.5,12) in XY panel -> dx=0.5-12=-11.5, dy=0 (level with center).",
+  "Right arm tip at (23,12) in XY panel -> dx=23-12=11, dy=0 (level with center).",
+  "Bottom-left arm tip at (8,23) in XY panel -> dx=8-12=-4, screen dy=23-12=11 => mesh dy=-11 (descending, matches arm going down-screen).",
+  "Bottom-right arm tip at (17,23) in XY panel -> dx=17-12=5, screen dy=11 => mesh dy=-11.",
+  "ZY panel: blade spans full y (0 to 24) with waist width z=8-16 around the middle, i.e. the top and bottom arms stay near z=12 (no lateral z offset) while the disc bulges the waist.",
+  "XZ panel: shape spans full x (0 to 24) with waist width z=8-16, i.e. the left/right arms stay near z=12 (no offset) while the central disc gives the raised bump seen at x=8-16.",
+  "All five arm lengths computed from center-to-tip distance are close to 12 grid units, consistent with a (near) 5-fold radial animal: top ~11.5, left ~11.5, right ~11, bottom-left ~11.7, bottom-right ~12.1."
+ ],
+ "notes": "Subject is a 5-armed sea star (starfish) with radial (not bilateral) symmetry, so there is no head/neck and no single 'profile' panel in the usual sense; the XY panel is treated as the defining plan view since it alone shows all five arms and the central disc clearly. Z was inferred to be a thin thickness axis: the ZY and XZ panels each show only a narrow (z=8-16) waist because the arms lie essentially flat in the XY plane, and each panel's blade shape is really the SUM/overlap silhouette of whichever arms extend along that panel's vertical axis (y for ZY, x for XZ) - not a separate limb. Root is the central disc (length 0, direction [0,0,0]) per protocol. Each of the five arms is modeled as a single unsegmented flap/leaf, since sea-star arms have no internal joints, tapering smoothly from disc to tip; this single-segment choice is the only structural inference made. For the required symmetric-pair bookkeeping I treated the top arm as sitting on the animal's one bilateral axis (unpaired), and mirrored the remaining two left/right pairs (arm_L/arm_R and arm_BL/arm_BR) across that axis, which matches the near-identical lengths (~11-12 units) measured for all five arms. Lengths are the straight center-to-tip distances read off the XY panel, rounded to the nearest integer.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

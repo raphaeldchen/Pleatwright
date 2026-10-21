@@ -1,0 +1,2 @@
+109 edits selected {'antlered': 35, 'toed': 39, 'lopsided': 35}
+PYTHONPATH=.:tests   --workers 6 >   4507.99s user 22.53s system 543% cpu 13:53.31 total

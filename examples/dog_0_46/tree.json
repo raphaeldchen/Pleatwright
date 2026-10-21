@@ -1,0 +1,190 @@
+{
+ "roll": "dog_0",
+ "subject": "dog",
+ "subject_guess": "dog (quadruped, e.g. beagle-type)",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    -6,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 5,
+   "direction": [
+    -8,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    4,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "hip",
+   "length": 6,
+   "direction": [
+    -3,
+    7,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "body",
+   "length": 6,
+   "direction": [
+    -1,
+    -8,
+    -3
+   ]
+  },
+  {
+   "name": "paw_front_L",
+   "parent": "shoulder_L",
+   "length": 7,
+   "direction": [
+    1,
+    -8,
+    -1
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "body",
+   "length": 6,
+   "direction": [
+    -1,
+    -8,
+    3
+   ]
+  },
+  {
+   "name": "paw_front_R",
+   "parent": "shoulder_R",
+   "length": 7,
+   "direction": [
+    1,
+    -8,
+    1
+   ]
+  },
+  {
+   "name": "thigh_L",
+   "parent": "hip",
+   "length": 6,
+   "direction": [
+    0,
+    -8,
+    -3
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "thigh_L",
+   "length": 4,
+   "direction": [
+    2,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "paw_rear_L",
+   "parent": "hock_L",
+   "length": 3,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "thigh_R",
+   "parent": "hip",
+   "length": 6,
+   "direction": [
+    0,
+    -8,
+    3
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "thigh_R",
+   "length": 4,
+   "direction": [
+    2,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "paw_rear_R",
+   "parent": "hock_R",
+   "length": 3,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "paw_front_L",
+   "paw_front_R"
+  ],
+  [
+   "paw_rear_L",
+   "paw_rear_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "paw_front_L",
+  "paw_front_R",
+  "paw_rear_L",
+  "paw_rear_R"
+ ],
+ "readings": [
+  "head at -x (nose points left in XY panel): XY panel is the profile view, ZY panel is the front/rear view, XZ panel is the top view",
+  "nose (2,9), skull/neck junction (10,5): head length ~5, extends forward and slightly downward from the skull",
+  "withers/neck junction (16,6) vs skull (10,5): neck length ~4, rises slightly and points forward to the head",
+  "withers (16,6), hip/croup (20,8): back length ~8, slopes gently down toward the hindquarters (larger screen-y = lower on the back)",
+  "hip (20,8), tail tip (17,1): tail curls forward and upward over the back, length ~6",
+  "shoulder (16,6, treated as withers) to elbow (15,14): front upper-leg length ~6, nearly straight down",
+  "elbow (15,14) to paw (16,22): front lower-leg length ~7, straight down to ground line y=22",
+  "hip (20,8) to knee (20,16): rear thigh length ~6, straight down",
+  "knee (20,16) to hock (22,18): lower rear-leg length ~4, down and slightly forward",
+  "hock (22,18) to paw (22,22): rear paw segment length ~3, straight down, matches ground line y=22 seen for front paws too",
+  "ZY panel: front-leg stance spans z=8 (animal-left) to z=16 (animal-right) around a body centerline of z=12, giving the lateral splay used for left/right leg directions; rear legs read a similar splay lower in the same panel"
+ ],
+ "notes": "Head/neck split inferred at the visible narrowing behind the ears (skull vs neck) in the XY panel. Front leg was split into two segments (shoulder-elbow, elbow-paw) since the profile shows a fairly straight limb with one visible bend at the elbow. Rear leg was split into three segments (thigh, lower-leg to hock, hock to paw) because the profile clearly shows the characteristic canine hock bend partway down the limb. Tail is encoded as a single curved-direction segment approximating its up-and-forward curl over the back rather than multiple segments, since only base and tip are clearly distinguishable in the render. Left/right leg lateral (z) offsets are taken from the ZY (front) panel's leg stance spread around the body centerline; sign convention: +z = animal's right side, -z = animal's left side. Ears, eyes, and other head details are sub-flap features and were not given separate leaves per the protocol. Vertical directions were sign-flipped from the screen's downward-increasing y grid so that all descending limbs have negative dy, verified on the front leg (shoulder to paw goes from y=6 to y=22 on screen, i.e. down, giving negative world dy).",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

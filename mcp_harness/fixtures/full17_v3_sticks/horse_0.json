@@ -1,0 +1,300 @@
+{
+ "roll": "horse_0",
+ "subject": "horse",
+ "subject_guess": "horse",
+ "nodes": [
+  {
+   "name": "trunk",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "trunk",
+   "length": 4,
+   "direction": [
+    -4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 11,
+   "direction": [
+    10,
+    5,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 6,
+   "direction": [
+    5,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "tailbase",
+   "parent": "trunk",
+   "length": 6,
+   "direction": [
+    -6,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tailtip",
+   "parent": "tailbase",
+   "length": 9,
+   "direction": [
+    -6,
+    -7,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "trunk",
+   "length": 6,
+   "direction": [
+    6,
+    -1,
+    1
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "elbow_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_L",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hoof_FL",
+   "parent": "fetlock_L",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "trunk",
+   "length": 6,
+   "direction": [
+    6,
+    -1,
+    -1
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "elbow_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_R",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hoof_FR",
+   "parent": "fetlock_R",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "trunk",
+   "length": 4,
+   "direction": [
+    -4,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "stifle_L",
+   "parent": "hip_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "stifle_L",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "fetlockH_L",
+   "parent": "hock_L",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hoof_HL",
+   "parent": "fetlockH_L",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "trunk",
+   "length": 4,
+   "direction": [
+    -4,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "stifle_R",
+   "parent": "hip_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "stifle_R",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "fetlockH_R",
+   "parent": "hock_R",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hoof_HR",
+   "parent": "fetlockH_R",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hoof_FL",
+   "hoof_FR"
+  ],
+  [
+   "hoof_HL",
+   "hoof_HR"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tailtip",
+  "hoof_FL",
+  "hoof_FR",
+  "hoof_HL",
+  "hoof_HR"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile, ZY is the front, XZ is the top-down view",
+  "poll (19,2), nose tip (24,6) in XY panel",
+  "withers (9,7) in XY panel",
+  "croup/back top (17,7) in XY panel",
+  "tail base (7,9), tail tip (1,16) in XY panel",
+  "chest/shoulder point (19,9) in XY panel",
+  "front-leg ground contact ~ (19-20,21) in XY panel, so front leg span ~12 units (9->21)",
+  "hip point (9,10) in XY panel",
+  "hind-leg ground contact ~ (11,21) in XY panel, so hind leg span ~11 units (10->21)",
+  "ZY panel confirms front legs sit at two distinct z-offsets (left vs right) near the body midline",
+  "XZ (top) panel shows fore- and hind-limb pairs splayed to either side of the spine, confirming left/right z-separation"
+ ],
+ "notes": "Horse is shown mid-gallop with legs at different stride phases; per the proportion-not-pose rule, both left/right front legs and both left/right hind legs were authored with IDENTICAL segment lengths (only mirrored in z at the shoulder/hip attachment), rather than copying the differing on-screen leg angles. Neck was split from the withers reading (9,7) to poll (19,2), and head (leaf) taken as poll->nose (19,2)->(24,6). Front leg total span (~12 units, shoulder 9 -> ground 21) was inferred to split into elbow/knee/fetlock/hoof segments (4/3/3/2) typical of equine limb joints; hind leg span (~11 units, hip 10 -> ground 21) split into stifle/hock/fetlock/hoof (3/3/3/2). Tail modeled as tailbase->tailtip using base (7,9) and tip (1,16). Left/right sides assigned by facing convention: animal faces +x with +y up, so its right side corresponds to -z and left side to +z in this mesh frame, matched to the two leg clusters visible in the ZY (front) and XZ (top) panels.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

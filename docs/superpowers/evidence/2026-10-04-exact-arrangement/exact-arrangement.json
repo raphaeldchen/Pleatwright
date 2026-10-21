@@ -1,0 +1,549 @@
+{
+ "area_vertices_max": 6,
+ "arrangement": {
+  "area_vertices_max": 6,
+  "covers_identical": true,
+  "exact_cells": 26,
+  "float_cells": 26,
+  "margins": {
+   "AREA_EPS/intersection": {
+    "closest_ratio_to_threshold": 108131.48788926807,
+    "threshold": 1e-09,
+    "value": 0.00010813148788926807
+   },
+   "AREA_EPS/outside": {
+    "closest_ratio_to_threshold": 108131.48788926807,
+    "threshold": 1e-09,
+    "value": 0.00010813148788926807
+   },
+   "GEOM_EPS/clip_half_signed_dist#absorbed": {
+    "closest_ratio_to_threshold": 236299.9804484519,
+    "threshold": 4.231908940924127e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/clip_half_signed_dist#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/clip_half_signed_dist#kept": {
+    "closest_ratio_to_threshold": 216262.97577842165,
+    "threshold": 1e-09,
+    "value": 0.00021626297577842166
+   },
+   "GEOM_EPS/dedupe_same_point#absorbed": {
+    "closest_ratio_to_threshold": 128674.27506772846,
+    "threshold": 7.771561172376096e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/dedupe_same_point#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/dedupe_same_point#kept": {
+    "closest_ratio_to_threshold": 14705882.352932796,
+    "threshold": 1e-09,
+    "value": 0.014705882352932798
+   }
+  },
+  "max_denominator": 68,
+  "n_pairs_only_exact": 0,
+  "n_pairs_only_float": 0,
+  "pairs_exact": 53754,
+  "pairs_float": 53754,
+  "pairs_identical": true,
+  "pairs_only_exact": [],
+  "pairs_only_float": [],
+  "secs": 0.99
+ },
+ "closest_call": {
+  "factor": 10813.148788925137,
+  "site": "INTERIOR_EPS/strictly_inside#kept",
+  "threshold": 1e-08,
+  "value": 0.00010813148788925136
+ },
+ "constraint_fidelity": {
+  "eqs": 28192,
+  "pairs": 53754,
+  "tacos": 74602
+ },
+ "constraints": {
+  "area_vertices_max": 6,
+  "census": {
+   "clip_seg_calls": 200394,
+   "collinear_overlap_calls": 0,
+   "creases": 745,
+   "eq_from_spanning": 28192,
+   "eq_from_taco_tortilla_along_flat_edge": 0,
+   "eq_from_tortilla_tortilla": 0,
+   "segs_interact_calls": 277140,
+   "side_of_calls": 1490,
+   "side_of_returned_0": 0,
+   "strictly_inside_calls": 179562,
+   "taco_from_taco_taco": 74602,
+   "tortilla_pairs": 0,
+   "tortillas": 0,
+   "unit_calls": 745,
+   "unit_returned_None": 0
+  },
+  "clauses_exact": 4614726,
+  "clauses_exact_by_family": {
+   "equality": 28192,
+   "taco": 74602,
+   "transitivity": 4511932
+  },
+  "clauses_exact_streamed": 4614726,
+  "clauses_float": 4614726,
+  "clauses_float_by_family": {
+   "equality": 28192,
+   "taco": 74602,
+   "transitivity": 4511932
+  },
+  "clauses_float_streamed": 4614726,
+  "clauses_identical": true,
+  "clauses_only_exact": 0,
+  "clauses_only_float": 0,
+  "coord_denominator_lcm": 68,
+  "direction": "identical",
+  "direction_inputs": {
+   "clauses_only_exact": 0,
+   "clauses_only_float": 0,
+   "covers": [
+    "pairs",
+    "eqs",
+    "tacos",
+    "clauses"
+   ],
+   "families_only_exact": 0,
+   "families_only_float": 0,
+   "only_exact": 0,
+   "only_float": 0
+  },
+  "eqs_identical": true,
+  "eqs_only_exact": 0,
+  "eqs_only_float": 0,
+  "eqs_sample_only_exact": [],
+  "eqs_sample_only_float": [],
+  "exact_area_quantum": 0.00010813148788927336,
+  "exact_cross_quantum": 0.00021626297577854672,
+  "families_exact": {
+   "eqs": 28192,
+   "pairs": 53754,
+   "tacos": 74602
+  },
+  "families_float": {
+   "eqs": 28192,
+   "pairs": 53754,
+   "tacos": 74602
+  },
+  "margins": {
+   "AREA_EPS/intersection": {
+    "closest_ratio_to_threshold": 108131.48788926807,
+    "threshold": 1e-09,
+    "value": 0.00010813148788926807
+   },
+   "AREA_EPS/outside": {
+    "closest_ratio_to_threshold": 108131.48788926807,
+    "threshold": 1e-09,
+    "value": 0.00010813148788926807
+   },
+   "GEOM_EPS/clip_half_signed_dist#absorbed": {
+    "closest_ratio_to_threshold": 236299.9804484519,
+    "threshold": 4.231908940924127e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/clip_half_signed_dist#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/clip_half_signed_dist#kept": {
+    "closest_ratio_to_threshold": 216262.97577842165,
+    "threshold": 1e-09,
+    "value": 0.00021626297577842166
+   },
+   "GEOM_EPS/clip_seg_denom#absorbed": {
+    "closest_ratio_to_threshold": 708899.9413453557,
+    "threshold": 1.4106363136413757e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/clip_seg_denom#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/clip_seg_denom#kept": {
+    "closest_ratio_to_threshold": 216262.9757785419,
+    "threshold": 1e-09,
+    "value": 0.00021626297577854192
+   },
+   "GEOM_EPS/clip_seg_parallel_num#absorbed": {
+    "closest_ratio_to_threshold": 911442.7817297428,
+    "threshold": 1.097161577276626e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/clip_seg_parallel_num#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/clip_seg_parallel_num#kept": {
+    "closest_ratio_to_threshold": 216262.9757785027,
+    "threshold": 1e-09,
+    "value": 0.00021626297577850273
+   },
+   "GEOM_EPS/clip_seg_span#absorbed": {
+    "closest_ratio_to_threshold": 16557.351571215033,
+    "threshold": 6.039613253960862e-14,
+    "value": 1e-09
+   },
+   "GEOM_EPS/clip_seg_span#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/clip_seg_span#kept": {
+    "closest_ratio_to_threshold": 41666666.66665941,
+    "threshold": 1e-09,
+    "value": 0.04166666666665941
+   },
+   "GEOM_EPS/dedupe_same_point#absorbed": {
+    "closest_ratio_to_threshold": 128674.27506772846,
+    "threshold": 7.771561172376096e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/dedupe_same_point#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/dedupe_same_point#kept": {
+    "closest_ratio_to_threshold": 14705882.352932796,
+    "threshold": 1e-09,
+    "value": 0.014705882352932798
+   },
+   "GEOM_EPS/overlap_length#kept": {
+    "closest_ratio_to_threshold": 14705882.352941012,
+    "threshold": 1e-09,
+    "value": 0.014705882352941013
+   },
+   "GEOM_EPS/overlap_span#absorbed": {
+    "closest_ratio_to_threshold": 948126.2373411572,
+    "threshold": 1.0547118733938987e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/overlap_span#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/overlap_span#kept": {
+    "closest_ratio_to_threshold": 14705882.35293757,
+    "threshold": 1e-09,
+    "value": 0.014705882352937572
+   },
+   "GEOM_EPS/segs_interact_o#absorbed": {
+    "closest_ratio_to_threshold": 773345.3905585691,
+    "threshold": 1.2930832875045956e-15,
+    "value": 1e-09
+   },
+   "GEOM_EPS/segs_interact_o#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-09,
+    "value": 0.0
+   },
+   "GEOM_EPS/segs_interact_o#kept": {
+    "closest_ratio_to_threshold": 216262.97577849127,
+    "threshold": 1e-09,
+    "value": 0.0002162629757784913
+   },
+   "GEOM_EPS/side_of#kept": {
+    "closest_ratio_to_threshold": 3466209.7116985144,
+    "threshold": 1e-09,
+    "value": 0.0034662097116985144
+   },
+   "GEOM_EPS/unit_length#kept": {
+    "closest_ratio_to_threshold": 14705882.352941012,
+    "threshold": 1e-09,
+    "value": 0.014705882352941013
+   },
+   "INTERIOR_EPS/strictly_inside#absorbed": {
+    "closest_ratio_to_threshold": 10208159.155373126,
+    "threshold": 9.796085511398439e-16,
+    "value": 1e-08
+   },
+   "INTERIOR_EPS/strictly_inside#exact-zero": {
+    "closest_ratio_to_threshold": 0.0,
+    "threshold": 1e-08,
+    "value": 0.0
+   },
+   "INTERIOR_EPS/strictly_inside#kept": {
+    "closest_ratio_to_threshold": 10813.148788925137,
+    "threshold": 1e-08,
+    "value": 0.00010813148788925136
+   }
+  },
+  "n_only_exact": 0,
+  "n_only_float": 0,
+  "pairs_identical": true,
+  "pairs_only_exact": 0,
+  "pairs_only_float": 0,
+  "pairs_sample_only_exact": [],
+  "pairs_sample_only_float": [],
+  "quantum_scope": {
+   "classification": {
+    "derived_area_quantum_1_over_2L2": [
+     "AREA_EPS/intersection",
+     "AREA_EPS/outside"
+    ],
+    "derived_coordinate_quantum_1_over_L": [
+     "GEOM_EPS/dedupe_same_point#kept"
+    ],
+    "derived_cross_quantum_1_over_L2": [
+     "GEOM_EPS/clip_half_signed_dist#kept",
+     "GEOM_EPS/clip_seg_denom#kept",
+     "GEOM_EPS/clip_seg_parallel_num#kept",
+     "GEOM_EPS/segs_interact_o#kept"
+    ],
+    "measured_only": {
+     "GEOM_EPS/clip_seg_span#kept": "a difference of span PARAMETERS t, not of coordinates; a clipped t is an arbitrary rational",
+     "GEOM_EPS/overlap_length#kept": "a norm -- irrational in general, so off the grid",
+     "GEOM_EPS/overlap_span#kept": "a norm-normalized projection minus a length",
+     "GEOM_EPS/side_of#kept": "a cross product against a norm-NORMALIZED direction",
+     "GEOM_EPS/unit_length#kept": "a norm -- irrational in general, so off the grid",
+     "INTERIOR_EPS/strictly_inside#kept": "evaluated at `build.spanning`'s off-grid midpoint; no derived floor exists (QUANTUM_EXCLUDES)"
+    }
+   },
+   "covers": [
+    "the clipping polygons `_polys_of` returns -- read by `clip_half`, `dedupe_ring` and `side_of`",
+    "the `_seg_of` vertices in `folded_vertices` -- read by the segment helpers"
+   ],
+   "excludes": [
+    "`build.spanning`'s `mid` (build.py:119-121) -- the clipped span's MIDPOINT, which is off the 1/L grid. `strictly_inside` is evaluated there and nowhere else, so INTERIOR_EPS has NO derived floor. Its observed `#kept` minimum is 1/(2L^2), exactly half the cross quantum, and that halving is the midpoint's own -- it coincides with the AREA quantum, whose halving comes from the shoelace, by accident.",
+    "`clip_seg`'s span parameter `t = -num/denom` for a genuinely clipped span -- a ratio of two grid multiples is an arbitrary rational with no bounded denominator."
+   ]
+  },
+  "secs": {
+   "exact": 9.11,
+   "float": 1.62
+  },
+  "tacos_identical": true,
+  "tacos_only_exact": 0,
+  "tacos_only_float": 0,
+  "tacos_sample_only_exact": [],
+  "tacos_sample_only_float": [],
+  "vacuous": [
+   "collinear_overlap_calls",
+   "eq_from_taco_tortilla_along_flat_edge",
+   "eq_from_tortilla_tortilla",
+   "side_of_returned_0",
+   "tortilla_pairs",
+   "tortillas",
+   "unit_returned_None"
+  ]
+ },
+ "epsilon_bounds": {
+  "AREA_EPS": {
+   "grow": {
+    "factor": 108131.48788926807,
+    "site": "AREA_EPS/intersection",
+    "threshold": 1e-09,
+    "value": 0.00010813148788926807
+   },
+   "shrink": null
+  },
+  "GEOM_EPS": {
+   "grow": {
+    "factor": 216262.97577842165,
+    "site": "GEOM_EPS/clip_half_signed_dist#kept",
+    "threshold": 1e-09,
+    "value": 0.00021626297577842166
+   },
+   "shrink": {
+    "factor": 16557.351571215033,
+    "site": "GEOM_EPS/clip_seg_span#absorbed",
+    "threshold": 6.039613253960862e-14,
+    "value": 1e-09
+   }
+  },
+  "INTERIOR_EPS": {
+   "grow": {
+    "factor": 10813.148788925137,
+    "site": "INTERIOR_EPS/strictly_inside#kept",
+    "threshold": 1e-08,
+    "value": 0.00010813148788925136
+   },
+   "shrink": {
+    "factor": 10208159.155373126,
+    "site": "INTERIOR_EPS/strictly_inside#absorbed",
+    "threshold": 9.796085511398439e-16,
+    "value": 1e-08
+   }
+  }
+ },
+ "epsilon_parity": {
+  "dedupe_atol_probe": 1e-09,
+  "dedupe_atol_production": [
+   1e-09
+  ],
+  "identical": true,
+  "kernel_copy": {
+   "AREA_EPS": 1e-09,
+   "GEOM_EPS": 1e-09,
+   "INTERIOR_EPS": 1e-08
+  },
+  "production": {
+   "AREA_EPS": 1e-09,
+   "GEOM_EPS": 1e-09,
+   "INTERIOR_EPS": 1e-08
+  }
+ },
+ "epsilons": {
+  "AREA_EPS": 1e-09,
+  "GEOM_EPS": 1e-09,
+  "INTERIOR_EPS": 1e-08,
+  "source": "kernel.py copies, asserted equal to layer_order's by `epsilon_parity`"
+ },
+ "fidelity": {
+  "bitwise_identical": true,
+  "production_cells": 26,
+  "transcription_cells": 26
+ },
+ "guards": {
+  "clause_comparator_refuses": {
+   "cases": {
+    "taco": {
+     "clauses_exact": 6,
+     "clauses_float": 7,
+     "clauses_identical": false,
+     "clauses_only_exact": 0,
+     "clauses_only_float": 1,
+     "families_differing": [
+      "taco"
+     ]
+    },
+    "transitivity": {
+     "clauses_exact": 4,
+     "clauses_float": 7,
+     "clauses_identical": false,
+     "clauses_only_exact": 0,
+     "clauses_only_float": 3,
+     "families_differing": [
+      "transitivity"
+     ]
+    }
+   },
+   "detected": true,
+   "message": "the `clauses` comparison reports a dropped clause in both the taco and the transitivity family: taco only-float 1; transitivity only-float 3",
+   "refused": true
+  },
+  "constraint_gate_refuses": {
+   "message": "REFUSED: the float constraint transcription does not reproduce production. tacos: production 74,602 vs transcription 74,601 (only-production 1, only-transcription 0). Until these agree, any float/exact difference is uninterpretable -- it could be arithmetic OR the rewrite.",
+   "refused": true
+  },
+  "fidelity_gate_refuses": {
+   "message": "REFUSED: the float transcription does not reproduce production bitwise. First difference -- cell count: production 26, transcription 25. Until these agree the exact result is uninterpretable -- a difference could be arithmetic OR a divergent rewrite.",
+   "refused": true
+  },
+  "grid_gate_refuses": {
+   "message": "REFUSED: 1 denominator(s) in control population do not divide the grid observed on control grid (L=68): [999983]. The two populations are then on different grids, so the 1/L^2 cross-product floor the README derives does not apply to the predicates that read the second one.",
+   "refused": true
+  },
+  "nonempty_guard_refuses": {
+   "message": "REFUSED: demo is empty, so the comparison over it is vacuous -- it would report agreement having examined nothing.",
+   "refused": true
+  },
+  "pairs_gate_refuses": {
+   "message": "REFUSED: the float constraint transcription does not reproduce production. pairs: production 53,754 vs transcription 53,753 (only-production 1, only-transcription 0). Until these agree, any float/exact difference is uninterpretable -- it could be arithmetic OR the rewrite.",
+   "refused": true
+  }
+ },
+ "input_grid": {
+  "ceiling": 1000,
+  "checked_against": "`_seg_of` vertices (`folded_vertices`)",
+  "distinct_denominators_checked": [
+   1,
+   2,
+   4,
+   17,
+   34,
+   68
+  ],
+  "distinct_denominators_grid": [
+   1,
+   2,
+   4,
+   17,
+   34,
+   68
+  ],
+  "grid_denominator": 68,
+  "grid_from": "clipping polygons (`_polys_of`)"
+ },
+ "peak_rss_mb": 1330.6,
+ "platform": {
+  "python": "3.14.3",
+  "sys_platform": "darwin"
+ },
+ "rationalization": {
+  "max_denominator_limit": 1000000,
+  "snap_tol": 1e-12
+ },
+ "seeded_disagreement": {
+  "cells_clean": 26,
+  "cells_comparison_detected_it": true,
+  "cells_perturbed": 28,
+  "comparison_detected_it": true,
+  "families": {
+   "eqs": {
+    "clean": 28192,
+    "detected": true,
+    "only_clean": 0,
+    "only_perturbed": 167,
+    "perturbed": 28359
+   },
+   "pairs": {
+    "clean": 53754,
+    "detected": false,
+    "only_clean": 0,
+    "only_perturbed": 0,
+    "perturbed": 53754
+   },
+   "tacos": {
+    "clean": 74602,
+    "detected": false,
+    "only_clean": 0,
+    "only_perturbed": 0,
+    "perturbed": 74602
+   }
+  },
+  "families_blind_to_it": [
+   "pairs",
+   "tacos"
+  ],
+  "families_detecting": [
+   "eqs"
+  ],
+  "grid_step": 0.014705882352941176,
+  "perturbation": 0.05,
+  "perturbation_over_grid_step": 3.4000000000000004
+ },
+ "subject": "dense lizard, the SAT-certified witness",
+ "total_secs": 55.0,
+ "witness": {
+  "cp_vertices": 380,
+  "edges": 759,
+  "edges_by_assignment": {
+   "B": 14,
+   "M": 384,
+   "V": 361
+  },
+  "faces_from_flat_fold": 380,
+  "faces_reversed_by_polys_of": 190,
+  "folded_faces": 380,
+  "path": "../2026-10-02-witness-identity-113/witness.fold",
+  "polys": 380,
+  "shared_edges": 745
+ }
+}

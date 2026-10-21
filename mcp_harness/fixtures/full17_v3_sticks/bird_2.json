@@ -1,0 +1,188 @@
+{
+ "roll": "bird_2",
+ "subject": "bird",
+ "subject_guess": "bird (cardinal-like songbird, perched)",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "torso_back",
+   "parent": "root",
+   "length": 6,
+   "direction": [
+    6,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "neck_base",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    -1,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck_base",
+   "length": 7,
+   "direction": [
+    -6,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "torso_back",
+   "length": 11,
+   "direction": [
+    11,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "root",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "root",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "wing_L",
+   "parent": "shoulder_L",
+   "length": 7,
+   "direction": [
+    6,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "wing_R",
+   "parent": "shoulder_R",
+   "length": 7,
+   "direction": [
+    6,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "torso_back",
+   "length": 6,
+   "direction": [
+    -4,
+    -4,
+    2
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "torso_back",
+   "length": 6,
+   "direction": [
+    -4,
+    -4,
+    -2
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "wing_L",
+   "wing_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "wing_L",
+  "wing_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "readings": [
+  "head at -x: beak tip (0,10) is far left, top of head (3,3), so XY panel is the profile; ZY is the front view and XZ is the top view",
+  "neck junction / nape (6,7) sits between head-top (3,3) and withers (8,8)",
+  "chest/withers (7,10) read as torso_front (root)",
+  "rump (13,12) read as torso_back, tail base",
+  "tail tip (24,11) - long feathers extend to grid max, giving tail length ~11",
+  "wing crease/fold line runs from shoulder (8,10) back to (14,13), read as folded wing on each side",
+  "ZY panel shows two leg columns at z=9-11 and z=13-15 around y=16-24, so legs are offset \u00b12-4 units from center z=12; mirror rule (front view) makes larger-z side the animal's LEFT",
+  "hip (9,16) to knee-bend (9,17.5) to foot/branch contact (9,19) gives two leg segments, each leg descending (dy negative) onto the branch at y=19-22",
+  "XZ (top) panel confirms a single tapering point at x=0 (beak) and a long thin taper to x=24 (tail), matching the XY read"
+ ],
+ "notes": "Head faces -x (beak tip at grid (0,10)); XY panel is the profile, ZY is the front, XZ is the top view, all sharing the 24-unit scale set by nose-to-tail length. Spine built as root(chest/withers) -> torso_back(rump), with neck/head, wings and legs each branching from a distinct spine node rather than a single hub, per instructions. Wings are not clearly separated in outline but a fold-crease from shoulder (8,10) to (14,13) on each flank was read as the folded wing per the leaf convention (present even when flush against the body). Each leg was split into hip->knee->foot (2 segments) based on the visible bend in the XY panel and the branch contact; left/right assignment uses the front-view mirror convention (larger z in ZY panel = animal's own left), producing symmetric hip/knee/foot chains that each terminate independently at the torso_back node rather than sharing a forked chain. All leg directions have negative dy, confirming legs descend correctly toward the branch.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

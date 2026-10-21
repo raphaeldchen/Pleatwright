@@ -1,0 +1,115 @@
+{
+ "roll": "dolphin_0",
+ "subject": "dolphin",
+ "n": 0,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.181818
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.218182
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.218182
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.327273
+  },
+  {
+   "id": 6,
+   "parent_id": 1,
+   "length": 0.363636
+  },
+  {
+   "id": 7,
+   "parent_id": 1,
+   "length": 0.363636
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 3,
+   "parent_id": null,
+   "length": 0
+  },
+  {
+   "id": 0,
+   "parent_id": 3,
+   "length": 0.4
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.181818
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.218182
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.218182
+  },
+  {
+   "id": 6,
+   "parent_id": 1,
+   "length": 0.363636
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.327273
+  },
+  {
+   "id": 7,
+   "parent_id": 1,
+   "length": 0.363636
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   6,
+   7
+  ]
+ ],
+ "names": {
+  "0": "torso",
+  "1": "chest",
+  "2": "head",
+  "3": "peduncle",
+  "4": "tail_fluke",
+  "5": "dorsal_fin",
+  "6": "pectoral_L",
+  "7": "pectoral_R"
+ },
+ "leaves": [
+  "head",
+  "tail_fluke",
+  "dorsal_fin",
+  "pectoral_L",
+  "pectoral_R"
+ ],
+ "served_stage": "none",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.820839) [ide: served a re-ranked attempt-0 ordering: 'seeded_0'] your node order packed, but a different attempt-0 ordering produced a strictly better base (by scale and/or mirror symmetry) with the exact same edge lengths, flaps, and pairs, so the backend served that ordering instead. Nothing about your requested anatomy changed -- only the packer's STARTING ORDER differed] [ide: served a re-rooted tree: node 3] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.263807, 0.263807], [0.729807298, 0.42017243], [0.494772324, 0.341306934], [0.636262715, 0.38878374], [0.50742806, 0.303590307], [0.656671411, 0.327961738], [0.439030726, 0.50742806], [0.60991099, 0.46731716], [0.454214645, 0.528538914], [7e-09, 7e-09], [0.955158112, 2e-09], [0.179092357, 6e-09], [0.507428058, 4e-09], [0.656671409, 3e-09], [0.179092358, 0.179092358], [0.999999998, 0.475469198], [0.983184272, 0.297168045], [0.714963739, 0.999999995], [0.843230115, 0.763961028], [0.914489082, 0.632828509], [0.473212566, 0.562889102], [2e-09, 0.955158112], [0.44685203, 0.98318427], [0.297901354, 0.973842217], [0.317794022, 0.656671411], [6e-09, 0.179092357], [4e-09, 0.507428058], [3e-09, 0.656671409]], \"edges_vertices\": [[2, 4], [3, 5], [1, 5], [5, 4], [4, 0], [0, 2], [2, 3], [3, 1], [2, 6], [3, 7], [0, 6], [6, 8], [8, 7], [7, 1], [11, 14], [12, 4], [13, 5], [16, 5], [18, 20], [19, 7], [22, 20], [23, 24], [25, 14], [26, 6], [27, 24], [9, 14], [14, 0], [5, 10], [9, 11], [11, 12], [12, 13], [13, 10], [1, 15], [10, 16], [16, 15], [8, 20], [20, 17], [17, 18], [18, 19], [19, 15], [8, 24], [24, 21], [17, 22], [22, 23], [23, 21], [9, 25], [25, 26], [26, 27], [27, 21]], \"edges_assignment\": [\"F\", \"F\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"F\", \"M\", \"M\", \"F\", \"M\", \"F\", \"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"M\", \"V\", \"B\", \"B\", \"B\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

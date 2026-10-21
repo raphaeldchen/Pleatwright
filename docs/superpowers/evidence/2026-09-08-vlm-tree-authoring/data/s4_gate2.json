@@ -1,0 +1,342 @@
+[
+ {
+  "set": "run1",
+  "subject": "ant",
+  "space": 45,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "bat",
+  "space": 31,
+  "baseline": false,
+  "rand_at": 4,
+  "rand_via": "order:seeded_3",
+  "guided_at": 3,
+  "guided_via": "flatten+order:seeded_1"
+ },
+ {
+  "set": "run1",
+  "subject": "bird",
+  "space": 31,
+  "baseline": true,
+  "rand_at": 7,
+  "rand_via": "flatten+order:seeded_0",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run1",
+  "subject": "cat",
+  "space": 43,
+  "baseline": false,
+  "rand_at": 23,
+  "rand_via": "order:seeded_0",
+  "guided_at": 7,
+  "guided_via": "order:seeded_0"
+ },
+ {
+  "set": "run1",
+  "subject": "crab",
+  "space": 63,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "dog",
+  "space": 37,
+  "baseline": false,
+  "rand_at": 5,
+  "rand_via": "order:seeded_2",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run1",
+  "subject": "dolphin",
+  "space": 19,
+  "baseline": false,
+  "rand_at": 2,
+  "rand_via": "flatten+order:seeded_3",
+  "guided_at": 5,
+  "guided_via": "flatten+order:seeded_3"
+ },
+ {
+  "set": "run1",
+  "subject": "elephant",
+  "space": 53,
+  "baseline": true,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "frog",
+  "space": 31,
+  "baseline": true,
+  "rand_at": 10,
+  "rand_via": "flatten+order:canonical",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run1",
+  "subject": "guinea_pig",
+  "space": 21,
+  "baseline": true,
+  "rand_at": 2,
+  "rand_via": "flatten+order:seeded_0",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run1",
+  "subject": "horse",
+  "space": 49,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "lizard",
+  "space": 33,
+  "baseline": false,
+  "rand_at": 20,
+  "rand_via": "flatten+order:seeded_1",
+  "guided_at": 3,
+  "guided_via": "flatten+order:seeded_1"
+ },
+ {
+  "set": "run1",
+  "subject": "octopus",
+  "space": 45,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "rabbit",
+  "space": 33,
+  "baseline": false,
+  "rand_at": 15,
+  "rand_via": "order:seeded_0",
+  "guided_at": 7,
+  "guided_via": "order:seeded_0"
+ },
+ {
+  "set": "run1",
+  "subject": "scorpion",
+  "space": 61,
+  "baseline": false,
+  "rand_at": 19,
+  "rand_via": "flatten+order:canonical",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run1",
+  "subject": "spider",
+  "space": 61,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run1",
+  "subject": "starfish",
+  "space": 11,
+  "baseline": false,
+  "rand_at": 1,
+  "rand_via": "order:seeded_2",
+  "guided_at": 6,
+  "guided_via": "order:canonical"
+ },
+ {
+  "set": "run2",
+  "subject": "ant",
+  "space": 41,
+  "baseline": false,
+  "rand_at": 15,
+  "rand_via": "flatten+order:seeded_0",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run2",
+  "subject": "bat",
+  "space": 33,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "bird",
+  "space": 35,
+  "baseline": false,
+  "rand_at": 25,
+  "rand_via": "flatten+order:canonical",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run2",
+  "subject": "cat",
+  "space": 41,
+  "baseline": false,
+  "rand_at": 7,
+  "rand_via": "order:canonical",
+  "guided_at": 6,
+  "guided_via": "order:canonical"
+ },
+ {
+  "set": "run2",
+  "subject": "crab",
+  "space": 11,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "dog",
+  "space": 31,
+  "baseline": false,
+  "rand_at": 2,
+  "rand_via": "flatten+identity",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ },
+ {
+  "set": "run2",
+  "subject": "dolphin",
+  "space": 21,
+  "baseline": true,
+  "rand_at": 4,
+  "rand_via": "flatten+order:seeded_3",
+  "guided_at": 2,
+  "guided_via": "flatten+order:seeded_0"
+ },
+ {
+  "set": "run2",
+  "subject": "elephant",
+  "space": 37,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "frog",
+  "space": 41,
+  "baseline": false,
+  "rand_at": 9,
+  "rand_via": "flatten+order:seeded_2",
+  "guided_at": 4,
+  "guided_via": "flatten+order:seeded_2"
+ },
+ {
+  "set": "run2",
+  "subject": "guinea_pig",
+  "space": 33,
+  "baseline": true,
+  "rand_at": 3,
+  "rand_via": "flatten+order:seeded_3",
+  "guided_at": 2,
+  "guided_via": "flatten+order:seeded_0"
+ },
+ {
+  "set": "run2",
+  "subject": "horse",
+  "space": 11,
+  "baseline": true,
+  "rand_at": 2,
+  "rand_via": "order:seeded_1",
+  "guided_at": 3,
+  "guided_via": "flatten+order:seeded_1"
+ },
+ {
+  "set": "run2",
+  "subject": "lizard",
+  "space": 31,
+  "baseline": false,
+  "rand_at": 1,
+  "rand_via": "flatten+order:seeded_2",
+  "guided_at": 4,
+  "guided_via": "flatten+order:seeded_2"
+ },
+ {
+  "set": "run2",
+  "subject": "octopus",
+  "space": 11,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "rabbit",
+  "space": 31,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "scorpion",
+  "space": 93,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": 8,
+  "guided_via": "order:seeded_1"
+ },
+ {
+  "set": "run2",
+  "subject": "spider",
+  "space": 61,
+  "baseline": false,
+  "rand_at": null,
+  "rand_via": null,
+  "guided_at": null,
+  "guided_via": null
+ },
+ {
+  "set": "run2",
+  "subject": "starfish",
+  "space": 21,
+  "baseline": true,
+  "rand_at": 2,
+  "rand_via": "order:seeded_2",
+  "guided_at": 1,
+  "guided_via": "flatten+order:canonical"
+ }
+]

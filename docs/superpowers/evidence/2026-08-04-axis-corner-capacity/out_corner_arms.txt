@@ -1,0 +1,34 @@
+arm                                st        scale     cover     bbox cnr
+-------------------------------------------------------------------------
+star-4-sym  free                   PACK   0.353553  0.500000 1.000000   0
+star-4-sym  pair->(1,0)/(0,1)      PACK   0.292893  0.414214 1.000000   2
+star-4-sym  4 corners              FAIL          -         -        -   -  RuntimeError: scale optimization did not converge (reason code 1)
+star-5     free                    PACK   0.323556  0.703897 1.000000   1
+star-5     1 corner(s)             PACK   0.323556  0.703897 1.000000   1
+star-5     2 corner(s)             PACK   0.353553  1.000000 1.000000   4
+star-5     4 corner(s)             PACK   0.353553  1.000000 1.000000   4
+star-6     free                    PACK   0.292893  0.828427 1.000000   2
+star-6     1 corner(s)             PACK   0.274292  1.000000 1.000000   4
+star-6     2 corner(s)             FAIL   0.258819         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.258819): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+star-6     4 corner(s)             FAIL   0.258819         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.258819): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+star-7     free                    FAIL   0.267949         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.267949): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+star-7     1 corner(s)             FAIL   0.258819         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.258819): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+star-7     2 corner(s)             PACK   0.251708  0.979480 1.000000   3
+star-7     4 corner(s)             PACK   0.258819  1.000000 1.000000   4
+star-8     free                    PACK   0.255983  0.924501 1.000000   2
+star-8     1 corner(s)             PACK   0.255983  0.924501 1.000000   2
+star-8     2 corner(s)             PACK   0.258819  1.000000 1.000000   4
+star-8     4 corner(s)             PACK   0.258819  1.000000 1.000000   4
+star-5     4 corners (rerun)       PACK   0.353553  1.000000 1.000000   4
+QUADRUPED  free                    PACK   0.667979  0.680970 1.000000   2
+QUADRUPED  pair0->(1,0)/(0,1)      FAIL   0.565143         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.565143): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+QUADRUPED  2 pairs->4 corners      FAIL          -         -        -   -  RuntimeError: scale optimization did not converge (reason code 1)
+BIRD       free                    PACK   0.652542  0.669464 1.000000   2
+BIRD       pair0->(1,0)/(0,1)      FAIL   0.557141         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.557141): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+BIRD       2 pairs->4 corners      FAIL          -         -        -   -  RuntimeError: scale optimization did not converge (reason code 1)
+HUMANOID   free                    PACK   0.629445  0.558981 1.000000   0
+HUMANOID   pair0->(1,0)/(0,1)      FAIL   0.557111         -        -   -  RuntimeError: could not build a full crease pattern (scale=0.557111): POLYS_MULTIPLE_IBPS: multiple inactive-border-path
+HUMANOID   2 pairs->4 corners      FAIL          -         -        -   -  RuntimeError: scale optimization did not converge (reason code 1)
+INSECT     free                    PACK   0.763400  0.789076 1.000000   2
+INSECT     pair0->(1,0)/(0,1)      FAIL   0.842724         -        -   -  RuntimeError: polygon network is not valid after optimization (scale=0.842724): the active-path network does not form a 
+INSECT     2 pairs->4 corners      FAIL          -         -        -   -  RuntimeError: scale optimization did not converge (reason code 1)

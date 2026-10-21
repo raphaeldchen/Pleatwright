@@ -1,0 +1,222 @@
+{
+ "roll": "ant_0",
+ "subject": "ant",
+ "subject_guess": "ant",
+ "nodes": [
+  {
+   "name": "thorax",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "thorax_front",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "thorax_hind",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "thorax",
+   "length": 9,
+   "direction": [
+    9,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "petiole",
+   "parent": "thorax",
+   "length": 3,
+   "direction": [
+    -3,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "gaster",
+   "parent": "petiole",
+   "length": 8,
+   "direction": [
+    -8,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "knee_front_R",
+   "parent": "thorax_front",
+   "length": 7,
+   "direction": [
+    3,
+    -5,
+    -4
+   ]
+  },
+  {
+   "name": "foot_front_R",
+   "parent": "knee_front_R",
+   "length": 7,
+   "direction": [
+    -4,
+    -6,
+    -2
+   ]
+  },
+  {
+   "name": "knee_front_L",
+   "parent": "thorax_front",
+   "length": 7,
+   "direction": [
+    3,
+    -5,
+    4
+   ]
+  },
+  {
+   "name": "foot_front_L",
+   "parent": "knee_front_L",
+   "length": 7,
+   "direction": [
+    -4,
+    -6,
+    2
+   ]
+  },
+  {
+   "name": "knee_mid_R",
+   "parent": "thorax",
+   "length": 9,
+   "direction": [
+    0,
+    -5,
+    -7
+   ]
+  },
+  {
+   "name": "foot_mid_R",
+   "parent": "knee_mid_R",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    -2
+   ]
+  },
+  {
+   "name": "knee_mid_L",
+   "parent": "thorax",
+   "length": 9,
+   "direction": [
+    0,
+    -5,
+    7
+   ]
+  },
+  {
+   "name": "foot_mid_L",
+   "parent": "knee_mid_L",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    2
+   ]
+  },
+  {
+   "name": "knee_hind_R",
+   "parent": "thorax_hind",
+   "length": 7,
+   "direction": [
+    -3,
+    -5,
+    -4
+   ]
+  },
+  {
+   "name": "foot_hind_R",
+   "parent": "knee_hind_R",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    -2
+   ]
+  },
+  {
+   "name": "knee_hind_L",
+   "parent": "thorax_hind",
+   "length": 7,
+   "direction": [
+    -3,
+    -5,
+    4
+   ]
+  },
+  {
+   "name": "foot_hind_L",
+   "parent": "knee_hind_L",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_front_L",
+   "foot_front_R"
+  ],
+  [
+   "foot_mid_L",
+   "foot_mid_R"
+  ],
+  [
+   "foot_hind_L",
+   "foot_hind_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "foot_front_L",
+  "foot_front_R",
+  "foot_mid_L",
+  "foot_mid_R",
+  "foot_hind_L",
+  "foot_hind_R"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile (antennae/mandible detail and head blob sit at x=16-24), ZY is the front view, XZ is the top view",
+  "thorax top (11,9), head tip (20,10) in XY -> head extends +x with slight downward droop, head width centered z=12 (no L/R offset)",
+  "thorax (11,9), petiole (8,10), gaster tip (0,9) in XY -> narrow waist at x~8-9 confirms petiole, gaster occupies x=0-8",
+  "leg ground line at y=20 across all six legs in XY panel; hip attach line at y=9",
+  "front leg hip (14,9) in XY, knee ~(17,14), foot (13,20); ZY shows front foot z=6 (R) / z=18 (L)",
+  "mid leg hip (11,9) in XY, knee (11,14), foot (10,20); ZY shows widest spread, foot z=3 (R) / z=21 (L)",
+  "hind leg hip (9,9) in XY, knee (6,14), foot (5,20); ZY shows foot z=6 (R) / z=18 (L)",
+  "ZY panel: legs converge near thorax center z=12 at y=8-9 and splay outward to ground, confirming three attachment points along thorax (front/mid/hind)"
+ ],
+ "notes": "Ant body treated as spine: thorax (root, central) -> head (leaf, via short neck, droops slightly down) and thorax -> petiole -> gaster (gaster is trunk/abdomen terminus, NOT a leaf since it's not a discrete external appendage like a tail). Three attachment points along thorax (thorax_front, thorax itself as mid, thorax_hind) inferred from leg-pair spacing seen in ZY/XZ panels, each anchoring a bilateral leg pair. Each leg simplified to a 2-segment chain (hip->knee->foot) inferred from the visible knee bend in the XY/ZY panels; more detailed insect leg segmentation (coxa/trochanter/femur/tibia/tarsus) was collapsed for clarity. Antennae and mandibles are excluded as leaves per sub-flap-detail rule. Left/right assigned by z<12 = R, z>12 = L (arbitrary but consistent mesh convention, noted since animal-relative handedness isn't recoverable from orthographic views alone). All leg directions verified to have negative dy (downward) at each segment per the flip-sign check.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

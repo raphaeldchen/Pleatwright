@@ -1,0 +1,421 @@
+{
+ "roll": "scorpion_1",
+ "subject": "scorpion",
+ "subject_guess": "scorpion",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    4,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg1",
+   "parent": "tail_base",
+   "length": 3,
+   "direction": [
+    1,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg2",
+   "parent": "tail_seg1",
+   "length": 3,
+   "direction": [
+    1,
+    3,
+    -1
+   ]
+  },
+  {
+   "name": "tail_seg3",
+   "parent": "tail_seg2",
+   "length": 3,
+   "direction": [
+    0,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "tail_curl",
+   "parent": "tail_seg3",
+   "length": 2,
+   "direction": [
+    -1,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "stinger_tip",
+   "parent": "tail_curl",
+   "length": 2,
+   "direction": [
+    -2,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "claw_base_L",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -2,
+    1,
+    -4
+   ]
+  },
+  {
+   "name": "claw_hinge_L",
+   "parent": "claw_base_L",
+   "length": 5,
+   "direction": [
+    -5,
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "claw_tip_L",
+   "parent": "claw_hinge_L",
+   "length": 6,
+   "direction": [
+    -6,
+    -1,
+    -1
+   ]
+  },
+  {
+   "name": "claw_base_R",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -2,
+    1,
+    4
+   ]
+  },
+  {
+   "name": "claw_hinge_R",
+   "parent": "claw_base_R",
+   "length": 5,
+   "direction": [
+    -5,
+    0,
+    2
+   ]
+  },
+  {
+   "name": "claw_tip_R",
+   "parent": "claw_hinge_R",
+   "length": 6,
+   "direction": [
+    -6,
+    -1,
+    1
+   ]
+  },
+  {
+   "name": "hip1_L",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "knee1_L",
+   "parent": "hip1_L",
+   "length": 6,
+   "direction": [
+    -1,
+    -3,
+    -5
+   ]
+  },
+  {
+   "name": "foot1_L",
+   "parent": "knee1_L",
+   "length": 5,
+   "direction": [
+    -3,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "hip2_L",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    0,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "knee2_L",
+   "parent": "hip2_L",
+   "length": 7,
+   "direction": [
+    -2,
+    -3,
+    -6
+   ]
+  },
+  {
+   "name": "foot2_L",
+   "parent": "knee2_L",
+   "length": 4,
+   "direction": [
+    -2,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "hip3_L",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    1,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "knee3_L",
+   "parent": "hip3_L",
+   "length": 8,
+   "direction": [
+    -2,
+    -3,
+    -7
+   ]
+  },
+  {
+   "name": "foot3_L",
+   "parent": "knee3_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    -1
+   ]
+  },
+  {
+   "name": "hip4_L",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    2,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "knee4_L",
+   "parent": "hip4_L",
+   "length": 7,
+   "direction": [
+    -1,
+    -3,
+    -6
+   ]
+  },
+  {
+   "name": "foot4_L",
+   "parent": "knee4_L",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip1_R",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "knee1_R",
+   "parent": "hip1_R",
+   "length": 6,
+   "direction": [
+    -1,
+    -3,
+    5
+   ]
+  },
+  {
+   "name": "foot1_R",
+   "parent": "knee1_R",
+   "length": 5,
+   "direction": [
+    -3,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "hip2_R",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    0,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "knee2_R",
+   "parent": "hip2_R",
+   "length": 7,
+   "direction": [
+    -2,
+    -3,
+    6
+   ]
+  },
+  {
+   "name": "foot2_R",
+   "parent": "knee2_R",
+   "length": 4,
+   "direction": [
+    -2,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "hip3_R",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    1,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "knee3_R",
+   "parent": "hip3_R",
+   "length": 8,
+   "direction": [
+    -2,
+    -3,
+    7
+   ]
+  },
+  {
+   "name": "foot3_R",
+   "parent": "knee3_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    1
+   ]
+  },
+  {
+   "name": "hip4_R",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    2,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "knee4_R",
+   "parent": "hip4_R",
+   "length": 7,
+   "direction": [
+    -1,
+    -3,
+    6
+   ]
+  },
+  {
+   "name": "foot4_R",
+   "parent": "knee4_R",
+   "length": 3,
+   "direction": [
+    1,
+    -3,
+    -1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_tip_L",
+   "claw_tip_R"
+  ],
+  [
+   "foot1_L",
+   "foot1_R"
+  ],
+  [
+   "foot2_L",
+   "foot2_R"
+  ],
+  [
+   "foot3_L",
+   "foot3_R"
+  ],
+  [
+   "foot4_L",
+   "foot4_R"
+  ]
+ ],
+ "leaves": [
+  "claw_tip_L",
+  "claw_tip_R",
+  "foot1_L",
+  "foot2_L",
+  "foot3_L",
+  "foot4_L",
+  "foot1_R",
+  "foot2_R",
+  "foot3_R",
+  "foot4_R",
+  "stinger_tip"
+ ],
+ "readings": [
+  "head/front at -x: XY panel is the profile, ZY is the front view, XZ is the dorsal (top) view",
+  "claw tip_L (0,13) profile; claw hinge (7,13); claw base (13,13) -> claw base is above tail base showing claws are forward",
+  "tail base (18,15) -> seg1(19,12) -> seg2(20,9) -> seg3(20,6) -> curl(19,4) -> stinger tip(17,5): tail curls upward then hooks forward, ground(body venter) at y=19 vs withers/back at y=11-13 confirming legs must go DOWN (dy negative)",
+  "XZ dorsal panel: claws at x=0-8 split top/bottom (z=0-8 and z=16-24), 4 leg pairs along x=9-17 spread in z, tail compressed at x=19-24 (curls out of plane)",
+  "ZY front panel: tail appears as vertical stack at z~11-13 (its curl is nearly in the x-y plane so seen edge-on from front), body dome z=6-18,y=12-19, legs splayed left z=0-9 and right z=15-24"
+ ],
+ "notes": "Cephalothorax+mesosoma treated as single fused 'body' root (no head leaf, per carapace rule). Tail (metasoma+telson) split into 5 inferred segments (base, seg1, seg2, seg3, curl) ending in stinger tip leaf, based on the curling silhouette in the XY profile panel. Each pedipalp/claw split into base-hinge-tip (2 segments) matching the visible pincer hinge. Each walking leg (4 pairs) split into hip-knee-foot (2 segments) as an anatomical inference since the ZY/XZ panels show overlapping multi-joint limbs but only 2 clear bend points are resolvable at this scale. All left/right pairs are independent chains rooted at 'body', never sharing joints. Verified hip->foot direction has negative dy (legs descend from body to ground) consistent with grid y increasing downward on screen.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

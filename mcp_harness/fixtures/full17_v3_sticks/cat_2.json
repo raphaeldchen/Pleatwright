@@ -1,0 +1,229 @@
+{
+ "roll": "cat_2",
+ "subject": "cat",
+ "subject_guess": "domestic cat, standing pose",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine_mid",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    3,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "spine_mid",
+   "length": 4,
+   "direction": [
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 2,
+   "direction": [
+    2,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 5,
+   "direction": [
+    5,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 7,
+   "direction": [
+    -7,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 4,
+   "direction": [
+    0,
+    0,
+    4
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 4,
+   "direction": [
+    -2,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "paw_R",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 4,
+   "direction": [
+    0,
+    0,
+    -4
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 4,
+   "direction": [
+    -2,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "paw_L",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_R_front",
+   "parent": "elbow_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_L_front",
+   "parent": "elbow_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "paw_R",
+   "paw_L"
+  ],
+  [
+   "paw_R_front",
+   "paw_L_front"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail_tip",
+  "paw_R",
+  "paw_L",
+  "paw_R_front",
+  "paw_L_front"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile, ZY is the front view of the face/chest, XZ is a top-down view",
+  "ears/head top (20-23,4) in XY, nose (24,8) in XY -> head sits at far +x, small and forward",
+  "withers/neck junction (15,7) in XY; neck base (17,6); these are close in x,y confirming a short thick neck",
+  "pelvis/rump (9,13) in XY; spine curves from pelvis (9,13) up to withers (15,7) giving a rising back line",
+  "tail base at rump (2,11) in XY, tail tip after curl (1,16) in XY -> tail length ~7 to a curled tip",
+  "front shoulder top (15,8) in XY and (15,8),z=13/7 in ZY, front paw (15,20) in both panels -> front leg span 12",
+  "hind hip (9,13) in XY, hind knee (7,17), hind paw (7,20) -> hind leg bends back then down, span ~7 vertical but longer path due to bend",
+  "ZY panel: two front legs spread at z~13 (right) and z~7 (left), shoulders at y~8, paws at y~20-24, elbows visible mid-way at y~14",
+  "ZY panel: hind legs at z~14 (right) and z~6 (left), hips near pelvis y~13, knees y~17, paws y~20",
+  "ground line at y=20 in XY/ZY matches paw positions, confirming legs reach the same ground level"
+ ],
+ "notes": "Head faces +x, so the XY panel is the profile view (used for x,y of spine, tail, and vertical leg extents); the ZY panel supplies the z (left/right) split for the paired legs, with +z assigned to the animal's right per the right-hand frame (x forward, y up). Spine is split into pelvis->spine_mid->withers->neck->head as inferred anatomical segments (only two hard landmarks - withers and neck junction - were directly visible, the spine_mid was inferred to keep the spine as multiple internal nodes rather than one hub). Each leg is split into hip/shoulder->knee/elbow->paw, with knee/elbow positions inferred from the visible bend in both XY and ZY panels rather than being explicit landmarks. Front and hind legs are each authored as two independent full chains from pelvis or withers to their own paw leaf, per the two-frame chain rule. Tail is a single 2-segment flap (base+tip) reflecting its curled shape. All four legs are encoded with equal proportional length pairs (front pair equal, hind pair equal) despite the mid-stride pose making them look uneven on screen.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

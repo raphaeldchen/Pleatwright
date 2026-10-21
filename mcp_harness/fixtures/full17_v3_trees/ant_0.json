@@ -1,0 +1,200 @@
+{
+ "roll": "ant_0",
+ "subject": "ant",
+ "n": 0,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.355556
+  },
+  {
+   "id": 6,
+   "parent_id": 1,
+   "length": 0.311111
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.311111
+  },
+  {
+   "id": 8,
+   "parent_id": 1,
+   "length": 0.311111
+  },
+  {
+   "id": 9,
+   "parent_id": 8,
+   "length": 0.311111
+  },
+  {
+   "id": 10,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.266667
+  },
+  {
+   "id": 12,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 13,
+   "parent_id": 12,
+   "length": 0.266667
+  },
+  {
+   "id": 14,
+   "parent_id": 2,
+   "length": 0.311111
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.266667
+  },
+  {
+   "id": 16,
+   "parent_id": 2,
+   "length": 0.311111
+  },
+  {
+   "id": 17,
+   "parent_id": 16,
+   "length": 0.266667
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.488889
+  },
+  {
+   "id": 11,
+   "parent_id": 0,
+   "length": 0.666667
+  },
+  {
+   "id": 13,
+   "parent_id": 0,
+   "length": 0.666667
+  },
+  {
+   "id": 9,
+   "parent_id": 1,
+   "length": 0.622222
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.088889
+  },
+  {
+   "id": 7,
+   "parent_id": 1,
+   "length": 0.622222
+  },
+  {
+   "id": 15,
+   "parent_id": 2,
+   "length": 0.577778
+  },
+  {
+   "id": 17,
+   "parent_id": 2,
+   "length": 0.577778
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   9,
+   7
+  ],
+  [
+   13,
+   11
+  ],
+  [
+   17,
+   15
+  ]
+ ],
+ "names": {
+  "0": "thorax",
+  "1": "thorax_front",
+  "2": "thorax_hind",
+  "3": "head",
+  "4": "petiole",
+  "5": "gaster",
+  "6": "knee_front_R",
+  "7": "foot_front_R",
+  "8": "knee_front_L",
+  "9": "foot_front_L",
+  "10": "knee_mid_R",
+  "11": "foot_mid_R",
+  "12": "knee_mid_L",
+  "13": "foot_mid_L",
+  "14": "knee_hind_R",
+  "15": "foot_hind_R",
+  "16": "knee_hind_L",
+  "17": "foot_hind_L"
+ },
+ "leaves": [
+  "head",
+  "foot_front_L",
+  "foot_front_R",
+  "foot_mid_L",
+  "foot_mid_R",
+  "foot_hind_L",
+  "foot_hind_R"
+ ],
+ "served_stage": "flatten",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.339948) [ide: rescued by lossless chain collapse: the exact tree did not pack, so the backend collapsed its pass-through joints ('flatten+seeded_3') and recompiled. A joint with exactly one child carries no flap and no branch, so merging it into its parent edge is LOSSLESS: every flap you asked for is present, every bilateral pair is intact, and the distance between any two flap tips is exactly what you specified. What changed is that intermediate joints along a limb no longer appear as separate nodes, so an edge length in this base may be the SUM of two you sent] [ide: mv-repair: cleared 5 of 9 defective interior vertex/vertices in the best of 1 packed rescue rung(s) by re-solving the coupled M/V assignment on 4 crease(s) (e28,e38,e52,e66); geometry and closure byte-identical (8.7e-08) -- only labels moved; 4 interior defect(s) REMAIN -- no relabelling of up to 4 crease(s) that keeps every clean vertex clean and fully fixes every defect it touches clears them (search exhausted); 0 hull-frontier vertex/vertices touched are outside the audit (boundary advisory)] [ide: cp-audit: 3 interior Maekawa + 0 interior Kawasaki + 1 interior M/V-arrangement violation(s), closure max error 8.7e-08 remain in the best of 1 packed rescue rung(s); real interior defects, NOT hull frontier -- served best-effort]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.387137289, 0.066630725], [7e-09, 7e-09], [0.163788831, 0.028189922], [0.166197029, 0.014197827], [0.835477855, 6e-09], [0.641196966, 0.028873314], [0.611307572, 0.033315365], [0.639063162, 0.014515507], [0.60884549, 0.016748662], [0.38752126, 0.033105036], [0.166197029, 7e-09], [0.38752126, 6e-09], [0.60884549, 6e-09], [0.639063161, 6e-09], [0.143877659, 0.143877659], [0.066630725, 0.387137289], [0.226884007, 0.226884007], [0.028189922, 0.163788831], [0.399781264, 0.538952143], [0.558817719, 0.657077679], [0.478781984, 0.597630529], [0.50304019, 0.615648496], [0.526414465, 0.533501289], [0.544081526, 0.560393139], [0.552681436, 0.57348346], [0.52400481, 0.529833441], [0.459119763, 0.624102451], [0.489337434, 0.634096985], [0.391734443, 0.714090136], [0.335556328, 0.522549289], [0.372769495, 0.649428617], [0.344873958, 0.657610259], [0.525296685, 0.525296685], [0.672573023, 0.239994542], [0.647510719, 0.27691681], [0.999999997, 0.700860794], [0.700860794, 0.999999997], [0.850430395, 0.850430395], [0.581765313, 0.581765313], [0.323140411, 0.999999997], [0.459119763, 0.999999997], [0.489337434, 0.999999997], [6e-09, 0.835477855], [0.175034405, 0.924594022], [0.201962797, 0.938304213], [0.29889073, 0.681325957], [0.028873314, 0.641196966], [0.033315365, 0.611307572], [0.558816655, 0.407582613], [0.880364679, 0.191216911], [0.887270351, 0.220634922], [0.911709128, 0.324743586], [0.936147904, 0.42885225], [0.937089786, 0.432864648], [0.938031668, 0.436877045], [0.94493734, 0.466295056], [0.948298858, 0.480615052], [0.951660377, 0.494935048], [0.014197827, 0.166197029], [0.014515507, 0.639063162], [0.016748662, 0.60884549], [0.033105036, 0.38752126], [6e-09, 0.639063161], [6e-09, 0.60884549], [6e-09, 0.38752126], [7e-09, 0.166197029]], \"edges_vertices\": [[2, 3], [5, 7], [6, 8], [0, 9], [9, 3], [3, 1], [0, 2], [2, 1], [9, 8], [8, 7], [7, 4], [10, 3], [11, 9], [12, 8], [13, 7], [4, 13], [13, 12], [12, 11], [11, 10], [10, 1], [4, 5], [5, 6], [6, 0], [2, 14], [16, 14], [17, 14], [1, 14], [14, 0], [14, 15], [15, 16], [16, 0], [15, 17], [17, 1], [20, 22], [21, 23], [19, 24], [24, 23], [23, 22], [22, 25], [25, 18], [18, 20], [20, 21], [21, 19], [20, 26], [21, 27], [18, 26], [26, 27], [27, 19], [30, 26], [28, 26], [18, 29], [28, 30], [30, 29], [30, 31], [29, 31], [31, 28], [16, 32], [5, 33], [6, 34], [37, 38], [40, 26], [41, 27], [43, 45], [44, 31], [46, 45], [47, 31], [15, 29], [25, 32], [32, 48], [48, 0], [48, 34], [34, 33], [33, 4], [24, 38], [38, 35], [49, 33], [50, 34], [51, 48], [52, 32], [53, 25], [54, 22], [55, 23], [56, 24], [57, 38], [4, 49], [49, 50], [50, 51], [51, 52], [52, 53], [53, 54], [54, 55], [55, 56], [56, 57], [57, 35], [19, 36], [36, 37], [37, 35], [28, 39], [39, 40], [40, 41], [41, 36], [31, 45], [45, 42], [42, 43], [43, 44], [44, 39], [42, 46], [46, 47], [47, 15], [17, 58], [46, 59], [47, 60], [1, 58], [58, 61], [61, 15], [61, 60], [60, 59], [59, 42], [62, 59], [63, 60], [64, 61], [65, 58], [42, 62], [62, 63], [63, 64], [64, 65], [65, 1]], \"edges_assignment\": [\"M\", \"F\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"V\", \"F\", \"B\", \"B\", \"B\", \"B\", \"B\", \"M\", \"M\", \"M\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"F\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"V\", \"F\", \"V\", \"V\", \"V\", \"M\", \"V\", \"M\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"F\", \"V\", \"M\", \"M\", \"F\", \"F\", \"M\", \"F\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"M\", \"M\", \"V\", \"V\", \"F\", \"M\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"V\", \"V\", \"B\", \"B\", \"B\", \"M\", \"M\", \"V\", \"M\", \"F\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"F\", \"M\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

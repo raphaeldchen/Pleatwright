@@ -1,0 +1,207 @@
+{
+ "roll": "lizard_2",
+ "subject": "lizard",
+ "subject_guess": "lizard",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 9,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0.97,
+    -0.24,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "hip",
+   "length": 7,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    -0.71,
+    -0.18,
+    -0.71
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 3,
+   "direction": [
+    -0.41,
+    -0.41,
+    -0.82
+   ]
+  },
+  {
+   "name": "foot_L_front",
+   "parent": "elbow_L",
+   "length": 3,
+   "direction": [
+    -0.577,
+    -0.577,
+    -0.577
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    -0.71,
+    -0.18,
+    0.71
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 3,
+   "direction": [
+    -0.41,
+    -0.41,
+    0.82
+   ]
+  },
+  {
+   "name": "foot_R_front",
+   "parent": "elbow_R",
+   "length": 3,
+   "direction": [
+    -0.577,
+    -0.577,
+    0.577
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hip",
+   "length": 3,
+   "direction": [
+    -0.436,
+    -0.218,
+    -0.873
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 3,
+   "direction": [
+    -0.408,
+    -0.408,
+    -0.816
+   ]
+  },
+  {
+   "name": "foot_L_hind",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    -0.577,
+    -0.577,
+    -0.577
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hip",
+   "length": 3,
+   "direction": [
+    -0.436,
+    -0.218,
+    0.873
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 3,
+   "direction": [
+    -0.408,
+    -0.408,
+    0.816
+   ]
+  },
+  {
+   "name": "foot_R_hind",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    -0.577,
+    -0.577,
+    0.577
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L_front",
+   "foot_R_front"
+  ],
+  [
+   "foot_L_hind",
+   "foot_R_hind"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "foot_L_front",
+  "foot_R_front",
+  "foot_L_hind",
+  "foot_R_hind"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (nose-tail = x, dorsal-ventral = y); XZ panel is the top view (x nose-tail, z = left-right splay); ZY panel is the front view (z width, y height)",
+  "snout tip (0,11) to neck junction (9,11) in XY panel: head length ~9",
+  "torso mid/root (13,11) to neck junction (9,11) in XY panel: neck length ~4",
+  "root (13,11) to hip (17,12) in XY panel: torso-to-hip offset ~4, hip sits slightly lower (ground-ward) than root",
+  "hip (17,12) to tail tip (24,12) in XY panel: tail length ~7",
+  "front leg shoulder attach ~x=9,y=12 in XY panel; in XZ panel front legs splay from centerline z=12 out to z\u22482 (left) and z\u224822 (right), giving strong lateral component",
+  "hind leg hip attach ~x=17,y=12 in XY panel; in XZ panel hind legs splay similarly from z=12 to z\u22482 (left) and z\u224822 (right)",
+  "leg vertical drop in XY panel from shoulder/hip line (y\u224812) to foot line (y\u224816-17): ~4-5 units, split across two joints (shoulder/elbow, hip/knee) since limbs bend once visibly in the render"
+ ],
+ "notes": "Lizard has a fused-looking short neck (inferred as a small segment between root and head since XY shows a continuous rounded head/neck mass). Tail treated as single segment root(hip)->tip since no visible joint. Each leg split into two segments (upper limb + lower limb) based on the visible bend in the XY panel silhouette and the strong lateral splay seen in the XZ (top) panel; the z-component of leg directions is inferred from the XZ panel's leg spread since the XY panel alone only shows the vertical/forward-back component. Left/right assigned by animal's own orientation (viewer's right in the panels = animal's left, since XY shows the belly/side with head at -x, so pairs are named _L/_R by mirrored z-sign). Root placed at a neutral mid-torso point (13,11,12) purely for computing relative directions; only directions matter, not absolute position.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

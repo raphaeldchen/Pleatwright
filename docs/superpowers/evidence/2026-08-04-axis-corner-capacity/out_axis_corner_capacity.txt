@@ -1,0 +1,33 @@
+AT THE OPTIMIZER ONLY (build_and_export never called)
+arm                                      st        scale  leafhull cnr bnd
+----------------------------------------------------------------------------
+star-4-sym diag45  free                  OPT    0.353553  0.500000   0   4
+star-4-sym book0   free                  OPT    0.500000  1.000000   4   4
+star-4-sym diag45  1 pair->2 corners     OPT    0.292893  0.414214   2   4
+star-4-sym book0   1 pair->2 corners     OPT    0.500000  1.000000   4   4
+star-4-sym diag45  2 pairs->4 corners    FAIL          -         -   -   -  RuntimeError: scale optimization did not converge (reason code 1)
+star-4-sym book0   2 pairs->4 corners    OPT    0.500000  1.000000   4   4
+QUADRUPED  diag45  free                  OPT    0.667979  0.680970   2   6
+QUADRUPED  book0   free                  OPT    0.612039  0.694970   1   2
+QUADRUPED  diag45  1 pair->2 corners     OPT    0.565143  0.852443   3   3
+QUADRUPED  book0   1 pair->2 corners     OPT    0.720729  0.932437   2   5
+QUADRUPED  diag45  2 pairs->4 corners    FAIL          -         -   -   -  RuntimeError: scale optimization did not converge (reason code 1)
+QUADRUPED  book0   2 pairs->4 corners    OPT    0.720456  1.000000   4   5
+BIRD       diag45  free                  OPT    0.652542  0.669464   2   6
+BIRD       book0   free                  OPT    0.599416  0.694637   0   5
+BIRD       diag45  1 pair->2 corners     OPT    0.557141  0.735395   3   3
+BIRD       book0   1 pair->2 corners     OPT    0.726895  0.954309   2   5
+BIRD       diag45  2 pairs->4 corners    FAIL          -         -   -   -  RuntimeError: scale optimization did not converge (reason code 1)
+BIRD       book0   2 pairs->4 corners    OPT    0.726750  1.000000   4   5
+HUMANOID   diag45  free                  OPT    0.629445  0.558981   0   5
+HUMANOID   book0   free                  OPT    0.788309  0.775908   2   4
+HUMANOID   diag45  1 pair->2 corners     OPT    0.557111  0.629024   2   4
+HUMANOID   book0   1 pair->2 corners     OPT    0.505322  0.828459   2   5
+HUMANOID   diag45  2 pairs->4 corners    FAIL          -         -   -   -  RuntimeError: scale optimization did not converge (reason code 1)
+HUMANOID   book0   2 pairs->4 corners    OPT    0.769231  1.000000   4   4
+INSECT     diag45  free                  OPT    0.763400  0.789076   2   6
+INSECT     book0   free                  OPT    0.770078  0.870405   1   5
+INSECT     diag45  1 pair->2 corners     OPT    0.842724  0.971593   3   7
+INSECT     book0   1 pair->2 corners     OPT    0.745112  0.945477   2   6
+INSECT     diag45  2 pairs->4 corners    FAIL          -         -   -   -  RuntimeError: scale optimization did not converge (reason code 1)
+INSECT     book0   2 pairs->4 corners    OPT    0.683946  1.000000   4   5

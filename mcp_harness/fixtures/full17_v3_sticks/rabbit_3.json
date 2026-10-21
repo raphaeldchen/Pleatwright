@@ -1,0 +1,226 @@
+{
+ "roll": "rabbit_3",
+ "subject": "rabbit",
+ "subject_guess": "rabbit",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine_mid",
+   "parent": "pelvis",
+   "length": 4,
+   "direction": [
+    4,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "spine_mid",
+   "length": 3,
+   "direction": [
+    3,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 4,
+   "direction": [
+    2,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 5,
+   "direction": [
+    4,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "front_knee_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    2,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "front_knee_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    2,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "front_paw_L",
+   "parent": "front_knee_L",
+   "length": 6,
+   "direction": [
+    1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "front_paw_R",
+   "parent": "front_knee_R",
+   "length": 6,
+   "direction": [
+    1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    3
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    -1,
+    1,
+    -3
+   ]
+  },
+  {
+   "name": "hind_knee_L",
+   "parent": "hip_L",
+   "length": 7,
+   "direction": [
+    3,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hind_knee_R",
+   "parent": "hip_R",
+   "length": 7,
+   "direction": [
+    3,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hind_paw_L",
+   "parent": "hind_knee_L",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hind_paw_R",
+   "parent": "hind_knee_R",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 4,
+   "direction": [
+    -4,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 4,
+   "direction": [
+    -2,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "front_paw_L",
+   "front_paw_R"
+  ],
+  [
+   "hind_paw_L",
+   "hind_paw_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "front_paw_L",
+  "front_paw_R",
+  "hind_paw_L",
+  "hind_paw_R",
+  "tail_tip"
+ ],
+ "readings": [
+  "head at +x: nose tip ~(19,8), ear tip ~(14,0) in XY panel -> XY panel is the PROFILE (nose-to-tail runs along x, height along y); ZY panel is the FRONT view (z is the animal's left-right width, matches the ~17-unit width seen in the XZ top view); XZ panel is the TOP view (x nose-tail, z left-right)",
+  "spine readings (XY panel): pelvis/root ~(6,11), spine_mid ~(10,9), withers ~(13,8) - back rises gently from rump to shoulders",
+  "neck/head: withers (13,8) to neck (13,8)->nose tip (19,8); ear tip (14,0) confirms head sits atop a short neck",
+  "front leg (XY panel): shoulder ~(13,9), knee/elbow ~(15,15), paw ~(16,21); ground line ~y=21-22",
+  "hind leg (XY panel): hip ~(5,10), hock ~(8,16), paw ~(10,21); hind leg tucked under body typical of sitting rabbit",
+  "tail (XY panel): base ~(2,11) at rear of rump, tip ~(0,14) - small downward tail bump",
+  "left/right offset taken from XZ top view: body center z~8.5, width 0-17, so left/right limbs offset by +/-3 in z from the spine"
+ ],
+ "notes": "Sitting rabbit. XY panel is the profile (head at +x, ears/snout on the right); the ZY panel, despite showing a similarly tall silhouette, is actually the front view because the animal's ears and splayed front paws give it comparable left-right (z) spread; the XZ panel is the top-down view and confirms x is the long nose-tail axis (spanning ~21 units) while z is the narrower left-right width (~17 units). Front and hind legs are each split into two segments (shoulder->knee->paw, hip->hock->paw) since the exact knee/hock bend isn't a sharply marked landmark but is anatomically required for a rabbit's crouched stance - this split is inferred, not directly measured. The small tail bump at the rear (x~0-2) was split into base/tip for a minimal one-segment flap. Left/right limb pairs are each given independent chains back to the spine (withers for forelegs, pelvis for hind legs) per the two-frame instructions, offset in z using the top-view body width as a proxy for left/right placement. Ears, eyes and other head detail were not counted as separate leaves per the sub-flap rule.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

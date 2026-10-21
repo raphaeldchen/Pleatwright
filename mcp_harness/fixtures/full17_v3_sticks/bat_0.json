@@ -1,0 +1,214 @@
+{
+ "roll": "bat_0",
+ "subject": "bat",
+ "subject_guess": "bat",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "hips",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "chest",
+   "length": 6,
+   "direction": [
+    0,
+    6,
+    1
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 5,
+   "direction": [
+    -4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 5,
+   "direction": [
+    4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "wingtip_L",
+   "parent": "elbow_L",
+   "length": 4,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wingtip_R",
+   "parent": "elbow_R",
+   "length": 4,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hips",
+   "length": 2,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hips",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 3,
+   "direction": [
+    -1,
+    -2.5,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 3,
+   "direction": [
+    1,
+    -2.5,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    -0.5,
+    -2.5,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    0.5,
+    -2.5,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "hips",
+   "length": 1,
+   "direction": [
+    0,
+    -1,
+    -0.5
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 8,
+   "direction": [
+    0,
+    -8,
+    -0.5
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "wingtip_L",
+   "wingtip_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "wingtip_L",
+  "wingtip_R",
+  "foot_L",
+  "foot_R",
+  "tail_tip"
+ ],
+ "readings": [
+  "head at top (small y in ZY panel): ZY panel is the profile, XY panel is the front (wings spread symmetrically left-right)",
+  "XY: left wingtip (0.5,7), elbow_L (3,7), shoulder_L (7,8); right wingtip (24,7), elbow_R (18,7), shoulder_R (13,8) -> wing bone ~9 units/side, wingspan ~24 units",
+  "XY: hip_L (8,15), knee_L (7,17.5), foot_L (6.5,20); hip_R (12,15), knee_R (13,17.5), foot_R (13,20) -> leg length ~6 units",
+  "ZY: ear tip (z=7.5,y=0), snout (z=13,y=10), withers (z=9,y=4), hip (z=8,y=15), tail_base (z=8.5,y=16), tail_tip (z=8,y=24) -> tail length ~8 units, head-to-hip body length ~15 units",
+  "XZ: body occupies x=7-13 matching shoulder span; tail shown curling to x=24 here is pose (mid-stride), true tail direction taken from ZY straight-down reading"
+ ],
+ "notes": "Elbow and knee joints inferred (mesh shows a bend/notch partway along each wing and leg in the XY panel, taken as elbow/knee). Left/right limb lengths were averaged since the pose is mid-stride/curled (asymmetric wingtip/tail extents in the render are pose, not proportion) per rule 3; directions kept mirrored. Tail direction taken from the true profile (ZY, straight down) rather than the XZ top view where it appears curled sideways - that curl is pose, not the rest-direction of the limb. Head treated as a single leaf (distinct lobe with ears/snout as sub-flap detail, not separate leaves). Two-segment wings (shoulder-elbow-wingtip) and legs (hip-knee-foot) inferred from silhouette bends; tail given one segment as it is a single thin flap.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

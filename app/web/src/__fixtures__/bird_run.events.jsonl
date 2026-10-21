@@ -1,0 +1,31 @@
+{"seq": 0, "t": "2026-10-12T01:42:42.520+00:00", "type": "run_created", "prompt": "a bird", "subject": "bird"}
+{"seq": 1, "t": "2026-10-12T01:42:42.520+00:00", "type": "user_message", "text": "a bird", "model": "haiku"}
+{"seq": 2, "t": "2026-10-12T01:42:42.521+00:00", "type": "stage_started", "stage": "image"}
+{"seq": 3, "t": "2026-10-12T01:42:42.523+00:00", "type": "stage_output", "stage": "image", "round": 0, "files": [], "summary": {"skipped": true, "note": "no concept image (fake)"}}
+{"seq": 4, "t": "2026-10-12T01:42:42.523+00:00", "type": "stage_started", "stage": "mesh"}
+{"seq": 5, "t": "2026-10-12T01:42:42.898+00:00", "type": "stage_output", "stage": "mesh", "round": 0, "files": ["author/mesh_r0.glb"], "summary": {"provider": "fake", "faces": 608}}
+{"seq": 6, "t": "2026-10-12T01:42:42.899+00:00", "type": "assistant_message", "text": "A bird mesh, drawn from the plain subject. Does it read as the animal? Approve it, or say what is wrong with it."}
+{"seq": 7, "t": "2026-10-12T01:42:42.899+00:00", "type": "awaiting_review", "stage": "mesh", "round": 0, "can_approve": true}
+{"seq": 8, "t": "2026-10-12T01:42:42.899+00:00", "type": "user_message", "text": "Approve"}
+{"seq": 9, "t": "2026-10-12T01:42:42.900+00:00", "type": "stage_output", "stage": "mesh", "round": 0, "files": ["author/mesh_r0.glb"], "summary": {"provider": "fake", "faces": 608, "approved": true}}
+{"seq": 10, "t": "2026-10-12T01:42:42.900+00:00", "type": "stage_started", "stage": "tree"}
+{"seq": 11, "t": "2026-10-12T01:42:43.236+00:00", "type": "stage_output", "stage": "tree", "round": 0, "files": ["author/tree_round0.png"], "summary": {"flaps": 6, "pairs": 2, "model": "haiku"}}
+{"seq": 12, "t": "2026-10-12T01:42:43.236+00:00", "type": "assistant_message", "text": "Read as: bird (perched songbird, e.g. cardinal, with crest, folded wings, tail, and two legs on a branch)\n6 flaps: head, tail, foot_L, foot_R, wing_L, wing_R\nLimb separation, lowest first (2): foot_L/foot_R 0.35, wing_L/wing_R 0.47 -- 0.00 means the pair is ONE limb that forks at the tip, 1.00 means two independent limbs. This is a ranking, not a test: there is no pass mark, so read the lowest one against the animal.\nDoes this read as the animal? Reply 'yes' to continue, or say what is wrong with it."}
+{"seq": 13, "t": "2026-10-12T01:42:43.236+00:00", "type": "awaiting_review", "stage": "tree", "round": 0, "can_approve": true}
+{"seq": 14, "t": "2026-10-12T01:42:43.236+00:00", "type": "user_message", "text": "make the tail longer", "model": "haiku"}
+{"seq": 15, "t": "2026-10-12T01:42:43.236+00:00", "type": "stage_started", "stage": "tree"}
+{"seq": 16, "t": "2026-10-12T01:42:43.285+00:00", "type": "stage_output", "stage": "tree", "round": 1, "files": ["author/tree_round1.png"], "summary": {"flaps": 6, "pairs": 2, "model": "haiku"}}
+{"seq": 17, "t": "2026-10-12T01:42:43.285+00:00", "type": "assistant_message", "text": "Read as: bird (perched songbird, e.g. cardinal, with crest, folded wings, tail, and two legs on a branch)\n6 flaps: head, tail, foot_L, foot_R, wing_L, wing_R\nLimb separation, lowest first (2): foot_L/foot_R 0.35, wing_L/wing_R 0.47 -- 0.00 means the pair is ONE limb that forks at the tip, 1.00 means two independent limbs. This is a ranking, not a test: there is no pass mark, so read the lowest one against the animal.\nDoes this read as the animal? Reply 'yes' to continue, or say what is wrong with it."}
+{"seq": 18, "t": "2026-10-12T01:42:43.285+00:00", "type": "awaiting_review", "stage": "tree", "round": 1, "can_approve": true}
+{"seq": 19, "t": "2026-10-12T01:42:43.285+00:00", "type": "user_message", "text": "Approve"}
+{"seq": 20, "t": "2026-10-12T01:42:43.285+00:00", "type": "stage_started", "stage": "tree"}
+{"seq": 21, "t": "2026-10-12T01:42:43.286+00:00", "type": "stage_output", "stage": "tree", "round": 1, "files": ["author/tree_round1.png", "tree.json"], "summary": {"approved": true}}
+{"seq": 22, "t": "2026-10-12T01:42:43.287+00:00", "type": "stage_started", "stage": "packing"}
+{"seq": 23, "t": "2026-10-12T01:42:43.922+00:00", "type": "stage_output", "stage": "packing", "files": ["Bird_40/packing_cp.svg"], "summary": {"grid": 40, "rung": "symmetric", "tried": 1}}
+{"seq": 24, "t": "2026-10-12T01:42:43.922+00:00", "type": "stage_started", "stage": "solve"}
+{"seq": 25, "t": "2026-10-12T01:42:46.959+00:00", "type": "stage_output", "stage": "solve", "files": ["Bird_40/solving_cp.svg"], "summary": {"flat_foldable": [187, 187], "global_verdict": "CERTIFIED"}}
+{"seq": 26, "t": "2026-10-12T01:42:46.959+00:00", "type": "stage_started", "stage": "shape"}
+{"seq": 27, "t": "2026-10-12T01:42:48.427+00:00", "type": "stage_output", "stage": "shape", "files": ["Bird_40/shaping_cp.svg"], "summary": {"flat_foldable": [792, 792]}}
+{"seq": 28, "t": "2026-10-12T01:42:48.427+00:00", "type": "stage_started", "stage": "model"}
+{"seq": 29, "t": "2026-10-12T01:42:49.165+00:00", "type": "stage_output", "stage": "model", "files": ["model.fold", "Bird_40/overview.png"], "summary": {}}
+{"seq": 30, "t": "2026-10-12T01:42:49.165+00:00", "type": "run_finished", "folder": "Bird_40", "grid": 40, "solving_ff": [187, 187], "shaping_ff": [792, 792], "global_verdict": "CERTIFIED", "secs": 5.51}

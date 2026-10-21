@@ -1,0 +1,97 @@
+{
+ "roll": "starfish_2",
+ "subject": "starfish",
+ "subject_guess": "starfish (sea star)",
+ "nodes": [
+  {
+   "name": "disc",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_top",
+   "parent": "disc",
+   "length": 10,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "arm_R",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_L",
+   "parent": "disc",
+   "length": 12,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_BR",
+   "parent": "disc",
+   "length": 13,
+   "direction": [
+    4,
+    -12,
+    0
+   ]
+  },
+  {
+   "name": "arm_BL",
+   "parent": "disc",
+   "length": 13,
+   "direction": [
+    -4,
+    -12,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "arm_R",
+   "arm_L"
+  ],
+  [
+   "arm_BR",
+   "arm_BL"
+  ]
+ ],
+ "leaves": [
+  "arm_top",
+  "arm_R",
+  "arm_L",
+  "arm_BR",
+  "arm_BL"
+ ],
+ "readings": [
+  "XY panel is the profile (top-down view of the radial body), ZY and XZ show arm thickness/side curvature",
+  "hub/disc center ~ (12,12) in XY panel",
+  "top arm tip (12,2) -> vertical arm, length 10",
+  "right arm tip (24,12) -> horizontal arm, length 12",
+  "left arm tip (0,12) -> horizontal arm, length 12",
+  "bottom-right arm tip (16,24) -> diagonal arm, dx=4,dy=12, length ~13",
+  "bottom-left arm tip (8,24) -> diagonal arm, dx=-4,dy=12, length ~13",
+  "ZY panel shows arm profile with z-thickness ~8 units near hub, tapering to point at tip, consistent with flat radial arms",
+  "XZ panel shows hub as a raised dome (z ~8 to ~16) with thin flat arms (z~11-13) extending outward"
+ ],
+ "notes": "Starfish has 5-fold radial symmetry, not bilateral, so only two of the five arms form true left/right mirror pairs (arm_R/arm_L and arm_BR/arm_BL); arm_top is unpaired, analogous to a lone anterior arm. No head node: the central disc tapers directly into arms without a distinct neck/head lobe, so it is treated as trunk (root 'disc') per the fused-body rule. No tail present. Each arm is modeled as a single unsegmented limb (hub->tip) since no internal joints are visible in the mesh (arms are smooth, ridged but continuous). Lengths for the mirrored pairs were averaged/assumed equal per the proportion (not pose) rule, using the read tip coordinates as the basis: right/left arms both set to 12 (matching x-extent to grid edges), bottom-left/bottom-right both set to 13 (from diagonal distance sqrt(4^2+12^2)). Directions use the XY-panel screen coordinates with y-sign flipped (screen-down = negative frame-y) per the stated frame convention; dz taken as 0 since ZY-panel cross-section shows arms are essentially planar/flat radiating from the hub, with z-thickness variation only in the hub bulge (not encoded as a separate limb, just body volume).",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

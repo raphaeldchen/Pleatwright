@@ -1,0 +1,42 @@
+[
+ {
+  "subject": "starfish",
+  "N": 4,
+  "paths": 39,
+  "adjacency_edges": 33,
+  "isolated": 0,
+  "bipartite": true,
+  "odd_cycle_len": 0,
+  "secs": 0.1
+ },
+ {
+  "subject": "bird",
+  "N": 54,
+  "paths": 963,
+  "adjacency_edges": 1216,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 5,
+  "secs": 3.7
+ },
+ {
+  "subject": "lizard",
+  "N": 34,
+  "paths": 365,
+  "adjacency_edges": 482,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 5,
+  "secs": 6.6
+ },
+ {
+  "subject": "horse",
+  "N": 46,
+  "paths": 809,
+  "adjacency_edges": 977,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 5,
+  "secs": 14.6
+ }
+]

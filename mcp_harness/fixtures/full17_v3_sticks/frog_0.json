@@ -1,0 +1,207 @@
+{
+ "roll": "frog_0",
+ "subject": "frog",
+ "subject_guess": "frog (crouching, seen in profile facing -x)",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shoulder",
+   "parent": "pelvis",
+   "length": 11,
+   "direction": [
+    -11,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "shoulder",
+   "length": 6,
+   "direction": [
+    -6,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "shoulder",
+   "length": 8,
+   "direction": [
+    0,
+    -3,
+    -7
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "hand_L",
+   "parent": "elbow_L",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "shoulder",
+   "length": 8,
+   "direction": [
+    0,
+    -3,
+    7
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "hand_R",
+   "parent": "elbow_R",
+   "length": 2,
+   "direction": [
+    1,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    0,
+    0,
+    -6
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "knee_L",
+   "length": 4,
+   "direction": [
+    -3,
+    -3,
+    -1
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "hock_L",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    -1
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    0,
+    0,
+    6
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "knee_R",
+   "length": 4,
+   "direction": [
+    -3,
+    -3,
+    1
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "hock_R",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hand_L",
+   "hand_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "hand_L",
+  "hand_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (side view), ZY is the front view, XZ is the dorsal/top view",
+  "XY panel: snout (2,8), eye bulge (5,6), chin (2,13) -> head sits forward and slightly above the neck base",
+  "XY panel: neck/shoulder base (9,8), pelvis/hip (20,9) -> trunk runs almost level, x 9->20",
+  "XY panel front leg (folded, small): shoulder (9,11), elbow (10,13), hand (11,15)",
+  "XY panel hind leg (folded, large): hip (20,9), knee (17,11), hock (14,14), foot (14,18)",
+  "ZY (front) panel: front legs symmetric at z~5 (left) and z~19 (right) about body centerline z=12",
+  "ZY (front) panel: hind legs symmetric at z~6 (left) and z~18 (right), toes spread near ground y~17-18",
+  "ground line sits at y~18-19 in XY panel, matching the foot readings -> confirms feet reach the ground",
+  "XZ (top) panel: rounded head/eye lobes sit at the small-x end, hips/hind-leg attachments at the large-x end, hind feet splay laterally (toward small z / large z) confirming left/right leg mirroring"
+ ],
+ "notes": "Frog has no external tail so only 5 leaves (head + 2 front legs + 2 hind legs). Head counts as a leaf since it protrudes as a distinct rounded lobe on a short neck. Front legs modeled as 2-segment (shoulder->elbow->hand); hind legs as 3-segment (hip->knee->hock->foot) since the mesh shows a clear thigh bulge, lower-leg bend, and splayed foot in the folded/crouched pose - these joint splits (elbow, knee, hock) are anatomical inference from the silhouette, not explicit grid landmarks. Lengths are proportional (limb PROPORTIONS, not the folded pose) taken as straight-line distances between the read landmark coordinates in the XY (x,y) and ZY (z) panels. All leg chains verified to descend (negative dy) from hip/shoulder to foot/hand, matching the ground line. Left/right pairs each run as independent chains back to a shared spine node (shoulder for arms, pelvis for legs), never sharing joints.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

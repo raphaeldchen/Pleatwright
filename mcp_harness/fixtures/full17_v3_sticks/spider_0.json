@@ -1,0 +1,306 @@
+{
+ "roll": "spider_0",
+ "subject": "spider",
+ "subject_guess": "spider (tarantula-like), 8 legs, cephalothorax+abdomen trunk",
+ "nodes": [
+  {
+   "name": "thorax",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "abdomen",
+   "parent": "thorax",
+   "length": 8,
+   "direction": [
+    -1,
+    -0.2,
+    0
+   ]
+  },
+  {
+   "name": "hip1_L",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    0.5,
+    0.1,
+    0.6
+   ]
+  },
+  {
+   "name": "knee1_L",
+   "parent": "hip1_L",
+   "length": 7,
+   "direction": [
+    0.4,
+    0.4,
+    0.5
+   ]
+  },
+  {
+   "name": "foot1_L",
+   "parent": "knee1_L",
+   "length": 8,
+   "direction": [
+    0.3,
+    -0.9,
+    0.2
+   ]
+  },
+  {
+   "name": "hip1_R",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    0.5,
+    0.1,
+    -0.6
+   ]
+  },
+  {
+   "name": "knee1_R",
+   "parent": "hip1_R",
+   "length": 7,
+   "direction": [
+    0.4,
+    0.4,
+    -0.5
+   ]
+  },
+  {
+   "name": "foot1_R",
+   "parent": "knee1_R",
+   "length": 8,
+   "direction": [
+    0.3,
+    -0.9,
+    -0.2
+   ]
+  },
+  {
+   "name": "hip2_L",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    0.2,
+    0.05,
+    0.8
+   ]
+  },
+  {
+   "name": "knee2_L",
+   "parent": "hip2_L",
+   "length": 7,
+   "direction": [
+    0.15,
+    0.35,
+    0.85
+   ]
+  },
+  {
+   "name": "foot2_L",
+   "parent": "knee2_L",
+   "length": 8,
+   "direction": [
+    0.1,
+    -0.9,
+    0.3
+   ]
+  },
+  {
+   "name": "hip2_R",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    0.2,
+    0.05,
+    -0.8
+   ]
+  },
+  {
+   "name": "knee2_R",
+   "parent": "hip2_R",
+   "length": 7,
+   "direction": [
+    0.15,
+    0.35,
+    -0.85
+   ]
+  },
+  {
+   "name": "foot2_R",
+   "parent": "knee2_R",
+   "length": 8,
+   "direction": [
+    0.1,
+    -0.9,
+    -0.3
+   ]
+  },
+  {
+   "name": "hip3_L",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    -0.1,
+    0.05,
+    0.85
+   ]
+  },
+  {
+   "name": "knee3_L",
+   "parent": "hip3_L",
+   "length": 7,
+   "direction": [
+    -0.15,
+    0.35,
+    0.85
+   ]
+  },
+  {
+   "name": "foot3_L",
+   "parent": "knee3_L",
+   "length": 8,
+   "direction": [
+    -0.1,
+    -0.9,
+    0.35
+   ]
+  },
+  {
+   "name": "hip3_R",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    -0.1,
+    0.05,
+    -0.85
+   ]
+  },
+  {
+   "name": "knee3_R",
+   "parent": "hip3_R",
+   "length": 7,
+   "direction": [
+    -0.15,
+    0.35,
+    -0.85
+   ]
+  },
+  {
+   "name": "foot3_R",
+   "parent": "knee3_R",
+   "length": 8,
+   "direction": [
+    -0.1,
+    -0.9,
+    -0.35
+   ]
+  },
+  {
+   "name": "hip4_L",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    -0.5,
+    0.05,
+    0.7
+   ]
+  },
+  {
+   "name": "knee4_L",
+   "parent": "hip4_L",
+   "length": 8,
+   "direction": [
+    -0.45,
+    0.35,
+    0.7
+   ]
+  },
+  {
+   "name": "foot4_L",
+   "parent": "knee4_L",
+   "length": 9,
+   "direction": [
+    -0.35,
+    -0.9,
+    0.3
+   ]
+  },
+  {
+   "name": "hip4_R",
+   "parent": "thorax",
+   "length": 2,
+   "direction": [
+    -0.5,
+    0.05,
+    -0.7
+   ]
+  },
+  {
+   "name": "knee4_R",
+   "parent": "hip4_R",
+   "length": 8,
+   "direction": [
+    -0.45,
+    0.35,
+    -0.7
+   ]
+  },
+  {
+   "name": "foot4_R",
+   "parent": "knee4_R",
+   "length": 9,
+   "direction": [
+    -0.35,
+    -0.9,
+    -0.3
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot1_L",
+   "foot1_R"
+  ],
+  [
+   "foot2_L",
+   "foot2_R"
+  ],
+  [
+   "foot3_L",
+   "foot3_R"
+  ],
+  [
+   "foot4_L",
+   "foot4_R"
+  ]
+ ],
+ "leaves": [
+  "foot1_L",
+  "foot1_R",
+  "foot2_L",
+  "foot2_R",
+  "foot3_L",
+  "foot3_R",
+  "foot4_L",
+  "foot4_R"
+ ],
+ "readings": [
+  "Head end at +x: the cephalothorax (bearing all 8 leg attachments and the mouth/eyes) sits at the +x end of the mesh; the abdomen trails at -x. XY panel is the profile (side view, shows the classic tarantula leg-arch), ZY panel is the front view (legs symmetric left/right), XZ panel is the top view (shows leg splay and fore-aft attachment order).",
+  "XY panel: cephalothorax center \u2248 (19,9); abdomen center \u2248 (9,11); abdomen rear tip \u2248 (3,13). Abdomen extends ~16 units behind the cephalothorax and droops slightly (screen dy ~+2 downward \u2192 frame dy small negative).",
+  "XY panel: ground line (bottom of all feet) \u2248 y=15.5; cephalothorax dorsal surface \u2248 y=7, so legs rise ~8 units above their hip before descending ~8-9 units back to the ground, matching the visible elbow-bend silhouette.",
+  "XY panel front leg (pair1): hip \u2248 (21,8), elbow/knee \u2248 (24,5) [screen y decreases \u2192 frame dy positive, leg rises], foot \u2248 (22,15) [screen y increases a lot \u2192 frame dy strongly negative].",
+  "XZ panel (top view): cephalothorax spans x\u224814-24, z center \u224812; legs splay outward to z\u22482 and z\u224822 at their widest (pair 1/2), while the hindmost pair (4) reaches back to x\u22482, crossing behind the abdomen, confirming hind legs are the longest and most posterior.",
+  "ZY panel (front view): body center z\u224811-12; legs symmetric about this center, tips reaching z\u22480 and z\u224824; all feet converge to ground y\u224815-16, consistent with the XY ground reading.",
+  "Four hip positions read along the cephalothorax long axis in XZ/XY panels: leg1\u2248x22 (front), leg2\u2248x19.5, leg3\u2248x17, leg4\u2248x14.5 (rear, nearest abdomen junction)."
+ ],
+ "notes": "Subject is a spider: cephalothorax (prosoma) and abdomen (opisthosoma) are fused-body trunk nodes, not leaves, per the carapace rule. Pedipalps are present but small/leg-like and per the 'four leg pairs, never five' rule are not given a leaf. All 8 legs (4 pairs, L/R) are each split into 3 inferred segments (coxa->hip, femur->knee, tibia+tarsus->foot) to capture the clear elbow-arch silhouette visible in the XY profile; this segmentation is an anatomical inference, not a directly measured joint. Leg lengths were kept nearly equal per pair per the proportion-not-pose rule, with the hindmost pair (4) given slightly greater length since the XZ top view shows it reaching furthest posteriorly/laterally past the abdomen, a proportional (not merely postural) difference typical of tarantulas. All descending segments (elbow->foot) were given negative dy to match the ground being a larger screen-y value than the body/hip, per the required sign flip. Left/right assigned as +z/-z arbitrarily but consistently; front-to-back leg order taken from hip x-positions read off the XZ/XY panels.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

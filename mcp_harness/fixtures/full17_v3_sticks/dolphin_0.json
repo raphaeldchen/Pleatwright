@@ -1,0 +1,108 @@
+{
+ "roll": "dolphin_0",
+ "subject": "dolphin",
+ "subject_guess": "dolphin",
+ "nodes": [
+  {
+   "name": "torso",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "torso",
+   "length": 5,
+   "direction": [
+    5,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "chest",
+   "length": 6,
+   "direction": [
+    4,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "peduncle",
+   "parent": "torso",
+   "length": 11,
+   "direction": [
+    -8,
+    -7,
+    0
+   ]
+  },
+  {
+   "name": "tail_fluke",
+   "parent": "peduncle",
+   "length": 6,
+   "direction": [
+    -2,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "dorsal_fin",
+   "parent": "torso",
+   "length": 9,
+   "direction": [
+    -3,
+    8,
+    0
+   ]
+  },
+  {
+   "name": "pectoral_L",
+   "parent": "chest",
+   "length": 10,
+   "direction": [
+    2,
+    -5,
+    -9
+   ]
+  },
+  {
+   "name": "pectoral_R",
+   "parent": "chest",
+   "length": 10,
+   "direction": [
+    2,
+    -5,
+    9
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "pectoral_L",
+   "pectoral_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail_fluke",
+  "dorsal_fin",
+  "pectoral_L",
+  "pectoral_R"
+ ],
+ "readings": [
+  "Head at large-x / mid-y in the XY panel (nose ~(20,15)) while tail fluke sits at small-x, large-y (~(1,22)): the leaping body's long axis runs along x, so the XY panel is the PROFILE (shows the arched leap pose, dorsal fin, pectoral fin, head, tail). The ZY panel (z across, y up) is the FRONT view (symmetric left/right fins, dorsal fin on top, flukes below). The XZ panel (x across, z up) is the TOP view (fins seen from above, dorsal fin as a thin forward sliver, flukes flared at x=0).",
+  "XY panel: torso center ~(11,9); chest/shoulder ~(16,10); nose tip ~(20,15); dorsal fin base ~(10,7), dorsal fin tip ~(8,1); pectoral fin tip ~(18,15); peduncle ~(3,16); tail fluke tip ~(1,22).",
+  "ZY panel: body width spans z=6 to z=18 (centerline z=12); pectoral fin tips at z=3 (left) and z=21 (right) at y~12; dorsal fin sits on centerline z=12; tail flukes spread z=6..19 at y~21-24, confirming midline z=12 for spine.",
+  "XZ (top) panel confirms full nose-to-tail extent x=0(tail)-24(nose) without the vertical-arch foreshortening seen in the profile, and shows the paired fins and flared tail symmetric about the body's long axis."
+ ],
+ "notes": "Spine authored as three internal nodes (torso=root, chest, peduncle) inferred from the curvature of the leaping pose visible in the XY (profile) panel; this curvature is treated as the mesh's authored static shape, not a pose to straighten. Head and tail_fluke are modeled as single-segment flaps (dolphins lack a distinct neck joint and the fluke is one fused terminal structure, counted as ONE tail leaf per convention). Dorsal fin is a single unpaired midline leaf off the torso. Pectoral fins are a symmetric leaf pair off the chest node, each a single rigid segment (no elbow/wrist joints visible in the render); lengths and z-offsets (+/-9 from centerline) taken from the ZY front panel to enforce left/right symmetry, matched in length (10 units each) per the symmetric-pair rule. All vertical (y in XY/ZY, z in XZ) grid ticks were sign-flipped versus horizontal ticks (x in XY/XZ, z in ZY) per the down-increasing grid vs. up-positive frame convention, verified by the tail's descending dy (-6) and dorsal fin's ascending dy (+8) matching their on-screen positions.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

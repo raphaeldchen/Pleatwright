@@ -1,0 +1,38 @@
+{
+  "api_name": null,
+  "cache_key": "a-scorpion-55c3d0c71e6e5c65",
+  "generated_utc": "2026-10-19T21:47:50Z",
+  "glb": "mesh.glb",
+  "glb_bytes": 4603300,
+  "glb_mtime_utc": "2026-10-19T21:48:21Z",
+  "glb_sha256": "74af145d59c4ae52640cbce6ed3d01ae9c0cdeda7bc264f04b19810cab1cbcbf",
+  "meta_version": 1,
+  "prompt": "a scorpion",
+  "provenance": "generated",
+  "provider": "hf2",
+  "recorded_utc": "2026-10-19T21:48:22Z",
+  "settings": {
+    "image_backend": "gemini",
+    "image_model": "gemini-nano-banana-2.1",
+    "image_seed": 1154703,
+    "mesh_api": "/shape_generation",
+    "mesh_kwargs": {
+      "caption": null,
+      "check_box_rembg": true,
+      "guidance_scale": 5.0,
+      "image": "<stage input>",
+      "mv_image_back": null,
+      "mv_image_front": null,
+      "mv_image_left": null,
+      "mv_image_right": null,
+      "num_chunks": 8000,
+      "octree_resolution": 256,
+      "randomize_seed": false,
+      "seed": 1234,
+      "steps": 30
+    },
+    "mesh_space": "tencent/Hunyuan3D-2",
+    "prompt_template": "A full-body 3D render of a single {subject}, three-quarter side view, the entire animal in frame with every leg, the tail and all appendages clearly visible and separated from the body, centered, isolated on a plain white background, soft even studio lighting, no shadow, no props, no text"
+  },
+  "space_id": null
+}

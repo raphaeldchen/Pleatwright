@@ -1,0 +1,198 @@
+{
+ "roll": "horse_2",
+ "subject": "horse",
+ "n": 2,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.254545
+  },
+  {
+   "id": 3,
+   "parent_id": 2,
+   "length": 0.181818
+  },
+  {
+   "id": 4,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 5,
+   "parent_id": 0,
+   "length": 0.109091
+  },
+  {
+   "id": 6,
+   "parent_id": 5,
+   "length": 0.181818
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.145455
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.109091
+  },
+  {
+   "id": 9,
+   "parent_id": 0,
+   "length": 0.109091
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.181818
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.145455
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.109091
+  },
+  {
+   "id": 13,
+   "parent_id": 1,
+   "length": 0.109091
+  },
+  {
+   "id": 14,
+   "parent_id": 13,
+   "length": 0.181818
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.145455
+  },
+  {
+   "id": 16,
+   "parent_id": 15,
+   "length": 0.072727
+  },
+  {
+   "id": 17,
+   "parent_id": 1,
+   "length": 0.109091
+  },
+  {
+   "id": 18,
+   "parent_id": 17,
+   "length": 0.181818
+  },
+  {
+   "id": 19,
+   "parent_id": 18,
+   "length": 0.145455
+  },
+  {
+   "id": 20,
+   "parent_id": 19,
+   "length": 0.072727
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 8,
+   "parent_id": 0,
+   "length": 0.545455
+  },
+  {
+   "id": 4,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 12,
+   "parent_id": 0,
+   "length": 0.545455
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.436363
+  },
+  {
+   "id": 20,
+   "parent_id": 1,
+   "length": 0.509091
+  },
+  {
+   "id": 16,
+   "parent_id": 1,
+   "length": 0.509091
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   8,
+   12
+  ],
+  [
+   16,
+   20
+  ]
+ ],
+ "names": {
+  "0": "withers",
+  "1": "hip",
+  "2": "neck",
+  "3": "head",
+  "4": "tail",
+  "5": "shoulder_L",
+  "6": "knee_L",
+  "7": "fetlock_L",
+  "8": "hoof_L",
+  "9": "shoulder_R",
+  "10": "knee_R",
+  "11": "fetlock_R",
+  "12": "hoof_R",
+  "13": "hip_L",
+  "14": "hock_L",
+  "15": "fetlock_h_L",
+  "16": "hoof_h_L",
+  "17": "hip_R",
+  "18": "hock_R",
+  "19": "fetlock_h_R",
+  "20": "hoof_h_R"
+ },
+ "leaves": [
+  "head",
+  "tail",
+  "hoof_L",
+  "hoof_R",
+  "hoof_h_L",
+  "hoof_h_R"
+ ],
+ "served_stage": "flatten",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.392744) [ide: rescued by lossless chain collapse: the exact tree did not pack, so the backend collapsed its pass-through joints ('flatten+seeded_3') and recompiled. A joint with exactly one child carries no flap and no branch, so merging it into its parent edge is LOSSLESS: every flap you asked for is present, every bilateral pair is intact, and the distance between any two flap tips is exactly what you specified. What changed is that intermediate joints along a limb no longer appear as separate nodes, so an edge length in this base may be the SUM of two you sent] [ide: mv-repair: cleared 6 of 8 defective interior vertex/vertices in the best of 1 packed rescue rung(s) by re-solving the coupled M/V assignment on 5 crease(s) (e29,e35,e38,e49,e92); geometry and closure byte-identical (1.6e-08) -- only labels moved; 2 interior defect(s) REMAIN -- no relabelling of up to 5 crease(s) that keeps every clean vertex clean and fully fixes every defect it touches clears them (search exhausted); 1 hull-frontier vertex/vertices touched are outside the audit (boundary advisory)] [ide: cp-audit: 2 interior Maekawa + 0 interior Kawasaki + 0 interior M/V-arrangement violation(s), closure max error 1.6e-08 remain in the best of 1 packed rescue rung(s); real interior defects, NOT hull frontier -- served best-effort]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.407358997, 0.71031812], [0.760833764, 0.999999989], [0.573050342, 0.846106535], [0.639326879, 0.900421901], [0.518046183, 0.913223549], [0.603735964, 0.943850544], [3e-09, 0.999999998], [0.232776526, 0.834467529], [0.162943537, 0.884127292], [0.285632472, 0.908795082], [0.199942692, 0.936156569], [0.401839327, 0.871689228], [0.603735964, 0.999999991], [0.518046184, 0.999999992], [0.401839328, 0.999999993], [0.285632473, 0.999999994], [0.199942693, 0.999999995], [0.717720949, 0.636665752], [0.727947548, 0.756642491], [0.722588697, 0.693773348], [0.6960366, 0.6960366], [0.745560926, 0.691815237], [0.732082365, 0.787240072], [0.71031812, 0.407358997], [0.558838559, 0.558838559], [1.0, 0.661867462], [0.871252662, 0.548752733], [0.901034762, 0.801784226], [0.85155203, 0.871742768], [0.52941928, 0.52941928], [0.21890178, 0.814956463], [0.153231217, 0.870469549], [0.999999998, 3e-09], [0.834467529, 0.232776526], [0.884127292, 0.162943537], [0.814956463, 0.21890178], [0.870469549, 0.153231217], [0.67843295, 0.380405609], [0.380405609, 0.67843295], [0.141380835, 0.858619166], [0.201972659, 0.798027342], [0.35098633, 0.649013671], [0.5, 0.5], [0.649013671, 0.35098633], [0.798027342, 0.201972659], [0.858619166, 0.141380835], [0.922442583, 0.490488295], [0.908795084, 0.285632473], [0.93615657, 0.199942693], [0.876088967, 0.388060384], [0.999999998, 0.199942693], [0.999999999, 0.285632473], [0.999999999, 0.388060384], [0.999999999, 0.490488295]], \"edges_vertices\": [[2, 4], [3, 5], [7, 9], [8, 10], [0, 11], [11, 4], [4, 5], [5, 1], [0, 2], [2, 3], [3, 1], [11, 9], [9, 10], [10, 6], [12, 5], [13, 4], [14, 11], [15, 9], [16, 10], [6, 16], [16, 15], [15, 14], [14, 13], [13, 12], [12, 1], [0, 7], [7, 8], [8, 6], [19, 20], [17, 20], [20, 18], [17, 19], [19, 18], [19, 21], [18, 21], [21, 17], [2, 20], [3, 22], [24, 20], [26, 21], [27, 21], [28, 22], [1, 22], [22, 18], [20, 0], [17, 23], [0, 24], [24, 23], [21, 25], [25, 26], [26, 23], [25, 27], [27, 28], [28, 1], [24, 29], [7, 30], [8, 31], [33, 35], [34, 36], [23, 37], [37, 29], [29, 38], [38, 0], [38, 30], [30, 31], [31, 6], [37, 35], [35, 36], [36, 32], [39, 31], [40, 30], [41, 38], [42, 29], [43, 37], [44, 35], [45, 36], [32, 45], [45, 44], [44, 43], [43, 42], [42, 41], [41, 40], [40, 39], [39, 6], [23, 33], [33, 34], [34, 32], [26, 46], [33, 47], [34, 48], [25, 46], [46, 49], [49, 23], [49, 47], [47, 48], [48, 32], [50, 48], [51, 47], [52, 49], [53, 46], [25, 53], [53, 52], [52, 51], [51, 50], [50, 32]], \"edges_assignment\": [\"M\", \"F\", \"M\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"F\", \"V\", \"M\", \"V\", \"F\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"M\", \"M\", \"M\", \"V\", \"M\", \"V\", \"M\", \"M\", \"M\", \"V\", \"V\", \"M\", \"F\", \"V\", \"V\", \"M\", \"F\", \"V\", \"V\", \"V\", \"M\", \"M\", \"V\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"V\", \"V\", \"F\", \"M\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"M\", \"M\", \"V\", \"V\", \"F\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"M\", \"M\", \"M\", \"M\", \"V\", \"F\", \"V\", \"M\", \"V\", \"V\", \"V\", \"V\", \"F\", \"M\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

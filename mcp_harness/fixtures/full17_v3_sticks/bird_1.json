@@ -1,0 +1,199 @@
+{
+ "roll": "bird_1",
+ "subject": "bird",
+ "subject_guess": "bird (perched songbird, e.g. cardinal, with crest, folded wings, tail, and two legs on a branch)",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    -2,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 7,
+   "direction": [
+    -7,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "pelvis",
+   "parent": "root",
+   "length": 8,
+   "direction": [
+    4,
+    -7,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    4,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "tail_base",
+   "length": 8,
+   "direction": [
+    7,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 3,
+   "direction": [
+    1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 2,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 2,
+   "direction": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 3,
+   "direction": [
+    1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 2,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    1,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "wing_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    3,
+    -1,
+    -5
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "root",
+   "length": 3,
+   "direction": [
+    1,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "wing_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    3,
+    -1,
+    5
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L",
+   "foot_R"
+  ],
+  [
+   "wing_L",
+   "wing_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "foot_L",
+  "foot_R",
+  "wing_L",
+  "wing_R"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile, ZY is the front view, XZ is the top view",
+  "beak tip (0,8) in XY; head crest top (5,3); eye/head-mid (7,6)",
+  "withers/neck-base (9,8) in XY, matches body-front top (13,8)",
+  "breast bottom (8,14), pelvis/rear bottom (13,15) in XY",
+  "tail base (17,12), tail tip (24,15) in XY",
+  "legs: body-bottom (13,15) down to feet near (14,20) in XY, perched on branch y=20-24",
+  "ZY front view: head top (z=12,y=0), head width z=7 to 17 at y=8, body bottom z=9-15 at y=16",
+  "ZY legs: left leg z=9-11, right leg z=13-15, from y=16 to y=23/24",
+  "XZ top view: beak (x=0,z=12), head width x=3,z=7-17, body max width x=8-16,z=4-20 (wings folded flush), tail x=16-24,z=10-14 narrow",
+  "wing shoulders inferred near withers x~10,z~9/15; wingtips at outer body edge x~13,z~4/20 (folded flat, seen only as body bulge in top view)"
+ ],
+ "notes": "Head-at-x=0 (beak) identifies XY as the profile view; ZY shows the bird head-on (front) revealing head width and the two legs splayed at the perch; XZ is the top view showing folded-wing bulge along the body. Splits inferred anatomically: neck vs head-with-beak (from crest/eye landmarks vs beak tip), tail_base vs tail-tip (from the bend visible at x=17 in XY), leg hip/knee/foot (typical bird leg segmentation, since only hip and foot endpoints are directly readable, knee placed at proportional midpoint), and wing shoulder/tip (since wings are folded flat, their extent is only visible as the extra body width in the XZ top view rather than as a separate silhouette in XY/ZY). Left/right assigned by z<12 = _L, z>12 = _R in the ZY/XZ readings, consistently applied to legs and wings. Root placed at the withers/chest point with length 0 as required.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

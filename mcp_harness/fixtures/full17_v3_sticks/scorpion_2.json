@@ -1,0 +1,332 @@
+{
+ "roll": "scorpion_2",
+ "subject": "scorpion",
+ "subject_guess": "scorpion",
+ "nodes": [
+  {
+   "name": "head_base",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg_base1",
+   "parent": "head_base",
+   "length": 2,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg_base2",
+   "parent": "leg_base1",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg_base3",
+   "parent": "leg_base2",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg_base4",
+   "parent": "leg_base3",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "abdomen",
+   "parent": "leg_base4",
+   "length": 2,
+   "direction": [
+    1,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "tail_mid",
+   "parent": "abdomen",
+   "length": 8,
+   "direction": [
+    4,
+    7,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_mid",
+   "length": 3,
+   "direction": [
+    -2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "claw_elbow_L",
+   "parent": "head_base",
+   "length": 6,
+   "direction": [
+    -3,
+    0,
+    5
+   ]
+  },
+  {
+   "name": "claw_tip_L",
+   "parent": "claw_elbow_L",
+   "length": 5,
+   "direction": [
+    -5,
+    -1,
+    2
+   ]
+  },
+  {
+   "name": "claw_elbow_R",
+   "parent": "head_base",
+   "length": 6,
+   "direction": [
+    -3,
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "claw_tip_R",
+   "parent": "claw_elbow_R",
+   "length": 5,
+   "direction": [
+    -5,
+    -1,
+    -2
+   ]
+  },
+  {
+   "name": "knee1_L",
+   "parent": "leg_base1",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    6
+   ]
+  },
+  {
+   "name": "foot1_L",
+   "parent": "knee1_L",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "knee1_R",
+   "parent": "leg_base1",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    -6
+   ]
+  },
+  {
+   "name": "foot1_R",
+   "parent": "knee1_R",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "knee2_L",
+   "parent": "leg_base2",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    6
+   ]
+  },
+  {
+   "name": "foot2_L",
+   "parent": "knee2_L",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "knee2_R",
+   "parent": "leg_base2",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    -6
+   ]
+  },
+  {
+   "name": "foot2_R",
+   "parent": "knee2_R",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "knee3_L",
+   "parent": "leg_base3",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    6
+   ]
+  },
+  {
+   "name": "foot3_L",
+   "parent": "knee3_L",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "knee3_R",
+   "parent": "leg_base3",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    -6
+   ]
+  },
+  {
+   "name": "foot3_R",
+   "parent": "knee3_R",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    -2
+   ]
+  },
+  {
+   "name": "knee4_L",
+   "parent": "leg_base4",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    6
+   ]
+  },
+  {
+   "name": "foot4_L",
+   "parent": "knee4_L",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "knee4_R",
+   "parent": "leg_base4",
+   "length": 6,
+   "direction": [
+    0,
+    -2,
+    -6
+   ]
+  },
+  {
+   "name": "foot4_R",
+   "parent": "knee4_R",
+   "length": 3,
+   "direction": [
+    0,
+    -2,
+    -2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_tip_L",
+   "claw_tip_R"
+  ],
+  [
+   "foot1_L",
+   "foot1_R"
+  ],
+  [
+   "foot2_L",
+   "foot2_R"
+  ],
+  [
+   "foot3_L",
+   "foot3_R"
+  ],
+  [
+   "foot4_L",
+   "foot4_R"
+  ]
+ ],
+ "leaves": [
+  "tail_tip",
+  "claw_tip_L",
+  "claw_tip_R",
+  "foot1_L",
+  "foot1_R",
+  "foot2_L",
+  "foot2_R",
+  "foot3_L",
+  "foot3_R",
+  "foot4_L",
+  "foot4_R"
+ ],
+ "readings": [
+  "head at -x: claws/pedipalps sit at x=0-9 in the XY panel, so XY is the PROFILE view; XZ (x across, z 'up') is the DORSAL/top view (claws upper-left x=0-8, tail centerline running to x=24); ZY is the FRONT view (body dome centered z=12, legs splayed left/right of it).",
+  "XY panel: claw tip (0,14), claw elbow (6,14), mouth/head_base (9,14) -- claw droops slightly toward ground.",
+  "XY panel: body/leg-attach line at y=15 running x=10,12,14,16 (four leg pairs along the carapace); ground line at y=19 where feet land.",
+  "XY panel: abdomen posterior end (17,13); tail arcs up to its high point (21,6); tail hooks back down to the stinger tip (19,8).",
+  "XZ (dorsal) panel: claws occupy x=0-8 spread to z=0 and mirrored to z=24 about centerline z=12; leg pairs radiate from the body block x=9-17 out to about z=2 and z=22; tail stays on the centerline z=12 from x=17 to x=24, confirming the tail curl is purely a y-motion (visible only in XY), not a sideways one.",
+  "ZY (front) panel: body dome center (12,14) with y=10 top / y=18 bottom; legs splay symmetrically from about z=3 to z=21 with feet meeting the ground at y=19, matching the XY ground reading."
+ ],
+ "notes": "Cephalothorax is fused (no separate head leaf, per the carapace rule). Root 'head_base' placed at the anterior tip where the fused head/thorax meets the pedipalps. The spine is modeled as a chain head_base -> leg_base1..4 (the four points along the carapace where each leg pair actually attaches, per the crab/scorpion rule) -> abdomen -> tail_mid -> tail_tip(stinger, the external-tail leaf). Each pedipalp is enlarged into a claw, so it is coded as a 2-segment limb (elbow+tip) rather than sub-flap detail, per the 'enlarged pedipalp = limb' rule. Each of the 4 leg pairs is a 2-segment limb (knee, foot) attached independently as its own L/R chain to its own leg_base spine node -- no shared/forked chains. All four leg pairs and both claws were given identical proportional geometry (only their spine attachment point differs), since the mid-stride pose differences in the render are not to be encoded, only proportions. Tail was split into base/arc/tip; this 2-joint split is an inferred simplification of the visibly more-segmented curling tail. Left/right sides use +z/-z respectively; verified hip->knee->foot direction has negative dy (descending toward the ground line at y=19), so the legs point down as required.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

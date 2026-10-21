@@ -1,0 +1,263 @@
+{
+ "roll": "elephant_1",
+ "subject": "elephant",
+ "subject_guess": "elephant",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "root",
+   "length": 1,
+   "direction": [
+    -1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 3,
+   "direction": [
+    -2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "trunk_upper",
+   "parent": "head",
+   "length": 3,
+   "direction": [
+    -3,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "trunk_tip",
+   "parent": "trunk_upper",
+   "length": 8,
+   "direction": [
+    -1,
+    -8,
+    0
+   ]
+  },
+  {
+   "name": "ear_L",
+   "parent": "head",
+   "length": 6,
+   "direction": [
+    -1,
+    4,
+    -4
+   ]
+  },
+  {
+   "name": "ear_R",
+   "parent": "head",
+   "length": 6,
+   "direction": [
+    -1,
+    4,
+    4
+   ]
+  },
+  {
+   "name": "spine_mid",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "spine_mid",
+   "length": 4,
+   "direction": [
+    4,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "hip",
+   "length": 9,
+   "direction": [
+    5,
+    -8,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "root",
+   "length": 6,
+   "direction": [
+    0,
+    -5,
+    -3
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "root",
+   "length": 7,
+   "direction": [
+    3,
+    -6,
+    3
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hip",
+   "length": 7,
+   "direction": [
+    -1,
+    -6,
+    -3
+   ]
+  },
+  {
+   "name": "knee_hind_L",
+   "parent": "hip_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_hind_L",
+   "parent": "knee_hind_L",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hip",
+   "length": 8,
+   "direction": [
+    2,
+    -7,
+    3
+   ]
+  },
+  {
+   "name": "knee_hind_R",
+   "parent": "hip_R",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_hind_R",
+   "parent": "knee_hind_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "ear_L",
+   "ear_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ],
+  [
+   "foot_hind_L",
+   "foot_hind_R"
+  ]
+ ],
+ "leaves": [
+  "trunk_tip",
+  "ear_L",
+  "ear_R",
+  "tail_tip",
+  "foot_L",
+  "foot_R",
+  "foot_hind_L",
+  "foot_hind_R"
+ ],
+ "readings": [
+  "head/trunk at -x: XY panel is the profile, ZY is the rear view, XZ is the top view",
+  "trunk tip (3,17), head/mouth (7,8), so trunk hangs down-forward ~9 units below head",
+  "ear tip (6,4) vs head (7,8): ear rises ~4 units above head, matches ZY panel ear spread z=7 to 16",
+  "withers/back (10,5) vs shoulder foot (10,20): front leg span 15 units, matches ground line y=20 across all four feet",
+  "hip (18,5) vs hind foot (18,20): hind leg span 15 units, symmetric with front legs (proportional gait, not pose)",
+  "tail base (18,5) to tail tip (23,13): tail extends back-down ~9 units",
+  "ZY panel: hind legs separated at z~9 (left) and z~15 (right), ears spread z~8 to 16, confirming left/right offsets used for all paired limbs",
+  "front leg column at XY x=10 (left) and x=13-14 (right, walking offset) - equal length limbs, different phase of stride"
+ ],
+ "notes": "Head faces -x in the XY panel, which is the profile view; ZY panel is the rear view showing tail, ears and hind legs; XZ is the top view. The trunk is treated as a distinct terminal appendage (proboscis) hanging from the head, so the head itself is an internal joint (neck->head->trunk), not a leaf. Ears count as two separate flap leaves per the folded-flap rule. Neck/head/trunk segmentation and leg joint splits (shoulder/knee/foot, hip/knee/foot) are anatomical inferences from the single continuous limb silhouettes in the XY panel; the ZY and XZ panels were used only to set left/right (z) offsets for ears and the four legs, keeping all four legs equal in proportion despite the walking-stride pose shown in the XY panel (front legs at slightly different x due to gait phase, not true length difference). Ground line at grid y=20 in the XY panel confirms all four feet reach the same height, used to keep leg lengths consistent.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

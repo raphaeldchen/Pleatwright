@@ -1,0 +1,269 @@
+{
+ "roll": "spider_1",
+ "subject": "spider",
+ "subject_guess": "spider (tarantula-like, 8 legs, fused cephalothorax/abdomen)",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine2",
+   "parent": "body",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine3",
+   "parent": "spine2",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine4",
+   "parent": "spine3",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "abdomen_base",
+   "parent": "spine4",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "abdomen_tip",
+   "parent": "abdomen_base",
+   "length": 6,
+   "direction": [
+    6,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "knee_L1",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -3,
+    -1,
+    5
+   ]
+  },
+  {
+   "name": "foot_L1",
+   "parent": "knee_L1",
+   "length": 6,
+   "direction": [
+    -1,
+    -4,
+    3
+   ]
+  },
+  {
+   "name": "knee_R1",
+   "parent": "body",
+   "length": 5,
+   "direction": [
+    -3,
+    -1,
+    -5
+   ]
+  },
+  {
+   "name": "foot_R1",
+   "parent": "knee_R1",
+   "length": 6,
+   "direction": [
+    -1,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "knee_L2",
+   "parent": "spine2",
+   "length": 5,
+   "direction": [
+    -1,
+    -1,
+    5
+   ]
+  },
+  {
+   "name": "foot_L2",
+   "parent": "knee_L2",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    3
+   ]
+  },
+  {
+   "name": "knee_R2",
+   "parent": "spine2",
+   "length": 5,
+   "direction": [
+    -1,
+    -1,
+    -5
+   ]
+  },
+  {
+   "name": "foot_R2",
+   "parent": "knee_R2",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "knee_L3",
+   "parent": "spine3",
+   "length": 5,
+   "direction": [
+    1,
+    -1,
+    5
+   ]
+  },
+  {
+   "name": "foot_L3",
+   "parent": "knee_L3",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    3
+   ]
+  },
+  {
+   "name": "knee_R3",
+   "parent": "spine3",
+   "length": 5,
+   "direction": [
+    1,
+    -1,
+    -5
+   ]
+  },
+  {
+   "name": "foot_R3",
+   "parent": "knee_R3",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    -3
+   ]
+  },
+  {
+   "name": "knee_L4",
+   "parent": "spine4",
+   "length": 5,
+   "direction": [
+    3,
+    -1,
+    5
+   ]
+  },
+  {
+   "name": "foot_L4",
+   "parent": "knee_L4",
+   "length": 6,
+   "direction": [
+    1,
+    -4,
+    3
+   ]
+  },
+  {
+   "name": "knee_R4",
+   "parent": "spine4",
+   "length": 5,
+   "direction": [
+    3,
+    -1,
+    -5
+   ]
+  },
+  {
+   "name": "foot_R4",
+   "parent": "knee_R4",
+   "length": 6,
+   "direction": [
+    1,
+    -4,
+    -3
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L1",
+   "foot_R1"
+  ],
+  [
+   "foot_L2",
+   "foot_R2"
+  ],
+  [
+   "foot_L3",
+   "foot_R3"
+  ],
+  [
+   "foot_L4",
+   "foot_R4"
+  ]
+ ],
+ "leaves": [
+  "foot_L1",
+  "foot_R1",
+  "foot_L2",
+  "foot_R2",
+  "foot_L3",
+  "foot_R3",
+  "foot_L4",
+  "foot_R4"
+ ],
+ "readings": [
+  "head/front of cephalothorax at -x: XY panel is the profile, ZY is the front view, XZ is the top-down view",
+  "front leg tip (XY) ~ (1,5)",
+  "cephalothorax anterior/body root (XY) ~ (9,9)",
+  "leg-pair2 base (XY) ~ (11,9)",
+  "leg-pair3 base (XY) ~ (13,9)",
+  "leg-pair4 (hindmost) base (XY) ~ (15,9)",
+  "abdomen front edge (XY) ~ (17,9)",
+  "abdomen rear tip (XY) ~ (23,11)",
+  "ground/leg-tip level (XY) ~ y=16",
+  "lateral leg spread (XZ) z from ~1 to ~15, body centerline z~8"
+ ],
+ "notes": "Cephalothorax+abdomen treated as fused trunk (spine chain body->spine2->spine3->spine4->abdomen_base->abdomen_tip) since the head does not protrude separately (arthropod cephalothorax rule) - no head leaf. Each of the 8 legs is split into two inferred segments (coxa+femur merged into the first 'knee' segment, patella/tibia/tarsus merged into the second 'foot' segment) based on the single visible bend per leg in the renders. Leg pairs 1-4 run anterior->posterior along the trunk, each pair attached at its own spine node (not a single hub), with L/R distinguished by sign of z. Front pair leans forward (-x lean), hind pair leans backward (+x lean), matching the splayed top-view (XZ) silhouette. All 8 legs given equal proportional length (design is proportion, not the mid-stride pose seen in the render). Pedipalps/mouthparts are sub-flap detail, not counted as leaves, keeping exactly 4 leg pairs.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,218 @@
+{
+ "roll": "rabbit_1",
+ "subject": "rabbit",
+ "subject_guess": "rabbit",
+ "nodes": [
+  {
+   "name": "torso",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "torso",
+   "length": 2,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "torso",
+   "length": 2,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "chest",
+   "length": 4,
+   "direction": [
+    2,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 8,
+   "direction": [
+    7,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "chest",
+   "length": 3,
+   "direction": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "paw_L",
+   "parent": "elbow_L",
+   "length": 7,
+   "direction": [
+    4,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_R",
+   "parent": "elbow_R",
+   "length": 7,
+   "direction": [
+    4,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hip",
+   "length": 5,
+   "direction": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "hip_L",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "hip_R",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "hock_L",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "hock_R",
+   "length": 5,
+   "direction": [
+    2,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    -4,
+    -2,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "paw_L",
+   "paw_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "paw_L",
+  "paw_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile, ZY is the front, XZ is the top view",
+  "ear/head top (17,0) to shoulder/chest attach (12,10): neck rises then head projects forward",
+  "nose tip (21,10), head-base (14,6) -> head direction forward-down from neck top",
+  "front paw ground contact (18,21); elbow inferred at (14,15) splitting shoulder(12,10)->paw(18,21)",
+  "hip attach (4,11); hind foot ground contact (7,21); hock inferred at (5,16)",
+  "tail bump (0,9)-(0,13): tail tip (0,13) relative to hip (4,11) gives small backward-down flap",
+  "ZY panel: front paws at z=9 (L) and z=15 (R), body center z~12 -> lateral leg offset ~3",
+  "ZY panel: hips/haunches at z=7 (L) and z=17 (R) -> lateral hip offset ~5",
+  "ground line at y=21-22 across XY and ZY panels confirms feet levels"
+ ],
+ "notes": "Rabbit is sitting, head at +x end (XY panel = profile/side view, ZY = front view, XZ = top view). Ears, eyes, and the small tail-tuft are treated as sub-flap detail per the leaf rules and were not given separate leaf nodes even though the ears are visually prominent - only the head itself (on its neck) counts as a leaf. Front-leg (shoulder->elbow->paw) and hind-leg (hip->hock->foot) segmentation is an anatomical inference splitting the single limb spans read from the XY panel (shoulder~(12,10) to paw~(18,21); hip~(4,11) to foot~(7,21)) into two roughly-equal segments at a joint. Lateral (z) offsets for the paired legs were read from the ZY front panel: front feet at z=9/15 (offset ~3 from body center z=12) and hips at z=7/17 (offset ~5). Tail length/direction inferred from the small rump bump in the XY panel just above the ground line, projecting backward and slightly downward. All leg-descent directions were checked to have negative dy consistent with the ground being a larger screen-y value than the hip/shoulder attachment points.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

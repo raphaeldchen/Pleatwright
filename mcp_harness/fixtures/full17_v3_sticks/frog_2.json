@@ -1,0 +1,206 @@
+{
+ "roll": "frog_2",
+ "subject": "frog",
+ "subject_guess": "frog",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "pelvis",
+   "length": 9,
+   "direction": [
+    -9,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "chest",
+   "length": 10,
+   "direction": [
+    -10,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "chest",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    -4
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "shoulder_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    -1
+   ]
+  },
+  {
+   "name": "hand_L",
+   "parent": "elbow_L",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    -1
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "chest",
+   "length": 6,
+   "direction": [
+    0,
+    -4,
+    4
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "shoulder_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    1
+   ]
+  },
+  {
+   "name": "hand_R",
+   "parent": "elbow_R",
+   "length": 4,
+   "direction": [
+    1,
+    -4,
+    1
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    0,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "hip_L",
+   "length": 7,
+   "direction": [
+    -5,
+    -5,
+    -2
+   ]
+  },
+  {
+   "name": "ankle_L",
+   "parent": "knee_L",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    -1
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "ankle_L",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    -1
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "hip_R",
+   "length": 7,
+   "direction": [
+    -5,
+    -5,
+    2
+   ]
+  },
+  {
+   "name": "ankle_R",
+   "parent": "knee_R",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    1
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "ankle_R",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hand_L",
+   "hand_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "hand_L",
+  "hand_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "readings": [
+  "head at -x: snout tip reads (0,8) in the XY panel, far left of the grid, so XY panel is the PROFILE (side view); ZY panel is the FRONT (face-on) view; XZ panel is the TOP (dorsal) view.",
+  "XY panel: snout (0,8), head/neck junction (8,9), withers/shoulder root (10,7), hip bulge center (19,9) -> pelvis-to-chest length ~9, chest-to-snout length ~10",
+  "XY panel: shoulder (10,11), elbow (10,14), front-paw tip (11,18) -> front leg segments 6/3/4",
+  "XY panel: hip (19,9), knee (14,14), ankle (13,17), hind-foot tip (13,19) -> hind leg segments 6/7/3/2",
+  "ZY panel: face centered z=12, left eye/shoulder z~8, right shoulder z~16 (symmetric about 12) -> used to split left/right z-offsets for shoulders, elbows, hands",
+  "ZY panel: hips at z=6 (L) and z=18 (R), knees at z=4/20, ankles at z=3/21, hind feet at z=2/22 -> symmetric hind-leg z read for L/R",
+  "Ground check: hip (19,9) to hind-foot (13,19) descends on screen (y 9->19), so dy must be negative in frame -> confirmed direction dy=-5 then -3 then -2 along the hind-leg chain",
+  "XZ (top) panel confirms legs splay outward from a narrow spine (body width much less than splayed-leg width), corroborating the z-mirrored hip/shoulder placement"
+ ],
+ "notes": "Frog has no external tail, so no tail leaf. Head counts as a leaf because it forms a distinct rounded lobe (bulging eyes, mouth) separated from the trunk by a visible neck-ish narrowing in the XY panel, not a mere taper. Each limb was split into anatomically standard joints inferred from a single silhouette per limb: front leg = shoulder->elbow->hand (wrist folded into hand leaf); hind leg = hip->knee->ankle->foot, matching the visible bend points in the XY panel (thigh bulge, shin, foot). Left/right offsets (z) were taken from the ZY (front) panel, mirrored symmetrically about the spine midline (z=12), since the XY profile panel cannot distinguish left from right. Pelvis chosen as root (length 0, direction [0,0,0]) since it anchors both the spine-to-head chain and both hind legs, matching where the hind legs visibly attach to the body mass in all three panels. All descending limb segments (chest->shoulder->elbow->hand and hip->knee->ankle->foot) carry negative dy per the required screen-to-frame vertical flip.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

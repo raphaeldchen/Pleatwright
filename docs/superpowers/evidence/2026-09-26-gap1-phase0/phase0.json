@@ -1,0 +1,251 @@
+[
+ {
+  "subject": "starfish",
+  "sparse_compile_secs": 0.1,
+  "N": 4,
+  "total_variables": 49,
+  "variables_by_role": {
+   "axial": 5,
+   "elev": 16,
+   "hinge": 10,
+   "ridge": 18
+  },
+  "pleat_vars": 12,
+  "released_vars": 7,
+  "ridge_only_variables": 18,
+  "ridge_share_of_variables": 36.73,
+  "dense_candidate_pieces": 54,
+  "x_shape_vertices": 1,
+  "dense_mv_emitted": 104,
+  "sparse_mv": 84,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 27,
+    "retained_pct_of_candidates": 50.0,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 27,
+    "retained_pct_of_candidates": 50.0,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 28,
+    "retained_pct_of_candidates": 51.85,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 36,
+    "retained_pct_of_candidates": 66.67,
+    "DEGENERATE": false
+   }
+  }
+ },
+ {
+  "subject": "lizard",
+  "sparse_compile_secs": 6.5,
+  "N": 34,
+  "total_variables": 429,
+  "variables_by_role": {
+   "elev": 229,
+   "hinge": 112,
+   "ridge": 88
+  },
+  "pleat_vars": 161,
+  "released_vars": 20,
+  "ridge_only_variables": 88,
+  "ridge_share_of_variables": 20.51,
+  "dense_candidate_pieces": 4488,
+  "x_shape_vertices": 0,
+  "dense_mv_emitted": 4868,
+  "sparse_mv": 476,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 432,
+    "retained_pct_of_candidates": 9.63,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 432,
+    "retained_pct_of_candidates": 9.63,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 432,
+    "retained_pct_of_candidates": 9.63,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 432,
+    "retained_pct_of_candidates": 9.63,
+    "DEGENERATE": false
+   }
+  }
+ },
+ {
+  "subject": "frog",
+  "sparse_compile_secs": 54.0,
+  "N": 38,
+  "total_variables": 541,
+  "variables_by_role": {
+   "elev": 273,
+   "hinge": 154,
+   "ridge": 114
+  },
+  "pleat_vars": 189,
+  "released_vars": 54,
+  "ridge_only_variables": 114,
+  "ridge_share_of_variables": 21.07,
+  "dense_candidate_pieces": 5638,
+  "x_shape_vertices": 0,
+  "dense_mv_emitted": 6128,
+  "sparse_mv": 608,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 545,
+    "retained_pct_of_candidates": 9.67,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 545,
+    "retained_pct_of_candidates": 9.67,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 545,
+    "retained_pct_of_candidates": 9.67,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 549,
+    "retained_pct_of_candidates": 9.74,
+    "DEGENERATE": false
+   }
+  }
+ },
+ {
+  "subject": "horse",
+  "sparse_compile_secs": 14.8,
+  "N": 46,
+  "total_variables": 878,
+  "variables_by_role": {
+   "axial": 102,
+   "elev": 374,
+   "hinge": 220,
+   "ridge": 182
+  },
+  "pleat_vars": 381,
+  "released_vars": 21,
+  "ridge_only_variables": 182,
+  "ridge_share_of_variables": 20.73,
+  "dense_candidate_pieces": 8330,
+  "x_shape_vertices": 0,
+  "dense_mv_emitted": 9116,
+  "sparse_mv": 2232,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 864,
+    "retained_pct_of_candidates": 10.37,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 864,
+    "retained_pct_of_candidates": 10.37,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 864,
+    "retained_pct_of_candidates": 10.37,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 872,
+    "retained_pct_of_candidates": 10.47,
+    "DEGENERATE": false
+   }
+  }
+ },
+ {
+  "subject": "bird",
+  "sparse_compile_secs": 3.6,
+  "N": 54,
+  "total_variables": 1024,
+  "variables_by_role": {
+   "axial": 92,
+   "elev": 466,
+   "hinge": 228,
+   "ridge": 238
+  },
+  "pleat_vars": 413,
+  "released_vars": 67,
+  "ridge_only_variables": 238,
+  "ridge_share_of_variables": 23.24,
+  "dense_candidate_pieces": 11534,
+  "x_shape_vertices": 1,
+  "dense_mv_emitted": 12436,
+  "sparse_mv": 1980,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 837,
+    "retained_pct_of_candidates": 7.26,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 837,
+    "retained_pct_of_candidates": 7.26,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 841,
+    "retained_pct_of_candidates": 7.29,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 843,
+    "retained_pct_of_candidates": 7.31,
+    "DEGENERATE": false
+   }
+  }
+ },
+ {
+  "subject": "guinea_pig",
+  "sparse_compile_secs": 283.5,
+  "N": 64,
+  "total_variables": 929,
+  "variables_by_role": {
+   "elev": 477,
+   "hinge": 248,
+   "ridge": 204
+  },
+  "pleat_vars": 325,
+  "released_vars": 102,
+  "ridge_only_variables": 204,
+  "ridge_share_of_variables": 21.96,
+  "dense_candidate_pieces": 16174,
+  "x_shape_vertices": 0,
+  "dense_mv_emitted": 17000,
+  "sparse_mv": 1024,
+  "variants": {
+   "v1_perp_hinge": {
+    "retained": 901,
+    "retained_pct_of_candidates": 5.57,
+    "DEGENERATE": false
+   },
+   "v2_any_hinge_no_perp_test": {
+    "retained": 901,
+    "retained_pct_of_candidates": 5.57,
+    "DEGENERATE": false
+   },
+   "v3_step3_full": {
+    "retained": 901,
+    "retained_pct_of_candidates": 5.57,
+    "DEGENERATE": false
+   },
+   "v4_step3_plus_step4_border": {
+    "retained": 905,
+    "retained_pct_of_candidates": 5.6,
+    "DEGENERATE": false
+   }
+  }
+ }
+]

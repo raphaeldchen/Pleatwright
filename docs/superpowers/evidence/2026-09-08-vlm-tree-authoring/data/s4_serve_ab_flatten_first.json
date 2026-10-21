@@ -1,0 +1,142 @@
+{
+ "before": {
+  "dog": [
+   false,
+   null
+  ],
+  "cat": [
+   true,
+   "order"
+  ],
+  "horse": [
+   false,
+   null
+  ],
+  "rabbit": [
+   false,
+   null
+  ],
+  "guinea_pig": [
+   true,
+   "placement"
+  ],
+  "elephant": [
+   true,
+   "order"
+  ],
+  "lizard": [
+   true,
+   "none"
+  ],
+  "frog": [
+   true,
+   "order"
+  ],
+  "bird": [
+   true,
+   "none"
+  ],
+  "bat": [
+   true,
+   "order"
+  ],
+  "dolphin": [
+   true,
+   "order"
+  ],
+  "starfish": [
+   false,
+   null
+  ],
+  "octopus": [
+   true,
+   "none"
+  ],
+  "crab": [
+   false,
+   null
+  ],
+  "spider": [
+   false,
+   null
+  ],
+  "scorpion": [
+   true,
+   "order"
+  ],
+  "ant": [
+   true,
+   "order"
+  ]
+ },
+ "after": {
+  "dog": [
+   false,
+   null
+  ],
+  "cat": [
+   true,
+   "order"
+  ],
+  "horse": [
+   true,
+   "flatten"
+  ],
+  "rabbit": [
+   false,
+   null
+  ],
+  "guinea_pig": [
+   true,
+   "flatten"
+  ],
+  "elephant": [
+   true,
+   "order"
+  ],
+  "lizard": [
+   true,
+   "none"
+  ],
+  "frog": [
+   true,
+   "flatten"
+  ],
+  "bird": [
+   true,
+   "none"
+  ],
+  "bat": [
+   true,
+   "order"
+  ],
+  "dolphin": [
+   true,
+   "flatten"
+  ],
+  "starfish": [
+   false,
+   null
+  ],
+  "octopus": [
+   true,
+   "none"
+  ],
+  "crab": [
+   false,
+   null
+  ],
+  "spider": [
+   false,
+   null
+  ],
+  "scorpion": [
+   true,
+   "flatten"
+  ],
+  "ant": [
+   true,
+   "flatten"
+  ]
+ }
+}

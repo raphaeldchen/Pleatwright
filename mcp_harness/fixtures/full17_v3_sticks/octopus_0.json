@@ -1,0 +1,149 @@
+{
+ "roll": "octopus_0",
+ "subject": "octopus",
+ "subject_guess": "octopus",
+ "nodes": [
+  {
+   "name": "mantle",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "mantle",
+   "length": 6,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm1_base_L",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -2,
+    -1,
+    -4
+   ]
+  },
+  {
+   "name": "arm1_base_R",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -2,
+    -1,
+    4
+   ]
+  },
+  {
+   "name": "arm2_base_L",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -3,
+    -2,
+    -3
+   ]
+  },
+  {
+   "name": "arm2_base_R",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -3,
+    -2,
+    3
+   ]
+  },
+  {
+   "name": "arm3_base_L",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -3,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "arm3_base_R",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -3,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "arm4_base_L",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -2,
+    -4,
+    -1
+   ]
+  },
+  {
+   "name": "arm4_base_R",
+   "parent": "head",
+   "length": 1,
+   "direction": [
+    -2,
+    -4,
+    1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "arm1_tip_L",
+   "arm1_tip_R"
+  ],
+  [
+   "arm2_tip_L",
+   "arm2_tip_R"
+  ],
+  [
+   "arm3_tip_L",
+   "arm3_tip_R"
+  ],
+  [
+   "arm4_tip_L",
+   "arm4_tip_R"
+  ]
+ ],
+ "leaves": [
+  "arm1_tip_L",
+  "arm1_tip_R",
+  "arm2_tip_L",
+  "arm2_tip_R",
+  "arm3_tip_L",
+  "arm3_tip_R",
+  "arm4_tip_L",
+  "arm4_tip_R"
+ ],
+ "readings": [
+  "head/mouth at -x: XY panel is the profile (shows anterior-posterior + up-down extent), ZY panel is the front (shows left-right arm spread), XZ panel is the top-down view (shows radial arm fan)",
+  "mantle bulge center in XY panel ~ (17,13); arm-base/mouth cluster center in XY panel ~ (11,13) -> head offset dx=-6 from mantle center",
+  "ZY panel: body silhouette centered on z=12, y~10-14, confirming bilateral symmetry about z=12 (left/right = small z / large z)",
+  "XZ panel (top-down), head/arm-base center ~ (x=13,z=12)",
+  "dorsal arm-pair tips (outer loops) in XZ ~ (x=4,z=2) and (x=4,z=22): relative to base (13,12) => dx=-9, dz=\u221310, est. total length ~14 (curled, straightened estimate)",
+  "2nd arm-pair tips in XZ ~ (x=2,z=5) and (x=2,z=19): dx=-11, dz=\u22137, length ~13",
+  "3rd arm-pair tips in XZ ~ (x=1,z=8) and (x=1,z=16): dx=-12, dz=\u22134, length ~12",
+  "ventral arm-pair tips in XZ ~ (x=0,z=10) and (x=0,z=14): dx=-13, dz=\u22132, length ~11",
+  "XY/ZY panels show all arm bases near y~10-12 at head, tips drooping/curling down to y~16-20, giving negative dy for every arm (down on screen = -y in frame), confirming hip->foot style downward sign convention",
+  "no neck: head and mantle are fused into one continuous tapering trunk (no distinct protruding lobe on a neck), so head is modeled as an internal spine node, not a leaf, per protrusion rule"
+ ],
+ "notes": "Octopus: mantle+head are fused with no neck, so treated as one internal trunk chain (mantle -> head) rather than a head leaf, per the fusion rule (analogous to crab/spider carapace). The 8 arms are the only terminal appendages, grouped into 4 anatomical pairs (dorsal, dorsolateral, ventrolateral, ventral) by attachment height/lateral spread read off the XZ (top-down) panel, mirrored across z for left/right. Each 'base' node here doubles as the arm's single segment root; since arms are strongly curled in the render, their drawn path is not reproduced (per 'proportion not pose') - instead each arm is authored as one straight proportional segment from head to an implied tip leaf, with length inferred from the unrolled/curled extent visible in the panels (dorsal longest ~14 down to ventral ~11). Left/right pairs are literally symmetric (mirrored dz sign) and each chain returns independently to the shared 'head' spine node, never merging with its partner before the spine. Downward droop of every arm (from base y~10-12 to tips y~16-20 on the grid) was converted to negative dy per the top-origin grid vs +y-up frame rule. Eyes visible as small marks in the XY/ZY panels were treated as sub-flap surface detail, not a separate head-leaf or extra flap.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

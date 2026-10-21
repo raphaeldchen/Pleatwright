@@ -1,0 +1,20 @@
+{
+ "_comment": "VISIBLE anatomy each mesh must show, present, attached and correctly numbered (spec 2026-10-16 §1). Not a leaf convention. Drafted by Claude from the manifest derivations; the owner corrects it on the round-1 review page. Digits, toes and antenna segments are out.",
+ "dog": [{"part": "legs", "count": 4}, {"part": "head", "count": 1}, {"part": "tail", "count": 1}],
+ "cat": [{"part": "legs", "count": 4}, {"part": "head", "count": 1}, {"part": "tail", "count": 1}],
+ "horse": [{"part": "legs", "count": 4}, {"part": "head", "count": 1, "note": "on a neck"}, {"part": "tail", "count": 1}],
+ "lizard": [{"part": "legs", "count": 4, "note": "splayed to the sides"}, {"part": "head", "count": 1}, {"part": "tail", "count": 1}],
+ "frog": [{"part": "legs", "count": 4, "note": "2 long hind legs, 2 short front legs"}, {"part": "head", "count": 1}],
+ "bird": [{"part": "wings", "count": 2}, {"part": "legs", "count": 2}, {"part": "head", "count": 1, "note": "with a beak"}, {"part": "tail", "count": 1}],
+ "starfish": [{"part": "arms", "count": 5, "note": "radiating from a central disc"}],
+ "spider": [{"part": "legs", "count": 8, "note": "4 per side"}, {"part": "abdomen", "count": 1, "note": "behind the leg-bearing front body"}],
+ "octopus": [{"part": "arms", "count": 8}, {"part": "mantle", "count": 1, "note": "the head and body the arms radiate from"}],
+ "dolphin": [{"part": "pectoral flippers", "count": 2}, {"part": "dorsal fin", "count": 1}, {"part": "tail fluke", "count": 1}, {"part": "head", "count": 1, "note": "with a beak"}],
+ "guinea pig": [{"part": "legs", "count": 4, "note": "short"}, {"part": "head", "count": 1}],
+ "rabbit": [{"part": "legs", "count": 4}, {"part": "head", "count": 1}, {"part": "ears", "count": 2, "note": "long"}, {"part": "tail", "count": 1, "note": "short"}],
+ "bat": [{"part": "wings", "count": 2}, {"part": "legs", "count": 2}, {"part": "head", "count": 1}, {"part": "tail", "count": 1, "note": "inside the tail membrane"}],
+ "elephant": [{"part": "legs", "count": 4}, {"part": "head", "count": 1}, {"part": "trunk", "count": 1}, {"part": "ears", "count": 2}, {"part": "tail", "count": 1}],
+ "ant": [{"part": "legs", "count": 6, "note": "3 per side"}, {"part": "head", "count": 1}, {"part": "gaster", "count": 1, "note": "the rear segment, behind a narrow waist"}, {"part": "antennae", "count": 2}],
+ "scorpion": [{"part": "walking legs", "count": 8, "note": "4 per side"}, {"part": "pincers", "count": 2}, {"part": "tail", "count": 1, "note": "segmented, ending in a stinger"}],
+ "crab": [{"part": "walking legs", "count": 8, "note": "4 per side"}, {"part": "pincers", "count": 2}]
+}

@@ -1,0 +1,112 @@
+{
+ "roll": "dolphin_2",
+ "subject": "dolphin",
+ "subject_guess": "dolphin",
+ "nodes": [
+  {
+   "name": "torso",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "torso",
+   "length": 10,
+   "direction": [
+    -4,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "torso_front",
+   "parent": "torso",
+   "length": 5,
+   "direction": [
+    5,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "dorsal_fin",
+   "parent": "torso",
+   "length": 6,
+   "direction": [
+    0,
+    6,
+    0
+   ]
+  },
+  {
+   "name": "tail_fluke",
+   "parent": "tail_base",
+   "length": 6,
+   "direction": [
+    -3,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "torso_front",
+   "length": 8,
+   "direction": [
+    6,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "pectoral_R",
+   "parent": "torso_front",
+   "length": 5,
+   "direction": [
+    3,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "pectoral_L",
+   "parent": "torso_front",
+   "length": 5,
+   "direction": [
+    3,
+    -3,
+    -2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "pectoral_L",
+   "pectoral_R"
+  ]
+ ],
+ "leaves": [
+  "dorsal_fin",
+  "tail_fluke",
+  "head",
+  "pectoral_L",
+  "pectoral_R"
+ ],
+ "readings": [
+  "head at +x: XY panel (leaping side view) is the profile, showing dorsal fin in profile, pectoral fin as a flap, and beak/rostrum at the front; XZ panel is the top-down view (tail fluke spread wide, dorsal fin seen edge-on as a thin ridge); ZY panel is the front/back silhouette (dorsal fin tip at top z=12,y=0, pectoral flaps at z~7-9 and z~15-17,y~10-13, tail fluke spread z~7-17,y~18-24).",
+  "dorsal fin base (8,8), dorsal fin tip (8,2) [XY panel] -> fin sticks straight up off the back.",
+  "torso/back peak (8,8) to tail stock (4,17) [XY panel] -> descending peduncle.",
+  "tail stock (4,17) to tail fluke tip (1,22) [XY panel].",
+  "torso peak (8,8) to torso_front/pectoral base (13,10) [XY panel].",
+  "pectoral base (13,10) to pectoral tip (16,13) [XY panel]; ZY panel shows pectoral base near z=9/15 (close to midline z=12) and tip near z=7/17 (further out), giving lateral component.",
+  "torso_front (13,10) to rostrum tip (19,15) [XY panel] = head length.",
+  "midline z=12 confirmed by symmetric dorsal fin and tail fluke positions in ZY/XZ panels."
+ ],
+ "notes": "Root placed at the peak of the back (dorsal-fin base) since the mesh is posed mid-leap with an arched spine; the spine was split into torso->tail_base and torso->torso_front to capture this curvature (inferred, not a repeated/symmetric limb so pose-curvature was kept). Head is treated as a single leaf (rostrum/melon) attached directly to torso_front since dolphins have no distinct neck. Dorsal fin and tail fluke are each single midline leaves (z=0) even though the tail fluke has two lobes, per the 'tail counts once' rule. Pectoral fins are a symmetric left/right pair, each a single-segment flap; their lateral (z) component was inferred by combining the XY-panel base/tip (x,y) with the ZY-panel base/tip (z) positions relative to the midline (z=12). No pelvic/hind limbs are present (cetacean). All descending limb directions (tail, head-taper, pectoral) carry negative dy as required since they point down-screen from their attachment points; the dorsal fin correctly carries positive dy since it points up off the back.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

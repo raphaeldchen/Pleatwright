@@ -1,0 +1,323 @@
+{
+ "roll": "scorpion_0",
+ "subject": "scorpion",
+ "subject_guess": "scorpion",
+ "nodes": [
+  {
+   "name": "prosoma",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mesosoma",
+   "parent": "prosoma",
+   "length": 5,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "metasoma1",
+   "parent": "mesosoma",
+   "length": 3,
+   "direction": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "metasoma2",
+   "parent": "metasoma1",
+   "length": 3,
+   "direction": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "metasoma3",
+   "parent": "metasoma2",
+   "length": 3,
+   "direction": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "metasoma4",
+   "parent": "metasoma3",
+   "length": 2,
+   "direction": [
+    1,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "telson",
+   "parent": "metasoma4",
+   "length": 2,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "pedipalp_elbow_L",
+   "parent": "prosoma",
+   "length": 7,
+   "direction": [
+    -4,
+    1,
+    -6
+   ]
+  },
+  {
+   "name": "claw_L",
+   "parent": "pedipalp_elbow_L",
+   "length": 5,
+   "direction": [
+    -4,
+    -1.5,
+    -2
+   ]
+  },
+  {
+   "name": "pedipalp_elbow_R",
+   "parent": "prosoma",
+   "length": 7,
+   "direction": [
+    -4,
+    1,
+    6
+   ]
+  },
+  {
+   "name": "claw_R",
+   "parent": "pedipalp_elbow_R",
+   "length": 5,
+   "direction": [
+    -4,
+    -1.5,
+    2
+   ]
+  },
+  {
+   "name": "leg1_knee_L",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    -3,
+    -3,
+    -8
+   ]
+  },
+  {
+   "name": "leg1_foot_L",
+   "parent": "leg1_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "leg1_knee_R",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    -3,
+    -3,
+    8
+   ]
+  },
+  {
+   "name": "leg1_foot_R",
+   "parent": "leg1_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "leg2_knee_L",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    -1,
+    -3,
+    -8
+   ]
+  },
+  {
+   "name": "leg2_foot_L",
+   "parent": "leg2_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "leg2_knee_R",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    -1,
+    -3,
+    8
+   ]
+  },
+  {
+   "name": "leg2_foot_R",
+   "parent": "leg2_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "leg3_knee_L",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    1,
+    -3,
+    -8
+   ]
+  },
+  {
+   "name": "leg3_foot_L",
+   "parent": "leg3_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "leg3_knee_R",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    1,
+    -3,
+    8
+   ]
+  },
+  {
+   "name": "leg3_foot_R",
+   "parent": "leg3_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "leg4_knee_L",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    3,
+    -3,
+    -8
+   ]
+  },
+  {
+   "name": "leg4_foot_L",
+   "parent": "leg4_knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "leg4_knee_R",
+   "parent": "prosoma",
+   "length": 9,
+   "direction": [
+    3,
+    -3,
+    8
+   ]
+  },
+  {
+   "name": "leg4_foot_R",
+   "parent": "leg4_knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_L",
+   "claw_R"
+  ],
+  [
+   "leg1_foot_L",
+   "leg1_foot_R"
+  ],
+  [
+   "leg2_foot_L",
+   "leg2_foot_R"
+  ],
+  [
+   "leg3_foot_L",
+   "leg3_foot_R"
+  ],
+  [
+   "leg4_foot_L",
+   "leg4_foot_R"
+  ]
+ ],
+ "leaves": [
+  "telson",
+  "claw_L",
+  "claw_R",
+  "leg1_foot_L",
+  "leg1_foot_R",
+  "leg2_foot_L",
+  "leg2_foot_R",
+  "leg3_foot_L",
+  "leg3_foot_R",
+  "leg4_foot_L",
+  "leg4_foot_R"
+ ],
+ "readings": [
+  "head/pedipalp end at -x, tail(metasoma+telson) at +x: XY panel is the profile; ZY panel is the front (anterior) view; XZ panel is the dorsal/top view.",
+  "XY panel: claw pincer tip (0,14)-(0,16), claw base at prosoma (8,14).",
+  "XY panel: prosoma/body mass spans x=8 to 17, y=12 to 19.",
+  "XY panel: tail base (17,14) curving through (19,12),(21,10),(23,8) to stinger tip (24,4).",
+  "XY panel: legs hang from body top y=13 down to feet y=19, clustered across x=9-16.",
+  "XZ (dorsal) panel: body centered z=8-16 (width ~8), legs splay outward to z~0-4 and z~20-24, claw region at x=0-8.",
+  "ZY (front) panel: tail reads as a vertical stalk at z~10-13,y=0-14; legs splay to z=0-8 (one side) and z=16-24 (other side); body base at y=14-19."
+ ],
+ "notes": "Head is fused into the prosoma (cephalothorax) with no distinct neck, so it is treated as trunk, not a leaf. All 4 walking-leg pairs and both pedipalps attach to the prosoma (root), matching real scorpion anatomy where the abdomen (mesosoma+metasoma) bears no legs. Tail (mesosoma->metasoma1-4->telson) segment count and curvature inferred from the curling shape in the XY profile panel (points (17,14),(19,12),(21,10),(23,8),(24,4)). Pedipalps split into an elbow segment + claw (chela) leaf, inferred from the bend visible in the XY panel between (8,14) and (0,14-16). Legs split into a femur segment (knee) and a tibia/tarsus segment (foot), inferred from the bent silhouette of the legs in the XY panel; left/right lateral (z) offsets for legs and claws were inferred from the XZ (dorsal) and ZY (front) panels since the XY profile only shows one side. All four leg pairs and the pedipalps are authored with equal proportional length (pose differences, e.g. slight leg splay, are not encoded per instructions). +z assigned as the animal's right side, -z as left, based on the dorsal/front panels.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

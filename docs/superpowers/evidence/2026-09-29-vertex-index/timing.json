@@ -1,0 +1,1822 @@
+{
+ "measured_utc": "2026-09-30T08:07:42+00:00",
+ "commit": "bc8f4e662d50e96db54af77e3b28aef2785d2458",
+ "budget": 20000,
+ "repeats": 3,
+ "estimator": "min of 3",
+ "interleaving": "off,on,off,on,off,on within each mode of each subject",
+ "fixture": "docs/superpowers/evidence/2026-09-08-vlm-tree-authoring/data/rule6_serve.json",
+ "debug_channels": "all off (no debug_search)",
+ "loadavg_at_start": [
+  3.46,
+  3.63,
+  4.07
+ ],
+ "rows": [
+  {
+   "subject": "starfish",
+   "loadavg_start": [
+    3.46,
+    3.63,
+    4.07
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       0.7,
+       0.7,
+       0.69
+      ],
+      "min": 0.69,
+      "spread_max_over_min": 1.014
+     },
+     "on": {
+      "readings": [
+       0.63,
+       0.67,
+       0.63
+      ],
+      "min": 0.63,
+      "spread_max_over_min": 1.063
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       0.408,
+       0.3893,
+       0.3944
+      ],
+      "min": 0.3893,
+      "spread_max_over_min": 1.048
+     },
+     "on": {
+      "readings": [
+       0.3326,
+       0.3714,
+       0.3308
+      ],
+      "min": 0.3308,
+      "spread_max_over_min": 1.123
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       3.46,
+       3.63,
+       4.07
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       3.46,
+       3.63,
+       4.07
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       3.46,
+       3.63,
+       4.07
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       3.46,
+       3.63,
+       4.07
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     }
+    ],
+    "wall_speedup_min": 1.095,
+    "assign_speedup_min": 1.177
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       0.13,
+       0.13,
+       0.12
+      ],
+      "min": 0.12,
+      "spread_max_over_min": 1.083
+     },
+     "on": {
+      "readings": [
+       0.13,
+       0.13,
+       0.14
+      ],
+      "min": 0.13,
+      "spread_max_over_min": 1.077
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       0.0642,
+       0.0635,
+       0.0621
+      ],
+      "min": 0.0621,
+      "spread_max_over_min": 1.034
+     },
+     "on": {
+      "readings": [
+       0.0623,
+       0.0638,
+       0.0632
+      ],
+      "min": 0.0623,
+      "spread_max_over_min": 1.024
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       3.34,
+       3.61,
+       4.06
+      ]
+     }
+    ],
+    "wall_speedup_min": 0.923,
+    "assign_speedup_min": 0.997
+   },
+   "loadavg_end": [
+    3.34,
+    3.61,
+    4.06
+   ]
+  },
+  {
+   "subject": "lizard",
+   "loadavg_start": [
+    3.34,
+    3.61,
+    4.06
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       43.69,
+       43.51,
+       43.72
+      ],
+      "min": 43.51,
+      "spread_max_over_min": 1.005
+     },
+     "on": {
+      "readings": [
+       17.77,
+       17.92,
+       17.93
+      ],
+      "min": 17.77,
+      "spread_max_over_min": 1.009
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       43.6449,
+       43.4686,
+       43.6773
+      ],
+      "min": 43.4686,
+      "spread_max_over_min": 1.005
+     },
+     "on": {
+      "readings": [
+       17.7244,
+       17.874,
+       17.8819
+      ],
+      "min": 17.7244,
+      "spread_max_over_min": 1.009
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       3.21,
+       3.52,
+       4.0
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       3.45,
+       3.56,
+       4.0
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       4.13,
+       3.72,
+       4.04
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       4.32,
+       3.78,
+       4.05
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       10.25,
+       5.2,
+       4.55
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       9.25,
+       5.3,
+       4.6
+      ]
+     }
+    ],
+    "wall_speedup_min": 2.449,
+    "assign_speedup_min": 2.452
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       6.84,
+       6.81,
+       6.8
+      ],
+      "min": 6.8,
+      "spread_max_over_min": 1.006
+     },
+     "on": {
+      "readings": [
+       0.41,
+       0.41,
+       0.41
+      ],
+      "min": 0.41,
+      "spread_max_over_min": 1.0
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       6.795,
+       6.7641,
+       6.7539
+      ],
+      "min": 6.7539,
+      "spread_max_over_min": 1.006
+     },
+     "on": {
+      "readings": [
+       0.3696,
+       0.3622,
+       0.3659
+      ],
+      "min": 0.3622,
+      "spread_max_over_min": 1.02
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       8.99,
+       5.31,
+       4.61
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       8.99,
+       5.31,
+       4.61
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       8.91,
+       5.35,
+       4.63
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       8.6,
+       5.35,
+       4.63
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       8.47,
+       5.38,
+       4.64
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       8.47,
+       5.38,
+       4.64
+      ]
+     }
+    ],
+    "wall_speedup_min": 16.585,
+    "assign_speedup_min": 18.647
+   },
+   "loadavg_end": [
+    8.47,
+    5.38,
+    4.64
+   ]
+  },
+  {
+   "subject": "frog",
+   "loadavg_start": [
+    8.47,
+    5.38,
+    4.64
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       42.33,
+       42.6,
+       41.84
+      ],
+      "min": 41.84,
+      "spread_max_over_min": 1.018
+     },
+     "on": {
+      "readings": [
+       8.78,
+       8.66,
+       8.64
+      ],
+      "min": 8.64,
+      "spread_max_over_min": 1.016
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       42.1356,
+       42.403,
+       41.6418
+      ],
+      "min": 41.6418,
+      "spread_max_over_min": 1.018
+     },
+     "on": {
+      "readings": [
+       8.5855,
+       8.4653,
+       8.4496
+      ],
+      "min": 8.4496,
+      "spread_max_over_min": 1.016
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       8.16,
+       5.66,
+       4.78
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       7.74,
+       5.65,
+       4.78
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       7.18,
+       5.83,
+       4.9
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       6.84,
+       5.78,
+       4.88
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       6.09,
+       5.72,
+       4.91
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       5.69,
+       5.65,
+       4.89
+      ]
+     }
+    ],
+    "wall_speedup_min": 4.843,
+    "assign_speedup_min": 4.928
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       55.34,
+       54.31,
+       54.35
+      ],
+      "min": 54.31,
+      "spread_max_over_min": 1.019
+     },
+     "on": {
+      "readings": [
+       2.24,
+       2.25,
+       2.25
+      ],
+      "min": 2.24,
+      "spread_max_over_min": 1.004
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       55.1598,
+       54.127,
+       54.1746
+      ],
+      "min": 54.127,
+      "spread_max_over_min": 1.019
+     },
+     "on": {
+      "readings": [
+       2.0596,
+       2.0722,
+       2.0714
+      ],
+      "min": 2.0596,
+      "spread_max_over_min": 1.006
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       4.63,
+       5.39,
+       4.84
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       4.63,
+       5.39,
+       4.84
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       3.45,
+       4.96,
+       4.72
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       3.45,
+       4.96,
+       4.72
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       3.26,
+       4.68,
+       4.63
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       3.08,
+       4.62,
+       4.61
+      ]
+     }
+    ],
+    "wall_speedup_min": 24.246,
+    "assign_speedup_min": 26.28
+   },
+   "loadavg_end": [
+    3.08,
+    4.62,
+    4.61
+   ]
+  },
+  {
+   "subject": "horse",
+   "loadavg_start": [
+    3.08,
+    4.62,
+    4.61
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       70.22,
+       70.09,
+       69.93
+      ],
+      "min": 69.93,
+      "spread_max_over_min": 1.004
+     },
+     "on": {
+      "readings": [
+       21.64,
+       21.8,
+       21.68
+      ],
+      "min": 21.64,
+      "spread_max_over_min": 1.007
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       67.481,
+       67.3349,
+       67.1824
+      ],
+      "min": 67.1824,
+      "spread_max_over_min": 1.004
+     },
+     "on": {
+      "readings": [
+       18.9091,
+       19.0591,
+       18.9391
+      ],
+      "min": 18.9091,
+      "spread_max_over_min": 1.008
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.33,
+       4.08,
+       4.4
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.45,
+       4.0,
+       4.37
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.15,
+       3.58,
+       4.18
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.49,
+       3.56,
+       4.15
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.41,
+       3.33,
+       4.02
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.23,
+       3.22,
+       3.96
+      ]
+     }
+    ],
+    "wall_speedup_min": 3.232,
+    "assign_speedup_min": 3.553
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       14.4,
+       14.49,
+       14.58
+      ],
+      "min": 14.4,
+      "spread_max_over_min": 1.012
+     },
+     "on": {
+      "readings": [
+       7.25,
+       7.3,
+       7.28
+      ],
+      "min": 7.25,
+      "spread_max_over_min": 1.007
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       10.2591,
+       10.2677,
+       10.364
+      ],
+      "min": 10.2591,
+      "spread_max_over_min": 1.01
+     },
+     "on": {
+      "readings": [
+       3.0266,
+       3.0336,
+       3.045
+      ],
+      "min": 3.0266,
+      "spread_max_over_min": 1.006
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.8,
+       3.3,
+       3.98
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.61,
+       3.24,
+       3.95
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.68,
+       3.22,
+       3.93
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.71,
+       3.22,
+       3.92
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.4,
+       3.13,
+       3.88
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.29,
+       3.09,
+       3.86
+      ]
+     }
+    ],
+    "wall_speedup_min": 1.986,
+    "assign_speedup_min": 3.39
+   },
+   "loadavg_end": [
+    2.29,
+    3.09,
+    3.86
+   ]
+  },
+  {
+   "subject": "bird",
+   "loadavg_start": [
+    2.29,
+    3.09,
+    3.86
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       69.26,
+       69.92,
+       69.67
+      ],
+      "min": 69.26,
+      "spread_max_over_min": 1.01
+     },
+     "on": {
+      "readings": [
+       2.48,
+       2.46,
+       2.46
+      ],
+      "min": 2.46,
+      "spread_max_over_min": 1.008
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       69.0579,
+       69.7199,
+       69.469
+      ],
+      "min": 69.0579,
+      "spread_max_over_min": 1.01
+     },
+     "on": {
+      "readings": [
+       2.2759,
+       2.2607,
+       2.2607
+      ],
+      "min": 2.2607,
+      "spread_max_over_min": 1.007
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.36,
+       2.96,
+       3.75
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.33,
+       2.94,
+       3.74
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.57,
+       2.87,
+       3.64
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.57,
+       2.87,
+       3.64
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.77,
+       2.9,
+       3.59
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.71,
+       2.88,
+       3.58
+      ]
+     }
+    ],
+    "wall_speedup_min": 28.154,
+    "assign_speedup_min": 30.547
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       3.48,
+       3.47,
+       3.47
+      ],
+      "min": 3.47,
+      "spread_max_over_min": 1.003
+     },
+     "on": {
+      "readings": [
+       1.78,
+       1.79,
+       1.77
+      ],
+      "min": 1.77,
+      "spread_max_over_min": 1.011
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       2.9646,
+       2.961,
+       2.9629
+      ],
+      "min": 2.961,
+      "spread_max_over_min": 1.001
+     },
+     "on": {
+      "readings": [
+       1.2734,
+       1.2788,
+       1.2626
+      ],
+      "min": 1.2626,
+      "spread_max_over_min": 1.013
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.71,
+       2.88,
+       3.58
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.57,
+       2.85,
+       3.57
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.57,
+       2.85,
+       3.57
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.52,
+       2.84,
+       3.56
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.52,
+       2.84,
+       3.56
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.48,
+       2.82,
+       3.55
+      ]
+     }
+    ],
+    "wall_speedup_min": 1.96,
+    "assign_speedup_min": 2.345
+   },
+   "loadavg_end": [
+    2.48,
+    2.82,
+    3.55
+   ]
+  },
+  {
+   "subject": "guinea_pig",
+   "loadavg_start": [
+    2.48,
+    2.82,
+    3.55
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       120.6,
+       120.55,
+       120.67
+      ],
+      "min": 120.55,
+      "spread_max_over_min": 1.001
+     },
+     "on": {
+      "readings": [
+       26.56,
+       26.43,
+       26.29
+      ],
+      "min": 26.29,
+      "spread_max_over_min": 1.01
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       116.488,
+       116.438,
+       116.5517
+      ],
+      "min": 116.438,
+      "spread_max_over_min": 1.001
+     },
+     "on": {
+      "readings": [
+       22.4564,
+       22.3213,
+       22.1844
+      ],
+      "min": 22.1844,
+      "spread_max_over_min": 1.012
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.24,
+       2.62,
+       3.37
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.31,
+       2.61,
+       3.34
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.74,
+       2.68,
+       3.27
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.85,
+       2.71,
+       3.27
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.26,
+       2.6,
+       3.15
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.25,
+       2.57,
+       3.12
+      ]
+     }
+    ],
+    "wall_speedup_min": 4.585,
+    "assign_speedup_min": 5.249
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       279.13,
+       277.21,
+       277.08
+      ],
+      "min": 277.08,
+      "spread_max_over_min": 1.007
+     },
+     "on": {
+      "readings": [
+       9.09,
+       9.08,
+       9.08
+      ],
+      "min": 9.08,
+      "spread_max_over_min": 1.001
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       275.0816,
+       273.1523,
+       273.0242
+      ],
+      "min": 273.0242,
+      "spread_max_over_min": 1.008
+     },
+     "on": {
+      "readings": [
+       5.0253,
+       5.032,
+       5.0178
+      ],
+      "min": 5.0178,
+      "spread_max_over_min": 1.003
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.38,
+       2.33,
+       2.85
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.4,
+       2.33,
+       2.84
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.48,
+       2.51,
+       2.78
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.49,
+       2.51,
+       2.77
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.13,
+       2.29,
+       2.59
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.1,
+       2.28,
+       2.58
+      ]
+     }
+    ],
+    "wall_speedup_min": 30.515,
+    "assign_speedup_min": 54.411
+   },
+   "loadavg_end": [
+    2.1,
+    2.28,
+    2.58
+   ]
+  },
+  {
+   "subject": "octopus",
+   "loadavg_start": [
+    2.1,
+    2.28,
+    2.58
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       132.42,
+       132.38,
+       134.18
+      ],
+      "min": 132.38,
+      "spread_max_over_min": 1.014
+     },
+     "on": {
+      "readings": [
+       5.82,
+       5.82,
+       5.82
+      ],
+      "min": 5.82,
+      "spread_max_over_min": 1.0
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       130.925,
+       130.8733,
+       132.6603
+      ],
+      "min": 130.8733,
+      "spread_max_over_min": 1.014
+     },
+     "on": {
+      "readings": [
+       4.2998,
+       4.3051,
+       4.307
+      ],
+      "min": 4.2998,
+      "spread_max_over_min": 1.002
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.06,
+       2.21,
+       2.51
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.38,
+       2.27,
+       2.53
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.04,
+       2.24,
+       2.48
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       1.95,
+       2.21,
+       2.47
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.59,
+       2.37,
+       2.49
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.63,
+       2.38,
+       2.5
+      ]
+     }
+    ],
+    "wall_speedup_min": 22.746,
+    "assign_speedup_min": 30.437
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       35.1,
+       34.84,
+       34.72
+      ],
+      "min": 34.72,
+      "spread_max_over_min": 1.011
+     },
+     "on": {
+      "readings": [
+       5.78,
+       5.83,
+       5.76
+      ],
+      "min": 5.76,
+      "spread_max_over_min": 1.012
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       32.5893,
+       32.3232,
+       32.2104
+      ],
+      "min": 32.2104,
+      "spread_max_over_min": 1.012
+     },
+     "on": {
+      "readings": [
+       3.2618,
+       3.3087,
+       3.2381
+      ],
+      "min": 3.2381,
+      "spread_max_over_min": 1.022
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.43,
+       2.35,
+       2.48
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.32,
+       2.33,
+       2.47
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.25,
+       2.32,
+       2.46
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.39,
+       2.35,
+       2.47
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.29,
+       2.33,
+       2.46
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.41,
+       2.36,
+       2.47
+      ]
+     }
+    ],
+    "wall_speedup_min": 6.028,
+    "assign_speedup_min": 9.947
+   },
+   "loadavg_end": [
+    2.41,
+    2.36,
+    2.47
+   ]
+  },
+  {
+   "subject": "dog",
+   "loadavg_start": [
+    2.41,
+    2.36,
+    2.47
+   ],
+   "dense": {
+    "wall": {
+     "off": {
+      "readings": [
+       152.66,
+       152.96,
+       153.19
+      ],
+      "min": 152.66,
+      "spread_max_over_min": 1.003
+     },
+     "on": {
+      "readings": [
+       26.65,
+       26.72,
+       26.79
+      ],
+      "min": 26.65,
+      "spread_max_over_min": 1.005
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       131.3751,
+       131.62,
+       131.9551
+      ],
+      "min": 131.3751,
+      "spread_max_over_min": 1.004
+     },
+     "on": {
+      "readings": [
+       5.3831,
+       5.403,
+       5.3868
+      ],
+      "min": 5.3831,
+      "spread_max_over_min": 1.004
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "assign",
+      "assign",
+      "assign"
+     ],
+     "on": [
+      "assign",
+      "assign",
+      "assign"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       1.78,
+       2.13,
+       2.35
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.07,
+       2.17,
+       2.36
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.52,
+       2.3,
+       2.37
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.38,
+       2.29,
+       2.37
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.97,
+       2.49,
+       2.43
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       2.93,
+       2.52,
+       2.44
+      ]
+     }
+    ],
+    "wall_speedup_min": 5.728,
+    "assign_speedup_min": 24.405
+   },
+   "sparse": {
+    "wall": {
+     "off": {
+      "readings": [
+       505.77,
+       503.38,
+       505.41
+      ],
+      "min": 503.38,
+      "spread_max_over_min": 1.005
+     },
+     "on": {
+      "readings": [
+       47.59,
+       47.63,
+       47.66
+      ],
+      "min": 47.59,
+      "spread_max_over_min": 1.001
+     }
+    },
+    "assign": {
+     "off": {
+      "readings": [
+       478.8494,
+       476.3125,
+       478.392
+      ],
+      "min": 476.3125,
+      "spread_max_over_min": 1.005
+     },
+     "on": {
+      "readings": [
+       20.6549,
+       20.6549,
+       20.6565
+      ],
+      "min": 20.6549,
+      "spread_max_over_min": 1.0
+     }
+    },
+    "stage_reached": {
+     "off": [
+      "emit",
+      "emit",
+      "emit"
+     ],
+     "on": [
+      "emit",
+      "emit",
+      "emit"
+     ]
+    },
+    "load_per_reading": [
+     {
+      "after": "off#1",
+      "loadavg": [
+       2.79,
+       2.49,
+       2.43
+      ]
+     },
+     {
+      "after": "on#1",
+      "loadavg": [
+       2.33,
+       2.41,
+       2.41
+      ]
+     },
+     {
+      "after": "off#2",
+      "loadavg": [
+       2.35,
+       2.36,
+       2.37
+      ]
+     },
+     {
+      "after": "on#2",
+      "loadavg": [
+       2.21,
+       2.33,
+       2.35
+      ]
+     },
+     {
+      "after": "off#3",
+      "loadavg": [
+       2.05,
+       2.33,
+       2.37
+      ]
+     },
+     {
+      "after": "on#3",
+      "loadavg": [
+       1.94,
+       2.26,
+       2.34
+      ]
+     }
+    ],
+    "wall_speedup_min": 10.577,
+    "assign_speedup_min": 23.061
+   },
+   "loadavg_end": [
+    1.94,
+    2.26,
+    2.34
+   ]
+  }
+ ],
+ "loadavg_at_end": [
+  1.94,
+  2.26,
+  2.34
+ ]
+}

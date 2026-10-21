@@ -1,0 +1,145 @@
+{
+ "roll": "dolphin_1",
+ "subject": "dolphin",
+ "subject_guess": "dolphin",
+ "nodes": [
+  {
+   "name": "trunk",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "trunk",
+   "length": 5,
+   "direction": [
+    5,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 7,
+   "direction": [
+    4,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "dorsal_fin",
+   "parent": "trunk",
+   "length": 8,
+   "direction": [
+    -6,
+    6,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "trunk",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "pectoral_L",
+   "parent": "shoulder_L",
+   "length": 4,
+   "direction": [
+    2,
+    -2,
+    3
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "trunk",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "pectoral_R",
+   "parent": "shoulder_R",
+   "length": 4,
+   "direction": [
+    2,
+    -2,
+    -3
+   ]
+  },
+  {
+   "name": "abdomen",
+   "parent": "trunk",
+   "length": 4,
+   "direction": [
+    -4,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "peduncle",
+   "parent": "abdomen",
+   "length": 6,
+   "direction": [
+    -4,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "peduncle",
+   "length": 8,
+   "direction": [
+    -5,
+    -6,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "pectoral_L",
+   "pectoral_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "dorsal_fin",
+  "pectoral_L",
+  "pectoral_R",
+  "tail"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile (leaping side view), ZY is the front view, XZ is the top view",
+  "nose tip (23,15) in XY, centerline z=12 in XZ/ZY",
+  "forehead/melon (19,9) in XY, centerline",
+  "dorsal fin tip (8,4) in XY, base (10,8) in XY, centerline z=12",
+  "trunk/shoulder point (14,10) in XY, z=12 centerline",
+  "pectoral fin base (14,11) in XY, z=9 (R) and z=15 (L) in ZY",
+  "pectoral fin tip (16,13) in XY, z=6 (R) and z=18 (L) in ZY",
+  "abdomen midpoint (10,10) in XY",
+  "peduncle (6,15) in XY",
+  "tail tip (1,21) in XY; flukes span z=6 to 18 at y=20-24 in ZY",
+  "ground/back check: shoulder(14,10) to pectoral tip(16,13) descends on screen -> dy negative, confirmed"
+ ],
+ "notes": "Dolphin: XY panel (leaping side view) is the profile, head at +x. Spine split into trunk/neck/head and trunk/abdomen/peduncle/tail based on visible curvature of the leaping pose in XY; directions follow the observed arc (not straightened) since only lengths, not directions, are pose-normalized per protocol. Pectoral fins split into shoulder(base)->pectoral(tip) segments, z-offsets (side-to-side) taken from ZY front panel where left/right symmetry (z=9/15 bases, z=6/18 tips) is clearest; XZ top panel confirms fin and dorsal-fin placement along x and centerline z=12 for unpaired midline features (nose, melon, dorsal fin, tail). Tail leaf represents the fluke as a single external tail flap (not two separate leaves) per convention; its direction is taken toward the tail-tip point (1,21) seen in XY, consistent with the wide bilateral fluke spread (z=6-18) seen in ZY at y=20-24. No hind limbs present (marine mammal). Total leaves = 5: head, dorsal fin, two pectoral fins, tail fluke.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

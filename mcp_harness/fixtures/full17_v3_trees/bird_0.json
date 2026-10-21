@@ -1,0 +1,167 @@
+{
+ "roll": "bird_0",
+ "subject": "bird",
+ "n": 0,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.311111
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.133333
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.4
+  },
+  {
+   "id": 6,
+   "parent_id": 3,
+   "length": 0.266667
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.177778
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.133333
+  },
+  {
+   "id": 9,
+   "parent_id": 6,
+   "length": 0.177778
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.133333
+  },
+  {
+   "id": 11,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.266667
+  },
+  {
+   "id": 13,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 14,
+   "parent_id": 13,
+   "length": 0.266667
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 2,
+   "parent_id": 0,
+   "length": 0.444444
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.133333
+  },
+  {
+   "id": 5,
+   "parent_id": 3,
+   "length": 0.533333
+  },
+  {
+   "id": 6,
+   "parent_id": 3,
+   "length": 0.266667
+  },
+  {
+   "id": 8,
+   "parent_id": 6,
+   "length": 0.311111
+  },
+  {
+   "id": 10,
+   "parent_id": 6,
+   "length": 0.311111
+  },
+  {
+   "id": 12,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 14,
+   "parent_id": 0,
+   "length": 0.4
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   14,
+   12
+  ],
+  [
+   10,
+   8
+  ]
+ ],
+ "names": {
+  "0": "chest",
+  "1": "neck",
+  "2": "head",
+  "3": "back",
+  "4": "tailbase",
+  "5": "tail",
+  "6": "hip",
+  "7": "knee_R",
+  "8": "foot_R",
+  "9": "knee_L",
+  "10": "foot_L",
+  "11": "shoulder_R",
+  "12": "wing_R",
+  "13": "shoulder_L",
+  "14": "wing_L"
+ },
+ "leaves": [
+  "head",
+  "tail",
+  "wing_L",
+  "wing_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "served_stage": "flatten",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.484513) [ide: rescued by lossless chain collapse: the exact tree did not pack, so the backend collapsed its pass-through joints ('flatten') and recompiled. A joint with exactly one child carries no flap and no branch, so merging it into its parent edge is LOSSLESS: every flap you asked for is present, every bilateral pair is intact, and the distance between any two flap tips is exactly what you specified. What changed is that intermediate joints along a limb no longer appear as separate nodes, so an edge length in this base may be the SUM of two you sent] [ide: mv-repair: 2 interior Maekawa + 0 interior Kawasaki + 0 interior M/V-arrangement violation(s) in the best of 1 packed rescue rung(s) were cleared by re-solving the coupled M/V assignment on 3 crease(s) (e9,e17,e47); geometry and closure byte-identical (2.0e-09) -- only labels moved; interior audit now CLEAN; 2 hull-frontier vertex/vertices touched are outside the audit (boundary advisory)]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.999999998, 0.461651808], [1.0, 1.0], [0.999999999, 0.612389263], [0.999999999, 0.741593004], [0.725500044, 0.612389264], [0.741593004, 0.741593004], [0.461651808, 0.999999998], [0.612389263, 0.999999999], [0.741593004, 0.999999999], [0.612389264, 0.640815112], [9e-09, 0.683226634], [0.337360924, 0.914714851], [0.230825709, 0.841613179], [0.177558301, 0.80506248], [0.546169973, 0.610405574], [0.438357279, 0.539165645], [0.384451134, 0.503545814], [3e-09, 0.274082183], [5e-09, 0.467887551], [0.352649794, 0.467887546], [0.274082183, 3e-09], [0.137041093, 0.137041093], [0.307929508, 0.307929508], [0.652484587, 0.652484587], [0.576291429, 0.630309079], [0.365271611, 0.490872465], [0.318720369, 0.406100479], [0.437618495, 0.104001905], [0.489755488, 0.13715874], [0.541892481, 0.170315574], [0.561287552, 0.182649987], [0.580682624, 0.194984399], [0.635194591, 0.229651613], [0.744218935, 0.298986301], [0.77467891, 0.318357506], [0.805138886, 0.337728711], [0.83897201, 0.35924509], [0.872805135, 0.380761469]], \"edges_vertices\": [[2, 4], [3, 5], [7, 9], [8, 5], [11, 14], [12, 15], [13, 16], [18, 19], [21, 22], [0, 4], [4, 23], [23, 5], [5, 1], [0, 2], [2, 3], [3, 1], [23, 9], [9, 24], [24, 6], [6, 7], [7, 8], [8, 1], [24, 14], [14, 15], [15, 16], [16, 25], [25, 10], [6, 11], [11, 12], [12, 13], [13, 10], [25, 19], [19, 26], [26, 17], [17, 18], [18, 10], [26, 22], [22, 20], [20, 21], [21, 17], [27, 22], [28, 26], [29, 19], [30, 25], [31, 16], [32, 15], [33, 14], [34, 24], [35, 9], [36, 23], [37, 4], [20, 27], [27, 28], [28, 29], [29, 30], [30, 31], [31, 32], [32, 33], [33, 34], [34, 35], [35, 36], [36, 37], [37, 0]], \"edges_assignment\": [\"F\", \"M\", \"F\", \"M\", \"F\", \"F\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"V\", \"B\", \"B\", \"B\", \"M\", \"M\", \"V\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"B\", \"B\", \"V\", \"V\", \"B\", \"B\", \"V\", \"M\", \"V\", \"M\", \"M\", \"F\", \"F\", \"V\", \"F\", \"V\", \"F\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

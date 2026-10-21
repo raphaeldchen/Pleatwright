@@ -1,0 +1,248 @@
+{
+ "roll": "horse_2",
+ "subject": "horse",
+ "subject_guess": "horse",
+ "nodes": [
+  {
+   "name": "withers",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "withers",
+   "length": 6,
+   "direction": [
+    -6,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 7,
+   "direction": [
+    6,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 5,
+   "direction": [
+    4,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "hip",
+   "length": 11,
+   "direction": [
+    -7,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_L",
+   "parent": "knee_L",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_L",
+   "parent": "fetlock_L",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_R",
+   "parent": "knee_R",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_R",
+   "parent": "fetlock_R",
+   "length": 3,
+   "direction": [
+    0,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "hip",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "hip_L",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_h_L",
+   "parent": "hock_L",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_h_L",
+   "parent": "fetlock_h_L",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "hip",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "hip_R",
+   "length": 5,
+   "direction": [
+    1,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "fetlock_h_R",
+   "parent": "hock_R",
+   "length": 4,
+   "direction": [
+    -1,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "hoof_h_R",
+   "parent": "fetlock_h_R",
+   "length": 2,
+   "direction": [
+    0,
+    -2,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "hoof_L",
+   "hoof_R"
+  ],
+  [
+   "hoof_h_L",
+   "hoof_h_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "hoof_L",
+  "hoof_R",
+  "hoof_h_L",
+  "hoof_h_R"
+ ],
+ "readings": [
+  "head at +x, tail at -x: XY panel is the profile (side view), ZY panel is the front view, XZ panel is the top view",
+  "poll (20,4), muzzle (24,7) in XY panel -> head/muzzle segment",
+  "withers (14,8), rump/hip (8,10) in XY panel -> back length, back descends slightly toward tail",
+  "withers (14,8), poll (20,4) in XY panel -> neck rises forward and up (frame dy=+4)",
+  "rump (6,10) to tail tip (1,19) in XY panel -> tail drapes down-back, frame dy=-9",
+  "front leg in XY panel: shoulder (14,9) -> knee (13,14) -> fetlock (13,18) -> hoof (13,21), ground at y=21",
+  "hind leg in XY panel: hip (8,10) -> hock (9,15) -> fetlock (8,19) -> hoof (8,21)",
+  "ZY panel (front view): body/chest spans z~7 to z~14 at y~8-12; outer (front) legs at z~7 and z~13, narrower hind legs visible near z~9 and z~12 -> used to set left(+z)/right(-z) offsets for leg pairs",
+  "XZ panel (top view) confirms head at +x, tail at -x, legs splayed laterally at both ends of the trunk"
+ ],
+ "notes": "Horse is mid-trot with legs at different stride phases in the render; leg lengths were authored as proportional/equal pairs rather than copying the mid-stride pose (front legs both use shoulder->knee->fetlock->hoof with lengths 3/5/4/3; hind legs both use hip->hock->fetlock->hoof with lengths 3/5/4/2). Knee/hock and fetlock joints were inferred from the single visible bend in each leg silhouette in the XY (profile) panel, since the grid only marks endpoints. Left/right z-offsets (+3/-3 for front legs, +3/-3 for hind legs) were inferred from the ZY (front) panel stance width, since the XY profile cannot show lateral separation. Tail authored as one flap (rump to tip) rather than sub-segmented, since only two clear endpoints were visible. Root placed at the withers as the main spine hub, with hip and neck as secondary spine nodes so each leg pair attaches to a body node rather than sharing a single chain.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

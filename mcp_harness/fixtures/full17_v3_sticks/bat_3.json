@@ -1,0 +1,166 @@
+{
+ "roll": "bat_3",
+ "subject": "bat",
+ "subject_guess": "bat",
+ "nodes": [
+  {
+   "name": "root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "chest",
+   "length": 7,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "root",
+   "length": 4,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "hip",
+   "length": 8,
+   "direction": [
+    1,
+    -8,
+    -1
+   ]
+  },
+  {
+   "name": "leg_L",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "leg_R",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    3,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "humerus_L",
+   "parent": "chest",
+   "length": 7,
+   "direction": [
+    -6,
+    3,
+    1
+   ]
+  },
+  {
+   "name": "forearm_L",
+   "parent": "humerus_L",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "wingtip_L",
+   "parent": "forearm_L",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    1
+   ]
+  },
+  {
+   "name": "humerus_R",
+   "parent": "chest",
+   "length": 7,
+   "direction": [
+    6,
+    3,
+    1
+   ]
+  },
+  {
+   "name": "forearm_R",
+   "parent": "humerus_R",
+   "length": 4,
+   "direction": [
+    3,
+    -2,
+    2
+   ]
+  },
+  {
+   "name": "wingtip_R",
+   "parent": "forearm_R",
+   "length": 4,
+   "direction": [
+    3,
+    -2,
+    1
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "wingtip_L",
+   "wingtip_R"
+  ],
+  [
+   "leg_L",
+   "leg_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "leg_L",
+  "leg_R",
+  "wingtip_L",
+  "wingtip_R"
+ ],
+ "readings": [
+  "head at top (small y-tick) in XY/ZY: XY panel is the FRONT (wings spread along x from x=0 to x=24), ZY panel is the PROFILE (ears+head at top, hunched torso, folded-wing hump, tail hanging to bottom)",
+  "head tip (11,1) XY / (11,2 vertical-tick) ZY-z~8, chest/neck base (12,8) XY -> head length ~7, direction straight up",
+  "torso center/root ~ (12,12) XY, chest (shoulder base) ~ (12,8) XY, hip ~ (12,16) XY",
+  "hip/tail base (12,16) XY, tail tip (13,24) XY; ZY shows same thin taper from y=16 to y=24 at roughly constant z~8, confirming a near-vertical tail -> length ~8",
+  "wing_R shoulder (14,8) XY, leading-edge peak/elbow (18,5) XY, tip (24,9) XY; XZ panel shows this same wing extending from x~14 to x=24 at z~12-14, confirming forward/back curvature of the arm bones",
+  "wing_L mirrors wing_R by symmetry (tip at (0,7) XY) since both wings must be authored with equal proportional length despite one being shown more extended than the other in this pose",
+  "hind legs mostly hidden under the wing membrane in all three panels; estimated attachment at hip (12,16) with feet near the wing's trailing edge (~(9,18) and (15,18) in XY) -> short legs length ~4, inferred from typical bat hindlimb proportion, not directly measurable as a separate silhouette"
+ ],
+ "notes": "Wing split into humerus/forearm/hand-to-tip is an anatomical inference (bat wing joints not explicitly marked in silhouette); the leading-edge peak in the XY panel and the folded-wing hump visible in the ZY panel were used to place an approximate elbow bend. The mesh shows an asymmetric pose (right wing more extended, left wing more folded/visible as a hump in ZY), but per the proportion-not-pose rule both wings are authored with equal length as a symmetric pair. Hind legs are largely concealed within the wing/tail membrane in all three views; their attachment point and length are inferred from typical bat anatomy (short legs rotated toward the tail) rather than a clearly separable silhouette. Tail direction/length cross-checked between the XY panel (x,y) and ZY panel (z,y), both showing a thin taper descending from the hip to y=24 at a near-constant lateral position, confirming a mostly vertical tail. All vertical (y and the z-as-drawn-vertical axis in the XZ panel) tick readings were sign-flipped to produce the final direction vectors, since the grid's vertical tick increases downward while +y (and +z in the XZ panel) is defined as up in the authored frame.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,148 @@
+{
+ "roll": "dolphin_1",
+ "subject": "dolphin",
+ "n": 1,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.25
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.35
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.2
+  },
+  {
+   "id": 6,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.2
+  },
+  {
+   "id": 8,
+   "parent_id": 0,
+   "length": 0.2
+  },
+  {
+   "id": 9,
+   "parent_id": 8,
+   "length": 0.3
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.4
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 8,
+   "parent_id": null,
+   "length": 0
+  },
+  {
+   "id": 9,
+   "parent_id": 8,
+   "length": 0.3
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.4
+  },
+  {
+   "id": 0,
+   "parent_id": 8,
+   "length": 0.2
+  },
+  {
+   "id": 4,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 3,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 6,
+   "parent_id": 0,
+   "length": 0.15
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.25
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.2
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.35
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.2
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   5,
+   7
+  ]
+ ],
+ "names": {
+  "0": "trunk",
+  "1": "neck",
+  "2": "head",
+  "3": "dorsal_fin",
+  "4": "shoulder_L",
+  "5": "pectoral_L",
+  "6": "shoulder_R",
+  "7": "pectoral_R",
+  "8": "abdomen",
+  "9": "peduncle",
+  "10": "tail"
+ },
+ "leaves": [
+  "head",
+  "dorsal_fin",
+  "pectoral_L",
+  "pectoral_R",
+  "tail"
+ ],
+ "served_stage": "none",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.673168) [ide: served a re-ranked attempt-0 ordering: 'seeded_1'] your node order packed, but a different attempt-0 ordering produced a strictly better base (by scale and/or mirror symmetry) with the exact same edge lengths, flaps, and pairs, so the backend served that ordering instead. Nothing about your requested anatomy changed -- only the packer's STARTING ORDER differed] [ide: served a re-rooted tree: node 8] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.744586119, 0.561003127], [0.355824149, 0.300538649], [0.720628507, 0.5449519], [0.636740785, 0.48874843], [0.524890489, 0.413810469], [0.7291952, 0.532165495], [0.675303804, 0.43119035], [0.548099184, 0.379169823], [0.551799429, 0.722366427], [0.37291345, 0.338733925], [0.543501952, 0.704571953], [0.500828951, 0.613056954], [0.443931616, 0.491036956], [0.55596164, 0.69876206], [0.577367431, 0.577367431], [0.486425469, 0.471222278], [0.532165493, 0.709858089], [0.431190348, 0.645529098], [0.398862763, 0.512052344], [0.417545466, 0.636836251], [0.709753998, 0.564411858], [0.999999996, 0.161923293], [0.139992883, 2e-09], [0.735382423, 0.112100742], [0.603073636, 0.087189466], [0.404610456, 0.049822553], [1.0, 0.66679902], [0.999999999, 0.532165492], [0.999999998, 0.431190347], [0.66679902, 1.0], [0.90479972, 0.7619993], [0.83339951, 0.83339951], [0.7619993, 0.90479972], [1e-09, 0.999999998], [0.032665007, 0.766666666], [0.055997154, 0.6], [0.074662872, 0.466666667], [0.102661448, 0.266666668], [0.235608674, 0.795077335], [0.403900584, 0.648704004], [0.532165492, 1.0], [0.431190347, 0.999999999], [0.417545465, 0.999999999], [0.403900583, 0.999999999], [0.235608674, 0.999999999]], \"edges_vertices\": [[2, 5], [3, 6], [4, 7], [0, 5], [5, 6], [6, 7], [7, 1], [0, 2], [2, 3], [3, 4], [4, 1], [10, 13], [11, 14], [12, 15], [8, 13], [13, 14], [14, 15], [15, 9], [8, 10], [10, 11], [11, 12], [12, 9], [10, 16], [11, 17], [12, 18], [9, 18], [18, 19], [19, 17], [17, 16], [16, 8], [2, 20], [3, 14], [4, 15], [1, 9], [14, 20], [20, 0], [23, 6], [24, 7], [25, 1], [27, 5], [28, 6], [30, 20], [31, 14], [32, 13], [34, 38], [35, 39], [36, 18], [37, 1], [22, 1], [6, 21], [21, 23], [23, 24], [24, 25], [25, 22], [0, 26], [26, 27], [27, 28], [28, 21], [8, 29], [26, 30], [30, 31], [31, 32], [32, 29], [19, 39], [39, 38], [38, 33], [40, 16], [41, 17], [42, 19], [43, 39], [44, 38], [33, 44], [44, 43], [43, 42], [42, 41], [41, 40], [40, 29], [33, 34], [34, 35], [35, 36], [36, 37], [37, 22]], \"edges_assignment\": [\"F\", \"F\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"F\", \"F\", \"M\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"F\", \"V\", \"F\", \"F\", \"M\", \"F\", \"M\", \"F\", \"F\", \"F\", \"M\", \"F\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"F\", \"F\", \"M\", \"F\", \"F\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

@@ -1,0 +1,224 @@
+{
+ "roll": "octopus_3",
+ "subject": "octopus",
+ "subject_guess": "octopus",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mantle",
+   "parent": "body",
+   "length": 6,
+   "direction": [
+    -1,
+    6,
+    0
+   ]
+  },
+  {
+   "name": "armL1_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    0.9,
+    -0.3,
+    -0.4
+   ]
+  },
+  {
+   "name": "armL1_tip",
+   "parent": "armL1_base",
+   "length": 6,
+   "direction": [
+    0.45,
+    -0.7,
+    -0.2
+   ]
+  },
+  {
+   "name": "armR1_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    0.9,
+    -0.3,
+    0.4
+   ]
+  },
+  {
+   "name": "armR1_tip",
+   "parent": "armR1_base",
+   "length": 6,
+   "direction": [
+    0.45,
+    -0.7,
+    0.2
+   ]
+  },
+  {
+   "name": "armL2_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    0.4,
+    -0.3,
+    -0.9
+   ]
+  },
+  {
+   "name": "armL2_tip",
+   "parent": "armL2_base",
+   "length": 6,
+   "direction": [
+    0.2,
+    -0.7,
+    -0.45
+   ]
+  },
+  {
+   "name": "armR2_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    0.4,
+    -0.3,
+    0.9
+   ]
+  },
+  {
+   "name": "armR2_tip",
+   "parent": "armR2_base",
+   "length": 6,
+   "direction": [
+    0.2,
+    -0.7,
+    0.45
+   ]
+  },
+  {
+   "name": "armL3_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    -0.4,
+    -0.3,
+    -0.9
+   ]
+  },
+  {
+   "name": "armL3_tip",
+   "parent": "armL3_base",
+   "length": 6,
+   "direction": [
+    -0.2,
+    -0.7,
+    -0.45
+   ]
+  },
+  {
+   "name": "armR3_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    -0.4,
+    -0.3,
+    0.9
+   ]
+  },
+  {
+   "name": "armR3_tip",
+   "parent": "armR3_base",
+   "length": 6,
+   "direction": [
+    -0.2,
+    -0.7,
+    0.45
+   ]
+  },
+  {
+   "name": "armL4_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    -0.9,
+    -0.3,
+    -0.4
+   ]
+  },
+  {
+   "name": "armL4_tip",
+   "parent": "armL4_base",
+   "length": 6,
+   "direction": [
+    -0.45,
+    -0.7,
+    -0.2
+   ]
+  },
+  {
+   "name": "armR4_base",
+   "parent": "body",
+   "length": 8,
+   "direction": [
+    -0.9,
+    -0.3,
+    0.4
+   ]
+  },
+  {
+   "name": "armR4_tip",
+   "parent": "armR4_base",
+   "length": 6,
+   "direction": [
+    -0.45,
+    -0.7,
+    0.2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "armL1_tip",
+   "armR1_tip"
+  ],
+  [
+   "armL2_tip",
+   "armR2_tip"
+  ],
+  [
+   "armL3_tip",
+   "armR3_tip"
+  ],
+  [
+   "armL4_tip",
+   "armR4_tip"
+  ]
+ ],
+ "leaves": [
+  "armL1_tip",
+  "armR1_tip",
+  "armL2_tip",
+  "armR2_tip",
+  "armL3_tip",
+  "armR3_tip",
+  "armL4_tip",
+  "armR4_tip"
+ ],
+ "readings": [
+  "Head/mouth (arm crown) at XY (14,15); mantle apex at XY (13,9) -> mantle dir (-1,6,0), length ~6",
+  "Crown and mantle both centered at ZY z\u224812 -> no lateral (z) offset for mantle",
+  "XZ top view: crown at (x14,z12); arm tips read near (22,9),(22,15),(18,3),(18,21),(9,3),(9,21),(5,9),(5,15) giving 8 symmetric radiating directions",
+  "ZY panel: arms reach laterally to z\u22480 and z\u224824 at extremes, confirming ~12-14 unit reach per arm with downward droop (y decreases from crown y_tick15 to arm-tip y_tick~19-20)",
+  "XY panel: arms mostly curl toward -x (tight loops near x=0-9) with one curling to +x (x=20-23), consistent with resting pose, proportions taken as equal for all 8 arms per protocol"
+ ],
+ "notes": "Octopus body: mantle/head fused into one trunk mass (no distinct neck/lobe), so head is NOT a separate leaf per protrusion rule. All 8 arms attach at a single hub (the mouth/buccal mass) which is anatomically correct for cephalopods (unlike quadrupeds, real octopus arms genuinely converge at one point), so 'body' root doubles as that hub. Each arm modeled as two segments (base + curling tip) to capture the characteristic loop/curl seen in all three panels, inferred since exact curl geometry differs per arm but total length/proportion is kept equal across all 8 (proportion not pose). Directions form an even 8-point rosette in the x-z plane (matching the XZ top-view radial arm spread) with a shared downward droop (-y) matching arms hanging below the mantle in the XY/ZY views. Left/right pairing based on the animal's z-axis spread visible in the ZY (front) panel.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,96 @@
+{
+ "roll": "starfish_0",
+ "subject": "starfish",
+ "subject_guess": "Starfish (sea star), 5-armed, viewed with arms spread in the XY plane; radially symmetric, so \"head\" does not apply",
+ "nodes": [
+  {
+   "name": "disc_center",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arm_C",
+   "parent": "disc_center",
+   "length": 11,
+   "direction": [
+    -1,
+    11,
+    0
+   ]
+  },
+  {
+   "name": "arm_L1",
+   "parent": "disc_center",
+   "length": 12,
+   "direction": [
+    -12,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "arm_R1",
+   "parent": "disc_center",
+   "length": 10,
+   "direction": [
+    10,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "arm_L2",
+   "parent": "disc_center",
+   "length": 13,
+   "direction": [
+    -7,
+    -11,
+    0
+   ]
+  },
+  {
+   "name": "arm_R2",
+   "parent": "disc_center",
+   "length": 12,
+   "direction": [
+    6,
+    -10,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "arm_L1",
+   "arm_R1"
+  ],
+  [
+   "arm_L2",
+   "arm_R2"
+  ]
+ ],
+ "leaves": [
+  "arm_C",
+  "arm_L1",
+  "arm_R1",
+  "arm_L2",
+  "arm_R2"
+ ],
+ "readings": [
+  "No head: radial (5-fold) body, disc fused with no protruding head/neck. The XY panel shows the full star outline (all 5 arms) and is used as the profile view for arm lengths/directions. The ZY panel shows one arm's edge-on curl plus the domed central disc (rings at z=8-16, y=8-16). The XZ panel shows the left/right arm pair edge-on plus the same domed disc (round blob z=8-16 at x=8-16).",
+  "disc center approx (12,12) in XY panel, taken as the body root",
+  "arm_C (central/top arm) tip at (11,1)",
+  "arm_L1 tip at (0,11)",
+  "arm_R1 tip at (22,11)",
+  "arm_L2 tip at (5,23)",
+  "arm_R2 tip at (18,22)",
+  "disc thickness: ZY/XZ panels show central bulge from z=8 to z=16 (and matching y=8-16), consistent with disc center z=12, thickness ~8 units, negligible compared to arm spans so arm z-direction taken as 0"
+ ],
+ "notes": "Starfish/sea star: radial body with no distinct head (disc is fused trunk, no protruding neck/lobe), so per the head-protrusion rule it contributes no leaf. Each of the 5 arms is a single unsegmented ray/limb (no internal joints visible in the mesh), so each arm is modeled as one segment from the disc center directly to its tip - lengths taken as straight-line (Euclidean) distance from the estimated disc center (12,12) to each arm tip as read in the XY panel, converting grid-y (down-positive) to frame-dy (up-positive) via dy = -(y_tip - y_center). Arm z-components are taken as 0 because the whole star lies essentially flat in the XY plane; the ZY/XZ panels only reveal the disc's small dome thickness (~8 units) and a slight out-of-plane curl at one arm's very tip, which is not encoded since we author proportional limb length/direction, not pose/curl. Two mirrored arm pairs (arm_L1/arm_R1 nearer the \"front\" and arm_L2/arm_R2 nearer the \"back\") were identified by their near-mirror positions about the vertical centerline in the XY panel; arm_C sits on that centerline and is unpaired, consistent with the 5-fold (pentaradial) body plan having one axis of bilateral symmetry through one arm.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,145 @@
+{
+  "dog": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "cat": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "horse": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "lizard": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "frog": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "bird": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "starfish": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "spider": {
+    "count_exact": false,
+    "label_exact": false,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "octopus": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "dolphin": {
+    "count_exact": false,
+    "label_exact": false,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [
+      "dorsal_fin"
+    ],
+    "unmatched": []
+  },
+  "guinea_pig": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "rabbit": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "bat": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "elephant": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "ant": {
+    "count_exact": false,
+    "label_exact": false,
+    "coverage": 0.875,
+    "missing": {
+      "head": 1
+    },
+    "excluded_leaves": [
+      "antenna_L",
+      "antenna_R"
+    ],
+    "unmatched": []
+  },
+  "scorpion": {
+    "count_exact": false,
+    "label_exact": false,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  },
+  "crab": {
+    "count_exact": true,
+    "label_exact": true,
+    "coverage": 1.0,
+    "missing": {},
+    "excluded_leaves": [],
+    "unmatched": []
+  }
+}

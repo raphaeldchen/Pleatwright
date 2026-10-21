@@ -1,0 +1,10 @@
+{"subject": "star5_len0.62", "served": true, "stage": "none", "can_move_a_path": false, "path_drift_max": 0.0, "invented": 0, "invented_source": "locs", "scale": 0.5218640449984678, "fidelity_fired": false, "fidelity_reason": "no-drift"}
+{"subject": "star6_len0.6", "served": true, "stage": "none", "can_move_a_path": false, "path_drift_max": 0.0, "invented": 0, "invented_source": "locs", "scale": 0.5007709965360231, "fidelity_fired": false, "fidelity_reason": "no-drift"}
+{"subject": "star6_len0.66", "served": true, "stage": "none", "can_move_a_path": false, "path_drift_max": 0.0, "invented": 0, "invented_source": "locs", "scale": 0.4528158900422341, "fidelity_fired": false, "fidelity_reason": "no-drift"}
+{"subject": "star7_len0.55", "served": true, "stage": "jitter", "can_move_a_path": true, "path_drift_max": 0.1476145454545455, "invented": 0, "invented_source": "locs", "scale": 0.48858665725952194, "fidelity_fired": true, "fidelity_reason": "unexplained path drift 0.1476 of span"}
+{"subject": "star7_len0.62", "served": true, "stage": "jitter", "can_move_a_path": true, "path_drift_max": 0.1476145161290322, "invented": 0, "invented_source": "locs", "scale": 0.43619365000098276, "fidelity_fired": true, "fidelity_reason": "unexplained path drift 0.1476 of span"}
+{"subject": "star8_len0.52", "served": true, "stage": "none", "can_move_a_path": false, "path_drift_max": 0.0, "invented": 0, "invented_source": "locs", "scale": 0.4878365764851468, "fidelity_fired": false, "fidelity_reason": "no-drift"}
+{"subject": "star8_len0.58", "served": true, "stage": "none", "can_move_a_path": false, "path_drift_max": 0.0, "invented": 0, "invented_source": "locs", "scale": 0.4373707273121416, "fidelity_fired": false, "fidelity_reason": "no-drift"}
+
+=== 2/7 reached a path-moving stage; 2 fired ===
+scale non-null on: 7/7

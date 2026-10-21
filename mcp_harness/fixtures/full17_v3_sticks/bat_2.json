@@ -1,0 +1,155 @@
+{
+ "roll": "bat_2",
+ "subject": "bat",
+ "subject_guess": "bat (fantasy long-tailed bat, wings spread)",
+ "nodes": [
+  {
+   "name": "body",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "parent": "body",
+   "length": 3,
+   "direction": [
+    0,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "abdomen",
+   "parent": "body",
+   "length": 4,
+   "direction": [
+    0,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "elbow_L",
+   "parent": "chest",
+   "length": 7,
+   "direction": [
+    7,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "wingtip_L",
+   "parent": "elbow_L",
+   "length": 7,
+   "direction": [
+    7,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "elbow_R",
+   "parent": "chest",
+   "length": 7,
+   "direction": [
+    -7,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "wingtip_R",
+   "parent": "elbow_R",
+   "length": 7,
+   "direction": [
+    -7,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "abdomen",
+   "length": 2,
+   "direction": [
+    1.5,
+    -1.5,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 2,
+   "direction": [
+    1.5,
+    -1.5,
+    0
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "abdomen",
+   "length": 2,
+   "direction": [
+    -1.5,
+    -1.5,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 2,
+   "direction": [
+    -1.5,
+    -1.5,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "abdomen",
+   "length": 10,
+   "direction": [
+    0,
+    -10,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "wingtip_L",
+   "wingtip_R"
+  ],
+  [
+   "foot_L",
+   "foot_R"
+  ]
+ ],
+ "leaves": [
+  "wingtip_L",
+  "wingtip_R",
+  "foot_L",
+  "foot_R",
+  "tail"
+ ],
+ "readings": [
+  "head at +y (up) in the ZY panel -> ZY panel is the profile, XY panel is the FRONT (spread-wing) view, as in the worked bat example",
+  "XY panel: left wingtip (23,6), right wingtip (1,7), shoulder/chest (9,7), body center (9,10)",
+  "XY panel: head top/ears (8.5,4)->(6,2)/(11,1), chest (9,7)",
+  "XY panel: foot_L (12,17), foot_R (7,17), abdomen (9,14)",
+  "ZY panel: torso top (8,2)-(10,8), tail base (8,14/16), tail tip (8,24) -> long whip tail, length ~10 in y",
+  "XZ panel: head (8,8), folded wing mass (1-8,13-16), extended wing/finger reaching (24,12-14) confirming wings run along x, depth z~8-9 for trunk",
+  "Wings read as asymmetric in this pose (23 vs 1 from chest) but per proportion rule both wings are authored with equal length, taken from the more extended (left) wing reading"
+ ],
+ "notes": "Head counts as a leaf since it forms a distinct lobe with ears above the chest. Wings and legs were each split into two segments (shoulder->elbow->wingtip, hip->knee->foot); these joints are anatomical inference, not directly marked on the grid, chosen as midpoints with the slight droop/upsweep visible in the XY silhouette. The tail is authored as a single flap (abdomen->tip) since no intermediate joint is visible; its length (~10) is read from the ZY panel where it hangs furthest (to y=24), which is more complete than its truncated appearance in the XY panel. Depth (z) values were kept nearly constant (~9) for trunk-mounted limbs since the XZ panel shows most of the body sitting in a narrow z-band, except the wing finger which sweeps out in x per the XZ panel, matching the XY wingspan. Left/right assigned assuming the XY panel is a front view facing the viewer (animal's left = image right, +x).",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

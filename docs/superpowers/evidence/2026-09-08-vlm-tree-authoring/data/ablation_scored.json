@@ -1,0 +1,4422 @@
+{
+  "none/dog": {
+    "mode": "none",
+    "subject": "dog",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 20,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.16
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 0,
+        "length": 0.24
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.12
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.08
+      },
+      {
+        "id": 6,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.2
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.32
+      },
+      {
+        "id": 9,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.2
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.32
+      },
+      {
+        "id": 12,
+        "parent_id": 3,
+        "length": 0.36
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.16
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.12
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.12
+      },
+      {
+        "id": 16,
+        "parent_id": 3,
+        "length": 0.36
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.16
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.12
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.12
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        8,
+        11
+      ],
+      [
+        15,
+        19
+      ]
+    ],
+    "labels": {
+      "0": "chest",
+      "1": "neck",
+      "2": "head",
+      "3": "back",
+      "4": "tail_base",
+      "5": "tail_tip",
+      "6": "shoulder_L",
+      "7": "elbow_L",
+      "8": "paw_front_L",
+      "9": "shoulder_R",
+      "10": "elbow_R",
+      "11": "paw_front_R",
+      "12": "hip_L",
+      "13": "knee_L",
+      "14": "hock_L",
+      "15": "paw_rear_L",
+      "16": "hip_R",
+      "17": "knee_R",
+      "18": "hock_R",
+      "19": "paw_rear_R"
+    },
+    "readings": [
+      "nose tip side (0,7.5)",
+      "head-base/ear junction side (9,4)",
+      "withers/chest side (13,3)",
+      "rump/back-end side (19,4)",
+      "tail base side (19.5,4.5)",
+      "tail mid side (19,1)",
+      "tail tip side (17,0.5)",
+      "front shoulder side (10,9)",
+      "front elbow est side (10,14)",
+      "front paw side (10.5,21.5)",
+      "rear hip side (19,12)",
+      "rear knee est side (19,16)",
+      "rear hock est side (19.5,19)",
+      "rear paw side (19.5,21.5)",
+      "shoulder width front view z 8-16 (offset ~5)",
+      "leg lateral spacing top view z 7/17 (offset ~5)"
+    ]
+  },
+  "none/cat": {
+    "mode": "none",
+    "subject": "cat",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 23,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.266667
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.333333
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.266667
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.066667
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.266667
+      },
+      {
+        "id": 7,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.266667
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.2
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.133333
+      },
+      {
+        "id": 11,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.266667
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.2
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.133333
+      },
+      {
+        "id": 15,
+        "parent_id": 4,
+        "length": 0.333333
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.266667
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.2
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.133333
+      },
+      {
+        "id": 19,
+        "parent_id": 4,
+        "length": 0.333333
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.266667
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.2
+      },
+      {
+        "id": 22,
+        "parent_id": 21,
+        "length": 0.133333
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        10,
+        14
+      ],
+      [
+        18,
+        22
+      ]
+    ],
+    "labels": {
+      "0": "torso",
+      "1": "withers",
+      "2": "neck",
+      "3": "head",
+      "4": "hip",
+      "5": "tail_base",
+      "6": "tail_tip",
+      "7": "front_shoulder_L",
+      "8": "front_elbow_L",
+      "9": "front_carpus_L",
+      "10": "front_paw_L",
+      "11": "front_shoulder_R",
+      "12": "front_elbow_R",
+      "13": "front_carpus_R",
+      "14": "front_paw_R",
+      "15": "hind_thigh_L",
+      "16": "hind_knee_L",
+      "17": "hind_hock_L",
+      "18": "hind_paw_L",
+      "19": "hind_thigh_R",
+      "20": "hind_knee_R",
+      "21": "hind_hock_R",
+      "22": "hind_paw_R"
+    },
+    "readings": [
+      "nose_tip (23.5,7.5)",
+      "top_of_head (20,3)",
+      "withers (12,8)",
+      "neck_mid (16,6)",
+      "head_center (21,4)",
+      "hip_top (5,9)",
+      "tail_base (4,10)",
+      "tail_tip (1,8)",
+      "front_shoulder (13,12)",
+      "front_elbow (13,16)",
+      "front_carpus (13,19)",
+      "front_paw (13,21)",
+      "hind_hip_joint (5,12)",
+      "hind_knee (4,16)",
+      "hind_hock (4.5,19)",
+      "hind_paw (5,21)",
+      "ground_line y=21",
+      "front_view_shoulder_width z=8to16",
+      "top_view_hip_width z=8to16"
+    ]
+  },
+  "none/horse": {
+    "mode": "none",
+    "subject": "horse",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 17,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.35
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.15
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.4
+      },
+      {
+        "id": 6,
+        "parent_id": 1,
+        "length": 0.15
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.15
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.15
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.15
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.1
+      },
+      {
+        "id": 11,
+        "parent_id": 9,
+        "length": 0.1
+      },
+      {
+        "id": 12,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.2
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.15
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.1
+      },
+      {
+        "id": 16,
+        "parent_id": 14,
+        "length": 0.1
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        10,
+        11
+      ],
+      [
+        15,
+        16
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "withers",
+      "2": "neck_base",
+      "3": "head",
+      "4": "tail_base",
+      "5": "tail_tip",
+      "6": "front_shoulder",
+      "7": "front_elbow",
+      "8": "front_knee",
+      "9": "front_fetlock",
+      "10": "front_left_hoof",
+      "11": "front_right_hoof",
+      "12": "hind_stifle",
+      "13": "hind_hock",
+      "14": "hind_fetlock",
+      "15": "hind_left_hoof",
+      "16": "hind_right_hoof"
+    },
+    "readings": [
+      "side view: nose tip (20, 4.5)",
+      "side view: poll/ear-top (17, 3)",
+      "side view: withers (13, 7)",
+      "side view: croup/hip-root (7, 8)",
+      "side view: tail base (6, 9)",
+      "side view: tail tip (0.5, 15)",
+      "side view: chest/front-shoulder (11, 9)",
+      "side view: front elbow (9.5, 12)",
+      "side view: front knee/carpus (9.5, 15)",
+      "side view: front fetlock (9.5, 17.5)",
+      "side view: front hoof/ground (9.5, 20)",
+      "side view: hind stifle (4, 12)",
+      "side view: hind hock (3.5, 16)",
+      "side view: hind fetlock (3, 18.5)",
+      "side view: hind hoof/ground (2, 20)",
+      "front view: chest top y=9, hoof bottoms y=22 (front leg span)",
+      "top view: body centerline z=12, leg spread approx z=9 to z=15"
+    ]
+  },
+  "none/lizard": {
+    "mode": "none",
+    "subject": "lizard",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 17,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.133333
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.177778
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.355556
+      },
+      {
+        "id": 5,
+        "parent_id": 1,
+        "length": 0.222222
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.133333
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.133333
+      },
+      {
+        "id": 8,
+        "parent_id": 1,
+        "length": 0.222222
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.133333
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.133333
+      },
+      {
+        "id": 11,
+        "parent_id": 0,
+        "length": 0.177778
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.133333
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.133333
+      },
+      {
+        "id": 14,
+        "parent_id": 0,
+        "length": 0.177778
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.133333
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.133333
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        10
+      ],
+      [
+        13,
+        16
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "withers",
+      "2": "neck",
+      "3": "head",
+      "4": "tail",
+      "5": "FL_elbow",
+      "6": "FL_wrist",
+      "7": "FL_paw",
+      "8": "FR_elbow",
+      "9": "FR_wrist",
+      "10": "FR_paw",
+      "11": "HL_knee",
+      "12": "HL_hock",
+      "13": "HL_paw",
+      "14": "HR_knee",
+      "15": "HR_hock",
+      "16": "HR_paw"
+    },
+    "readings": [
+      "side(XY) tail tip \u2248 (0,12)",
+      "side(XY) hip/pelvis \u2248 (8,11)",
+      "side(XY) withers/shoulder \u2248 (17,10)",
+      "side(XY) neck junction \u2248 (20,9)",
+      "side(XY) snout tip \u2248 (24,10)",
+      "top(XZ) front-leg foot cluster \u2248 x=17-23, z=4 and z=20 (mirrored)",
+      "top(XZ) hind-leg foot cluster \u2248 x=2-9, z=4 and z=20 (mirrored)",
+      "front(ZY) body/legs extend from y\u22488 (back) down to y\u224816 (foot level)",
+      "front(ZY) mid-body width gives z-offset of ~8 units from spine centerline to a splayed foot"
+    ]
+  },
+  "none/frog": {
+    "mode": "none",
+    "subject": "frog",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 16,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.114286
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.342857
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.285714
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.228571
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.285714
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.228571
+      },
+      {
+        "id": 10,
+        "parent_id": 1,
+        "length": 0.228571
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.228571
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.228571
+      },
+      {
+        "id": 13,
+        "parent_id": 1,
+        "length": 0.228571
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.228571
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.228571
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        9,
+        6
+      ],
+      [
+        15,
+        12
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "spine_front",
+      "2": "neck",
+      "3": "head",
+      "4": "knee_R",
+      "5": "hock_R",
+      "6": "foot_R",
+      "7": "knee_L",
+      "8": "hock_L",
+      "9": "foot_L",
+      "10": "elbow_R",
+      "11": "wrist_R",
+      "12": "hand_R",
+      "13": "elbow_L",
+      "14": "wrist_L",
+      "15": "hand_L"
+    },
+    "readings": [
+      "side(XY) snout tip (24,9)",
+      "side(XY) neck junction (18,8)",
+      "side(XY) shoulder (16,9)",
+      "side(XY) hip (9,9)",
+      "side(XY) knee (4,12)",
+      "side(XY) hock (2,15)",
+      "side(XY) hind-foot tip (1,18)",
+      "side(XY) elbow (17,13)",
+      "side(XY) wrist (15,16)",
+      "side(XY) front-foot (14,19)",
+      "front(ZY) shoulders (z=8,y=10) & (z=18,y=10)",
+      "front(ZY) hips (z=7,y=13) & (z=19,y=13)",
+      "front(ZY) hind-feet (z=2,y=19) & (z=24,y=19)",
+      "top(XZ) confirms body midline z\u224813 and lateral spread of limbs increasing distally"
+    ]
+  },
+  "none/bird": {
+    "mode": "none",
+    "subject": "bird",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 17,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.35
+      },
+      {
+        "id": 3,
+        "parent_id": 0,
+        "length": 0.3
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.4
+      },
+      {
+        "id": 5,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.3
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.3
+      },
+      {
+        "id": 9,
+        "parent_id": 0,
+        "length": 0.3
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.15
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.1
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.1
+      },
+      {
+        "id": 13,
+        "parent_id": 0,
+        "length": 0.3
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.15
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.1
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.1
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        6,
+        8
+      ],
+      [
+        12,
+        16
+      ]
+    ],
+    "labels": {
+      "0": "body_root",
+      "1": "neck_base",
+      "2": "head",
+      "3": "tail_base",
+      "4": "tail",
+      "5": "shoulder_L",
+      "6": "wing_L",
+      "7": "shoulder_R",
+      "8": "wing_R",
+      "9": "hip_L",
+      "10": "knee_L",
+      "11": "hock_L",
+      "12": "foot_L",
+      "13": "hip_R",
+      "14": "knee_R",
+      "15": "hock_R",
+      "16": "foot_R"
+    },
+    "readings": [
+      "side: beak tip (0,8.5)",
+      "side: crown/head top (4.5,3.5)",
+      "side: neck/withers junction (8,8)",
+      "side: belly underside (10,15.5)",
+      "side: tail base (16,12)",
+      "side: tail tip (24,14)",
+      "side: hip attach (14,15)",
+      "side: knee bend (13.5,18)",
+      "side: foot/ground contact (13,22)",
+      "front: shoulder half-width at y=8 -> z=7.5 to 16.5 (half-width ~4.5)",
+      "front: leg spread at y=15 -> z~9 and z~15 (offset ~3 from center z=12)",
+      "top: body half-width at x=12 -> z=8 to 16 (half-width ~4)",
+      "top: tail converges toward x=24 near edge of grid"
+    ]
+  },
+  "none/starfish": {
+    "mode": "none",
+    "subject": "starfish",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 16,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.32
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.32
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.32
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.32
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.32
+      },
+      {
+        "id": 10,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.4
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.32
+      },
+      {
+        "id": 13,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.4
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.32
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        6,
+        9
+      ],
+      [
+        12,
+        15
+      ]
+    ],
+    "labels": {
+      "0": "center",
+      "1": "top_ray_prox",
+      "2": "top_ray_mid",
+      "3": "top_ray_tip",
+      "4": "left_ray_prox",
+      "5": "left_ray_mid",
+      "6": "left_ray_tip",
+      "7": "right_ray_prox",
+      "8": "right_ray_mid",
+      "9": "right_ray_tip",
+      "10": "bl_ray_prox",
+      "11": "bl_ray_mid",
+      "12": "bl_ray_tip",
+      "13": "br_ray_prox",
+      "14": "br_ray_mid",
+      "15": "br_ray_tip"
+    },
+    "readings": [
+      "side view center/disc at (12,12)",
+      "side view top-ray tip at (12,0.5) -> vertical ray, dx=0",
+      "side view left-ray tip at (0.5,12) -> horizontal ray, dy=0",
+      "side view right-ray tip at (23.5,12) -> horizontal ray, dy=0",
+      "side view lower-left ray tip at (5,24)",
+      "side view lower-right ray tip at (19,24) (mirrors lower-left, confirms bilateral pair)",
+      "front view (ZY) shows narrow leaf silhouette from y=0 to y=24 with bulge at y\u22488-16 -> confirms rays lie in the X-Y plane, disc bulges only slightly in z",
+      "top view (XZ) shows shape spanning x\u22480-24 with a lumpy bulge at x\u224810-14, z held near 8-16 -> confirms rays are essentially flat (constant z\u224812) tapering tubes, thickness only at the central disc"
+    ]
+  },
+  "none/spider": {
+    "mode": "none",
+    "subject": "spider",
+    "leaf_count": 10,
+    "expected": 9,
+    "delta": 1,
+    "n_nodes": 36,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.181818
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.109091
+      },
+      {
+        "id": 4,
+        "parent_id": 2,
+        "length": 0.072727
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.109091
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.072727
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.072727
+      },
+      {
+        "id": 8,
+        "parent_id": 2,
+        "length": 0.072727
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.109091
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.072727
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.072727
+      },
+      {
+        "id": 12,
+        "parent_id": 2,
+        "length": 0.072727
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.109091
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.072727
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.072727
+      },
+      {
+        "id": 16,
+        "parent_id": 2,
+        "length": 0.072727
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.109091
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.072727
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.072727
+      },
+      {
+        "id": 20,
+        "parent_id": 2,
+        "length": 0.109091
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.109091
+      },
+      {
+        "id": 22,
+        "parent_id": 21,
+        "length": 0.072727
+      },
+      {
+        "id": 23,
+        "parent_id": 22,
+        "length": 0.072727
+      },
+      {
+        "id": 24,
+        "parent_id": 2,
+        "length": 0.109091
+      },
+      {
+        "id": 25,
+        "parent_id": 24,
+        "length": 0.109091
+      },
+      {
+        "id": 26,
+        "parent_id": 25,
+        "length": 0.072727
+      },
+      {
+        "id": 27,
+        "parent_id": 26,
+        "length": 0.072727
+      },
+      {
+        "id": 28,
+        "parent_id": 2,
+        "length": 0.109091
+      },
+      {
+        "id": 29,
+        "parent_id": 28,
+        "length": 0.109091
+      },
+      {
+        "id": 30,
+        "parent_id": 29,
+        "length": 0.109091
+      },
+      {
+        "id": 31,
+        "parent_id": 30,
+        "length": 0.109091
+      },
+      {
+        "id": 32,
+        "parent_id": 2,
+        "length": 0.109091
+      },
+      {
+        "id": 33,
+        "parent_id": 32,
+        "length": 0.109091
+      },
+      {
+        "id": 34,
+        "parent_id": 33,
+        "length": 0.109091
+      },
+      {
+        "id": 35,
+        "parent_id": 34,
+        "length": 0.109091
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        11
+      ],
+      [
+        15,
+        19
+      ],
+      [
+        23,
+        27
+      ],
+      [
+        31,
+        35
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "abdomen",
+      "2": "cephalothorax",
+      "3": "head",
+      "4": "coxaL1",
+      "5": "patellaL1",
+      "6": "tibiaL1",
+      "7": "tarsusL1",
+      "8": "coxaR1",
+      "9": "patellaR1",
+      "10": "tibiaR1",
+      "11": "tarsusR1",
+      "12": "coxaL2",
+      "13": "patellaL2",
+      "14": "tibiaL2",
+      "15": "tarsusL2",
+      "16": "coxaR2",
+      "17": "patellaR2",
+      "18": "tibiaR2",
+      "19": "tarsusR2",
+      "20": "coxaL3",
+      "21": "patellaL3",
+      "22": "tibiaL3",
+      "23": "tarsusL3",
+      "24": "coxaR3",
+      "25": "patellaR3",
+      "26": "tibiaR3",
+      "27": "tarsusR3",
+      "28": "coxaL4",
+      "29": "patellaL4",
+      "30": "tibiaL4",
+      "31": "tarsusL4",
+      "32": "coxaR4",
+      "33": "patellaR4",
+      "34": "tibiaR4",
+      "35": "tarsusR4"
+    },
+    "readings": [
+      "top view: cephalothorax-abdomen junction / pedicel ~ (13,z12) -> used as root",
+      "top view: abdomen rear tip ~ (2,z12); root(13)->abdomen tip(2) => abdomen length 11, direction (-11,0,0)",
+      "top/side view: cephalothorax hub ~ (18, y9, z12); root(13,y10)->hub => length ~5, direction (5,-1,0)",
+      "top/side view: head tip ~ (21, y9, z12); hub(18,9)->head(21,9) => length 3, direction (3,0,0)",
+      "leg pair1 (front-most, hip near x19,y9,z13): top-view foot tip ~ (24, z17), side/front foot y~15 => delta (5,6,4), total len~9",
+      "leg pair2 (hip x17,y9,z13): foot tip ~ (21, z19), y15 => delta (4,6,6), total len~9",
+      "leg pair3 (hip x15,y9,z13): foot tip ~ (10, z19), y15 => delta (-5,6,6), total len~10",
+      "leg pair4 (rear-most, raised leg seen in side view at (2, y4)): hip x13,y9,z13 -> foot (2,y4,z15) => delta (-11,-5,2), total len~12",
+      "all leg pairs mirrored across midline (z12) for left/right symmetry, confirmed by matching tip spread top and bottom of top-view grid"
+    ]
+  },
+  "none/octopus": {
+    "mode": "none",
+    "subject": "octopus",
+    "leaf_count": 9,
+    "expected": 9,
+    "delta": 0,
+    "n_nodes": 19,
+    "revised": null,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.285714
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.171429
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.342857
+      },
+      {
+        "id": 5,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.342857
+      },
+      {
+        "id": 7,
+        "parent_id": 2,
+        "length": 0.285714
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.285714
+      },
+      {
+        "id": 9,
+        "parent_id": 2,
+        "length": 0.285714
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.285714
+      },
+      {
+        "id": 11,
+        "parent_id": 2,
+        "length": 0.342857
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.285714
+      },
+      {
+        "id": 13,
+        "parent_id": 2,
+        "length": 0.342857
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.285714
+      },
+      {
+        "id": 15,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.342857
+      },
+      {
+        "id": 17,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.342857
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        4,
+        6
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        16,
+        18
+      ]
+    ],
+    "labels": {
+      "0": "body",
+      "1": "head",
+      "2": "mouth",
+      "3": "pair1L_knuckle",
+      "4": "pair1L_tip",
+      "5": "pair1R_knuckle",
+      "6": "pair1R_tip",
+      "7": "pair2L_knuckle",
+      "8": "pair2L_tip",
+      "9": "pair2R_knuckle",
+      "10": "pair2R_tip",
+      "11": "pair3L_knuckle",
+      "12": "pair3L_tip",
+      "13": "pair3R_knuckle",
+      "14": "pair3R_tip",
+      "15": "pair4L_knuckle",
+      "16": "pair4L_tip",
+      "17": "pair4R_knuckle",
+      "18": "pair4R_tip"
+    },
+    "readings": [
+      "body center: side(13,13), front z,y(12,13), top x,z(13,10)",
+      "head/eye bulge: side(9,10), front eyes ~z8-9,y9-10, top x~9,z11",
+      "mouth/arm-hub: side(10,14), front bases z10&14,y13",
+      "pair1 (longest hook) tip: side(1,8), front z3&21,y8, top x5,z2&18",
+      "pair2 tip: front z6&18,y16, side x~17,y16, top x17,z6&18",
+      "pair3 tip: front z8&16,y18, side x~20,y18, top x20,z8&16",
+      "pair4 (shortest ventral) tip: front z10&14,y19, side x~22,y19, top x22,z10&14"
+    ]
+  },
+  "text/dog": {
+    "mode": "text",
+    "subject": "dog",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 21,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.311111
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.222222
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.177778
+      },
+      {
+        "id": 5,
+        "parent_id": 1,
+        "length": 0.311111
+      },
+      {
+        "id": 6,
+        "parent_id": 1,
+        "length": 0.311111
+      },
+      {
+        "id": 7,
+        "parent_id": 5,
+        "length": 0.266667
+      },
+      {
+        "id": 8,
+        "parent_id": 6,
+        "length": 0.266667
+      },
+      {
+        "id": 9,
+        "parent_id": 7,
+        "length": 0.177778
+      },
+      {
+        "id": 10,
+        "parent_id": 8,
+        "length": 0.177778
+      },
+      {
+        "id": 11,
+        "parent_id": 9,
+        "length": 0.133333
+      },
+      {
+        "id": 12,
+        "parent_id": 10,
+        "length": 0.133333
+      },
+      {
+        "id": 13,
+        "parent_id": 0,
+        "length": 0.311111
+      },
+      {
+        "id": 14,
+        "parent_id": 0,
+        "length": 0.311111
+      },
+      {
+        "id": 15,
+        "parent_id": 13,
+        "length": 0.177778
+      },
+      {
+        "id": 16,
+        "parent_id": 14,
+        "length": 0.177778
+      },
+      {
+        "id": 17,
+        "parent_id": 15,
+        "length": 0.177778
+      },
+      {
+        "id": 18,
+        "parent_id": 16,
+        "length": 0.177778
+      },
+      {
+        "id": 19,
+        "parent_id": 17,
+        "length": 0.177778
+      },
+      {
+        "id": 20,
+        "parent_id": 18,
+        "length": 0.177778
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        12,
+        11
+      ],
+      [
+        20,
+        19
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "spine",
+      "2": "neck",
+      "3": "head",
+      "4": "tail",
+      "5": "shoulder_R",
+      "6": "shoulder_L",
+      "7": "elbow_R",
+      "8": "elbow_L",
+      "9": "wrist_R",
+      "10": "wrist_L",
+      "11": "front_paw_R",
+      "12": "front_paw_L",
+      "13": "hip_R",
+      "14": "hip_L",
+      "15": "knee_R",
+      "16": "knee_L",
+      "17": "hock_R",
+      "18": "hock_L",
+      "19": "rear_paw_R",
+      "20": "rear_paw_L"
+    },
+    "readings": [
+      "nose (0,8)",
+      "head_top (5,4)",
+      "withers (13,2)",
+      "rump (20,3)",
+      "tail_tip (17,0)",
+      "front_shoulder (12,8)",
+      "front_elbow (12,14)",
+      "front_wrist (12,18)",
+      "front_paw (12,21)",
+      "rear_hip (19,9)",
+      "rear_knee (20,13)",
+      "rear_hock (20,17)",
+      "rear_paw (21,21)",
+      "front stance z=9/15 (front view)",
+      "rear stance z=8/16 (front view)",
+      "top view spine centerline z=12"
+    ]
+  },
+  "text/cat": {
+    "mode": "text",
+    "subject": "cat",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 22,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.24
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.4
+      },
+      {
+        "id": 5,
+        "parent_id": 0,
+        "length": 0.16
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.32
+      },
+      {
+        "id": 8,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.32
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.4
+      },
+      {
+        "id": 11,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.32
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.4
+      },
+      {
+        "id": 14,
+        "parent_id": 0,
+        "length": 0.24
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.24
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.24
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.16
+      },
+      {
+        "id": 18,
+        "parent_id": 0,
+        "length": 0.24
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.24
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.24
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.16
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        10,
+        13
+      ],
+      [
+        17,
+        21
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "lower_back",
+      "2": "withers",
+      "3": "neck_base",
+      "4": "head",
+      "5": "tail_base",
+      "6": "tail_mid",
+      "7": "tail_tip",
+      "8": "shoulder_L",
+      "9": "elbow_L",
+      "10": "front_paw_L",
+      "11": "shoulder_R",
+      "12": "elbow_R",
+      "13": "front_paw_R",
+      "14": "hip_L",
+      "15": "knee_L",
+      "16": "hock_L",
+      "17": "hind_foot_L",
+      "18": "hip_R",
+      "19": "knee_R",
+      "20": "hock_R",
+      "21": "hind_foot_R"
+    },
+    "readings": [
+      "pelvis/hip (10,11)",
+      "lower-back (13,9)",
+      "withers (18,9)",
+      "neck-base (19,6)",
+      "nose/head tip (24,7)",
+      "tail-base (8,11)",
+      "tail-mid curl (3,13)",
+      "tail-tip (1,9)",
+      "front shoulder (18,11), z offset \u00b13 from front view",
+      "front elbow (18,15)",
+      "front paw ground (18,20)",
+      "hind hip (10,12), z offset \u00b13",
+      "hind knee (9,15)",
+      "hind hock (10,18)",
+      "hind paw ground (10,20)"
+    ]
+  },
+  "text/horse": {
+    "mode": "text",
+    "subject": "horse",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 27,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.15
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.15
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.05
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 8,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 9,
+        "parent_id": 7,
+        "length": 0.15
+      },
+      {
+        "id": 10,
+        "parent_id": 8,
+        "length": 0.15
+      },
+      {
+        "id": 11,
+        "parent_id": 9,
+        "length": 0.15
+      },
+      {
+        "id": 12,
+        "parent_id": 10,
+        "length": 0.15
+      },
+      {
+        "id": 13,
+        "parent_id": 11,
+        "length": 0.2
+      },
+      {
+        "id": 14,
+        "parent_id": 12,
+        "length": 0.2
+      },
+      {
+        "id": 15,
+        "parent_id": 13,
+        "length": 0.15
+      },
+      {
+        "id": 16,
+        "parent_id": 14,
+        "length": 0.15
+      },
+      {
+        "id": 17,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 18,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 19,
+        "parent_id": 17,
+        "length": 0.15
+      },
+      {
+        "id": 20,
+        "parent_id": 18,
+        "length": 0.15
+      },
+      {
+        "id": 21,
+        "parent_id": 19,
+        "length": 0.15
+      },
+      {
+        "id": 22,
+        "parent_id": 20,
+        "length": 0.15
+      },
+      {
+        "id": 23,
+        "parent_id": 21,
+        "length": 0.15
+      },
+      {
+        "id": 24,
+        "parent_id": 22,
+        "length": 0.15
+      },
+      {
+        "id": 25,
+        "parent_id": 23,
+        "length": 0.15
+      },
+      {
+        "id": 26,
+        "parent_id": 24,
+        "length": 0.15
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        15,
+        16
+      ],
+      [
+        25,
+        26
+      ]
+    ],
+    "labels": {
+      "0": "torso",
+      "1": "withers",
+      "2": "poll",
+      "3": "head",
+      "4": "croup",
+      "5": "tail_base",
+      "6": "tail_tip",
+      "7": "shoulder_L",
+      "8": "shoulder_R",
+      "9": "elbow_L",
+      "10": "elbow_R",
+      "11": "knee_L",
+      "12": "knee_R",
+      "13": "fetlock_L",
+      "14": "fetlock_R",
+      "15": "front_hoof_L",
+      "16": "front_hoof_R",
+      "17": "hip_L",
+      "18": "hip_R",
+      "19": "stifle_L",
+      "20": "stifle_R",
+      "21": "hock_L",
+      "22": "hock_R",
+      "23": "hind_fetlock_L",
+      "24": "hind_fetlock_R",
+      "25": "hind_hoof_L",
+      "26": "hind_hoof_R"
+    },
+    "readings": [
+      "muzzle (20,6)",
+      "poll (18,3.5)",
+      "withers (14,7.5)",
+      "torso-center (10,9)",
+      "croup (7,8)",
+      "tail-base (7,9)",
+      "tail-tip (0,13)",
+      "shoulder (9.5,9.5)",
+      "elbow (9,12)",
+      "carpus/knee (9,14.5)",
+      "fetlock (9,18)",
+      "front-hoof (9,21)",
+      "hip (6,10)",
+      "stifle (6,12.5)",
+      "hock (5,15.5)",
+      "hind-fetlock (4.5,18.5)",
+      "hind-hoof (4,21)",
+      "front-view shoulder z \u2248 \u00b11.5",
+      "front-view hip z \u2248 \u00b11.2"
+    ]
+  },
+  "text/lizard": {
+    "mode": "text",
+    "subject": "lizard",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 17,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.16
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.2
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 5,
+        "parent_id": 1,
+        "length": 0.2
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.16
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.08
+      },
+      {
+        "id": 8,
+        "parent_id": 1,
+        "length": 0.2
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.16
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.08
+      },
+      {
+        "id": 11,
+        "parent_id": 0,
+        "length": 0.08
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.16
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.08
+      },
+      {
+        "id": 14,
+        "parent_id": 0,
+        "length": 0.08
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.16
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.08
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        10
+      ],
+      [
+        13,
+        16
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "torso",
+      "2": "neck",
+      "3": "head",
+      "4": "tail",
+      "5": "upper_arm_L",
+      "6": "forearm_L",
+      "7": "hand_L",
+      "8": "upper_arm_R",
+      "9": "forearm_R",
+      "10": "hand_R",
+      "11": "thigh_L",
+      "12": "shank_L",
+      "13": "foot_L",
+      "14": "thigh_R",
+      "15": "shank_R",
+      "16": "foot_R"
+    },
+    "readings": [
+      "snout tip: side (24,10), top (24,12)",
+      "head base/neck junction: side (19,9)",
+      "withers/shoulder: side (15,9); top shoulder-L (15,8), shoulder-R (15,16)",
+      "hip: side (5,11); top hip-L (5,8), hip-R (5,16)",
+      "tail tip: side (0,13), top (0,12)",
+      "front elbow: side (13,13); top elbow-L (13,5), elbow-R (13,19)",
+      "front wrist/foot base: side (12,16); top foot-L (12,3), foot-R (12,21)",
+      "front toe tip: side (11,17); top toe-L (11,2), toe-R (11,22)",
+      "hind knee: side (4,13); top knee-L (4,7), knee-R (4,17)",
+      "hind hock/foot base: side (3,15); top foot-L (3,4), foot-R (3,20)",
+      "hind toe tip: side (2,16); top toe-L (2,2), toe-R (2,22)"
+    ]
+  },
+  "text/frog": {
+    "mode": "text",
+    "subject": "frog",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 16,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.342857
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.228571
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.342857
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.285714
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.342857
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.342857
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.285714
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.342857
+      },
+      {
+        "id": 10,
+        "parent_id": 1,
+        "length": 0.285714
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.171429
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.114286
+      },
+      {
+        "id": 13,
+        "parent_id": 1,
+        "length": 0.285714
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.171429
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.114286
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        6,
+        9
+      ],
+      [
+        12,
+        15
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "shoulder_girdle",
+      "2": "neck",
+      "3": "head",
+      "4": "hind_thigh_L",
+      "5": "hind_shank_L",
+      "6": "hind_foot_L",
+      "7": "hind_thigh_R",
+      "8": "hind_shank_R",
+      "9": "hind_foot_R",
+      "10": "front_upperarm_L",
+      "11": "front_forearm_L",
+      "12": "front_foot_L",
+      "13": "front_upperarm_R",
+      "14": "front_forearm_R",
+      "15": "front_foot_R"
+    },
+    "readings": [
+      "snout tip (24,9) in side view",
+      "eye bump top (18,6) in side view",
+      "back highest point (12,7) in side view",
+      "chest / front-leg shoulder attachment (15,12) in side view",
+      "front elbow (13,15) in side view",
+      "front wrist (10,16) in side view",
+      "front foot tip (8,17) in side view",
+      "hip / hind-leg attachment (9,10) in side view",
+      "knee (6,11) in side view",
+      "ankle/hock (6,16) in side view",
+      "hind foot tip (0,14) in side view",
+      "ground line y=17 in side view",
+      "left eye (z=8,y=4) in front view",
+      "right eye (z=17,y=4) in front view, symmetric about midline z=12.5",
+      "shoulder left (z=9,y=11) in front view",
+      "shoulder right (z=16,y=11) in front view",
+      "front foot left (z=3,y=17) in front view",
+      "front foot right (z=22,y=17) in front view",
+      "hip left (z=8,y=10) in front view",
+      "hip right (z=17,y=10) in front view",
+      "hind foot left (z=1,y=18) in front view",
+      "hind foot right (z=24,y=18) in front view"
+    ]
+  },
+  "text/bird": {
+    "mode": "text",
+    "subject": "bird",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 15,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 0,
+        "length": 0.12
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.32
+      },
+      {
+        "id": 5,
+        "parent_id": 0,
+        "length": 0.24
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.12
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.12
+      },
+      {
+        "id": 8,
+        "parent_id": 0,
+        "length": 0.24
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.12
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.12
+      },
+      {
+        "id": 11,
+        "parent_id": 0,
+        "length": 0.16
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.36
+      },
+      {
+        "id": 13,
+        "parent_id": 0,
+        "length": 0.16
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.36
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        10
+      ],
+      [
+        12,
+        14
+      ]
+    ],
+    "labels": {
+      "0": "root_torso",
+      "1": "neck_base",
+      "2": "head",
+      "3": "tail_base",
+      "4": "tail",
+      "5": "hip_L",
+      "6": "knee_L",
+      "7": "foot_L",
+      "8": "hip_R",
+      "9": "knee_R",
+      "10": "foot_R",
+      "11": "shoulder_L",
+      "12": "wingtip_L",
+      "13": "shoulder_R",
+      "14": "wingtip_R"
+    },
+    "readings": [
+      "side beak tip (0, 8.5)",
+      "side crest top (7, 4)",
+      "side head/neck junction (10, 7)",
+      "side chest front/root ref (10, 10)",
+      "side withers/back (13, 8)",
+      "side belly bottom (13, 16)",
+      "side tail base (16, 12)",
+      "side tail tip (24, 12.5)",
+      "side hip (12, 16)",
+      "side knee (11, 19)",
+      "side foot (11, 22)",
+      "side wing-shoulder crease (14, 10)",
+      "side wing-tip crease (22, 14)",
+      "front head top (z=12, y=2)",
+      "front body width at y=12 (z=8 to 16)",
+      "front left-leg column (z=9, y=16-24)",
+      "front right-leg column (z=15, y=16-24)",
+      "top beak tip (x=0, z=12)",
+      "top head width (x=4-10, z=8-16)",
+      "top body width (x=10-16, z=6-18)",
+      "top tail tip (x=24, z=12)"
+    ]
+  },
+  "text/starfish": {
+    "mode": "text",
+    "subject": "starfish",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 12,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.133333
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 4,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.4
+      },
+      {
+        "id": 6,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.4
+      },
+      {
+        "id": 8,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.4
+      },
+      {
+        "id": 10,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.4
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        5,
+        7
+      ],
+      [
+        9,
+        11
+      ]
+    ],
+    "labels": {
+      "0": "center_disc",
+      "1": "disc_rim",
+      "2": "top_arm_base",
+      "3": "top_arm_tip",
+      "4": "left_arm_base",
+      "5": "left_arm_tip",
+      "6": "right_arm_base",
+      "7": "right_arm_tip",
+      "8": "bottom_left_arm_base",
+      "9": "bottom_left_arm_tip",
+      "10": "bottom_right_arm_base",
+      "11": "bottom_right_arm_tip"
+    },
+    "readings": [
+      "side view center/disc \u2248 (12,12)",
+      "side view top-arm tip \u2248 (12,0): image offset (0,-12) -> real dy=+12, dx=0 => vertical arm, length 12",
+      "side view left-arm tip \u2248 (0,12): offset (-12,0) -> dx=-12, dy=0, length 12",
+      "side view right-arm tip \u2248 (23,10): offset (11,-2) -> dx=11, real dy=+2, length\u224811.2 (rounded to 12 for symmetry)",
+      "side view bottom-left-arm tip \u2248 (8,23): offset (-4,11) -> dx=-4, real dy=-11, length\u224811.7 (rounded to 12)",
+      "side view bottom-right-arm tip \u2248 (18,22): offset (6,10) -> dx=6, real dy=-10, length\u224811.7 (rounded to 12)",
+      "front view (ZY): y spans full 0-24 matching top-to-bottom arm reach; z spans only ~8-16, confirming arms lie flat in XY plane with thin Z depth, and a central bulge (disc) visible at y\u224812",
+      "top view (XZ): x spans full 0-24 matching left-right arm reach; z spans only ~8-16, same thin-Z confirmation, disc bulge visible near x=12,z=12"
+    ]
+  },
+  "text/spider": {
+    "mode": "text",
+    "subject": "spider",
+    "leaf_count": 10,
+    "expected": 9,
+    "delta": 1,
+    "n_nodes": 36,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 0,
+        "length": 0.15
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.2
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.3
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.2
+      },
+      {
+        "id": 8,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.2
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.3
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.2
+      },
+      {
+        "id": 12,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.2
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.25
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.2
+      },
+      {
+        "id": 16,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.2
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.25
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.2
+      },
+      {
+        "id": 20,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.2
+      },
+      {
+        "id": 22,
+        "parent_id": 21,
+        "length": 0.25
+      },
+      {
+        "id": 23,
+        "parent_id": 22,
+        "length": 0.2
+      },
+      {
+        "id": 24,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 25,
+        "parent_id": 24,
+        "length": 0.2
+      },
+      {
+        "id": 26,
+        "parent_id": 25,
+        "length": 0.25
+      },
+      {
+        "id": 27,
+        "parent_id": 26,
+        "length": 0.2
+      },
+      {
+        "id": 28,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 29,
+        "parent_id": 28,
+        "length": 0.2
+      },
+      {
+        "id": 30,
+        "parent_id": 29,
+        "length": 0.2
+      },
+      {
+        "id": 31,
+        "parent_id": 30,
+        "length": 0.2
+      },
+      {
+        "id": 32,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 33,
+        "parent_id": 32,
+        "length": 0.2
+      },
+      {
+        "id": 34,
+        "parent_id": 33,
+        "length": 0.2
+      },
+      {
+        "id": 35,
+        "parent_id": 34,
+        "length": 0.2
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        11
+      ],
+      [
+        15,
+        19
+      ],
+      [
+        23,
+        27
+      ],
+      [
+        31,
+        35
+      ]
+    ],
+    "labels": {
+      "0": "cephalothorax",
+      "1": "pedicel",
+      "2": "abdomen",
+      "3": "head",
+      "4": "coxa_L1_left",
+      "5": "femur_L1_left",
+      "6": "tibia_L1_left",
+      "7": "tarsus_L1_left",
+      "8": "coxa_L1_right",
+      "9": "femur_L1_right",
+      "10": "tibia_L1_right",
+      "11": "tarsus_L1_right",
+      "12": "coxa_L2_left",
+      "13": "femur_L2_left",
+      "14": "tibia_L2_left",
+      "15": "tarsus_L2_left",
+      "16": "coxa_L2_right",
+      "17": "femur_L2_right",
+      "18": "tibia_L2_right",
+      "19": "tarsus_L2_right",
+      "20": "coxa_L3_left",
+      "21": "femur_L3_left",
+      "22": "tibia_L3_left",
+      "23": "tarsus_L3_left",
+      "24": "coxa_L3_right",
+      "25": "femur_L3_right",
+      "26": "tibia_L3_right",
+      "27": "tarsus_L3_right",
+      "28": "coxa_L4_left",
+      "29": "femur_L4_left",
+      "30": "tibia_L4_left",
+      "31": "tarsus_L4_left",
+      "32": "coxa_L4_right",
+      "33": "femur_L4_right",
+      "34": "tibia_L4_right",
+      "35": "tarsus_L4_right"
+    },
+    "readings": [
+      "top view: abdomen sphere spans x=1 to x=9, centered z=12 -> abdomen length ~8",
+      "top view: cephalothorax sphere spans x=8 to x=14, centered z=12 -> radius ~3",
+      "top view: head/chelicerae tip at (x=14, z=12), thorax center (x=11,z=12) -> head length=3",
+      "top view: leg hip attachment points along thorax rim at roughly (13,9)/(13,15) for L1, (12,9)/(12,15) for L2, (10,9)/(10,15) for L3, (9,9)/(9,15) for L4",
+      "top view: L1 foot tips ~(23,4)/(23,20)",
+      "top view: L2 foot tips ~(19,2)/(19,22)",
+      "top view: L3 foot tips ~(3,2)/(3,22)",
+      "top view: L4 foot tips ~(1,5)/(1,19)",
+      "side view: hip height ~y=9-10, knee/arch apex ~y=5-6, foot/ground contact ~y=15-16, giving legs an up-then-down arched profile",
+      "front view: body width (z-extent) roughly symmetric about z=12, confirming bilateral leg pairs mirror across the spine",
+      "verification: summing unit-direction*length for L1 chain gives displacement (~9.6,~0.2,~-6.0), matching read hip(13,9)->foot(23,4) delta (10,-,-5)"
+    ]
+  },
+  "text/octopus": {
+    "mode": "text",
+    "subject": "octopus",
+    "leaf_count": 9,
+    "expected": 9,
+    "delta": 0,
+    "n_nodes": 19,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.1
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 3,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.35
+      },
+      {
+        "id": 5,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.35
+      },
+      {
+        "id": 7,
+        "parent_id": 1,
+        "length": 0.35
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.4
+      },
+      {
+        "id": 9,
+        "parent_id": 1,
+        "length": 0.35
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.4
+      },
+      {
+        "id": 11,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.35
+      },
+      {
+        "id": 13,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.35
+      },
+      {
+        "id": 15,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.3
+      },
+      {
+        "id": 17,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.3
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        4,
+        6
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        16,
+        18
+      ]
+    ],
+    "labels": {
+      "0": "mantle_root",
+      "1": "oral_junction",
+      "2": "head",
+      "3": "arm1_elbow_R",
+      "4": "arm1_tip_R",
+      "5": "arm1_elbow_L",
+      "6": "arm1_tip_L",
+      "7": "arm2_elbow_R",
+      "8": "arm2_tip_R",
+      "9": "arm2_elbow_L",
+      "10": "arm2_tip_L",
+      "11": "arm3_elbow_R",
+      "12": "arm3_tip_R",
+      "13": "arm3_elbow_L",
+      "14": "arm3_tip_L",
+      "15": "arm4_elbow_R",
+      "16": "arm4_tip_R",
+      "17": "arm4_elbow_L",
+      "18": "arm4_tip_L"
+    },
+    "readings": [
+      "mantle center: side(12,12), top(13,12), front(12,10)",
+      "head/eyes: top(13,~12), side bulge(14-16,9-11)",
+      "arm1 tips: top(4,4) & top(4,20), side hook(4,4)",
+      "arm2 tips: top(8,0) & top(8,24), side cluster(10,19)",
+      "arm3 tips: top(20,4) & top(20,20), side hook(18,18)",
+      "arm4 tip: top(24,12), side extension(20,13)-(24,15)"
+    ]
+  },
+  "visual/dog": {
+    "mode": "visual",
+    "subject": "dog",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 20,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.123077
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 1,
+        "length": 0.246154
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.153846
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.215385
+      },
+      {
+        "id": 6,
+        "parent_id": 1,
+        "length": 0.246154
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.153846
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.215385
+      },
+      {
+        "id": 9,
+        "parent_id": 0,
+        "length": 0.123077
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.061538
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.123077
+      },
+      {
+        "id": 12,
+        "parent_id": 9,
+        "length": 0.184615
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.153846
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.123077
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.092308
+      },
+      {
+        "id": 16,
+        "parent_id": 9,
+        "length": 0.184615
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.153846
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.123077
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.092308
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        5,
+        8
+      ],
+      [
+        15,
+        19
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "neck_base",
+      "2": "head",
+      "3": "FL_shoulder",
+      "4": "FL_elbow",
+      "5": "FL_foot",
+      "6": "FR_shoulder",
+      "7": "FR_elbow",
+      "8": "FR_foot",
+      "9": "hip_base",
+      "10": "tail_base",
+      "11": "tail_tip",
+      "12": "RL_hip",
+      "13": "RL_knee",
+      "14": "RL_hock",
+      "15": "RL_foot",
+      "16": "RR_hip",
+      "17": "RR_knee",
+      "18": "RR_hock",
+      "19": "RR_foot"
+    },
+    "readings": [
+      "nose (0,8) side",
+      "head-top (4,3) side",
+      "withers (12,3) side",
+      "back (14-18,3) side",
+      "hip-top (20,4) side",
+      "tail-base (18,4) side",
+      "tail-tip (16,0) side",
+      "front shoulder (8,9) side",
+      "front elbow (8,14) side",
+      "front foot (8,21) side",
+      "rear hip (20,9) side",
+      "rear knee (19,14) side",
+      "rear hock (20,18) side",
+      "rear foot (20,21) side",
+      "head z-center (12,0) front",
+      "shoulder width z=9/15 front",
+      "hip width z=9/15 front",
+      "nose top (0,12)",
+      "front legs x~20,z=9/15 top",
+      "rear legs x~4,z=9/15 top"
+    ]
+  },
+  "visual/cat": {
+    "mode": "visual",
+    "subject": "cat",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 16,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.133333
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.133333
+      },
+      {
+        "id": 3,
+        "parent_id": 1,
+        "length": 0.133333
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.2
+      },
+      {
+        "id": 5,
+        "parent_id": 2,
+        "length": 0.4
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.166667
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.1
+      },
+      {
+        "id": 8,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.166667
+      },
+      {
+        "id": 10,
+        "parent_id": 1,
+        "length": 0.3
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.166667
+      },
+      {
+        "id": 12,
+        "parent_id": 2,
+        "length": 0.233333
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.133333
+      },
+      {
+        "id": 14,
+        "parent_id": 2,
+        "length": 0.233333
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.133333
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        9,
+        11
+      ],
+      [
+        13,
+        15
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "withers",
+      "2": "pelvis",
+      "3": "neck",
+      "4": "head",
+      "5": "tail_base",
+      "6": "tail_mid",
+      "7": "tail_tip",
+      "8": "FL_elbow",
+      "9": "FL_paw",
+      "10": "FR_elbow",
+      "11": "FR_paw",
+      "12": "BL_knee",
+      "13": "BL_paw",
+      "14": "BR_knee",
+      "15": "BR_paw"
+    },
+    "readings": [
+      "nose tip (side XY) ~ (22,7)",
+      "head top/ears (side XY) ~ (20,2.5)",
+      "withers/neck-shoulder junction (side XY) ~ (13,7.5)",
+      "neck-top/skull-base inferred (side XY) ~ (16,5)",
+      "tail base (side XY) ~ (7,11)",
+      "tail mid (side XY) ~ (3,9)",
+      "tail tip (side XY) ~ (0.5,9)",
+      "front shoulder/hip attach depth read via withers point (13,7.5)",
+      "front elbow (side XY) ~ (13,16)",
+      "front paw/ground (side XY) ~ (13.5,21)",
+      "hip/pelvis top (side XY) ~ (18.5,11)",
+      "back knee (side XY) ~ (18.5,17)",
+      "back paw/ground (side XY) ~ (18.5,21)",
+      "front view (ZY) chest width z=8..15 at y=8 (shoulders, ~3 unit half-width)",
+      "front view (ZY) hips width similar ~3 unit half-width at hip height",
+      "top view (XZ) body centerline z=12",
+      "top view (XZ) nose tip (22,12)",
+      "top view (XZ) tail base (7,12), tail tip (0.5,12)"
+    ]
+  },
+  "visual/horse": {
+    "mode": "visual",
+    "subject": "horse",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 27,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.35
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.1
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.3
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.25
+      },
+      {
+        "id": 5,
+        "parent_id": 0,
+        "length": 0.05
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 1,
+        "length": 0.15
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.15
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.2
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.2
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.1
+      },
+      {
+        "id": 12,
+        "parent_id": 1,
+        "length": 0.15
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.15
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.2
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.2
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.1
+      },
+      {
+        "id": 17,
+        "parent_id": 0,
+        "length": 0.15
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.2
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.2
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.15
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.1
+      },
+      {
+        "id": 22,
+        "parent_id": 0,
+        "length": 0.15
+      },
+      {
+        "id": 23,
+        "parent_id": 22,
+        "length": 0.2
+      },
+      {
+        "id": 24,
+        "parent_id": 23,
+        "length": 0.2
+      },
+      {
+        "id": 25,
+        "parent_id": 24,
+        "length": 0.15
+      },
+      {
+        "id": 26,
+        "parent_id": 25,
+        "length": 0.1
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        11,
+        16
+      ],
+      [
+        21,
+        26
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "torso",
+      "2": "withers",
+      "3": "neck",
+      "4": "head",
+      "5": "tail_base",
+      "6": "tail_tip",
+      "7": "shoulder_L",
+      "8": "elbow_L",
+      "9": "knee_L",
+      "10": "fetlock_L",
+      "11": "hoof_L",
+      "12": "shoulder_R",
+      "13": "elbow_R",
+      "14": "knee_R",
+      "15": "fetlock_R",
+      "16": "hoof_R",
+      "17": "hip_L",
+      "18": "stifle_L",
+      "19": "hock_L",
+      "20": "fetlock_h_L",
+      "21": "hoof_h_L",
+      "22": "hip_R",
+      "23": "stifle_R",
+      "24": "hock_R",
+      "25": "fetlock_h_R",
+      "26": "hoof_h_R"
+    },
+    "readings": [
+      "side: muzzle tip \u2248 (23.5, 5.5)",
+      "side: poll/head-neck junction \u2248 (19.5, 2.5)",
+      "side: withers \u2248 (15, 7)",
+      "side: chest/shoulder-top \u2248 (14, 9)",
+      "side: pelvis/hip-top \u2248 (7.5, 10)",
+      "side: tail base \u2248 (6.5, 9)",
+      "side: tail tip \u2248 (0.5, 13.5)",
+      "side: front leg - shoulder(14,9) -> elbow(14,12) -> knee(14.5,16) -> fetlock(15,19.5) -> hoof(15.5,21.5)",
+      "side: hind leg - hip(7.5,10) -> stifle(7.5,13.5) -> hock(8.5,17) -> fetlock(9,20) -> hoof(9.5,21.5)",
+      "front view: body centerline z\u224811, front legs symmetric about z=11 with lateral offset \u2248 \u00b13",
+      "top view: front legs at x\u224814-15, z\u22488 and z\u224814 (offset \u00b13 from centerline)",
+      "top view: hind legs at x\u22487-8, z\u22488 and z\u224814 (offset \u00b13 from centerline)",
+      "top view: muzzle z\u224811.5 (slightly right of centerline, head turned)",
+      "overall nose-to-tail-tip span \u224823 units, matching the 24-unit max-extent grid"
+    ]
+  },
+  "visual/lizard": {
+    "mode": "visual",
+    "subject": "lizard",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 21,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.08
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.2
+      },
+      {
+        "id": 5,
+        "parent_id": 1,
+        "length": 0.12
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.16
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.12
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.04
+      },
+      {
+        "id": 9,
+        "parent_id": 1,
+        "length": 0.12
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.16
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.12
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.04
+      },
+      {
+        "id": 13,
+        "parent_id": 0,
+        "length": 0.12
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.2
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.12
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.08
+      },
+      {
+        "id": 17,
+        "parent_id": 0,
+        "length": 0.12
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.2
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.12
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.08
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        8,
+        12
+      ],
+      [
+        16,
+        20
+      ]
+    ],
+    "labels": {
+      "0": "pelvis",
+      "1": "torso",
+      "2": "neck",
+      "3": "head",
+      "4": "tail",
+      "5": "shoulder_L",
+      "6": "upper_arm_L",
+      "7": "forearm_L",
+      "8": "paw_L",
+      "9": "shoulder_R",
+      "10": "upper_arm_R",
+      "11": "forearm_R",
+      "12": "paw_R",
+      "13": "hip_L",
+      "14": "thigh_L",
+      "15": "shank_L",
+      "16": "foot_L",
+      "17": "hip_R",
+      "18": "thigh_R",
+      "19": "shank_R",
+      "20": "foot_R"
+    },
+    "readings": [
+      "side view snout tip (0,11.5)",
+      "side view head/neck junction (8,9)",
+      "side view shoulder attach (9,11)",
+      "side view mid-body top (13,9)",
+      "side view hip attach (19,11)",
+      "side view tail base (19,12)",
+      "side view tail tip (24,12)",
+      "side view front foot (11,16)",
+      "side view hind foot (21,16)",
+      "top view body centerline z=12 constant along spine",
+      "top view front-leg shoulder point (x=9,z=9) left / (x=9,z=15) right",
+      "top view front-leg elbow (x=10,z=6) left / (x=10,z=18) right",
+      "top view front-leg wrist (x=11,z=4) left / (x=11,z=20) right",
+      "top view front paw tip (x=11,z=3) left / (x=11,z=21) right",
+      "top view hind-leg hip point (x=19,z=9) left / (x=19,z=15) right",
+      "top view hind-leg knee (x=17,z=5) left / (x=17,z=19) right",
+      "top view hind-leg ankle (x=16,z=3) left / (x=16,z=21) right",
+      "top view hind foot tip (x=15,z=2) left / (x=15,z=22) right"
+    ]
+  },
+  "visual/frog": {
+    "mode": "visual",
+    "subject": "frog",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 17,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.228571
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.228571
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.228571
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.342857
+      },
+      {
+        "id": 5,
+        "parent_id": 2,
+        "length": 0.171429
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.171429
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.171429
+      },
+      {
+        "id": 8,
+        "parent_id": 2,
+        "length": 0.171429
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.171429
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.171429
+      },
+      {
+        "id": 11,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.228571
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.285714
+      },
+      {
+        "id": 14,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.228571
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.285714
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        7,
+        10
+      ],
+      [
+        13,
+        16
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "spine_mid",
+      "2": "shoulder",
+      "3": "neck",
+      "4": "head",
+      "5": "R_upperarm",
+      "6": "R_elbow",
+      "7": "R_hand",
+      "8": "L_upperarm",
+      "9": "L_elbow",
+      "10": "L_hand",
+      "11": "R_thigh",
+      "12": "R_knee",
+      "13": "R_foot",
+      "14": "L_thigh",
+      "15": "L_knee",
+      "16": "L_foot"
+    },
+    "readings": [
+      "side(XY) snout tip ~ (24,8)",
+      "side(XY) head/eye hump ~ (18,6)",
+      "side(XY) shoulder/withers ~ (14,7)",
+      "side(XY) mid-back ~ (10,7)",
+      "side(XY) hip/pelvis top ~ (6,8)",
+      "side(XY) front-leg elbow ~ (13,10)",
+      "side(XY) front-leg wrist ~ (12,13)",
+      "side(XY) front-leg fingertip ~ (11,16)",
+      "side(XY) hind knee ~ (9,14)",
+      "side(XY) hind hock ~ (6,17)",
+      "side(XY) hind foot tip ~ (1,18)",
+      "front(ZY) shoulder width span roughly z=4 to z=20 (half-width ~8)",
+      "top(XZ) hind-foot lateral spread reaches near full z range (0-24), confirming wide hind splay vs narrower front splay"
+    ]
+  },
+  "visual/bird": {
+    "mode": "visual",
+    "subject": "bird",
+    "leaf_count": 6,
+    "expected": 6,
+    "delta": 0,
+    "n_nodes": 14,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.3
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.25
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.35
+      },
+      {
+        "id": 4,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.35
+      },
+      {
+        "id": 6,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 8,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 9,
+        "parent_id": 0,
+        "length": 0.25
+      },
+      {
+        "id": 10,
+        "parent_id": 8,
+        "length": 0.15
+      },
+      {
+        "id": 11,
+        "parent_id": 9,
+        "length": 0.15
+      },
+      {
+        "id": 12,
+        "parent_id": 10,
+        "length": 0.2
+      },
+      {
+        "id": 13,
+        "parent_id": 11,
+        "length": 0.2
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        6,
+        7
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "neck",
+      "2": "head",
+      "3": "beak",
+      "4": "tail_base",
+      "5": "tail",
+      "6": "wing_L",
+      "7": "wing_R",
+      "8": "knee_L",
+      "9": "knee_R",
+      "10": "hock_L",
+      "11": "hock_R",
+      "12": "foot_L",
+      "13": "foot_R"
+    },
+    "readings": [
+      "beak tip side (0,9)",
+      "crest top side (5,4)",
+      "skull/neck junction side (9,6.5)",
+      "shoulder/back-of-neck side (10,8)",
+      "torso center est. side (13,11) from chest(7,11)/belly(13,15.5)/back(13,8)",
+      "rump/tail-base side (18,11)",
+      "tail tip side (24,13.5)",
+      "head width front z=7-17 @ y=8",
+      "chest width front z=8-16 @ y=12",
+      "hip left front (z=14,y=15)",
+      "hip right front (z=10,y=15)",
+      "knee bend side (15,18)",
+      "stance narrows front z=9/15 @ y=18",
+      "foot on perch side (17,22)",
+      "wing shoulder side ~(10,9)",
+      "wing tip side ~(20,12), lateral z=8/16 front"
+    ]
+  },
+  "visual/starfish": {
+    "mode": "visual",
+    "subject": "starfish",
+    "leaf_count": 5,
+    "expected": 5,
+    "delta": 0,
+    "n_nodes": 11,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "ok",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 1,
+        "length": 0.4
+      },
+      {
+        "id": 3,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.4
+      },
+      {
+        "id": 5,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.4
+      },
+      {
+        "id": 7,
+        "parent_id": 0,
+        "length": 0.333333
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.4
+      },
+      {
+        "id": 9,
+        "parent_id": 0,
+        "length": 0.333333
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.4
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        4,
+        6
+      ],
+      [
+        8,
+        10
+      ]
+    ],
+    "labels": {
+      "0": "disc",
+      "1": "arm1_base",
+      "2": "arm1_tip",
+      "3": "arm2_base",
+      "4": "arm2_tip",
+      "5": "arm3_base",
+      "6": "arm3_tip",
+      "7": "arm4_base",
+      "8": "arm4_tip",
+      "9": "arm5_base",
+      "10": "arm5_tip"
+    },
+    "readings": [
+      "side view disc/hub center \u2248 (12,13)",
+      "side view top-arm tip \u2248 (12,1)",
+      "side view upper-left arm tip \u2248 (0,11)",
+      "side view upper-right arm tip \u2248 (24,11)",
+      "side view lower-left arm tip \u2248 (7,22)",
+      "side view lower-right arm tip \u2248 (18,22)",
+      "front view (Z,Y) spans Y 0-24 but only Z 8-17, showing the body is thin in Z and the star's plane lies mainly in X-Y",
+      "top view (X,Z) spans X 0-24 but only Z 8-16, confirming Z is the thin dorsal-ventral thickness, bulging only at the central disc"
+    ]
+  },
+  "visual/spider": {
+    "mode": "visual",
+    "subject": "spider",
+    "leaf_count": 10,
+    "expected": 9,
+    "delta": 1,
+    "n_nodes": 28,
+    "revised": false,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.266667
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.133333
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.133333
+      },
+      {
+        "id": 4,
+        "parent_id": 2,
+        "length": 0.088889
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.222222
+      },
+      {
+        "id": 6,
+        "parent_id": 5,
+        "length": 0.133333
+      },
+      {
+        "id": 7,
+        "parent_id": 2,
+        "length": 0.088889
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.222222
+      },
+      {
+        "id": 9,
+        "parent_id": 8,
+        "length": 0.133333
+      },
+      {
+        "id": 10,
+        "parent_id": 2,
+        "length": 0.044444
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.177778
+      },
+      {
+        "id": 12,
+        "parent_id": 11,
+        "length": 0.088889
+      },
+      {
+        "id": 13,
+        "parent_id": 2,
+        "length": 0.044444
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.177778
+      },
+      {
+        "id": 15,
+        "parent_id": 14,
+        "length": 0.088889
+      },
+      {
+        "id": 16,
+        "parent_id": 2,
+        "length": 0.088889
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.355556
+      },
+      {
+        "id": 18,
+        "parent_id": 17,
+        "length": 0.222222
+      },
+      {
+        "id": 19,
+        "parent_id": 2,
+        "length": 0.088889
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.355556
+      },
+      {
+        "id": 21,
+        "parent_id": 20,
+        "length": 0.222222
+      },
+      {
+        "id": 22,
+        "parent_id": 2,
+        "length": 0.133333
+      },
+      {
+        "id": 23,
+        "parent_id": 22,
+        "length": 0.4
+      },
+      {
+        "id": 24,
+        "parent_id": 23,
+        "length": 0.266667
+      },
+      {
+        "id": 25,
+        "parent_id": 2,
+        "length": 0.133333
+      },
+      {
+        "id": 26,
+        "parent_id": 25,
+        "length": 0.4
+      },
+      {
+        "id": 27,
+        "parent_id": 26,
+        "length": 0.266667
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        6,
+        9
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        18,
+        21
+      ],
+      [
+        24,
+        27
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "abdomen",
+      "2": "cephalothorax",
+      "3": "head",
+      "4": "leg1_L_coxa",
+      "5": "leg1_L_femur",
+      "6": "leg1_L_tarsus",
+      "7": "leg1_R_coxa",
+      "8": "leg1_R_femur",
+      "9": "leg1_R_tarsus",
+      "10": "leg2_L_coxa",
+      "11": "leg2_L_femur",
+      "12": "leg2_L_tarsus",
+      "13": "leg2_R_coxa",
+      "14": "leg2_R_femur",
+      "15": "leg2_R_tarsus",
+      "16": "leg3_L_coxa",
+      "17": "leg3_L_femur",
+      "18": "leg3_L_tarsus",
+      "19": "leg3_R_coxa",
+      "20": "leg3_R_femur",
+      "21": "leg3_R_tarsus",
+      "22": "leg4_L_coxa",
+      "23": "leg4_L_femur",
+      "24": "leg4_L_tarsus",
+      "25": "leg4_R_coxa",
+      "26": "leg4_R_femur",
+      "27": "leg4_R_tarsus"
+    },
+    "readings": [
+      "waist/pedicel ~ (14,10) side view",
+      "abdomen rear tip ~ (8,12) side view => vector (-6,-2,0) from waist, length~6",
+      "cephalothorax center ~ (17,9) side view => (3,1,0) from waist, length~3",
+      "head tip ~ (20,8) side view => (3,1,0) from cephalothorax, length~3",
+      "leg1 tip top view (24,4)&(24,16), ground y=13 => dir (7,-4,\u22136), total length~10",
+      "leg2 tip top view (22,7)&(22,13) => dir (5,-4,\u22133), total length~7",
+      "leg3 tip top view (3,7)&(3,13) => dir (-14,-4,\u22133), total length~15",
+      "leg4 tip top view (1,4)&(1,16) => dir (-16,-4,\u22136), total length~18"
+    ]
+  },
+  "visual/octopus": {
+    "mode": "visual",
+    "subject": "octopus",
+    "leaf_count": 9,
+    "expected": 9,
+    "delta": 0,
+    "n_nodes": 27,
+    "revised": true,
+    "contract_errors": [],
+    "attempt0": "err",
+    "tree_nodes": [
+      {
+        "id": 0,
+        "parent_id": null,
+        "length": 0.0
+      },
+      {
+        "id": 1,
+        "parent_id": 0,
+        "length": 0.4
+      },
+      {
+        "id": 2,
+        "parent_id": 0,
+        "length": 0.32
+      },
+      {
+        "id": 3,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 4,
+        "parent_id": 3,
+        "length": 0.32
+      },
+      {
+        "id": 5,
+        "parent_id": 4,
+        "length": 0.32
+      },
+      {
+        "id": 6,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 7,
+        "parent_id": 6,
+        "length": 0.32
+      },
+      {
+        "id": 8,
+        "parent_id": 7,
+        "length": 0.32
+      },
+      {
+        "id": 9,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 10,
+        "parent_id": 9,
+        "length": 0.32
+      },
+      {
+        "id": 11,
+        "parent_id": 10,
+        "length": 0.32
+      },
+      {
+        "id": 12,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 13,
+        "parent_id": 12,
+        "length": 0.32
+      },
+      {
+        "id": 14,
+        "parent_id": 13,
+        "length": 0.32
+      },
+      {
+        "id": 15,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 16,
+        "parent_id": 15,
+        "length": 0.32
+      },
+      {
+        "id": 17,
+        "parent_id": 16,
+        "length": 0.32
+      },
+      {
+        "id": 18,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 19,
+        "parent_id": 18,
+        "length": 0.32
+      },
+      {
+        "id": 20,
+        "parent_id": 19,
+        "length": 0.32
+      },
+      {
+        "id": 21,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 22,
+        "parent_id": 21,
+        "length": 0.32
+      },
+      {
+        "id": 23,
+        "parent_id": 22,
+        "length": 0.32
+      },
+      {
+        "id": 24,
+        "parent_id": 2,
+        "length": 0.32
+      },
+      {
+        "id": 25,
+        "parent_id": 24,
+        "length": 0.32
+      },
+      {
+        "id": 26,
+        "parent_id": 25,
+        "length": 0.32
+      }
+    ],
+    "symmetric_pairs": [
+      [
+        5,
+        8
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        17,
+        20
+      ],
+      [
+        23,
+        26
+      ]
+    ],
+    "labels": {
+      "0": "root",
+      "1": "head",
+      "2": "arm_hub",
+      "3": "arm1_base",
+      "4": "arm1_mid",
+      "5": "arm1_tip",
+      "6": "arm2_base",
+      "7": "arm2_mid",
+      "8": "arm2_tip",
+      "9": "arm3_base",
+      "10": "arm3_mid",
+      "11": "arm3_tip",
+      "12": "arm4_base",
+      "13": "arm4_mid",
+      "14": "arm4_tip",
+      "15": "arm5_base",
+      "16": "arm5_mid",
+      "17": "arm5_tip",
+      "18": "arm6_base",
+      "19": "arm6_mid",
+      "20": "arm6_tip",
+      "21": "arm7_base",
+      "22": "arm7_mid",
+      "23": "arm7_tip",
+      "24": "arm8_base",
+      "25": "arm8_mid",
+      "26": "arm8_tip"
+    },
+    "readings": [
+      "mantle/body center: side(12,12), front(12,12)[z,y], top(12,12)[x,z]",
+      "eye/head bump: side(8,9) -> offset(-4,-3) from center => head length 5, dir forward+up",
+      "arm crown attachment: side(12,16) -> offset(0,+4) from center => hub length 4, dir straight down",
+      "outstretched rear arm: top hub(13,12) -> tip(24,12) -> offset(+11,0) => total arm length ~12, dir mostly backward(-x)",
+      "front view arms span full width z:0-24, confirming wide lateral spread of arm directions"
+    ]
+  }
+}

@@ -1,0 +1,239 @@
+{
+ "roll": "elephant_0",
+ "subject": "elephant",
+ "subject_guess": "elephant",
+ "nodes": [
+  {
+   "name": "withers",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "parent": "withers",
+   "length": 8,
+   "direction": [
+    8,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    -3,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 4,
+   "direction": [
+    -3,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "trunk_base",
+   "parent": "neck",
+   "length": 4,
+   "direction": [
+    -2,
+    -4,
+    0
+   ]
+  },
+  {
+   "name": "trunk_tip",
+   "parent": "trunk_base",
+   "length": 9,
+   "direction": [
+    -2,
+    -9,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "hip",
+   "length": 3,
+   "direction": [
+    2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 8,
+   "direction": [
+    2,
+    -8,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "knee_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "knee_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hipjoint_L",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "stifle_L",
+   "parent": "hipjoint_L",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hindfoot_L",
+   "parent": "stifle_L",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hipjoint_R",
+   "parent": "hip",
+   "length": 4,
+   "direction": [
+    0,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "stifle_R",
+   "parent": "hipjoint_R",
+   "length": 6,
+   "direction": [
+    0,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "hindfoot_R",
+   "parent": "stifle_R",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L",
+   "foot_R"
+  ],
+  [
+   "hindfoot_L",
+   "hindfoot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "trunk_tip",
+  "tail_tip",
+  "foot_L",
+  "foot_R",
+  "hindfoot_L",
+  "hindfoot_R"
+ ],
+ "readings": [
+  "head at -x, trunk curling down-left: XY panel is the profile, ZY is the rear view, XZ is the top view",
+  "withers (10,5), hip (18,6) -> spine length 8",
+  "neck (7,4) off withers (10,5)",
+  "head center (4,6) off neck (7,4)",
+  "trunk_base (5,8) off neck (7,4); trunk_tip (3,17) off trunk_base -> trunk length 9",
+  "tail_base (20,8) off hip (18,6); tail_tip (22,16) off tail_base -> tail length 8",
+  "front shoulder (9,8) off withers, front knee (9,14), front foot (9,20) -> ground line ~y=20",
+  "hind hip-joint (18,9) off hip, hind stifle (18,15), hind foot (18,20)",
+  "ZY panel shows leg lateral spread: left leg z~+2, right leg z~-2 from body centerline"
+ ],
+ "notes": "Head faces -x; XY panel = profile (used for all length/height measurements), ZY panel = rear view (used to read lateral z-offsets for leg pairs), XZ panel = top view (confirms body length axis). Ears omitted as leaves per sub-flap-detail rule. Trunk treated as its own terminal appendage (proboscis), separate from head, both branching from a shared neck node (spine hub), matching the 'each side its own chain to a spine node' rule generalized to head/trunk split. Front legs split into shoulder->knee->foot; hind legs split into hip-joint->stifle->foot, inferred anatomical joints since only shoulder/hip and ground contacts are directly visible on the grid. Left/right leg lateral (z) offsets inferred from ZY panel spacing (~2 units each side of centerline) since XY panel cannot show depth. All leg chains parent to spine nodes (withers for front, hip for rear) independently for L and R, never sharing a joint below the spine.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

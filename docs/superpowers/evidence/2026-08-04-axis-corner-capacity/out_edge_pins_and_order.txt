@@ -1,0 +1,41 @@
+arm                                  st        scale     cover cnr bnd
+----------------------------------------------------------------------
+QUADRUPED free                       PACK   0.667979  0.680970   2   6
+QUADRUPED pair0 edge x=1/y=1         FAIL   0.476860         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.47686): NOT_LOCAL_ROOT_CONNECTABLE: local-root co
+QUADRUPED pair0 edge x=0/y=0         PACK   0.619667  0.592914   1   5
+QUADRUPED 2 pairs, all 4 edges       FAIL   0.476860         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.47686): NOT_LOCAL_ROOT_CONNECTABLE: local-root co
+BIRD      free                       PACK   0.652542  0.669464   2   6
+BIRD      pair0 edge x=1/y=1         FAIL   0.481127         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.481127): POLYS_MULTIPLE_IBPS: multiple inactive-b
+BIRD      pair0 edge x=0/y=0         PACK   0.652542  0.669464   2   6
+BIRD      2 pairs, all 4 edges       FAIL   0.451588         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.451588): NOT_LOCAL_ROOT_CONNECTABLE: local-root c
+HUMANOID  free                       PACK   0.629445  0.558981   0   5
+HUMANOID  pair0 edge x=1/y=1         PACK   0.629445  0.558981   0   5
+HUMANOID  pair0 edge x=0/y=0         FAIL   0.589467         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.589467): NOT_LOCAL_ROOT_CONNECTABLE: local-root c
+HUMANOID  2 pairs, all 4 edges       PACK   0.638738  0.488009   0   4
+INSECT    free                       PACK   0.763400  0.789076   2   6
+INSECT    pair0 edge x=1/y=1         FAIL   0.700807         -   -   -  RuntimeError: polygon network is not valid after optimization (scale=0.700807): the active-path network does n
+INSECT    pair0 edge x=0/y=0         FAIL   0.691692         -   -   -  RuntimeError: polygon network is not valid after optimization (scale=0.691692): the active-path network does n
+INSECT    2 pairs, all 4 edges       FAIL   0.715767         -   -   -  RuntimeError: polygon network is not valid after optimization (scale=0.715767): the active-path network does n
+star-5    free                       PACK   0.323556  0.703897   1   5
+star-5    4 edges (1-eq)             PACK   0.323556  0.703897   1   5
+star-6    free                       PACK   0.292893  0.828427   2   6
+star-6    4 edges (1-eq)             PACK   0.297549  0.858084   2   5
+star-7    free                       FAIL   0.267949         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.267949): POLYS_MULTIPLE_IBPS: multiple inactive-b
+star-7    4 edges (1-eq)             PACK   0.265708  0.839028   0   6
+star-8    free                       PACK   0.255983  0.924501   2   6
+star-8    4 edges (1-eq)             FAIL   0.251000         -   -   -  RuntimeError: could not build a full crease pattern (scale=0.251): POLYS_MULTIPLE_IBPS: multiple inactive-bord
+
+Q2  star-5 node-order restarts, NO pins (does the ladder already reach 0.353553?)
+  order#0  PACK   0.323556  0.703897
+  order#1  PACK   0.323556  0.703897
+  order#2  PACK   0.323556  0.703897
+  order#3  PACK   0.323556  0.703897
+  order#4  PACK   0.323556  0.703897
+  order#5  PACK   0.323556  0.703897
+  order#6  PACK   0.323556  0.703897
+  order#7  PACK   0.323556  0.703897
+  order#8  PACK   0.323556  0.703897
+  order#9  PACK   0.323556  0.703897
+  order#10 PACK   0.323556  0.703897
+  order#11 PACK   0.323556  0.703897
+  best unpinned scale over 12 orders: 0.323556   (4-corner-pinned reference: 0.353553)

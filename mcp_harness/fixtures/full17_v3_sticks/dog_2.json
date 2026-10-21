@@ -1,0 +1,228 @@
+{
+ "roll": "dog_2",
+ "subject": "dog",
+ "subject_guess": "dog",
+ "nodes": [
+  {
+   "name": "chest",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "chest",
+   "length": 6,
+   "direction": [
+    -4,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "withers",
+   "length": 6,
+   "direction": [
+    -5.5,
+    -1.5,
+    0
+   ]
+  },
+  {
+   "name": "pelvis",
+   "parent": "chest",
+   "length": 5,
+   "direction": [
+    4,
+    2.5,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 2,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_mid",
+   "parent": "tail_base",
+   "length": 4,
+   "direction": [
+    2,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_mid",
+   "length": 2,
+   "direction": [
+    1,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "withers",
+   "length": 5,
+   "direction": [
+    0,
+    -3.5,
+    -3
+   ]
+  },
+  {
+   "name": "knee_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_foot_R",
+   "parent": "knee_R",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "withers",
+   "length": 5,
+   "direction": [
+    0,
+    -3.5,
+    3
+   ]
+  },
+  {
+   "name": "knee_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "foreleg_foot_L",
+   "parent": "knee_L",
+   "length": 7,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    -4
+   ]
+  },
+  {
+   "name": "hock_R",
+   "parent": "hip_R",
+   "length": 7,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_foot_R",
+   "parent": "hock_R",
+   "length": 5,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    0,
+    -3,
+    4
+   ]
+  },
+  {
+   "name": "hock_L",
+   "parent": "hip_L",
+   "length": 7,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "hindleg_foot_L",
+   "parent": "hock_L",
+   "length": 5,
+   "direction": [
+    1,
+    -1,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foreleg_foot_L",
+   "foreleg_foot_R"
+  ],
+  [
+   "hindleg_foot_L",
+   "hindleg_foot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail_tip",
+  "foreleg_foot_R",
+  "foreleg_foot_L",
+  "hindleg_foot_R",
+  "hindleg_foot_L"
+ ],
+ "readings": [
+  "head at -x (nose points left in XY panel): XY panel is the profile, ZY is the front view, XZ is the top view",
+  "XY nose tip (1,8), ear top (8,4) -> head centroid ~(4.5,6)",
+  "XY withers/top-of-shoulder (10,4.5)",
+  "XY hip/top-of-croup (18,6)",
+  "XY tail base (17,6), tail mid-curl (19,2), tail tip (20,0)",
+  "XY front shoulder (10,8), front elbow (10,14), front paw (11,21)",
+  "XY rear hip joint (18,9), hock (18,16), rear paw (19,21); ground line at y=21.5",
+  "ZY panel: head centered z=12; front legs at z=9 (dog right) and z=15 (dog left); rear legs slightly wider at z=8 (right) and z=16 (left)",
+  "XZ top view confirms front legs near x=9-10 and rear legs near x=18-19, symmetric about z=12 centerline"
+ ],
+ "notes": "Head treated as single leaf (protrudes from trunk on neck); ears are sub-flap detail on the head and not counted. Tail split into base/mid/tip (3 segments) inferred from the curl visible in the XY panel; only tail_tip is the leaf endpoint, base/mid are joints. Each foreleg and hindleg split into two segments (shoulder/hip -> knee/hock -> foot) inferred from the visible bend in the XY panel; ground line at XY y=21.5 used to confirm foot placement. Left/right assigned assuming the ZY panel is a front view with the dog facing the viewer (nose toward -x, camera at -x looking +x), so screen-right (larger z) corresponds to the animal's own left side. All four legs given identical proportional segment lengths per side pair (front pair equal, rear pair equal) per the proportion-not-pose rule, despite mid-stride differences in the render. Root 'chest' placed at trunk center with zero length as required.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

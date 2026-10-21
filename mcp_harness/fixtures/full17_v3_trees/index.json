@@ -1,0 +1,363 @@
+{
+ "rolls": [
+  {
+   "roll": "ant_0",
+   "subject": "ant",
+   "n_leaves": 8,
+   "n_pairs": 3,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "ant_1",
+   "subject": "ant",
+   "n_leaves": 8,
+   "n_pairs": 3,
+   "served_stage": "order"
+  },
+  {
+   "roll": "ant_2",
+   "subject": "ant",
+   "n_leaves": 8,
+   "n_pairs": 3,
+   "served_stage": "order"
+  },
+  {
+   "roll": "bat_0",
+   "subject": "bat",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "bat_2",
+   "subject": "bat",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "bat_3",
+   "subject": "bat",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "bird_0",
+   "subject": "bird",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "bird_1",
+   "subject": "bird",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "placement"
+  },
+  {
+   "roll": "bird_2",
+   "subject": "bird",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "cat_1",
+   "subject": "cat",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "cat_2",
+   "subject": "cat",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "cat_3",
+   "subject": "cat",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "crab_0",
+   "subject": "crab",
+   "n_leaves": 10,
+   "n_pairs": 5,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "crab_1",
+   "subject": "crab",
+   "n_leaves": 10,
+   "n_pairs": 5,
+   "served_stage": "placement"
+  },
+  {
+   "roll": "crab_3",
+   "subject": "crab",
+   "n_leaves": 11,
+   "n_pairs": 5,
+   "served_stage": "stub"
+  },
+  {
+   "roll": "dog_0",
+   "subject": "dog",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "dog_1",
+   "subject": "dog",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "dog_2",
+   "subject": "dog",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "dolphin_0",
+   "subject": "dolphin",
+   "n_leaves": 5,
+   "n_pairs": 1,
+   "served_stage": "none"
+  },
+  {
+   "roll": "dolphin_1",
+   "subject": "dolphin",
+   "n_leaves": 5,
+   "n_pairs": 1,
+   "served_stage": "none"
+  },
+  {
+   "roll": "dolphin_2",
+   "subject": "dolphin",
+   "n_leaves": 5,
+   "n_pairs": 1,
+   "served_stage": "none"
+  },
+  {
+   "roll": "elephant_0",
+   "subject": "elephant",
+   "n_leaves": 7,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "elephant_1",
+   "subject": "elephant",
+   "n_leaves": 8,
+   "n_pairs": 3,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "elephant_3",
+   "subject": "elephant",
+   "n_leaves": 8,
+   "n_pairs": 3,
+   "served_stage": "order"
+  },
+  {
+   "roll": "frog_0",
+   "subject": "frog",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "frog_1",
+   "subject": "frog",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "frog_2",
+   "subject": "frog",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "guinea_pig_0",
+   "subject": "guinea_pig",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "guinea_pig_1",
+   "subject": "guinea_pig",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "guinea_pig_2",
+   "subject": "guinea_pig",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "horse_0",
+   "subject": "horse",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "horse_1",
+   "subject": "horse",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "horse_2",
+   "subject": "horse",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "lizard_0",
+   "subject": "lizard",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "lizard_1",
+   "subject": "lizard",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "lizard_2",
+   "subject": "lizard",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "octopus_0",
+   "subject": "octopus",
+   "n_leaves": 9,
+   "n_pairs": 0,
+   "served_stage": "jitter"
+  },
+  {
+   "roll": "octopus_2",
+   "subject": "octopus",
+   "n_leaves": 9,
+   "n_pairs": 4,
+   "served_stage": "none"
+  },
+  {
+   "roll": "octopus_3",
+   "subject": "octopus",
+   "n_leaves": 9,
+   "n_pairs": 4,
+   "served_stage": "placement"
+  },
+  {
+   "roll": "rabbit_0",
+   "subject": "rabbit",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "rabbit_1",
+   "subject": "rabbit",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "rabbit_3",
+   "subject": "rabbit",
+   "n_leaves": 6,
+   "n_pairs": 2,
+   "served_stage": "order"
+  },
+  {
+   "roll": "scorpion_0",
+   "subject": "scorpion",
+   "n_leaves": 11,
+   "n_pairs": 5,
+   "served_stage": "order"
+  },
+  {
+   "roll": "scorpion_1",
+   "subject": "scorpion",
+   "n_leaves": 11,
+   "n_pairs": 5,
+   "served_stage": "order"
+  },
+  {
+   "roll": "scorpion_2",
+   "subject": "scorpion",
+   "n_leaves": 11,
+   "n_pairs": 5,
+   "served_stage": "order"
+  },
+  {
+   "roll": "spider_0",
+   "subject": "spider",
+   "n_leaves": 9,
+   "n_pairs": 4,
+   "served_stage": "flatten"
+  },
+  {
+   "roll": "spider_1",
+   "subject": "spider",
+   "n_leaves": 9,
+   "n_pairs": 4,
+   "served_stage": "none"
+  },
+  {
+   "roll": "spider_2",
+   "subject": "spider",
+   "n_leaves": 9,
+   "n_pairs": 4,
+   "served_stage": "order"
+  },
+  {
+   "roll": "starfish_0",
+   "subject": "starfish",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "starfish_1",
+   "subject": "starfish",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  },
+  {
+   "roll": "starfish_2",
+   "subject": "starfish",
+   "n_leaves": 5,
+   "n_pairs": 2,
+   "served_stage": "none"
+  }
+ ],
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree",
+ "count": 51
+}

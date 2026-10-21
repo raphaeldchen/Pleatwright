@@ -1,0 +1,298 @@
+[
+ {
+  "subject": "starfish",
+  "faces": 38,
+  "cells": 6,
+  "pairs": 671,
+  "baseline_contradiction": null,
+  "forced": 419,
+  "free": 252,
+  "pct_free": 37.56,
+  "max_cell_free": 236,
+  "cells_with_free": 3,
+  "max_cover": 34,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 0.2
+ },
+ {
+  "subject": "bird",
+  "faces": 104,
+  "cells": 94,
+  "pairs": 4012,
+  "baseline_contradiction": null,
+  "forced": 4004,
+  "free": 8,
+  "pct_free": 0.2,
+  "max_cell_free": 8,
+  "cells_with_free": 9,
+  "max_cover": 76,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 4.7
+ },
+ {
+  "subject": "lizard",
+  "faces": 20,
+  "cells": 7,
+  "pairs": 158,
+  "baseline_contradiction": null,
+  "forced": 150,
+  "free": 8,
+  "pct_free": 5.06,
+  "max_cell_free": 8,
+  "cells_with_free": 2,
+  "max_cover": 12,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 6.8
+ },
+ {
+  "subject": "horse",
+  "faces": 166,
+  "cells": 82,
+  "pairs": 12407,
+  "baseline_contradiction": null,
+  "forced": 12407,
+  "free": 0,
+  "pct_free": 0.0,
+  "max_cell_free": 0,
+  "cells_with_free": 0,
+  "max_cover": 124,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 21.6
+ },
+ {
+  "subject": "octopus",
+  "faces": 144,
+  "cells": 134,
+  "pairs": 8036,
+  "baseline_contradiction": null,
+  "forced": 8036,
+  "free": 0,
+  "pct_free": 0.0,
+  "max_cell_free": 0,
+  "cells_with_free": 0,
+  "max_cover": 114,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 48.6
+ },
+ {
+  "subject": "frog",
+  "faces": 28,
+  "cells": 29,
+  "pairs": 290,
+  "baseline_contradiction": null,
+  "forced": 290,
+  "free": 0,
+  "pct_free": 0.0,
+  "max_cell_free": 0,
+  "cells_with_free": 0,
+  "max_cover": 20,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 69.4
+ },
+ {
+  "subject": "guinea_pig",
+  "faces": 28,
+  "cells": 27,
+  "pairs": 290,
+  "baseline_contradiction": null,
+  "forced": 290,
+  "free": 0,
+  "pct_free": 0.0,
+  "max_cell_free": 0,
+  "cells_with_free": 0,
+  "max_cover": 20,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 353.7
+ },
+ {
+  "subject": "dog",
+  "faces": 298,
+  "cells": 150,
+  "pairs": 30697,
+  "baseline_contradiction": null,
+  "forced": 30697,
+  "free": 0,
+  "pct_free": 0.0,
+  "max_cell_free": 0,
+  "cells_with_free": 0,
+  "max_cover": 180,
+  "variants": {
+   "fifo": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand1": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   },
+   "rand2": {
+    "contradiction": null,
+    "disagree": 0,
+    "only_shipped": 0,
+    "only_variant": 0,
+    "verdict_flip": false
+   }
+  },
+  "secs": 523.7
+ }
+]

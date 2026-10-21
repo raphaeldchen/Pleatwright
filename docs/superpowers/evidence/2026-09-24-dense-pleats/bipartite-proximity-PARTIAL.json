@@ -1,0 +1,62 @@
+[
+ {
+  "subject": "starfish",
+  "N": 4,
+  "paths": 10,
+  "adjacency_edges": 11,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 3,
+  "secs": 0.1
+ },
+ {
+  "subject": "bird",
+  "N": 54,
+  "paths": 76,
+  "adjacency_edges": 63,
+  "isolated": 4,
+  "bipartite": true,
+  "odd_cycle_len": 0,
+  "secs": 3.8
+ },
+ {
+  "subject": "lizard",
+  "N": 34,
+  "paths": 2,
+  "adjacency_edges": 0,
+  "isolated": 2,
+  "bipartite": true,
+  "odd_cycle_len": 0,
+  "secs": 7.1
+ },
+ {
+  "subject": "horse",
+  "N": 46,
+  "paths": 134,
+  "adjacency_edges": 126,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 3,
+  "secs": 15.7
+ },
+ {
+  "subject": "octopus",
+  "N": 74,
+  "paths": 110,
+  "adjacency_edges": 107,
+  "isolated": 0,
+  "bipartite": false,
+  "odd_cycle_len": 3,
+  "secs": 40.2
+ },
+ {
+  "subject": "frog",
+  "N": 38,
+  "paths": 10,
+  "adjacency_edges": 7,
+  "isolated": 2,
+  "bipartite": true,
+  "odd_cycle_len": 0,
+  "secs": 66.1
+ }
+]

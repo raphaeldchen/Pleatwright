@@ -1,0 +1,43 @@
+displacement of the PINNED coordinate, optimizer -> post-projection
+arm                            st     node  ax   want          pre         post     |move|
+--------------------------------------------------------------------------------------------
+star-5  4 corners (2-eq)       PACK      1   x  0.000  0.000000001  0.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      1   y  0.000  0.000000000  0.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      2   x  1.000  1.000000000  1.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      2   y  0.000  0.000000000  0.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      3   x  1.000  1.000000000  1.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      3   y  1.000  1.000000000  1.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      4   x  0.000  0.000000000  0.000000000   0.00e+00
+star-5  4 corners (2-eq)       PACK      4   y  1.000  1.000000000  1.000000000   0.00e+00
+                                                     worst |post - requested|    0.00e+00
+
+star-6  1 corner (2-eq)        PACK      1   x  0.000  0.000000000  0.000000000   0.00e+00
+star-6  1 corner (2-eq)        PACK      1   y  0.000  0.000000001  0.000000000   0.00e+00
+                                                     worst |post - requested|    0.00e+00
+
+star-6  4 edges (1-eq)         PACK      1   x  0.000  0.000000000  0.000000000   0.00e+00
+star-6  4 edges (1-eq)         PACK      2   x  1.000  1.000000000  1.000000000   3.62e-10
+star-6  4 edges (1-eq)         PACK      3   y  0.000  0.000000000  0.000000000   4.91e-10
+star-6  4 edges (1-eq)         PACK      4   y  1.000  1.000000000  0.999999999   6.63e-10
+                                                     worst |post - requested|    6.63e-10
+
+star-7  4 edges (1-eq)         PACK      1   x  0.000  0.000000000  0.000000583   5.83e-07
+star-7  4 edges (1-eq)         PACK      2   x  1.000  1.000000000  0.999999764   2.36e-07
+star-7  4 edges (1-eq)         PACK      3   y  0.000  0.000000000  0.000000028   2.81e-08
+star-7  4 edges (1-eq)         PACK      4   y  1.000  0.999999998  1.000000000   0.00e+00
+                                                     worst |post - requested|    5.83e-07
+
+HUMANOID 4 edges (1-eq)        PACK      3   x  1.000  1.000000000  1.000000000   0.00e+00
+HUMANOID 4 edges (1-eq)        PACK      4   y  1.000  0.999999999  1.000000000   0.00e+00
+HUMANOID 4 edges (1-eq)        PACK      6   x  0.000  0.000000000  0.000000000   0.00e+00
+HUMANOID 4 edges (1-eq)        PACK      7   y  0.000  0.000000000  0.000000000   0.00e+00
+                                                     worst |post - requested|    0.00e+00
+
+QUADRUPED pair0 edge x=0/y=0   PACK      3   x  0.000  0.000000001  0.000000004   4.38e-09
+QUADRUPED pair0 edge x=0/y=0   PACK      4   y  0.000  0.000000000  0.000000004   4.38e-09
+                                                     worst |post - requested|    4.38e-09
+
+BIRD    pair0 edge x=0/y=0     PACK      3   x  0.000  0.000000000  0.000000000   1.13e-10
+BIRD    pair0 edge x=0/y=0     PACK      4   y  0.000  0.000000000  0.000000000   1.13e-10
+                                                     worst |post - requested|    1.13e-10
+

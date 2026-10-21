@@ -1,0 +1,10 @@
+arm                                    status      scale   coverage      bbox
+star-4 unconstrained                   PACK     0.500000   1.000000  1.000000
+star-4 4 corners pinned                PACK     0.500000   1.000000  1.000000
+star-4 1 corner pinned                 PACK     0.500000   1.000000  1.000000
+star-5 unconstrained                   PACK     0.323556   0.703897  1.000000
+star-5 4 corners pinned                PACK     0.353553   1.000000  1.000000
+TEMPLATE_HUMANOID unconstrained        PACK     0.629445   0.558981  1.000000
+TEMPLATE_QUADRUPED unconstrained       PACK     0.667979   0.680970  1.000000
+TEMPLATE_BIRD unconstrained            PACK     0.652542   0.669464  1.000000
+TEMPLATE_INSECT unconstrained          PACK     0.763400   0.789076  1.000000

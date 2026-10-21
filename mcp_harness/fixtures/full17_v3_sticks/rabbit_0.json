@@ -1,0 +1,175 @@
+{
+ "roll": "rabbit_0",
+ "subject": "rabbit",
+ "subject_guess": "rabbit (sitting)",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spine1_chest",
+   "parent": "pelvis",
+   "length": 7,
+   "direction": [
+    6,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "spine1_chest",
+   "length": 4,
+   "direction": [
+    2,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 4,
+   "direction": [
+    4,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "tail",
+   "parent": "pelvis",
+   "length": 5,
+   "direction": [
+    -5,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_L",
+   "parent": "spine1_chest",
+   "length": 8,
+   "direction": [
+    5,
+    -4,
+    4
+   ]
+  },
+  {
+   "name": "foot_L",
+   "parent": "shoulder_L",
+   "length": 6,
+   "direction": [
+    3,
+    -5,
+    2
+   ]
+  },
+  {
+   "name": "shoulder_R",
+   "parent": "spine1_chest",
+   "length": 8,
+   "direction": [
+    5,
+    -4,
+    -4
+   ]
+  },
+  {
+   "name": "foot_R",
+   "parent": "shoulder_R",
+   "length": 6,
+   "direction": [
+    3,
+    -5,
+    -2
+   ]
+  },
+  {
+   "name": "hip_L",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    4,
+    -3,
+    3
+   ]
+  },
+  {
+   "name": "hindfoot_L",
+   "parent": "hip_L",
+   "length": 5,
+   "direction": [
+    4,
+    -3,
+    2
+   ]
+  },
+  {
+   "name": "hip_R",
+   "parent": "pelvis",
+   "length": 6,
+   "direction": [
+    4,
+    -3,
+    -3
+   ]
+  },
+  {
+   "name": "hindfoot_R",
+   "parent": "hip_R",
+   "length": 5,
+   "direction": [
+    4,
+    -3,
+    -2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_L",
+   "foot_R"
+  ],
+  [
+   "hindfoot_L",
+   "hindfoot_R"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail",
+  "foot_L",
+  "foot_R",
+  "hindfoot_L",
+  "hindfoot_R"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile (nose/ears toward x=14-21), ZY is the front, XZ is the top view",
+  "ear tips (XY): (14,0) and (18,1)",
+  "eye (XY): (17,8)",
+  "nose/mouth (XY): (21,10)",
+  "neck junction / top of shoulders (XY): (13,8)",
+  "withers/back arch (XY): (7,8)",
+  "rump top (XY): (2,10)",
+  "tail bump (XY): (1,12)",
+  "ground line (XY): y=20",
+  "front paw on ground near chin (XY): (20,19)",
+  "hind foot flat on ground in front of haunch (XY): (14,20)",
+  "pelvis/hip mass center (XY): approx (6,14)",
+  "chest/shoulder base (XY): approx (12,10)",
+  "body width center (ZY): z spans 6-18, center z=12",
+  "front feet cluster (ZY bottom blob): z=8-16",
+  "hind feet cluster (ZY bottom blob): z=6-18 but narrower stance, z=9-15"
+ ],
+ "notes": "Rabbit is sitting/crouched with legs folded, so limb segment endpoints (elbow/hock) were inferred proportionally from typical lagomorph anatomy rather than read directly, since the mesh only shows overall silhouette with paws tucked under chin (front) and flat in front of haunches (hind). Body width (z) center taken as 12 from ZY/XZ panels; left/right leg pairs given symmetric +/- z offsets since only silhouette overlap is visible in profile. Head counted as a leaf since it protrudes on a clear neck; ears/eyes/nose treated as sub-flap detail, not separate leaves. Tail is a small tucked flap, counted once. Root placed at pelvis (hip mass center) with zero length/direction per convention.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

@@ -1,0 +1,218 @@
+{
+ "roll": "frog_0",
+ "subject": "frog",
+ "n": 0,
+ "tree_nodes": [
+  {
+   "id": 0,
+   "parent_id": null,
+   "length": 0.0
+  },
+  {
+   "id": 1,
+   "parent_id": 0,
+   "length": 0.4
+  },
+  {
+   "id": 2,
+   "parent_id": 1,
+   "length": 0.218182
+  },
+  {
+   "id": 3,
+   "parent_id": 1,
+   "length": 0.290909
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.072727
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.072727
+  },
+  {
+   "id": 6,
+   "parent_id": 1,
+   "length": 0.290909
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.072727
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.072727
+  },
+  {
+   "id": 9,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.145455
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.145455
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.145455
+  },
+  {
+   "id": 13,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 14,
+   "parent_id": 13,
+   "length": 0.145455
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.145455
+  },
+  {
+   "id": 16,
+   "parent_id": 15,
+   "length": 0.145455
+  }
+ ],
+ "served_nodes": [
+  {
+   "id": 2,
+   "parent_id": null,
+   "length": 0
+  },
+  {
+   "id": 1,
+   "parent_id": 2,
+   "length": 0.218182
+  },
+  {
+   "id": 0,
+   "parent_id": 1,
+   "length": 0.4
+  },
+  {
+   "id": 3,
+   "parent_id": 1,
+   "length": 0.290909
+  },
+  {
+   "id": 6,
+   "parent_id": 1,
+   "length": 0.290909
+  },
+  {
+   "id": 9,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 13,
+   "parent_id": 0,
+   "length": 0.218182
+  },
+  {
+   "id": 4,
+   "parent_id": 3,
+   "length": 0.072727
+  },
+  {
+   "id": 7,
+   "parent_id": 6,
+   "length": 0.072727
+  },
+  {
+   "id": 10,
+   "parent_id": 9,
+   "length": 0.145455
+  },
+  {
+   "id": 14,
+   "parent_id": 13,
+   "length": 0.145455
+  },
+  {
+   "id": 11,
+   "parent_id": 10,
+   "length": 0.145455
+  },
+  {
+   "id": 15,
+   "parent_id": 14,
+   "length": 0.145455
+  },
+  {
+   "id": 5,
+   "parent_id": 4,
+   "length": 0.072727
+  },
+  {
+   "id": 8,
+   "parent_id": 7,
+   "length": 0.072727
+  },
+  {
+   "id": 12,
+   "parent_id": 11,
+   "length": 0.145455
+  },
+  {
+   "id": 16,
+   "parent_id": 15,
+   "length": 0.145455
+  }
+ ],
+ "symmetric_pairs": [
+  [
+   5,
+   8
+  ],
+  [
+   12,
+   16
+  ]
+ ],
+ "names": {
+  "0": "pelvis",
+  "1": "shoulder",
+  "2": "head",
+  "3": "shoulder_L",
+  "4": "elbow_L",
+  "5": "hand_L",
+  "6": "shoulder_R",
+  "7": "elbow_R",
+  "8": "hand_R",
+  "9": "hip_L",
+  "10": "knee_L",
+  "11": "hock_L",
+  "12": "foot_L",
+  "13": "hip_R",
+  "14": "knee_R",
+  "15": "hock_R",
+  "16": "foot_R"
+ },
+ "leaves": [
+  "head",
+  "hand_L",
+  "hand_R",
+  "foot_L",
+  "foot_R"
+ ],
+ "served_stage": "order",
+ "served_fold": "{\"file_spec\": 1.1, \"file_creator\": \"headless_treemaker\", \"file_classes\": [\"singleModel\"], \"frame_title\": \"TreeMaker crease pattern (scale=0.544785) [ide: rescued by node-order restart: the exact tree did not pack, so the backend retried with the node list in a different order ('canonical'); the engine seeds initial flap positions by list order, so this moves the packer's starting point. Edge lengths are untouched by this step] [ide: served a re-rooted tree: node 2] your tree packed, but the SAME tree re-rooted at another of its nodes compiled to a strictly better base (by invented-flap count, scale and/or mirror symmetry), so the backend served that rooting instead. Nothing about your requested anatomy changed -- same nodes, same edges, same edge lengths, same flaps, same bilateral pairs. Only which node the engine picks up FIRST differs, which is what selects the mountain/valley colouring among the many a base admits. IMPORTANT: the tree that produced THIS base is read_base()'s served_tree, not the node list you sent -- any tool that recompiles (apply_shaping_ops, suggest_flap_for_region, suggest_pose_stack) must be given served_tree, or it will silently work against a different base]\", \"frame_classes\": [\"creasePattern\"], \"frame_attributes\": [\"2D\"], \"vertices_coords\": [[0.651499398, 0.976257117], [0.976257117, 0.651499398], [0.673798048, 0.953958467], [0.701814013, 0.925942502], [0.813878257, 0.813878257], [0.925942502, 0.701814013], [0.953958467, 0.673798048], [0.683034451, 0.96319487], [0.722655009, 0.946783498], [0.881137783, 0.881137783], [0.946783498, 0.722655009], [0.96319487, 0.683034451], [0.648421373, 0.928581792], [0.644554151, 0.86868264], [0.62908521, 0.62908521], [0.86868264, 0.644554151], [0.928581792, 0.648421373], [1.0, 1.0], [1.0, 0.643413894], [1.0, 0.881137783], [1.0, 0.722655009], [1.0, 0.683034451], [0.643413894, 1.0], [0.881137783, 1.0], [0.722655009, 1.0], [0.683034451, 1.0], [0.0, 0.504290448], [0.612027987, 0.975819152], [0.58064208, 0.951638303], [0.455098022, 0.854914578], [0.282474887, 0.721919413], [0.188316735, 0.649376536], [0.12554449, 0.601014507], [0.062772245, 0.552652477], [0.473706882, 0.473706882], [0.315804829, 0.483901389], [0.210536553, 0.490697742], [0.105268276, 0.497494095], [0.504290448, 0.0], [0.056032315, 0.448258134], [0.11206463, 0.392225819], [0.168096945, 0.336193504], [0.252145224, 0.252145224], [0.336193504, 0.168096945], [0.392225819, 0.11206463], [0.448258134, 0.056032315], [0.483901389, 0.315804829], [0.490697742, 0.210536553], [0.497494095, 0.105268276], [0.975819152, 0.612027987], [0.951638303, 0.58064208], [0.854914578, 0.455098022], [0.721919413, 0.282474887], [0.649376536, 0.188316735], [0.601014507, 0.12554449], [0.552652477, 0.062772245]], \"edges_vertices\": [[2, 7], [3, 8], [4, 9], [5, 10], [6, 11], [0, 7], [7, 8], [8, 9], [9, 10], [10, 11], [11, 1], [0, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 1], [2, 12], [3, 13], [4, 14], [5, 15], [6, 16], [1, 16], [16, 15], [15, 14], [14, 13], [13, 12], [12, 0], [19, 9], [20, 10], [21, 11], [23, 9], [24, 8], [25, 7], [27, 12], [28, 13], [29, 14], [30, 34], [31, 35], [32, 36], [33, 37], [39, 37], [40, 36], [41, 35], [42, 34], [43, 46], [44, 47], [45, 48], [49, 16], [50, 15], [51, 14], [52, 34], [53, 46], [54, 47], [55, 48], [18, 1], [9, 17], [17, 19], [19, 20], [20, 21], [21, 18], [0, 22], [17, 23], [23, 24], [24, 25], [25, 22], [14, 34], [34, 35], [35, 36], [36, 37], [37, 26], [22, 27], [27, 28], [28, 29], [29, 30], [30, 31], [31, 32], [32, 33], [33, 26], [34, 46], [46, 47], [47, 48], [48, 38], [26, 39], [39, 40], [40, 41], [41, 42], [42, 43], [43, 44], [44, 45], [45, 38], [18, 49], [49, 50], [50, 51], [51, 52], [52, 53], [53, 54], [54, 55], [55, 38]], \"edges_assignment\": [\"F\", \"F\", \"M\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"M\", \"M\", \"M\", \"M\", \"M\", \"M\", \"F\", \"F\", \"V\", \"F\", \"F\", \"V\", \"V\", \"V\", \"V\", \"V\", \"V\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"M\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"F\", \"M\", \"F\", \"F\", \"F\", \"F\", \"F\", \"M\", \"F\", \"F\", \"F\", \"F\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"V\", \"V\", \"V\", \"V\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\", \"B\"]}",
+ "source": "full17_v3 run (prompt 055dc4a), five shards, 2026-09-13; untracked repair_rolls_out_full17_v3/<roll>/state.json in the silly-tereshkova worktree"
+}

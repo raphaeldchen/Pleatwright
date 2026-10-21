@@ -1,0 +1,19 @@
+{
+ "run1": [
+  "bird",
+  "elephant",
+  "frog",
+  "guinea_pig"
+ ],
+ "run2": [
+  "dolphin",
+  "guinea_pig",
+  "horse",
+  "starfish"
+ ],
+ "uniform": [
+  "bird",
+  "lizard",
+  "octopus"
+ ]
+}

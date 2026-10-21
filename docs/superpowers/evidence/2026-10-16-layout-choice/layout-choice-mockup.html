@@ -1,0 +1,128 @@
+<h2>The layout choice, in the app</h2>
+<p class="subtitle">A sketch using real data: dolphin_0, which packs at grid 50 with mirror symmetry or at grid 32 without it. Both versions solve, certify and fold. The chat panel is on the left and the viewer on the right, as in the app today.</p>
+
+<style>
+  .app { display:flex; gap:16px; align-items:flex-start; }
+  .chatcol { flex:0 0 380px; border:1px solid var(--border, #ccc); border-radius:10px; padding:14px; }
+  .viewcol { flex:1; border:1px solid var(--border, #ccc); border-radius:10px; padding:14px; }
+  .stage { font-size:13px; opacity:.7; margin:4px 0 10px; }
+  .q { font-weight:600; margin:6px 0 10px; }
+  .opt { border:1px solid var(--border, #ccc); border-radius:8px; padding:10px 12px; margin-bottom:8px; cursor:pointer; }
+  .opt:hover { border-color:#5b8def; }
+  .opt .t { font-weight:600; }
+  .opt .t small { font-weight:400; opacity:.7; }
+  .opt ul { margin:6px 0 0 18px; padding:0; font-size:13px; }
+  .opt li { margin:2px 0; }
+  .cps { display:flex; gap:16px; }
+  .cp { flex:1; text-align:center; font-size:13px; }
+  .cp svg { width:100%; max-width:320px; border:1px solid #999; background:#fff; }
+  .cp .n { font-weight:600; margin-top:6px; }
+  .sq { display:flex; gap:24px; align-items:flex-end; margin-top:18px; font-size:12px; }
+  .sq div.box { border:2px solid #888; position:relative; }
+  .sq div.fill { position:absolute; left:0; bottom:0; background:#8b1a2b; opacity:.85; }
+  .note { font-size:12px; opacity:.7; margin-top:8px; }
+</style>
+
+<div class="app">
+  <div class="chatcol">
+    <div class="stage">Tree approved · Packing</div>
+    <div class="q">Your dolphin can be packed two ways. Which do you want?</div>
+
+    <div class="opt" data-choice="smaller" onclick="toggleSelect(this)">
+      <div class="t">Smaller grid <small>· grid 32 (Recommended)</small></div>
+      <ul>
+        <li><b>Pro:</b> the folded dolphin is 1.56× larger from the same sheet</li>
+        <li><b>Pro:</b> about half the creases (129 vertices against 257), with fewer hidden layers per flap</li>
+        <li><b>Con:</b> the crease pattern isn't mirror-symmetric, so the left and right sides fold differently</li>
+      </ul>
+    </div>
+
+    <div class="opt" data-choice="symmetric" onclick="toggleSelect(this)">
+      <div class="t">Mirror-symmetric <small>· grid 50</small></div>
+      <ul>
+        <li><b>Pro:</b> the left and right halves of the sheet mirror each other, so each paired step is folded twice the same way</li>
+        <li><b>Con:</b> the model comes out 36% smaller</li>
+        <li><b>Con:</b> the band of extra paper (top of the pattern) is folded into the flaps, so they come out thicker</li>
+      </ul>
+    </div>
+    <div class="note">The question only appears when the two layouts differ by a meaningful amount; otherwise the symmetric layout is used automatically.</div>
+  </div>
+
+  <div class="viewcol">
+    <div class="cps">
+      <div class="cp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <line stroke="black" x1="0" y1="0" x2="531" y2="0"/>
+  <line stroke="black" x1="531" y1="0" x2="812" y2="0"/>
+  <line stroke="black" x1="812" y1="0" x2="1000" y2="0"/>
+  <line stroke="black" x1="0" y1="1000" x2="312" y2="1000"/>
+  <line stroke="black" x1="312" y1="1000" x2="500" y2="1000"/>
+  <line stroke="black" x1="500" y1="1000" x2="688" y2="1000"/>
+  <line stroke="black" x1="688" y1="1000" x2="1000" y2="1000"/>
+  <line stroke="black" x1="0" y1="0" x2="0" y2="531"/>
+  <line stroke="black" x1="0" y1="531" x2="0" y2="688"/>
+  <line stroke="black" x1="0" y1="688" x2="0" y2="1000"/>
+  <line stroke="black" x1="1000" y1="0" x2="1000" y2="438"/>
+  <line stroke="black" x1="1000" y1="438" x2="1000" y2="531"/>
+  <line stroke="black" x1="1000" y1="531" x2="1000" y2="688"/>
+  <line stroke="black" x1="1000" y1="688" x2="1000" y2="1000"/>
+  <line stroke="green" x1="0" y1="688" x2="312" y2="688"/>
+  <line stroke="green" x1="312" y1="688" x2="688" y2="688"/>
+  <line stroke="green" x1="688" y1="688" x2="1000" y2="688"/>
+  <line stroke="green" x1="531" y1="0" x2="531" y2="531"/>
+  <line stroke="green" x1="0" y1="531" x2="531" y2="531"/>
+  <line stroke="green" x1="531" y1="531" x2="1000" y2="531"/>
+  <line stroke="green" x1="688" y1="688" x2="688" y2="1000"/>
+  <line stroke="green" x1="312" y1="688" x2="312" y2="1000"/>
+  <line stroke="red" x1="0" y1="0" x2="531" y2="531"/>
+  <line stroke="red" x1="688" y1="688" x2="1000" y2="1000"/>
+  <line stroke="red" x1="531" y1="531" x2="812" y2="250"/>
+  <line stroke="red" x1="812" y1="0" x2="812" y2="250"/>
+  <line stroke="red" x1="812" y1="250" x2="1000" y2="438"/>
+  <line stroke="red" x1="0" y1="1000" x2="312" y2="688"/>
+  <line stroke="red" x1="312" y1="688" x2="500" y2="875"/>
+  <line stroke="red" x1="500" y1="875" x2="500" y2="1000"/>
+  <line stroke="red" x1="500" y1="875" x2="688" y2="688"/>
+</svg>
+<div class="n">Smaller grid: 32 × 32</div></div>
+      <div class="cp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <line stroke="black" x1="0" y1="0" x2="1000" y2="0"/>
+  <line stroke="black" x1="0" y1="1000" x2="200" y2="1000"/>
+  <line stroke="black" x1="200" y1="1000" x2="240" y2="1000"/>
+  <line stroke="black" x1="240" y1="1000" x2="760" y2="1000"/>
+  <line stroke="black" x1="760" y1="1000" x2="800" y2="1000"/>
+  <line stroke="black" x1="800" y1="1000" x2="1000" y2="1000"/>
+  <line stroke="black" x1="0" y1="0" x2="0" y2="340"/>
+  <line stroke="black" x1="0" y1="340" x2="0" y2="520"/>
+  <line stroke="black" x1="0" y1="520" x2="0" y2="700"/>
+  <line stroke="black" x1="0" y1="700" x2="0" y2="800"/>
+  <line stroke="black" x1="0" y1="800" x2="0" y2="1000"/>
+  <line stroke="black" x1="1000" y1="0" x2="1000" y2="340"/>
+  <line stroke="black" x1="1000" y1="340" x2="1000" y2="520"/>
+  <line stroke="black" x1="1000" y1="520" x2="1000" y2="700"/>
+  <line stroke="black" x1="1000" y1="700" x2="1000" y2="800"/>
+  <line stroke="black" x1="1000" y1="800" x2="1000" y2="1000"/>
+  <line stroke="green" x1="0" y1="700" x2="1000" y2="700"/>
+  <line stroke="green" x1="0" y1="800" x2="200" y2="800"/>
+  <line stroke="green" x1="200" y1="800" x2="800" y2="800"/>
+  <line stroke="green" x1="800" y1="800" x2="1000" y2="800"/>
+  <line stroke="green" x1="200" y1="800" x2="200" y2="1000"/>
+  <line stroke="green" x1="800" y1="800" x2="800" y2="1000"/>
+  <line stroke="green" x1="0" y1="340" x2="1000" y2="340"/>
+  <line stroke="red" x1="0" y1="520" x2="1000" y2="520"/>
+  <line stroke="red" x1="0" y1="1000" x2="200" y2="800"/>
+  <line stroke="red" x1="800" y1="800" x2="1000" y2="1000"/>
+  <line stroke="red" x1="200" y1="800" x2="320" y2="920"/>
+  <line stroke="red" x1="240" y1="1000" x2="320" y2="920"/>
+  <line stroke="red" x1="320" y1="920" x2="680" y2="920"/>
+  <line stroke="red" x1="680" y1="920" x2="800" y2="800"/>
+  <line stroke="red" x1="680" y1="920" x2="760" y2="1000"/>
+</svg>
+<div class="n">Mirror-symmetric: 50 × 50</div></div>
+    </div>
+    <div class="sq">
+      <div><div class="box" style="width:150px;height:150px"><div class="fill" style="width:94px;height:94px"></div></div>Folded size from the same sheet: grid 32…</div>
+      <div><div class="box" style="width:150px;height:150px"><div class="fill" style="width:60px;height:60px"></div></div>…grid 50</div>
+    </div>
+    <div class="note">Packing crease patterns. Green lines are hinges and red lines are ridges.</div>
+  </div>
+</div>

@@ -1,0 +1,238 @@
+{
+ "roll": "cat_1",
+ "subject": "cat",
+ "subject_guess": "cat",
+ "nodes": [
+  {
+   "name": "pelvis",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "withers",
+   "parent": "pelvis",
+   "length": 7,
+   "direction": [
+    7,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "parent": "withers",
+   "length": 4,
+   "direction": [
+    3,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "neck",
+   "length": 4,
+   "direction": [
+    4,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    -2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_base",
+   "length": 6,
+   "direction": [
+    -5,
+    3,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_FL",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "elbow_FL",
+   "parent": "shoulder_FL",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_FL",
+   "parent": "elbow_FL",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "shoulder_FR",
+   "parent": "withers",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "elbow_FR",
+   "parent": "shoulder_FR",
+   "length": 6,
+   "direction": [
+    -1,
+    -6,
+    0
+   ]
+  },
+  {
+   "name": "paw_FR",
+   "parent": "elbow_FR",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hip_HL",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    -3
+   ]
+  },
+  {
+   "name": "knee_HL",
+   "parent": "hip_HL",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hock_HL",
+   "parent": "knee_HL",
+   "length": 3,
+   "direction": [
+    2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "paw_HL",
+   "parent": "hock_HL",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  },
+  {
+   "name": "hip_HR",
+   "parent": "pelvis",
+   "length": 3,
+   "direction": [
+    0,
+    -1,
+    3
+   ]
+  },
+  {
+   "name": "knee_HR",
+   "parent": "hip_HR",
+   "length": 5,
+   "direction": [
+    0,
+    -5,
+    0
+   ]
+  },
+  {
+   "name": "hock_HR",
+   "parent": "knee_HR",
+   "length": 3,
+   "direction": [
+    2,
+    -2,
+    0
+   ]
+  },
+  {
+   "name": "paw_HR",
+   "parent": "hock_HR",
+   "length": 3,
+   "direction": [
+    -1,
+    -3,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "paw_FL",
+   "paw_FR"
+  ],
+  [
+   "paw_HL",
+   "paw_HR"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "tail_tip",
+  "paw_FL",
+  "paw_FR",
+  "paw_HL",
+  "paw_HR"
+ ],
+ "readings": [
+  "head at +x: XY panel is the profile, ZY is the front",
+  "nose tip (24,7), ear top (21,4), chin (22,10) -> head landmark approx (23,7)",
+  "neck junction approx (19,6) between withers (16,8) and head",
+  "withers (16,8), hip (9,9): back nearly horizontal with slight rise to shoulders",
+  "tail base (7,11) curling to tail tip (2,8), matching curled tail visible in XY and XZ panels",
+  "front leg: shoulder (16,9) -> elbow (15,15) -> paw (15,20), ground line y=20",
+  "hind leg: hip (9,10) -> knee (9,15) -> hock (11,17) -> paw (10,20)",
+  "ZY panel: torso center z=8, torso width spans z=4-12; raised paw visible near z=13-16 confirms lateral leg offset",
+  "Right = Forward x Up with Forward=+x, Up=+y gives Right=+z, so right-side limbs placed at z=11, left-side at z=5"
+ ],
+ "notes": "Head/neck split inferred from the visible neck curve between withers and skull in the XY profile. Tail split into base+tip inferred from its curling silhouette (droops down then curls up), visible in both XY and XZ (top) panels. Front legs split into shoulder-elbow-paw (2 segments) based on the visible elbow bend; hind legs split into hip-knee-hock-paw (3 segments) based on the characteristic double-bend of a cat's hind leg visible in the XY panel. Left/right z-offsets (z=5 vs z=11) are inferred from torso width in the ZY panel combined with the Forward=+x/Up=+y => Right=+z convention; exact per-limb z was not separately distinguishable for every joint so a uniform offset was used, since only proportional limb length/direction (not stance) is being encoded. All four legs are authored with equal proportional length despite the mid-stride pose differences visible in the render.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

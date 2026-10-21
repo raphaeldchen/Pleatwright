@@ -1,0 +1,48 @@
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 8/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/9002 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 9002/9002 [00:00<00:00, 856928.45it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/4236 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 4236/4236 [00:00<00:00, 1177250.98it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 5/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/15540 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 15540/15540 [00:00<00:00, 1369029.28it/s]
+subject    R  served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max        pair_path_gap_max  error_codes                 
+quadruped  6  7              3           0.8333           2               2           False          stub          stub          0.0             False       MIXED       0.7161         0.599702      False         0.374146            ?             0.1945628966515113  0.0                polygon network is not valid
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 8/10it, ?it/s, epsilon 1  1%|          | [00:00<00:14, 10/10it,  6.98it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/9250 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 9250/9250 [00:00<00:00, 1195602.84it/s]
+subject  R  served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max        pair_path_gap_max  error_codes
+bird     4  4              0           1.0              2               1           True           none          none          0.0             False       PASS        0.9848         1.515998      False         0.0                 4             0.2027592089895524  0.0                -          
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 8/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/9632 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 9632/9632 [00:00<00:00, 1211271.43it/s]
+subject   R  served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max         pair_path_gap_max  error_codes
+humanoid  5  5              0           1.0              2               2           True           none          none          0.0             False       PASS        0.6638         0.775554      False         0.0                 2             0.26861250000000003  0.0                -          
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 9/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/8145 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 8145/8145 [00:00<00:00, 1340972.13it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/3722 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 3722/3722 [00:00<00:00, 1202156.13it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 6/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 10/10it, ?it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/14226 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 14226/14226 [00:00<00:00, 1416253.32it/s]
+subject  R   served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max        pair_path_gap_max  error_codes               
+fish     10  8              0           0.8              2               2           False          placement     placement     0.0             False       BENIGN      0.9077         0.653249      False         0.121893            ?             0.6258561237563468  0.0                NOT_LOCAL_ROOT_CONNECTABLE
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 7/10it, ?it/s, epsilon 1  1%|          | [00:00<00:15, 10/10it,  6.49it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/10110 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 10110/10110 [00:00<00:00, 1026517.55it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  1%|          | [00:00<00:07, 10/10it, 12.38it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/4924 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 4924/4924 [00:00<00:00, 877235.39it/s]
+  0%|          | [00:00<?, 1/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 5/10it, ?it/s, epsilon 1  0%|          | [00:00<?, 9/10it, ?it/s, epsilon 1  1%|          | [00:00<00:25, 10/10it,  3.84it/s, epsilon 0.99
+Skeletonizing:   0%|          | 0/17184 [00:00<?, ?it/s]Skeletonizing: 100%|██████████| 17184/17184 [00:00<00:00, 1079660.86it/s]
+subject  R  served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max         pair_path_gap_max  error_codes        
+insect   9  8              0           0.8889           3               4           False          order         order         0.0             False       BENIGN      0.8595         0.582125      False         0.0                 6             0.07246792718639723  0.0                POLYS_MULTIPLE_IBPS
+
+=== scorecard ===
+subject    R   served_leaves  stub_flaps  served_fidelity  pairs_expected  pairs_kept  attempt0_pack  rescue_stage  served_stage  path_drift_max  asymmetric  lint_class  hull_coverage  design_scale  cp_symmetric  cp_mirror_residual  cp_mv_broken  pair_gap_max         pair_path_gap_max  error_codes                 
+quadruped  6   7              3           0.8333           2               2           False          stub          stub          0.0             False       MIXED       0.7161         0.599702      False         0.374146            ?             0.1945628966515113   0.0                polygon network is not valid
+bird       4   4              0           1.0              2               1           True           none          none          0.0             False       PASS        0.9848         1.515998      False         0.0                 4             0.2027592089895524   0.0                -                           
+humanoid   5   5              0           1.0              2               2           True           none          none          0.0             False       PASS        0.6638         0.775554      False         0.0                 2             0.26861250000000003  0.0                -                           
+fish       10  8              0           0.8              2               2           False          placement     placement     0.0             False       BENIGN      0.9077         0.653249      False         0.121893            ?             0.6258561237563468   0.0                NOT_LOCAL_ROOT_CONNECTABLE  
+insect     9   8              0           0.8889           3               4           False          order         order         0.0             False       BENIGN      0.8595         0.582125      False         0.0                 6             0.07246792718639723  0.0                POLYS_MULTIPLE_IBPS         
+
+=== deltas vs fixtures/scorecard_baseline.jsonl ===
+quadruped: design_scale: None -> 0.599702
+bird: lint_class: 'BENIGN' -> 'PASS'; hull_coverage: 0.5 -> 0.9848; design_scale: None -> 1.515998; cp_mirror_residual: 0.053492 -> 0.0; cp_mv_broken: None -> 4
+humanoid: lint_class: 'BENIGN' -> 'PASS'; hull_coverage: 0.6319 -> 0.6638; design_scale: None -> 0.775554; cp_mirror_residual: 0.378336 -> 0.0; cp_mv_broken: None -> 2
+fish: design_scale: None -> 0.653249
+insect: design_scale: None -> 0.582125
+EXIT=0

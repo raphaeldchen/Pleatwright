@@ -1,0 +1,71 @@
+{
+ "subject": "lizard",
+ "baseline": {
+  "rejections": 113,
+  "secs": 834.0,
+  "clause_vars_median": 202,
+  "outcome": "AssignFail(kind='budget', site=500000)",
+  "source": "../2026-09-24-dense-pleats/nogood-lizard.json"
+ },
+ "arms": [
+  {
+   "core_extraction": false,
+   "assign_budget": 500000,
+   "core_extraction_error": null,
+   "stage_reached": "assign",
+   "failure": "AssignFail(kind='budget', site=500000)",
+   "verdict": "None",
+   "layers_tried": 113,
+   "rejections": 113,
+   "secs": 1052.0,
+   "clause_vars_min": 6,
+   "clause_vars_median": 202,
+   "clause_vars_max": 259,
+   "budget_exhausted": true,
+   "nodes_per_rejection": 4424.8
+  },
+  {
+   "core_extraction": true,
+   "assign_budget": 500000,
+   "core_extraction_error": null,
+   "stage_reached": "assign",
+   "failure": "AssignFail(kind='budget', site=500000)",
+   "verdict": "None",
+   "layers_tried": 3,
+   "rejections": 3,
+   "secs": 954.9,
+   "clause_vars_min": 5,
+   "clause_vars_median": 8,
+   "clause_vars_max": 8,
+   "budget_exhausted": true,
+   "nodes_per_rejection": 166666.7,
+   "core_rows": [
+    [
+     44,
+     8,
+     31,
+     5.069
+    ],
+    [
+     361,
+     5,
+     47,
+     9.789
+    ],
+    [
+     65,
+     8,
+     43,
+     6.847
+    ]
+   ],
+   "blamed_creases_median": 65,
+   "core_creases_median": 8,
+   "oracle_calls_median": 43,
+   "extract_secs_total": 21.7,
+   "extract_secs_median": 6.847
+  }
+ ],
+ "clause_size_guard_passed": true,
+ "verdict": "UNRESOLVED AT THIS BUDGET"
+}

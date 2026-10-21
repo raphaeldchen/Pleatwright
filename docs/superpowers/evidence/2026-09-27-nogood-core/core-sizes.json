@@ -1,0 +1,591 @@
+[
+ {
+  "subject": "starfish",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 0.02,
+  "oracle_calls": 11,
+  "blamed_creases": 6,
+  "core_creases": 5,
+  "blamed_variables": 6,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 4.15,
+  "oracle_calls": 29,
+  "blamed_creases": 44,
+  "core_creases": 8,
+  "blamed_variables": 44,
+  "core_variables": 8,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "frog",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 0.54,
+  "oracle_calls": 3,
+  "blamed_creases": 2,
+  "core_creases": 2,
+  "blamed_variables": 2,
+  "core_variables": 2,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "horse",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 1.45,
+  "oracle_calls": 3,
+  "blamed_creases": 2,
+  "core_creases": 2,
+  "blamed_variables": 2,
+  "core_variables": 2,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "bird",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 2.24,
+  "oracle_calls": 3,
+  "blamed_creases": 2,
+  "core_creases": 2,
+  "blamed_variables": 2,
+  "core_variables": 2,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "guinea_pig",
+  "sample": "breadth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 1.66,
+  "oracle_calls": 3,
+  "blamed_creases": 2,
+  "core_creases": 2,
+  "blamed_variables": 2,
+  "core_variables": 2,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 3.85,
+  "oracle_calls": 29,
+  "blamed_creases": 44,
+  "core_creases": 8,
+  "blamed_variables": 44,
+  "core_variables": 8,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 6.79,
+  "oracle_calls": 45,
+  "blamed_creases": 361,
+  "core_creases": 5,
+  "blamed_variables": 210,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 5.32,
+  "oracle_calls": 41,
+  "blamed_creases": 65,
+  "core_creases": 8,
+  "blamed_variables": 65,
+  "core_variables": 8,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 5.74,
+  "oracle_calls": 41,
+  "blamed_creases": 71,
+  "core_creases": 6,
+  "blamed_variables": 48,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 2.5,
+  "oracle_calls": 23,
+  "blamed_creases": 50,
+  "core_creases": 5,
+  "blamed_variables": 50,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 2.84,
+  "oracle_calls": 27,
+  "blamed_creases": 64,
+  "core_creases": 5,
+  "blamed_variables": 64,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 7.88,
+  "oracle_calls": 43,
+  "blamed_creases": 325,
+  "core_creases": 6,
+  "blamed_variables": 220,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 4.06,
+  "oracle_calls": 29,
+  "blamed_creases": 42,
+  "core_creases": 8,
+  "blamed_variables": 42,
+  "core_variables": 8,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 8.39,
+  "oracle_calls": 57,
+  "blamed_creases": 386,
+  "core_creases": 6,
+  "blamed_variables": 245,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 3.02,
+  "oracle_calls": 27,
+  "blamed_creases": 53,
+  "core_creases": 5,
+  "blamed_variables": 53,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 4.52,
+  "oracle_calls": 33,
+  "blamed_creases": 42,
+  "core_creases": 8,
+  "blamed_variables": 42,
+  "core_variables": 8,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 8.92,
+  "oracle_calls": 51,
+  "blamed_creases": 361,
+  "core_creases": 6,
+  "blamed_variables": 212,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 1.87,
+  "oracle_calls": 19,
+  "blamed_creases": 60,
+  "core_creases": 5,
+  "blamed_variables": 60,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 5.27,
+  "oracle_calls": 35,
+  "blamed_creases": 364,
+  "core_creases": 4,
+  "blamed_variables": 232,
+  "core_variables": 4,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 1.3,
+  "oracle_calls": 11,
+  "blamed_creases": 6,
+  "core_creases": 5,
+  "blamed_variables": 6,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 1.83,
+  "oracle_calls": 17,
+  "blamed_creases": 30,
+  "core_creases": 4,
+  "blamed_variables": 30,
+  "core_variables": 4,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 8.62,
+  "oracle_calls": 51,
+  "blamed_creases": 351,
+  "core_creases": 6,
+  "blamed_variables": 230,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 3.34,
+  "oracle_calls": 33,
+  "blamed_creases": 177,
+  "core_creases": 5,
+  "blamed_variables": 108,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 9.03,
+  "oracle_calls": 53,
+  "blamed_creases": 364,
+  "core_creases": 6,
+  "blamed_variables": 235,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 2.77,
+  "oracle_calls": 27,
+  "blamed_creases": 172,
+  "core_creases": 4,
+  "blamed_variables": 112,
+  "core_variables": 4,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 9.79,
+  "oracle_calls": 53,
+  "blamed_creases": 353,
+  "core_creases": 7,
+  "blamed_variables": 206,
+  "core_variables": 7,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 6.84,
+  "oracle_calls": 39,
+  "blamed_creases": 364,
+  "core_creases": 4,
+  "blamed_variables": 237,
+  "core_variables": 4,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 3.49,
+  "oracle_calls": 29,
+  "blamed_creases": 162,
+  "core_creases": 5,
+  "blamed_variables": 109,
+  "core_variables": 5,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 9.8,
+  "oracle_calls": 47,
+  "blamed_creases": 354,
+  "core_creases": 6,
+  "blamed_variables": 203,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ },
+ {
+  "subject": "lizard",
+  "sample": "depth",
+  "witness_kind": "taco_tortilla",
+  "witness_faces": 3,
+  "blamed_not_slots": 0,
+  "extract_secs": 8.68,
+  "oracle_calls": 45,
+  "blamed_creases": 368,
+  "core_creases": 6,
+  "blamed_variables": 236,
+  "core_variables": 6,
+  "checks": {
+   "full_blamed_contradicts": true,
+   "empty_contradicts": false,
+   "core_plus_one_contradicts": true,
+   "all_ok": true
+  }
+ }
+]

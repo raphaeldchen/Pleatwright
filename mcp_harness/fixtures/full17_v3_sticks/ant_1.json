@@ -1,0 +1,204 @@
+{
+ "roll": "ant_1",
+ "subject": "ant",
+ "subject_guess": "ant",
+ "nodes": [
+  {
+   "name": "thorax",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "parent": "thorax",
+   "length": 8,
+   "direction": [
+    -7,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "petiole",
+   "parent": "thorax",
+   "length": 5,
+   "direction": [
+    5,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "gaster",
+   "parent": "petiole",
+   "length": 9,
+   "direction": [
+    9,
+    2,
+    0
+   ]
+  },
+  {
+   "name": "knee_FL",
+   "parent": "thorax",
+   "length": 7,
+   "direction": [
+    -4,
+    -4,
+    -5
+   ]
+  },
+  {
+   "name": "foot_FL",
+   "parent": "knee_FL",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    -2
+   ]
+  },
+  {
+   "name": "knee_FR",
+   "parent": "thorax",
+   "length": 7,
+   "direction": [
+    -4,
+    -4,
+    5
+   ]
+  },
+  {
+   "name": "foot_FR",
+   "parent": "knee_FR",
+   "length": 5,
+   "direction": [
+    -1,
+    -5,
+    2
+   ]
+  },
+  {
+   "name": "knee_ML",
+   "parent": "thorax",
+   "length": 8,
+   "direction": [
+    -1,
+    -5,
+    -6
+   ]
+  },
+  {
+   "name": "foot_ML",
+   "parent": "knee_ML",
+   "length": 5,
+   "direction": [
+    -1,
+    -4,
+    -2
+   ]
+  },
+  {
+   "name": "knee_MR",
+   "parent": "thorax",
+   "length": 8,
+   "direction": [
+    -1,
+    -5,
+    6
+   ]
+  },
+  {
+   "name": "foot_MR",
+   "parent": "knee_MR",
+   "length": 5,
+   "direction": [
+    -1,
+    -4,
+    2
+   ]
+  },
+  {
+   "name": "knee_HL",
+   "parent": "thorax",
+   "length": 10,
+   "direction": [
+    3,
+    -6,
+    -7
+   ]
+  },
+  {
+   "name": "foot_HL",
+   "parent": "knee_HL",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    -2
+   ]
+  },
+  {
+   "name": "knee_HR",
+   "parent": "thorax",
+   "length": 10,
+   "direction": [
+    3,
+    -6,
+    7
+   ]
+  },
+  {
+   "name": "foot_HR",
+   "parent": "knee_HR",
+   "length": 4,
+   "direction": [
+    -1,
+    -3,
+    2
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "foot_FL",
+   "foot_FR"
+  ],
+  [
+   "foot_ML",
+   "foot_MR"
+  ],
+  [
+   "foot_HL",
+   "foot_HR"
+  ]
+ ],
+ "leaves": [
+  "head",
+  "foot_FL",
+  "foot_FR",
+  "foot_ML",
+  "foot_MR",
+  "foot_HL",
+  "foot_HR"
+ ],
+ "readings": [
+  "head at -x: XY panel is the profile (side view), ZY panel is the front view, XZ panel is the top-down view",
+  "head front/mandible tip (0,8) to head-thorax junction (7,9): head spans x0-7, center (3.5,8)",
+  "thorax bulk x7-14, top(10,7) bottom(10,13), center (10.5,10)",
+  "thorax-petiole junction (14,11); petiole-gaster junction (16,10): narrow waist, petiole length ~5",
+  "gaster (abdomen) runs x16-24, tip at (24,9); ventral curl to (18,19) is body shape, not a separate flap",
+  "front leg pair: hip near thorax (9,10) at z=9/15 in ZY panel; knee (7,14) at z=7/17; foot (6,19) at z=5/19",
+  "mid leg pair: hip (10,10) z=8/16; knee (10,15) z=6/18; foot (9,19) z=4/20",
+  "hind leg pair: hip (13,10) z=7/17; knee (13,16) z=5/19; foot (12,19) z=3/21",
+  "all six feet reach ground line y~19-20 confirming equal stance height",
+  "antennae visible at head (x0-4, small fuzzy protrusions) but excluded as leaves per sub-flap rule"
+ ],
+ "notes": "Ant body modeled as a spine: thorax (root) -> head (protruding lobe, counted as leaf) and thorax -> petiole -> gaster (trunk continuation, not a leaf since it's a body-axis segment, not a terminal appendage). Six legs each split into two inferred segments (coxa/femur combined into first segment 'knee_*', tibia/tarsus combined into second segment 'foot_*') based on the two clear bends visible in the ZY (front) and XY (profile) panels; finer leg joints (trochanter, individual tarsal segments) were not distinguishable at this resolution and were merged. Antennae, mandibles and eyes are visible in the renders but excluded as leaves per the sub-flap-detail rule. The ventral curl at the gaster tip (visible in the XY panel around x=18,y=19) was interpreted as the natural rounded/curled shape of the gaster rather than a separate tail flap, since ants have no external tail. Left/right pairing assigned by ANT anatomy using the ZY (front) panel's lateral z-spread, which widens from front pair to hind pair, matching the increasing knee/foot z-offsets used above. All leg direction vectors have negative dy from hip to foot, correctly placing feet below the body per the required sign convention.",
+ "source": "tree.nodes of untracked repair_rolls_out_full17_v3/<roll>/state.json (silly-tereshkova worktree); same run as ../full17_v3_trees (topology verified identical node-for-node)"
+}

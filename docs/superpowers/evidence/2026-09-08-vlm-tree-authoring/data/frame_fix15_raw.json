@@ -1,0 +1,4091 @@
+[
+  {
+    "mode": "none",
+    "subject": "horse",
+    "tree": {
+      "subject_guess": "horse",
+      "readings": [
+        "withers (9,7)",
+        "croup (18,8)",
+        "poll/top-of-head (20,3.5)",
+        "nose (23.5,6.5)",
+        "tail_base (18.5,9)",
+        "tail_tip (1,13.5)",
+        "front shoulder point (10.5,11)",
+        "front knee (7,13)",
+        "front fetlock (6,17)",
+        "front hoof (6,19.5)",
+        "hip point (17,11)",
+        "hind stifle (16,14)",
+        "hind hock (15,17)",
+        "hind fetlock (15,19)",
+        "hind hoof (13,20)",
+        "ground line ~y=20 in side view"
+      ],
+      "nodes": [
+        {
+          "name": "root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "spine_croup",
+          "parent": "root",
+          "length": 9,
+          "direction": [
+            9,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "tail",
+          "parent": "spine_croup",
+          "length": 18,
+          "direction": [
+            -17.5,
+            -4.5,
+            0
+          ]
+        },
+        {
+          "name": "hip",
+          "parent": "spine_croup",
+          "length": 3,
+          "direction": [
+            -1,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "hind_stifle",
+          "parent": "hip",
+          "length": 3,
+          "direction": [
+            -1,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "hind_hock",
+          "parent": "hind_stifle",
+          "length": 3,
+          "direction": [
+            -1,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "hind_fetlock",
+          "parent": "hind_hock",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "hind_hoof_L",
+          "parent": "hind_fetlock",
+          "length": 2,
+          "direction": [
+            -2,
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "hind_hoof_R",
+          "parent": "hind_fetlock",
+          "length": 2,
+          "direction": [
+            -2,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "root",
+          "length": 12,
+          "direction": [
+            11,
+            3.5,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 5,
+          "direction": [
+            3.5,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "front_shoulder",
+          "parent": "root",
+          "length": 4,
+          "direction": [
+            1.5,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "front_knee",
+          "parent": "front_shoulder",
+          "length": 4,
+          "direction": [
+            -3.5,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "front_fetlock",
+          "parent": "front_knee",
+          "length": 4,
+          "direction": [
+            -1,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "front_hoof_L",
+          "parent": "front_fetlock",
+          "length": 3,
+          "direction": [
+            0,
+            -2.5,
+            1
+          ]
+        },
+        {
+          "name": "front_hoof_R",
+          "parent": "front_fetlock",
+          "length": 3,
+          "direction": [
+            0,
+            -2.5,
+            -1
+          ]
+        }
+      ],
+      "leaves": [
+        "tail",
+        "head",
+        "front_hoof_L",
+        "front_hoof_R",
+        "hind_hoof_L",
+        "hind_hoof_R"
+      ],
+      "pairs": [
+        [
+          "front_hoof_L",
+          "front_hoof_R"
+        ],
+        [
+          "hind_hoof_L",
+          "hind_hoof_R"
+        ]
+      ],
+      "notes": "Root placed at withers. Spine runs withers->croup (readings 9,7 to 18,8). Tail is single segment croup->tail tip (very long, streaming, per side-view reading 18.5,9 to 1,13.5). Neck split at poll (withers 9,7 to poll 20,3.5), head continues poll->nose (20,3.5 to 23.5,6.5). Front leg inferred as 4 segments shoulder->knee->fetlock->hoof using side-view knee/fetlock/hoof readings (10.5,11)->(7,13)->(6,17)->(6,19.5); hind leg inferred as hip->stifle->hock->fetlock->hoof using (17,11)->(16,14)->(15,17)->(15,19)->(13,20). Per protocol, left/right legs are authored as a single shared internal joint chain (shoulder/knee/fetlock, hip/stifle/hock/fetlock) with the symmetric fork occurring ONLY at the terminal hoof leaves (z sign mirrored using front-view/top-view left-right spread), since symmetric pairs must join two leaves, not internal joints. All lengths converted from grid pixel distances to positive integers; vertical (y) components negated relative to the downward-increasing image grid so that descending limbs have negative dy in the output frame (+y up). Four leg leaves + head + tail = 6 total leaves, matching leaf-count convention."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 12428,
+      "total_tokens": 15564,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "cat",
+    "tree": {
+      "subject_guess": "cat",
+      "readings": [
+        "nose_tip (20,8)",
+        "ear_tip (18,3)",
+        "neck_base (18,4)",
+        "withers (17,7)",
+        "chest/root (14,10)",
+        "hip (12,12)",
+        "tail_base (10,12)",
+        "tail_mid (4,8)",
+        "tail_tip (0,8.5)",
+        "front_elbow (17,13)",
+        "front_paw (17,21)",
+        "hind_knee (12,16)",
+        "hind_paw (12.5,21)"
+      ],
+      "nodes": [
+        {
+          "name": "spine_root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "withers",
+          "parent": "spine_root",
+          "length": 4,
+          "direction": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "withers",
+          "length": 3,
+          "direction": [
+            1,
+            3,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 4,
+          "direction": [
+            2,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "hip",
+          "parent": "spine_root",
+          "length": 3,
+          "direction": [
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "tail_base",
+          "parent": "hip",
+          "length": 2,
+          "direction": [
+            -2,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "tail_mid",
+          "parent": "tail_base",
+          "length": 7,
+          "direction": [
+            -6,
+            4,
+            0.3
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "tail_mid",
+          "length": 4,
+          "direction": [
+            -4,
+            -0.5,
+            -0.3
+          ]
+        },
+        {
+          "name": "front_elbow_L",
+          "parent": "withers",
+          "length": 6,
+          "direction": [
+            0,
+            -6,
+            -1
+          ]
+        },
+        {
+          "name": "front_paw_L",
+          "parent": "front_elbow_L",
+          "length": 8,
+          "direction": [
+            0,
+            -8,
+            -0.3
+          ]
+        },
+        {
+          "name": "front_elbow_R",
+          "parent": "withers",
+          "length": 6,
+          "direction": [
+            0,
+            -6,
+            1
+          ]
+        },
+        {
+          "name": "front_paw_R",
+          "parent": "front_elbow_R",
+          "length": 8,
+          "direction": [
+            0,
+            -8,
+            0.3
+          ]
+        },
+        {
+          "name": "hind_knee_L",
+          "parent": "hip",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            -1
+          ]
+        },
+        {
+          "name": "hind_paw_L",
+          "parent": "hind_knee_L",
+          "length": 5,
+          "direction": [
+            0.5,
+            -5,
+            -0.3
+          ]
+        },
+        {
+          "name": "hind_knee_R",
+          "parent": "hip",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            1
+          ]
+        },
+        {
+          "name": "hind_paw_R",
+          "parent": "hind_knee_R",
+          "length": 5,
+          "direction": [
+            0.5,
+            -5,
+            0.3
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "tail_tip",
+        "front_paw_L",
+        "front_paw_R",
+        "hind_paw_L",
+        "hind_paw_R"
+      ],
+      "pairs": [
+        [
+          "front_paw_L",
+          "front_paw_R"
+        ],
+        [
+          "hind_paw_L",
+          "hind_paw_R"
+        ]
+      ],
+      "notes": "Root placed at central chest point (14,10) between withers and hip. Withers(17,7) is closer to the head (nose at x=20) than hip(12,12) is, confirming front/hind leg assignment - front legs attach near withers, hind legs near hip, tail near hip/tail_base(10,12) trailing to tail_tip(0,8.5). All vertical deltas were flipped in sign (image y grows downward, output +y is up), so every hip/withers->paw direction has negative dy as required. Neck/head, elbow/paw and knee/paw segment splits are anatomical inferences from single endpoint silhouettes; tail split into base/mid/tip to capture its curl, with a small z-wiggle read from the top (XZ) view. Left/right leg z-offsets taken from the front (ZY) view showing the two forelimbs splayed to either side."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 13906,
+      "total_tokens": 17042,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "guinea_pig",
+    "tree": {
+      "subject_guess": "guinea pig",
+      "readings": [
+        "nose tip (23,13)",
+        "mouth (20,18)",
+        "head top (18,3)",
+        "neck base (19,4)",
+        "withers/top of back (10,3)",
+        "shoulder (16,4)",
+        "rump/pelvis (4,13)",
+        "ground line y=24 in all views",
+        "front paw visible (12,23) vs hidden hip line ~y=17 -> leg length ~7",
+        "front view body width z=2 to 22, ear tuft z=16-22,y=4-9",
+        "top view confirms body length spans full 0-24 (longest extent), width z=2-22"
+      ],
+      "nodes": [
+        {
+          "name": "root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "pelvis",
+          "parent": "root",
+          "length": 4,
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "withers",
+          "parent": "root",
+          "length": 4,
+          "direction": [
+            1,
+            0.6,
+            0
+          ]
+        },
+        {
+          "name": "shoulder",
+          "parent": "withers",
+          "length": 4,
+          "direction": [
+            1,
+            -0.1,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "shoulder",
+          "length": 3,
+          "direction": [
+            1,
+            0.2,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 5,
+          "direction": [
+            1,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "hind_thigh_L",
+          "parent": "pelvis",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            0.3
+          ]
+        },
+        {
+          "name": "hind_knee_L",
+          "parent": "hind_thigh_L",
+          "length": 1,
+          "direction": [
+            0.3,
+            -1,
+            0.2
+          ]
+        },
+        {
+          "name": "hind_shank_L",
+          "parent": "hind_knee_L",
+          "length": 2,
+          "direction": [
+            -0.2,
+            -1,
+            0.2
+          ]
+        },
+        {
+          "name": "hind_hock_L",
+          "parent": "hind_shank_L",
+          "length": 1,
+          "direction": [
+            0.3,
+            -1,
+            0.1
+          ]
+        },
+        {
+          "name": "hind_left_foot",
+          "parent": "hind_hock_L",
+          "length": 1,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "hind_thigh_R",
+          "parent": "pelvis",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -0.3
+          ]
+        },
+        {
+          "name": "hind_knee_R",
+          "parent": "hind_thigh_R",
+          "length": 1,
+          "direction": [
+            0.3,
+            -1,
+            -0.2
+          ]
+        },
+        {
+          "name": "hind_shank_R",
+          "parent": "hind_knee_R",
+          "length": 2,
+          "direction": [
+            -0.2,
+            -1,
+            -0.2
+          ]
+        },
+        {
+          "name": "hind_hock_R",
+          "parent": "hind_shank_R",
+          "length": 1,
+          "direction": [
+            0.3,
+            -1,
+            -0.1
+          ]
+        },
+        {
+          "name": "hind_right_foot",
+          "parent": "hind_hock_R",
+          "length": 1,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "front_upperarm_L",
+          "parent": "shoulder",
+          "length": 2,
+          "direction": [
+            0.2,
+            -1,
+            0.3
+          ]
+        },
+        {
+          "name": "front_elbow_L",
+          "parent": "front_upperarm_L",
+          "length": 1,
+          "direction": [
+            -0.2,
+            -1,
+            0.2
+          ]
+        },
+        {
+          "name": "front_forearm_L",
+          "parent": "front_elbow_L",
+          "length": 2,
+          "direction": [
+            0.2,
+            -1,
+            0.2
+          ]
+        },
+        {
+          "name": "front_wrist_L",
+          "parent": "front_forearm_L",
+          "length": 1,
+          "direction": [
+            -0.1,
+            -1,
+            0.1
+          ]
+        },
+        {
+          "name": "front_left_foot",
+          "parent": "front_wrist_L",
+          "length": 1,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "front_upperarm_R",
+          "parent": "shoulder",
+          "length": 2,
+          "direction": [
+            0.2,
+            -1,
+            -0.3
+          ]
+        },
+        {
+          "name": "front_elbow_R",
+          "parent": "front_upperarm_R",
+          "length": 1,
+          "direction": [
+            -0.2,
+            -1,
+            -0.2
+          ]
+        },
+        {
+          "name": "front_forearm_R",
+          "parent": "front_elbow_R",
+          "length": 2,
+          "direction": [
+            0.2,
+            -1,
+            -0.2
+          ]
+        },
+        {
+          "name": "front_wrist_R",
+          "parent": "front_forearm_R",
+          "length": 1,
+          "direction": [
+            -0.1,
+            -1,
+            -0.1
+          ]
+        },
+        {
+          "name": "front_right_foot",
+          "parent": "front_wrist_R",
+          "length": 1,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "hind_left_foot",
+        "hind_right_foot",
+        "front_left_foot",
+        "front_right_foot"
+      ],
+      "pairs": [
+        [
+          "hind_left_foot",
+          "hind_right_foot"
+        ],
+        [
+          "front_left_foot",
+          "front_right_foot"
+        ]
+      ],
+      "notes": "Guinea pig: compact round body, no external tail (excluded per leaf convention), short stubby legs mostly hidden by fur. Spine split into pelvis/withers/shoulder/neck/head as inferred internal joints (protocol #8) since only endpoint landmarks (rump, withers peak, shoulder, neck base, nose) were directly readable. Leg total length (~7 units) inferred from hidden hip line (~y=17) to ground (y=24); split into thigh-knee-shank-hock-foot (hind) and upperarm-elbow-forearm-wrist-foot (front) as anatomical inference, not directly measurable due to fur coverage. Left/right leg pairs mirrored in +z/-z (left=+z per frame convention). Vertical grid flip applied: all descending limb segments (hip->foot, shoulder->foot) carry negative dy as required."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 17903,
+      "total_tokens": 21039,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "lizard",
+    "tree": {
+      "subject_guess": "lizard (generic quadruped reptile)",
+      "readings": [
+        "side view snout tip (0,11)",
+        "side view neck/back junction (8,10)",
+        "side view shoulder (9,11)",
+        "side view hip (16,11)",
+        "side view tail tip (24,13)",
+        "side view front foot on ground (10,15)",
+        "side view hind foot on ground (15,16)",
+        "top view shoulder centerline (9,12)",
+        "top view front-leg elbow bend, right side (9, z=8)",
+        "top view front foot right (10, z=6)",
+        "top view front foot left mirrored (10, z=18)",
+        "top view hip centerline (16,12)",
+        "top view hind-leg knee bend right (16, z=8)",
+        "top view hind foot right (15, z=6)",
+        "top view hind foot left mirrored (15, z=18)"
+      ],
+      "nodes": [
+        {
+          "name": "hip",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "shoulder",
+          "parent": "hip",
+          "length": 7,
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "shoulder",
+          "length": 2,
+          "direction": [
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 8,
+          "direction": [
+            8,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "hip",
+          "length": 8,
+          "direction": [
+            -8,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "front_elbow_R",
+          "parent": "shoulder",
+          "length": 4,
+          "direction": [
+            0,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "front_foot_R",
+          "parent": "front_elbow_R",
+          "length": 3,
+          "direction": [
+            -1,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "front_elbow_L",
+          "parent": "shoulder",
+          "length": 4,
+          "direction": [
+            0,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "front_foot_L",
+          "parent": "front_elbow_L",
+          "length": 3,
+          "direction": [
+            -1,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "hind_knee_R",
+          "parent": "hip",
+          "length": 4,
+          "direction": [
+            0,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "hind_foot_R",
+          "parent": "hind_knee_R",
+          "length": 4,
+          "direction": [
+            1,
+            -3,
+            -2
+          ]
+        },
+        {
+          "name": "hind_knee_L",
+          "parent": "hip",
+          "length": 4,
+          "direction": [
+            0,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "hind_foot_L",
+          "parent": "hind_knee_L",
+          "length": 4,
+          "direction": [
+            1,
+            -3,
+            2
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "tail_tip",
+        "front_foot_R",
+        "front_foot_L",
+        "hind_foot_R",
+        "hind_foot_L"
+      ],
+      "pairs": [
+        [
+          "front_foot_L",
+          "front_foot_R"
+        ],
+        [
+          "hind_foot_L",
+          "hind_foot_R"
+        ]
+      ],
+      "notes": "Root placed at hip/pelvis (length 0). Spine chain hip->shoulder->neck->head built from side-view x,y readings; z held at body centerline (12) for spine points since top view shows spine straight. Tail modeled as single segment from hip to tail tip (no visible tail joint/bend in renders). Forelimb and hindlimb each split into two segments (shoulder->elbow->foot; hip->knee->foot); elbow/knee positions inferred from the top-view bend point (z moves from centerline 12 out to 6/8 before the foot moves further out to 6, and mirrored to 16/18 on the other side) combined with the side-view vertical drop to the ground line (~y=15-16). All leg segments confirmed to have negative dy (descending) per the up-frame convention. Left/right leg pairs are exact anatomical mirrors (only z sign differs) since renders show a static, symmetric proportion despite mid-stride pose in the top view."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 9790,
+      "total_tokens": 12926,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "elephant",
+    "tree": {
+      "subject_guess": "elephant",
+      "readings": [
+        "side: withers/shoulder-hump top (9,4)",
+        "side: pelvis/hip-joint (17,9)",
+        "side: neck-to-head junction (8,7)",
+        "side: ear/head top (3,2)",
+        "side: trunk mid curve (7,13)",
+        "side: trunk tip (13,17)",
+        "side: rump/tail base (20,7)",
+        "side: tail mid (22,11)",
+        "side: tail tip (23,16)",
+        "side: front leg shoulder attachment (9,8)",
+        "side: front knee (7,14)",
+        "side: front hock (7,18)",
+        "side: front foot on ground (7,20)",
+        "side: back stifle (17,13)",
+        "side: back hock (17,17)",
+        "side: back foot on ground (17,20)",
+        "front(ZY): legs spread to about z=+/-3 either side of spine",
+        "top(XZ): body centerline z~13, confirms lateral leg offsets"
+      ],
+      "nodes": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "withers",
+          "parent": "pelvis",
+          "length": 9,
+          "direction": [
+            -8,
+            5,
+            0
+          ]
+        },
+        {
+          "name": "neck_base",
+          "parent": "withers",
+          "length": 3,
+          "direction": [
+            -1,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck_base",
+          "length": 7,
+          "direction": [
+            -5,
+            5,
+            0
+          ]
+        },
+        {
+          "name": "trunk_mid",
+          "parent": "neck_base",
+          "length": 6,
+          "direction": [
+            -1,
+            -6,
+            0
+          ]
+        },
+        {
+          "name": "trunk_tip",
+          "parent": "trunk_mid",
+          "length": 7,
+          "direction": [
+            6,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "tail_base",
+          "parent": "pelvis",
+          "length": 4,
+          "direction": [
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "tail_mid",
+          "parent": "tail_base",
+          "length": 4,
+          "direction": [
+            2,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "tail_mid",
+          "length": 5,
+          "direction": [
+            1,
+            -5,
+            0
+          ]
+        },
+        {
+          "name": "front_shoulder",
+          "parent": "withers",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "front_knee",
+          "parent": "front_shoulder",
+          "length": 6,
+          "direction": [
+            -2,
+            -6,
+            0
+          ]
+        },
+        {
+          "name": "front_hock",
+          "parent": "front_knee",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "front_foot_L",
+          "parent": "front_hock",
+          "length": 4,
+          "direction": [
+            0,
+            -2,
+            3
+          ]
+        },
+        {
+          "name": "front_foot_R",
+          "parent": "front_hock",
+          "length": 4,
+          "direction": [
+            0,
+            -2,
+            -3
+          ]
+        },
+        {
+          "name": "back_stifle",
+          "parent": "pelvis",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "back_hock",
+          "parent": "back_stifle",
+          "length": 4,
+          "direction": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "back_foot_L",
+          "parent": "back_hock",
+          "length": 4,
+          "direction": [
+            0,
+            -3,
+            3
+          ]
+        },
+        {
+          "name": "back_foot_R",
+          "parent": "back_hock",
+          "length": 4,
+          "direction": [
+            0,
+            -3,
+            -3
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "trunk_tip",
+        "tail_tip",
+        "front_foot_L",
+        "front_foot_R",
+        "back_foot_L",
+        "back_foot_R"
+      ],
+      "pairs": [
+        [
+          "front_foot_L",
+          "front_foot_R"
+        ],
+        [
+          "back_foot_L",
+          "back_foot_R"
+        ]
+      ],
+      "notes": "Root placed at pelvis/hip joint (side reading 17,9). Spine simplified to pelvis->withers->neck_base, with head and trunk as separate leaf-terminated branches off neck_base (trunk treated as its own proboscis appendage, distinct from head, per its major limb-like size). Tail split into base/mid/tip (inferred 2-segment). Each leg reduced to a single shared thigh->knee->hock chain (read from the side/blended view) that then forks into two leaf feet (front_foot_L/R, back_foot_L/R) separated only by a small lateral z-offset (~3 units, read from front/top views showing stance width), satisfying the rule that symmetric pairs join leaves only, not internal joints. All vertical (y) directions were sign-flipped from the down-increasing grid to the up-positive model frame, verified by checking hip(17,9)->foot(17,20) gives negative dy as required."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 11004,
+      "total_tokens": 14140,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "frog",
+    "tree": {
+      "subject_guess": "frog",
+      "readings": [
+        "side(XY): hip/pelvis top \u2248 (6,11)",
+        "side(XY): shoulder/chest \u2248 (16,10)",
+        "side(XY): head top \u2248 (20,7), snout tip \u2248 (23,9) -> head landmark taken as (23,8)",
+        "side(XY): front-leg elbow \u2248 (15,13)",
+        "side(XY): front-leg wrist \u2248 (14,15)",
+        "side(XY): front-leg hand tip \u2248 (13,16)",
+        "side(XY): hind-leg knee \u2248 (2,13)",
+        "side(XY): hind-leg ankle/hock \u2248 (8,15)",
+        "side(XY): hind-leg foot tip \u2248 (11,16)",
+        "side(XY): ground line at y=16 for both feet",
+        "top(XZ): body centerline at z=12",
+        "top(XZ): shoulder attach lateral offset \u2248 \u00b13 from centerline",
+        "top(XZ): elbow lateral offset \u2248 \u00b16",
+        "top(XZ): wrist lateral offset \u2248 \u00b18",
+        "top(XZ): hand tip lateral offset \u2248 \u00b110",
+        "top(XZ): hip attach lateral offset \u2248 \u00b12 (close to spine)",
+        "top(XZ): knee lateral offset \u2248 \u00b110 (thigh splayed far to sides, characteristic frog top-view flap)",
+        "top(XZ): ankle lateral offset \u2248 \u00b18",
+        "top(XZ): foot tip lateral offset \u2248 \u00b110"
+      ],
+      "nodes": [
+        {
+          "name": "root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "spine1",
+          "parent": "root",
+          "length": 10,
+          "direction": [
+            10,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "spine1",
+          "length": 7,
+          "direction": [
+            7,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "shoulder_L",
+          "parent": "spine1",
+          "length": 3,
+          "direction": [
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "name": "shoulder_R",
+          "parent": "spine1",
+          "length": 3,
+          "direction": [
+            0,
+            0,
+            -3
+          ]
+        },
+        {
+          "name": "elbow_L",
+          "parent": "shoulder_L",
+          "length": 4,
+          "direction": [
+            -1,
+            -3,
+            3
+          ]
+        },
+        {
+          "name": "wrist_L",
+          "parent": "elbow_L",
+          "length": 3,
+          "direction": [
+            -1,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "hand_L",
+          "parent": "wrist_L",
+          "length": 2,
+          "direction": [
+            -1,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "elbow_R",
+          "parent": "shoulder_R",
+          "length": 4,
+          "direction": [
+            -1,
+            -3,
+            -3
+          ]
+        },
+        {
+          "name": "wrist_R",
+          "parent": "elbow_R",
+          "length": 3,
+          "direction": [
+            -1,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "hand_R",
+          "parent": "wrist_R",
+          "length": 2,
+          "direction": [
+            -1,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "hip_L",
+          "parent": "root",
+          "length": 2,
+          "direction": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "name": "hip_R",
+          "parent": "root",
+          "length": 2,
+          "direction": [
+            0,
+            0,
+            -2
+          ]
+        },
+        {
+          "name": "knee_L",
+          "parent": "hip_L",
+          "length": 9,
+          "direction": [
+            -4,
+            -2,
+            8
+          ]
+        },
+        {
+          "name": "ankle_L",
+          "parent": "knee_L",
+          "length": 7,
+          "direction": [
+            6,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "foot_L",
+          "parent": "ankle_L",
+          "length": 4,
+          "direction": [
+            3,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "knee_R",
+          "parent": "hip_R",
+          "length": 9,
+          "direction": [
+            -4,
+            -2,
+            -8
+          ]
+        },
+        {
+          "name": "ankle_R",
+          "parent": "knee_R",
+          "length": 7,
+          "direction": [
+            6,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "foot_R",
+          "parent": "ankle_R",
+          "length": 4,
+          "direction": [
+            3,
+            -1,
+            -2
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "hand_L",
+        "hand_R",
+        "foot_L",
+        "foot_R"
+      ],
+      "pairs": [
+        [
+          "hand_L",
+          "hand_R"
+        ],
+        [
+          "foot_L",
+          "foot_R"
+        ]
+      ],
+      "notes": "Frog has no external tail, so only 5 leaves: head + 4 limbs. Root placed at pelvis (hip center). Spine simplified to a single chest/shoulder segment (root->spine1) plus a head segment, since the frog's neck is negligible in the side view (withers-to-head slope read directly from side view). Each limb was split into anatomically standard 3-segment chains (front: shoulder-elbow-wrist-hand; hind: hip-knee-ankle-foot) inferred from the folded-leg silhouette in the side view; lateral (z) placement and splay of each joint was inferred from the top view, where hind legs show a much larger lateral splay (knee/foot offset \u224810) than front legs (elbow/hand offset \u22486-10), consistent with typical frog anatomy where hind legs are proportionally larger and more sprawled. All vertical (y) directions were sign-flipped from the screen's down-positive grid to the up-positive model frame; verified hip->foot and shoulder->hand both have net negative dy (legs descend), confirming correct orientation."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 12322,
+      "total_tokens": 15458,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "bird",
+    "tree": {
+      "subject_guess": "bird (cardinal), perched",
+      "readings": [
+        "beak tip (0,8)",
+        "head/crest top (6,4)",
+        "neck base/skull back (9,10)",
+        "body center/withers (10,12) - root ref",
+        "tail base (14,12)",
+        "tail tip (24,14)",
+        "hip/leg attach (10,14)",
+        "knee (9,16)",
+        "hock (9,18)",
+        "foot on branch (9,20)",
+        "front view: center z=12, right leg z=9, left leg z=15",
+        "shoulder fold (10,10), wingtip fold-back (16,13)"
+      ],
+      "nodes": [
+        {
+          "name": "body_root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "neck_base",
+          "parent": "body_root",
+          "length": 2,
+          "direction": [
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "head_top",
+          "parent": "neck_base",
+          "length": 7,
+          "direction": [
+            3,
+            6,
+            0
+          ]
+        },
+        {
+          "name": "beak_tip",
+          "parent": "head_top",
+          "length": 7,
+          "direction": [
+            6,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "tail_base",
+          "parent": "body_root",
+          "length": 4,
+          "direction": [
+            -4,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "tail_base",
+          "length": 10,
+          "direction": [
+            -10,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "shoulder_L",
+          "parent": "body_root",
+          "length": 4,
+          "direction": [
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "name": "wingtip_L",
+          "parent": "shoulder_L",
+          "length": 7,
+          "direction": [
+            -6,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "shoulder_R",
+          "parent": "body_root",
+          "length": 4,
+          "direction": [
+            0,
+            2,
+            -3
+          ]
+        },
+        {
+          "name": "wingtip_R",
+          "parent": "shoulder_R",
+          "length": 7,
+          "direction": [
+            -6,
+            -3,
+            0
+          ]
+        },
+        {
+          "name": "hip_R",
+          "parent": "body_root",
+          "length": 4,
+          "direction": [
+            0,
+            -2,
+            -3
+          ]
+        },
+        {
+          "name": "knee_R",
+          "parent": "hip_R",
+          "length": 2,
+          "direction": [
+            1,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "hock_R",
+          "parent": "knee_R",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "foot_R",
+          "parent": "hock_R",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "hip_L",
+          "parent": "body_root",
+          "length": 4,
+          "direction": [
+            0,
+            -2,
+            3
+          ]
+        },
+        {
+          "name": "knee_L",
+          "parent": "hip_L",
+          "length": 2,
+          "direction": [
+            1,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "hock_L",
+          "parent": "knee_L",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "foot_L",
+          "parent": "hock_L",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            0
+          ]
+        }
+      ],
+      "leaves": [
+        "beak_tip",
+        "tail_tip",
+        "wingtip_L",
+        "wingtip_R",
+        "foot_L",
+        "foot_R"
+      ],
+      "pairs": [
+        [
+          "wingtip_L",
+          "wingtip_R"
+        ],
+        [
+          "foot_L",
+          "foot_R"
+        ]
+      ],
+      "notes": "Head split inferred as neck_base->head_top(crest)->beak_tip to capture the crest silhouette and forward-pointing beak. Tail modeled as single segment root->tail_base->tail_tip since only two clear bends visible. Wings are folded against body (not extended in any view); inferred shoulder->wingtip fold-back along body axis to satisfy leaf convention for wings even though pose hides full extension - length kept proportionally short/moderate per visible body-hugging silhouette in side view. Legs split per protocol into hip->knee->hock->foot (thigh implicit/hidden inside body plumage, so thigh segment omitted and hip treated as thigh root). Left/right leg and wing z-offsets taken from front view (ZY) spacing around center z=12, right side (screen-left, smaller z) mapped to -z per animal's-right convention, left side (screen-right, larger z) mapped to +z. Vertical grid axis flipped (grid-down = frame -y) throughout, confirmed by hip->knee->hock->foot all having negative dy (legs descend correctly, not inverted)."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 12902,
+      "total_tokens": 16038,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "dolphin",
+    "tree": {
+      "subject_guess": "dolphin",
+      "readings": [
+        "side view: tail fluke tip (x=0,y=22)",
+        "side view: peduncle/tail-base (x=4,y=18)",
+        "side view: torso back (x=9,y=10)",
+        "side view: dorsal fin base (x=8.5,y=4.5)",
+        "side view: dorsal fin tip (x=8.5,y=0.5)",
+        "side view: shoulder/pectoral base (x=10.5,y=9)",
+        "side view: pectoral tip (x=11,y=13)",
+        "side view: neck/melon junction (x=15,y=9)",
+        "side view: rostrum/head tip (x=19-20,y=13-15)",
+        "top view: pectoral fins at z=6-8 (left) and z=16-18 (right), body centerline z=12",
+        "top view: torso width z=8-16, tail/fluke width z=8-17 centered at z=12",
+        "front view: dorsal fin z=10-14,y=0.5-4; body max width z=8-17,y=8; pectorals z=6-8/16-18,y=11-14; flukes z=8-17,y=20-24"
+      ],
+      "nodes": [
+        {
+          "name": "body_center",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "peduncle",
+          "parent": "body_center",
+          "length": 9,
+          "direction": [
+            -5,
+            -8,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "body_center",
+          "length": 6,
+          "direction": [
+            6,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "dorsal_base",
+          "parent": "body_center",
+          "length": 6,
+          "direction": [
+            -0.5,
+            5.5,
+            0
+          ]
+        },
+        {
+          "name": "shoulder",
+          "parent": "body_center",
+          "length": 2,
+          "direction": [
+            1.5,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "tail",
+          "parent": "peduncle",
+          "length": 6,
+          "direction": [
+            -4,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 6,
+          "direction": [
+            5,
+            -4,
+            0
+          ]
+        },
+        {
+          "name": "dorsal_tip",
+          "parent": "dorsal_base",
+          "length": 4,
+          "direction": [
+            0,
+            4,
+            0
+          ]
+        },
+        {
+          "name": "pect_left",
+          "parent": "shoulder",
+          "length": 6,
+          "direction": [
+            0.5,
+            -4,
+            -5
+          ]
+        },
+        {
+          "name": "pect_right",
+          "parent": "shoulder",
+          "length": 6,
+          "direction": [
+            0.5,
+            -4,
+            5
+          ]
+        }
+      ],
+      "leaves": [
+        "tail",
+        "head",
+        "dorsal_tip",
+        "pect_left",
+        "pect_right"
+      ],
+      "pairs": [
+        [
+          "pect_left",
+          "pect_right"
+        ]
+      ],
+      "notes": "Root placed at torso center (approx side-view x=9,y=10, top-view z=12), the mesh's mass centroid, giving zero-length reference. Spine split into four direct children (peduncle, neck, dorsal_base, shoulder) inferred from the visible back curvature and fin bases since the mesh has no discrete vertebral joints visible. Tail, dorsal fin, and each pectoral fin were modeled as single-segment appendages (joint->tip) because the render shows no intermediate joint/bend in these fins, unlike jointed legs. Y-grid coordinates (0=top,24=bottom) were inverted (dy_frame = -(delta y_image)) to satisfy the +Y-up frame convention; e.g. peduncle->tail and shoulder->pect fins all show negative dy, correctly indicating downward-hanging/curving appendages. Z taken directly from front/top views, with animal's left = larger z per convention. Left/right pectoral fins form the only symmetric leaf pair; tail and dorsal fin are singular midline leaves per protocol."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 8309,
+      "total_tokens": 11445,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "starfish",
+    "tree": {
+      "subject_guess": "Starfish (5-armed sea star)",
+      "readings": [
+        "side(XY) center/disc ~ (12.5,12.5)",
+        "side(XY) top-arm tip ~ (12,1)",
+        "side(XY) left-arm tip ~ (2,12)",
+        "side(XY) right-arm tip ~ (23,12)",
+        "side(XY) rear-left-arm tip ~ (8,23)",
+        "side(XY) rear-right-arm tip ~ (17,23)",
+        "front(ZY) body spans z~8-17, y~0-24 (thin flat body, thickness axis)",
+        "top(XZ) body spans x~1-23, z~8-17 (confirms flat plate lying mainly in XY plane, small Z thickness)"
+      ],
+      "nodes": [
+        {
+          "name": "center",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "disc",
+          "parent": "center",
+          "length": 1,
+          "direction": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "arm_anterior",
+          "parent": "disc",
+          "length": 12,
+          "direction": [
+            -0.04,
+            0.999,
+            0
+          ]
+        },
+        {
+          "name": "arm_left",
+          "parent": "disc",
+          "length": 11,
+          "direction": [
+            -0.998,
+            0.048,
+            0
+          ]
+        },
+        {
+          "name": "arm_right",
+          "parent": "disc",
+          "length": 11,
+          "direction": [
+            0.998,
+            0.048,
+            0
+          ]
+        },
+        {
+          "name": "arm_rearleft",
+          "parent": "disc",
+          "length": 11,
+          "direction": [
+            -0.394,
+            -0.919,
+            0
+          ]
+        },
+        {
+          "name": "arm_rearright",
+          "parent": "disc",
+          "length": 11,
+          "direction": [
+            0.394,
+            -0.919,
+            0
+          ]
+        }
+      ],
+      "leaves": [
+        "arm_anterior",
+        "arm_left",
+        "arm_right",
+        "arm_rearleft",
+        "arm_rearright"
+      ],
+      "pairs": [
+        [
+          "arm_left",
+          "arm_right"
+        ],
+        [
+          "arm_rearleft",
+          "arm_rearright"
+        ]
+      ],
+      "notes": "Starfish has 5 arms + central disc, treated as radially symmetric with one unpaired anterior arm and two bilateral pairs (left/right lateral arms, rear-left/rear-right arms) to satisfy the symmetric-pair rule. Root ('center') is the animal's mouth/central point (length 0). 'disc' is a small internal spine node representing the central body bump (aboral disc) from which all arms radiate - added so the body isn't a single hub, per structure rules. Each arm is modeled as a single segment (base at disc, tip = leaf) since starfish arms taper continuously with no discrete joints like a vertebrate limb (thigh/knee/etc. segmentation not anatomically applicable here); this single-segment choice is the inferred simplification. Lengths were read from the side (XY) view as straight-line distances from the disc center (~12.5,12.5) to each arm tip: anterior tip (12,1)->~11.5\u224812; left tip (2,12)->~10.5\u224811; right tip (23,12)->~10.5\u224811; rear-left tip (8,23)->~11.4\u224811; rear-right tip (17,23)->~11.4\u224811. The vertical (Y) grid axis runs 0 at top to 24 at bottom on screen, so screen-down = negative real dy per the required flip; this is why the rear-left/rear-right arms (which descend on screen) get negative dy (-0.919) and the anterior arm (which rises on screen) gets positive dy (+0.999). Front (ZY) and top (XZ) views show the star lies almost entirely in the XY plane with only a small, roughly uniform Z thickness (the flat body depth), so Z-components of arm directions were set to ~0 rather than varying per arm."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 12385,
+      "total_tokens": 15521,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "octopus",
+    "tree": {
+      "subject_guess": "octopus",
+      "readings": [
+        "mantle center side view (13,13)",
+        "mantle top side view (13,8)",
+        "mantle bottom side view (13,17)",
+        "nose tip side view (19,12) -> head dx=+6,dy=+1",
+        "arm cluster center top view (11,12)",
+        "front arm tips top view (15,16)/(15,8)",
+        "mid-front arm tips top view (6,20)/(6,4)",
+        "mid-back arm tips top view (2,16)/(2,8)",
+        "back hook arm tips top view (7,23)/(7,1)",
+        "front view mantle top (12,8), arm tips droop to y~18-20 -> negative dy for arm segments"
+      ],
+      "nodes": [
+        {
+          "name": "body",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "body",
+          "length": 6,
+          "direction": [
+            1,
+            0.15,
+            0
+          ]
+        },
+        {
+          "name": "arm1L_base",
+          "parent": "body",
+          "length": 4,
+          "direction": [
+            0.5,
+            -0.2,
+            1
+          ]
+        },
+        {
+          "name": "arm1L_tip",
+          "parent": "arm1L_base",
+          "length": 5,
+          "direction": [
+            0.2,
+            -1,
+            0.5
+          ]
+        },
+        {
+          "name": "arm1R_base",
+          "parent": "body",
+          "length": 4,
+          "direction": [
+            0.5,
+            -0.2,
+            -1
+          ]
+        },
+        {
+          "name": "arm1R_tip",
+          "parent": "arm1R_base",
+          "length": 5,
+          "direction": [
+            0.2,
+            -1,
+            -0.5
+          ]
+        },
+        {
+          "name": "arm2L_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            0.2,
+            -0.1,
+            1
+          ]
+        },
+        {
+          "name": "arm2L_tip",
+          "parent": "arm2L_base",
+          "length": 6,
+          "direction": [
+            -0.2,
+            -1,
+            0.6
+          ]
+        },
+        {
+          "name": "arm2R_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            0.2,
+            -0.1,
+            -1
+          ]
+        },
+        {
+          "name": "arm2R_tip",
+          "parent": "arm2R_base",
+          "length": 6,
+          "direction": [
+            -0.2,
+            -1,
+            -0.6
+          ]
+        },
+        {
+          "name": "arm3L_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            -0.3,
+            -0.1,
+            1
+          ]
+        },
+        {
+          "name": "arm3L_tip",
+          "parent": "arm3L_base",
+          "length": 6,
+          "direction": [
+            -0.5,
+            -1,
+            0.4
+          ]
+        },
+        {
+          "name": "arm3R_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            -0.3,
+            -0.1,
+            -1
+          ]
+        },
+        {
+          "name": "arm3R_tip",
+          "parent": "arm3R_base",
+          "length": 6,
+          "direction": [
+            -0.5,
+            -1,
+            -0.4
+          ]
+        },
+        {
+          "name": "arm4L_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            -0.6,
+            0.1,
+            0.8
+          ]
+        },
+        {
+          "name": "arm4L_tip",
+          "parent": "arm4L_base",
+          "length": 7,
+          "direction": [
+            -0.8,
+            -1,
+            0.3
+          ]
+        },
+        {
+          "name": "arm4R_base",
+          "parent": "body",
+          "length": 5,
+          "direction": [
+            -0.6,
+            0.1,
+            -0.8
+          ]
+        },
+        {
+          "name": "arm4R_tip",
+          "parent": "arm4R_base",
+          "length": 7,
+          "direction": [
+            -0.8,
+            -1,
+            -0.3
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "arm1L_tip",
+        "arm1R_tip",
+        "arm2L_tip",
+        "arm2R_tip",
+        "arm3L_tip",
+        "arm3R_tip",
+        "arm4L_tip",
+        "arm4R_tip"
+      ],
+      "pairs": [
+        [
+          "arm1L_tip",
+          "arm1R_tip"
+        ],
+        [
+          "arm2L_tip",
+          "arm2R_tip"
+        ],
+        [
+          "arm3L_tip",
+          "arm3R_tip"
+        ],
+        [
+          "arm4L_tip",
+          "arm4R_tip"
+        ]
+      ],
+      "notes": "Octopus has no external tail leaf; mantle/rostrum treated as single 'head' leaf on the midline. The 8 arms were grouped into 4 bilaterally symmetric pairs (front, mid-front, mid-back, back) based on their radial spread in the top (XZ) view; within each pair the true anatomical length is kept equal for both sides even though the render shows different curl poses (proportion, not pose). Each arm was split into base->tip as the minimal inferred multi-segment joint, since the grid only gives base attachment and tip endpoints, not intermediate joints. Vertical directions were flipped per the grid convention (screen-down = physically negative y), giving all arm-tip segments a negative dy since arms droop from the mantle toward the ground, while the head/rostrum direction is slightly positive dy since it points up and forward from the mantle center."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 11351,
+      "total_tokens": 14487,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "spider",
+    "tree": {
+      "subject_guess": "spider (tarantula-like, 8 legs)",
+      "readings": [
+        "side: abdomen spans x4-11,y9-16 -> center (7,13)",
+        "side: cephalothorax spans x11-18,y8-15 -> center (14,11)",
+        "side: head/chelicerae bump x18-21,y9-12 -> center (19,10)",
+        "top: abdomen sphere x4-9,z8-16 -> center (6.5,12)",
+        "top: cephalothorax x9-17,z6-18 -> center (13,12), matches root z=12",
+        "top: head bump x17-19,z10-14 -> center (18,12)",
+        "top: front leg (leg I) tip ~ (23,2) and mirrored (23,22)",
+        "top: leg II tip ~ (24,8) and mirrored (24,17)",
+        "top: leg III tip ~ (5,4) and mirrored (5,20)",
+        "top: leg IV tip ~ (2,3) and mirrored (2,21)",
+        "front view: legs attach near y8, ground contact y15-16 confirming downward leg direction",
+        "ground line (any x,15.5) vs withers/cephalothorax top (14,8): back is smaller y-number, ground larger, so leg dy must be negative"
+      ],
+      "nodes": [
+        {
+          "name": "root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "abdomen",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            -4,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "cephalothorax",
+          "parent": "root",
+          "length": 3,
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "leg1R_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            1,
+            0,
+            -1
+          ]
+        },
+        {
+          "name": "leg1R_femur",
+          "parent": "leg1R_coxa",
+          "length": 9,
+          "direction": [
+            2,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "leg1R_tibia",
+          "parent": "leg1R_femur",
+          "length": 6,
+          "direction": [
+            1,
+            -2,
+            -1
+          ]
+        },
+        {
+          "name": "leg1R_tarsus",
+          "parent": "leg1R_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "leg1L_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "leg1L_femur",
+          "parent": "leg1L_coxa",
+          "length": 9,
+          "direction": [
+            2,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "leg1L_tibia",
+          "parent": "leg1L_femur",
+          "length": 6,
+          "direction": [
+            1,
+            -2,
+            1
+          ]
+        },
+        {
+          "name": "leg1L_tarsus",
+          "parent": "leg1L_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "leg2R_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            1,
+            0,
+            -1
+          ]
+        },
+        {
+          "name": "leg2R_femur",
+          "parent": "leg2R_coxa",
+          "length": 7,
+          "direction": [
+            1,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "leg2R_tibia",
+          "parent": "leg2R_femur",
+          "length": 5,
+          "direction": [
+            0,
+            -2,
+            -1
+          ]
+        },
+        {
+          "name": "leg2R_tarsus",
+          "parent": "leg2R_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "leg2L_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "leg2L_femur",
+          "parent": "leg2L_coxa",
+          "length": 7,
+          "direction": [
+            1,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "leg2L_tibia",
+          "parent": "leg2L_femur",
+          "length": 5,
+          "direction": [
+            0,
+            -2,
+            1
+          ]
+        },
+        {
+          "name": "leg2L_tarsus",
+          "parent": "leg2L_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "leg3R_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        {
+          "name": "leg3R_femur",
+          "parent": "leg3R_coxa",
+          "length": 7,
+          "direction": [
+            -1,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "leg3R_tibia",
+          "parent": "leg3R_femur",
+          "length": 5,
+          "direction": [
+            0,
+            -2,
+            -1
+          ]
+        },
+        {
+          "name": "leg3R_tarsus",
+          "parent": "leg3R_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "leg3L_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "leg3L_femur",
+          "parent": "leg3L_coxa",
+          "length": 7,
+          "direction": [
+            -1,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "leg3L_tibia",
+          "parent": "leg3L_femur",
+          "length": 5,
+          "direction": [
+            0,
+            -2,
+            1
+          ]
+        },
+        {
+          "name": "leg3L_tarsus",
+          "parent": "leg3L_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "leg4R_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        {
+          "name": "leg4R_femur",
+          "parent": "leg4R_coxa",
+          "length": 8,
+          "direction": [
+            -2,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "leg4R_tibia",
+          "parent": "leg4R_femur",
+          "length": 6,
+          "direction": [
+            -1,
+            -2,
+            -1
+          ]
+        },
+        {
+          "name": "leg4R_tarsus",
+          "parent": "leg4R_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "leg4L_coxa",
+          "parent": "cephalothorax",
+          "length": 1,
+          "direction": [
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "name": "leg4L_femur",
+          "parent": "leg4L_coxa",
+          "length": 8,
+          "direction": [
+            -2,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "leg4L_tibia",
+          "parent": "leg4L_femur",
+          "length": 6,
+          "direction": [
+            -1,
+            -2,
+            1
+          ]
+        },
+        {
+          "name": "leg4L_tarsus",
+          "parent": "leg4L_tibia",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "leg1R_tarsus",
+        "leg1L_tarsus",
+        "leg2R_tarsus",
+        "leg2L_tarsus",
+        "leg3R_tarsus",
+        "leg3L_tarsus",
+        "leg4R_tarsus",
+        "leg4L_tarsus"
+      ],
+      "pairs": [
+        [
+          "leg1R_tarsus",
+          "leg1L_tarsus"
+        ],
+        [
+          "leg2R_tarsus",
+          "leg2L_tarsus"
+        ],
+        [
+          "leg3R_tarsus",
+          "leg3L_tarsus"
+        ],
+        [
+          "leg4R_tarsus",
+          "leg4L_tarsus"
+        ]
+      ],
+      "notes": "Spider (tarantula-like) mesh, no external tail. Body spine simplified to root(junction of abdomen/cephalothorax)->abdomen(terminal, not a leaf, per convention only appendages/head/tail count as leaves)->cephalothorax->head(leaf). All 8 legs attach at cephalothorax and were each split into 4 inferred segments (coxa-femur-tibia-tarsus) since the grid only gives overall limb span; segment proportions (short coxa stub, long femur, medium tibia, short tarsus) are anatomical inference per protocol #8. Leg pair I (front) and IV (rear) read longest from top-view tip spread (~x2-23, full 20+ unit span), pairs II/III shorter and more laterally directed, matching the top-view silhouette. All y-directions for legs are negative (down) per the mandatory sign flip, since ground (y~15.5 screen) lies below the cephalothorax attachment (y~8 screen). Left/Right leg copies mirror only in the z-component (+z = animal's left), lengths kept identical per pair to encode proportion rather than the current mid-stride pose. Root placed at length 0 with direction [0,0,0] as required."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 11827,
+      "total_tokens": 14963,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "crab",
+    "tree": {
+      "subject_guess": "crab",
+      "readings": [
+        "carapace front (6,9) to rear (20,10) side view -> body length ~14",
+        "carapace top y=8, leg line y=16 side view -> body height ~8",
+        "top view body z=4..20 -> core width ~10 (excl. leg spread)",
+        "right claw side view: base(19,10)->elbow(22,7)->wrist(23,5)->tip(24,4)",
+        "left claw side view: base(8,10)->elbow(4,7)->wrist(2,5)->tip(0,4)",
+        "front view raised claw base(z=12,y=8)->tip(z=20,y=0) => claw reach ~11 (screen y down->flip sign, claw rises above body)",
+        "legs attach y=16 (side), feet cluster y=20-24, lateral spread to z=0/24 (top/front) => leg length ~14, split thigh5+shank5+foot4",
+        "all 4 leg pairs shown at different stride phase (pose only) -> authored with equal segment lengths per protocol"
+      ],
+      "nodes": [
+        {
+          "name": "root",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "fore_carapace",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "aft_carapace",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rostrum",
+          "parent": "fore_carapace",
+          "length": 2,
+          "direction": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "L_cheliped_merus",
+          "parent": "fore_carapace",
+          "length": 5,
+          "direction": [
+            0.5,
+            0.4,
+            0.75
+          ]
+        },
+        {
+          "name": "L_cheliped_carpus",
+          "parent": "L_cheliped_merus",
+          "length": 3,
+          "direction": [
+            0.3,
+            0.6,
+            0.7
+          ]
+        },
+        {
+          "name": "L_cheliped_claw",
+          "parent": "L_cheliped_carpus",
+          "length": 3,
+          "direction": [
+            0.1,
+            0.9,
+            0.4
+          ]
+        },
+        {
+          "name": "R_cheliped_merus",
+          "parent": "fore_carapace",
+          "length": 5,
+          "direction": [
+            0.5,
+            0.4,
+            -0.75
+          ]
+        },
+        {
+          "name": "R_cheliped_carpus",
+          "parent": "R_cheliped_merus",
+          "length": 3,
+          "direction": [
+            0.3,
+            0.6,
+            -0.7
+          ]
+        },
+        {
+          "name": "R_cheliped_claw",
+          "parent": "R_cheliped_carpus",
+          "length": 3,
+          "direction": [
+            0.1,
+            0.9,
+            -0.4
+          ]
+        },
+        {
+          "name": "L1_thigh",
+          "parent": "fore_carapace",
+          "length": 5,
+          "direction": [
+            0.2,
+            -0.4,
+            0.85
+          ]
+        },
+        {
+          "name": "L1_shank",
+          "parent": "L1_thigh",
+          "length": 5,
+          "direction": [
+            0.1,
+            -0.8,
+            0.55
+          ]
+        },
+        {
+          "name": "L1_foot",
+          "parent": "L1_shank",
+          "length": 4,
+          "direction": [
+            -0.1,
+            -0.95,
+            0.25
+          ]
+        },
+        {
+          "name": "R1_thigh",
+          "parent": "fore_carapace",
+          "length": 5,
+          "direction": [
+            0.2,
+            -0.4,
+            -0.85
+          ]
+        },
+        {
+          "name": "R1_shank",
+          "parent": "R1_thigh",
+          "length": 5,
+          "direction": [
+            0.1,
+            -0.8,
+            -0.55
+          ]
+        },
+        {
+          "name": "R1_foot",
+          "parent": "R1_shank",
+          "length": 4,
+          "direction": [
+            -0.1,
+            -0.95,
+            -0.25
+          ]
+        },
+        {
+          "name": "L2_thigh",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            0.05,
+            -0.4,
+            0.9
+          ]
+        },
+        {
+          "name": "L2_shank",
+          "parent": "L2_thigh",
+          "length": 5,
+          "direction": [
+            0.0,
+            -0.85,
+            0.5
+          ]
+        },
+        {
+          "name": "L2_foot",
+          "parent": "L2_shank",
+          "length": 4,
+          "direction": [
+            -0.05,
+            -0.95,
+            0.25
+          ]
+        },
+        {
+          "name": "R2_thigh",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            0.05,
+            -0.4,
+            -0.9
+          ]
+        },
+        {
+          "name": "R2_shank",
+          "parent": "R2_thigh",
+          "length": 5,
+          "direction": [
+            0.0,
+            -0.85,
+            -0.5
+          ]
+        },
+        {
+          "name": "R2_foot",
+          "parent": "R2_shank",
+          "length": 4,
+          "direction": [
+            -0.05,
+            -0.95,
+            -0.25
+          ]
+        },
+        {
+          "name": "L3_thigh",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            -0.1,
+            -0.4,
+            0.9
+          ]
+        },
+        {
+          "name": "L3_shank",
+          "parent": "L3_thigh",
+          "length": 5,
+          "direction": [
+            -0.05,
+            -0.85,
+            0.5
+          ]
+        },
+        {
+          "name": "L3_foot",
+          "parent": "L3_shank",
+          "length": 4,
+          "direction": [
+            -0.15,
+            -0.95,
+            0.2
+          ]
+        },
+        {
+          "name": "R3_thigh",
+          "parent": "root",
+          "length": 5,
+          "direction": [
+            -0.1,
+            -0.4,
+            -0.9
+          ]
+        },
+        {
+          "name": "R3_shank",
+          "parent": "R3_thigh",
+          "length": 5,
+          "direction": [
+            -0.05,
+            -0.85,
+            -0.5
+          ]
+        },
+        {
+          "name": "R3_foot",
+          "parent": "R3_shank",
+          "length": 4,
+          "direction": [
+            -0.15,
+            -0.95,
+            -0.2
+          ]
+        },
+        {
+          "name": "L4_thigh",
+          "parent": "aft_carapace",
+          "length": 5,
+          "direction": [
+            -0.3,
+            -0.4,
+            0.85
+          ]
+        },
+        {
+          "name": "L4_shank",
+          "parent": "L4_thigh",
+          "length": 5,
+          "direction": [
+            -0.15,
+            -0.8,
+            0.55
+          ]
+        },
+        {
+          "name": "L4_foot",
+          "parent": "L4_shank",
+          "length": 4,
+          "direction": [
+            -0.1,
+            -0.95,
+            0.25
+          ]
+        },
+        {
+          "name": "R4_thigh",
+          "parent": "aft_carapace",
+          "length": 5,
+          "direction": [
+            -0.3,
+            -0.4,
+            -0.85
+          ]
+        },
+        {
+          "name": "R4_shank",
+          "parent": "R4_thigh",
+          "length": 5,
+          "direction": [
+            -0.15,
+            -0.8,
+            -0.55
+          ]
+        },
+        {
+          "name": "R4_foot",
+          "parent": "R4_shank",
+          "length": 4,
+          "direction": [
+            -0.1,
+            -0.95,
+            -0.25
+          ]
+        }
+      ],
+      "leaves": [
+        "rostrum",
+        "L_cheliped_claw",
+        "R_cheliped_claw",
+        "L1_foot",
+        "R1_foot",
+        "L2_foot",
+        "R2_foot",
+        "L3_foot",
+        "R3_foot",
+        "L4_foot",
+        "R4_foot"
+      ],
+      "pairs": [
+        [
+          "L_cheliped_claw",
+          "R_cheliped_claw"
+        ],
+        [
+          "L1_foot",
+          "R1_foot"
+        ],
+        [
+          "L2_foot",
+          "R2_foot"
+        ],
+        [
+          "L3_foot",
+          "R3_foot"
+        ],
+        [
+          "L4_foot",
+          "R4_foot"
+        ]
+      ],
+      "notes": "Crab carapace modeled as two spine nodes (fore/aft) off a central root for structural variety. Rostrum serves as the 'head' leaf (crabs lack a distinct head, it's the front tip of the fused cephalothorax). No external tail leaf included since the crab's abdomen/apron is folded flat underneath and not a protruding terminal appendage. Chelipeds (claws) split into merus/carpus/claw based on side and front view bend points; claws read as raised above the body (screen-y decreasing => positive actual dy after sign flip). The four walking-leg pairs are shown at different stride phases in the render (classic mid-walk pose) but are authored with identical thigh/shank/foot lengths (5/5/4) per the proportion-not-pose rule, attaching at three points along the spine (fore_carapace, root, aft_carapace) to reflect their front-to-rear body position. All leg chains have monotonically negative dy from hip to foot, consistent with the flipped-grid convention (ground = large screen-y = downward in actual frame)."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 16781,
+      "total_tokens": 19917,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "scorpion",
+    "tree": {
+      "subject_guess": "scorpion",
+      "readings": [
+        "side view head/carapace front (8,14); cephalothorax ref center (14,15) -> head length ~6",
+        "side view abdomen/tail base (19,13) vs cephalothorax (14,15) -> abdomen length ~5",
+        "side view tail seg1 (20,11), seg2 (21,9), seg3/top-of-curl (21,6) -> tail segment lengths ~2,2,3",
+        "side view stinger tip (23,8) vs tail3 (21,6) -> stinger length ~3",
+        "side view claw elbow (4,13) & top-view claw z-spread (z~6 and z~18, center z=12) -> pedipalp_arm length ~7",
+        "side view claw tip (0,15) vs elbow (4,13) with top-view z shift -> pincer length ~5",
+        "front view body-dome edge (z=8/16,y=14) to foot z=0/24,y=19-20 -> leg drop used to build coxa/femur/foot lengths 5(or3)/5/3",
+        "top view leg attachment x positions ~9,12,16,19 relative to body center x=14 -> coxa dx offsets 5,2,-2,-5 for the four leg pairs",
+        "front view foot tips at y~19-20, z=0 and z=24 -> confirms strong downward (-y) and outward (\u00b1z) leg direction"
+      ],
+      "nodes": [
+        {
+          "name": "cephalothorax",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "cephalothorax",
+          "length": 6,
+          "direction": [
+            6,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "abdomen",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            -5,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "tail1",
+          "parent": "abdomen",
+          "length": 2,
+          "direction": [
+            -1,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "tail2",
+          "parent": "tail1",
+          "length": 2,
+          "direction": [
+            -1,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "tail3",
+          "parent": "tail2",
+          "length": 3,
+          "direction": [
+            0,
+            3,
+            0
+          ]
+        },
+        {
+          "name": "stinger",
+          "parent": "tail3",
+          "length": 3,
+          "direction": [
+            -2,
+            -2,
+            0
+          ]
+        },
+        {
+          "name": "pedipalp_arm_L",
+          "parent": "head",
+          "length": 7,
+          "direction": [
+            4,
+            1,
+            -6
+          ]
+        },
+        {
+          "name": "pincer_L",
+          "parent": "pedipalp_arm_L",
+          "length": 5,
+          "direction": [
+            4,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "pedipalp_arm_R",
+          "parent": "head",
+          "length": 7,
+          "direction": [
+            4,
+            1,
+            6
+          ]
+        },
+        {
+          "name": "pincer_R",
+          "parent": "pedipalp_arm_R",
+          "length": 5,
+          "direction": [
+            4,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "coxa_p1_L",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            5,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "femur_p1_L",
+          "parent": "coxa_p1_L",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            -4
+          ]
+        },
+        {
+          "name": "foot_p1_L",
+          "parent": "femur_p1_L",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "coxa_p1_R",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            5,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "femur_p1_R",
+          "parent": "coxa_p1_R",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            4
+          ]
+        },
+        {
+          "name": "foot_p1_R",
+          "parent": "femur_p1_R",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "coxa_p2_L",
+          "parent": "cephalothorax",
+          "length": 3,
+          "direction": [
+            2,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "femur_p2_L",
+          "parent": "coxa_p2_L",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            -4
+          ]
+        },
+        {
+          "name": "foot_p2_L",
+          "parent": "femur_p2_L",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "coxa_p2_R",
+          "parent": "cephalothorax",
+          "length": 3,
+          "direction": [
+            2,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "femur_p2_R",
+          "parent": "coxa_p2_R",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            4
+          ]
+        },
+        {
+          "name": "foot_p2_R",
+          "parent": "femur_p2_R",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "coxa_p3_L",
+          "parent": "cephalothorax",
+          "length": 3,
+          "direction": [
+            -2,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "femur_p3_L",
+          "parent": "coxa_p3_L",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            -4
+          ]
+        },
+        {
+          "name": "foot_p3_L",
+          "parent": "femur_p3_L",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "coxa_p3_R",
+          "parent": "cephalothorax",
+          "length": 3,
+          "direction": [
+            -2,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "femur_p3_R",
+          "parent": "coxa_p3_R",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            4
+          ]
+        },
+        {
+          "name": "foot_p3_R",
+          "parent": "femur_p3_R",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "coxa_p4_L",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            -5,
+            -1,
+            -2
+          ]
+        },
+        {
+          "name": "femur_p4_L",
+          "parent": "coxa_p4_L",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            -4
+          ]
+        },
+        {
+          "name": "foot_p4_L",
+          "parent": "femur_p4_L",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "coxa_p4_R",
+          "parent": "cephalothorax",
+          "length": 5,
+          "direction": [
+            -5,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "femur_p4_R",
+          "parent": "coxa_p4_R",
+          "length": 5,
+          "direction": [
+            0,
+            -3,
+            4
+          ]
+        },
+        {
+          "name": "foot_p4_R",
+          "parent": "femur_p4_R",
+          "length": 3,
+          "direction": [
+            0,
+            -2,
+            2
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "stinger",
+        "pincer_L",
+        "pincer_R",
+        "foot_p1_L",
+        "foot_p1_R",
+        "foot_p2_L",
+        "foot_p2_R",
+        "foot_p3_L",
+        "foot_p3_R",
+        "foot_p4_L",
+        "foot_p4_R"
+      ],
+      "pairs": [
+        [
+          "pincer_L",
+          "pincer_R"
+        ],
+        [
+          "foot_p1_L",
+          "foot_p1_R"
+        ],
+        [
+          "foot_p2_L",
+          "foot_p2_R"
+        ],
+        [
+          "foot_p3_L",
+          "foot_p3_R"
+        ],
+        [
+          "foot_p4_L",
+          "foot_p4_R"
+        ]
+      ],
+      "notes": "Root placed at an inferred cephalothorax center (~grid 14,15 in side view) since no single landmark marks it; all leg/claw attachments and the abdomen/tail base are measured relative to this point. Tail was split into 3 inferred internal segments (tail1-3) plus a terminal stinger leaf based on the visible curl bumps in the side view. Each leg was split into coxa->femur->foot (3 segments) as an anatomical inference from the single visible bend in front/top views; all four leg pairs share identical femur/foot lengths and directions (per proportion-not-pose rule), differing only in the coxa's forward/back offset (dx) that reflects each pair's attachment point along the cephalothorax (x=9,12,16,19 vs body-center x=14). Pedipalps (claws) modeled as arm+pincer, attached at the head. Left/right sides mirrored via z-sign only. Vertical axis sign was flipped from the on-screen grid (down-screen => negative y) throughout, e.g. all leg 'foot' directions carry negative dy, matching hip-to-foot descending downward."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 18414,
+      "total_tokens": 21550,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "ant",
+    "tree": {
+      "subject_guess": "ant",
+      "readings": [
+        "side: head_tip (1,8)",
+        "side: head_center (4,9)",
+        "side: neck/head-thorax join (8,10)",
+        "side: thorax_center (12,10)",
+        "side: petiole/thorax-gaster join (15,11)",
+        "side: gaster_center (19,12)",
+        "side: gaster_tip (21,17)",
+        "side: leg attach band on thorax x=10-14, y=11",
+        "side: leg tips reach y=16-17 across x=10-14",
+        "front: body top y=2-8 centered z=12",
+        "front: leg tips spread z=6..18 at y=16",
+        "top: gaster fuzzy block x=0-8, z=8-16",
+        "top: thorax/leg band x=8-16",
+        "top: head fuzzy block x=16-24, z=8-16",
+        "top: front-leg tips extend toward x=20-24, z=2/22",
+        "top: mid-leg tips extend to z=1/23 near x=9-10",
+        "top: hind-leg tips extend toward x=0-2, z=2/22"
+      ],
+      "nodes": [
+        {
+          "name": "thorax",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "thorax",
+          "length": 8,
+          "direction": [
+            8,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 3,
+          "direction": [
+            3,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "petiole",
+          "parent": "thorax",
+          "length": 3,
+          "direction": [
+            -3,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "gaster",
+          "parent": "petiole",
+          "length": 8,
+          "direction": [
+            -6,
+            -6,
+            0
+          ]
+        },
+        {
+          "name": "front_left_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            2,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "front_left_femur",
+          "parent": "front_left_coxa",
+          "length": 6,
+          "direction": [
+            3,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "front_left_tibia",
+          "parent": "front_left_femur",
+          "length": 6,
+          "direction": [
+            1,
+            -3,
+            -1
+          ]
+        },
+        {
+          "name": "front_left_foot",
+          "parent": "front_left_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "front_right_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            2,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "front_right_femur",
+          "parent": "front_right_coxa",
+          "length": 6,
+          "direction": [
+            3,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "front_right_tibia",
+          "parent": "front_right_femur",
+          "length": 6,
+          "direction": [
+            1,
+            -3,
+            1
+          ]
+        },
+        {
+          "name": "front_right_foot",
+          "parent": "front_right_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        },
+        {
+          "name": "mid_left_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "mid_left_femur",
+          "parent": "mid_left_coxa",
+          "length": 6,
+          "direction": [
+            0,
+            -2,
+            3
+          ]
+        },
+        {
+          "name": "mid_left_tibia",
+          "parent": "mid_left_femur",
+          "length": 6,
+          "direction": [
+            0,
+            -3,
+            -1
+          ]
+        },
+        {
+          "name": "mid_left_foot",
+          "parent": "mid_left_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "mid_right_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            0,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "mid_right_femur",
+          "parent": "mid_right_coxa",
+          "length": 6,
+          "direction": [
+            0,
+            -2,
+            -3
+          ]
+        },
+        {
+          "name": "mid_right_tibia",
+          "parent": "mid_right_femur",
+          "length": 6,
+          "direction": [
+            0,
+            -3,
+            1
+          ]
+        },
+        {
+          "name": "mid_right_foot",
+          "parent": "mid_right_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            0
+          ]
+        },
+        {
+          "name": "hind_left_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            -2,
+            -1,
+            3
+          ]
+        },
+        {
+          "name": "hind_left_femur",
+          "parent": "hind_left_coxa",
+          "length": 6,
+          "direction": [
+            -3,
+            -2,
+            2
+          ]
+        },
+        {
+          "name": "hind_left_tibia",
+          "parent": "hind_left_femur",
+          "length": 6,
+          "direction": [
+            -1,
+            -3,
+            -1
+          ]
+        },
+        {
+          "name": "hind_left_foot",
+          "parent": "hind_left_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            -1
+          ]
+        },
+        {
+          "name": "hind_right_coxa",
+          "parent": "thorax",
+          "length": 2,
+          "direction": [
+            -2,
+            -1,
+            -3
+          ]
+        },
+        {
+          "name": "hind_right_femur",
+          "parent": "hind_right_coxa",
+          "length": 6,
+          "direction": [
+            -3,
+            -2,
+            -2
+          ]
+        },
+        {
+          "name": "hind_right_tibia",
+          "parent": "hind_right_femur",
+          "length": 6,
+          "direction": [
+            -1,
+            -3,
+            1
+          ]
+        },
+        {
+          "name": "hind_right_foot",
+          "parent": "hind_right_tibia",
+          "length": 3,
+          "direction": [
+            0,
+            -1,
+            1
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "gaster",
+        "front_left_foot",
+        "front_right_foot",
+        "mid_left_foot",
+        "mid_right_foot",
+        "hind_left_foot",
+        "hind_right_foot"
+      ],
+      "pairs": [
+        [
+          "front_left_foot",
+          "front_right_foot"
+        ],
+        [
+          "mid_left_foot",
+          "mid_right_foot"
+        ],
+        [
+          "hind_left_foot",
+          "hind_right_foot"
+        ]
+      ],
+      "notes": "Raw grid has the head cluster at LOW x (0-8) and gaster at HIGH x (16-24) in the side view, but the top view shows the head-fuzz block at HIGH x (16-24) and gaster block at LOW x (0-8) - i.e. the two views are mirrored in x relative to each other for this render. Since the frame requires +x to point toward the head, all x-readings were mirrored (output_x = 24 - grid_x) before computing direction deltas, using the top-view convention (head = high x) as the reference. The vertical grid axis (y) was flipped per protocol (output_dy = -(grid_dy)) since the grid's y increases downward while the frame's +y is up; every leg segment's dy is negative, correctly sending hip->foot downward. Body spine was split into thorax(root)-neck-head and thorax-petiole-gaster based on the two visible waist constrictions in the side view (x~8-9 and x~15-16). Each of the 6 legs was split into coxa->femur->tibia->foot (anatomical inference of ant leg segmentation, analogous to thigh->knee->shank->hock->foot) since only attachment point and ground-contact tip are directly visible; intermediate joint count is inferred, not directly read. Antennae and mandibles are treated as sub-flap detail of the head leaf, not separate leaves, per protocol."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 15258,
+      "total_tokens": 18394,
+      "calls": 1
+    }
+  },
+  {
+    "mode": "none",
+    "subject": "bat",
+    "tree": {
+      "subject_guess": "bat",
+      "readings": [
+        "top view nose (24, z=9.5)",
+        "top view eyes (20,z=8) and (20,z=11)",
+        "top view shoulder (16,z=9.5)",
+        "top view hip (9,z=9.5)",
+        "top view wing root (16,z=7/12)",
+        "top view wingtip (2,z=0/19)",
+        "front view ear tips (z=7,y=1) and (z=10.5,y=2)",
+        "front view tail tip (z=8,y=24)",
+        "front view hip band (z=8-9,y=13)",
+        "side view withers (x=9,y=6-9)",
+        "side view hip (x=9,y=13)",
+        "side view tail tip (x=8,y=24)",
+        "side view wing chord spans x=0-24 at y=7-8"
+      ],
+      "nodes": [
+        {
+          "name": "pelvis",
+          "parent": null,
+          "length": 0,
+          "direction": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "chest",
+          "parent": "pelvis",
+          "length": 4,
+          "direction": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "name": "shoulder",
+          "parent": "chest",
+          "length": 6,
+          "direction": [
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "name": "neck",
+          "parent": "shoulder",
+          "length": 4,
+          "direction": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "neck",
+          "length": 4,
+          "direction": [
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "name": "tail_mid",
+          "parent": "pelvis",
+          "length": 5,
+          "direction": [
+            -1,
+            -5,
+            0
+          ]
+        },
+        {
+          "name": "tail_tip",
+          "parent": "tail_mid",
+          "length": 6,
+          "direction": [
+            0,
+            -6,
+            0
+          ]
+        },
+        {
+          "name": "knee_L",
+          "parent": "pelvis",
+          "length": 4,
+          "direction": [
+            0,
+            -3,
+            2
+          ]
+        },
+        {
+          "name": "foot_L",
+          "parent": "knee_L",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            1
+          ]
+        },
+        {
+          "name": "knee_R",
+          "parent": "pelvis",
+          "length": 4,
+          "direction": [
+            0,
+            -3,
+            -2
+          ]
+        },
+        {
+          "name": "foot_R",
+          "parent": "knee_R",
+          "length": 2,
+          "direction": [
+            0,
+            -2,
+            -1
+          ]
+        },
+        {
+          "name": "elbow_L",
+          "parent": "shoulder",
+          "length": 8,
+          "direction": [
+            -6,
+            -1,
+            5
+          ]
+        },
+        {
+          "name": "wrist_L",
+          "parent": "elbow_L",
+          "length": 7,
+          "direction": [
+            -6,
+            0,
+            3
+          ]
+        },
+        {
+          "name": "wingtip_L",
+          "parent": "wrist_L",
+          "length": 3,
+          "direction": [
+            -2,
+            -1,
+            2
+          ]
+        },
+        {
+          "name": "elbow_R",
+          "parent": "shoulder",
+          "length": 8,
+          "direction": [
+            -6,
+            -1,
+            -5
+          ]
+        },
+        {
+          "name": "wrist_R",
+          "parent": "elbow_R",
+          "length": 7,
+          "direction": [
+            -6,
+            0,
+            -3
+          ]
+        },
+        {
+          "name": "wingtip_R",
+          "parent": "wrist_R",
+          "length": 3,
+          "direction": [
+            -2,
+            -1,
+            -2
+          ]
+        }
+      ],
+      "leaves": [
+        "head",
+        "tail_tip",
+        "foot_L",
+        "foot_R",
+        "wingtip_L",
+        "wingtip_R"
+      ],
+      "pairs": [
+        [
+          "foot_L",
+          "foot_R"
+        ],
+        [
+          "wingtip_L",
+          "wingtip_R"
+        ]
+      ],
+      "notes": "Side view's wide \"batwing\" silhouette is the projected shadow of the drooping wing membrane (spans full x-range due to chord length, not true forward/back extent), so forward-axis (x) readings were taken from the top view instead, z (left-right) cross-checked between front/top, y (height) cross-checked between front/side. All grid y-values were flipped (final dy = parent_y_grid - child_y_grid) so descending limbs (legs, tail) have negative dy as required. Tail split into tail_mid/tail_tip and legs split with an inferred knee joint per the joint-chain convention; bat legs are largely hidden in the wing membrane in all views so knee/foot positions are proportionally inferred (shorter than the clearly-visible tail). Wing elbow/wrist joints are inferred by interpolating along the shoulder->wingtip vector read from the top view. Ears/eyes are sub-flap detail folded into the head leaf, not separate leaves."
+    },
+    "log": [
+      {
+        "stage": "validate",
+        "round": 0,
+        "errors": []
+      },
+      {
+        "stage": "review",
+        "mode": "none",
+        "revised": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 3136,
+      "completion_tokens": 31059,
+      "total_tokens": 34195,
+      "calls": 1
+    }
+  }
+]

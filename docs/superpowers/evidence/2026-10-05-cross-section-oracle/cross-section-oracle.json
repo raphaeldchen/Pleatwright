@@ -1,0 +1,323 @@
+{
+  "clause_census": {
+    "TOTAL": 4614726,
+    "equality": 28192,
+    "taco": 74602,
+    "transitivity": 4511932
+  },
+  "collinear_lines": 29,
+  "creases": 745,
+  "edges": 745,
+  "elapsed_secs": 51.0,
+  "faces": 380,
+  "families_cross_validated": [
+    "equality"
+  ],
+  "families_independently_checked": [
+    "taco"
+  ],
+  "families_not_under_test": [
+    "transitivity"
+  ],
+  "gates": {
+    "accounting": {
+      "bundle_lines": 29,
+      "crease_overlapping_lines": 29,
+      "creases": 745,
+      "edges": 745,
+      "edges_placed": 745,
+      "flat_edges": 0
+    },
+    "constancy": {
+      "boundaries_that_varied": 24,
+      "sub_segments_constant": 53
+    },
+    "crossvalidate": {
+      "identical": true,
+      "only_oracle": 0,
+      "only_production": 0,
+      "oracle_condition1": 28192,
+      "production_equality_on_these_lines": 28192,
+      "reproduced": 28192
+    },
+    "face_contribution": {
+      "bundle_faces_only": {
+        "samples": 53,
+        "samples_with_a_through_face": 0,
+        "sub_segments": 53
+      },
+      "faces_added_by_line_clip_total": 4994,
+      "faces_via_bundle_edges_total": 1490,
+      "lines": 29,
+      "samples_with_a_through_face": 25,
+      "sub_segments": 53
+    },
+    "faces_usable": {
+      "faces_checked": 380,
+      "non_convex": 0,
+      "non_rational": 0
+    },
+    "fidelity": {
+      "bitwise_identical": true,
+      "production_cells": 26,
+      "transcription_cells": 26
+    },
+    "refuses": {
+      "intruder_rejected_at_least_one": true,
+      "seeded_interleaving_rejected_at_least_one": true,
+      "seeded_witness": {
+        "crossed_order": {
+          "10": 2,
+          "11": 3,
+          "5": 0,
+          "6": 1
+        },
+        "line": "(0, 1, Fraction(-13, 17))",
+        "t": "23/68",
+        "uturns": [
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      }
+    },
+    "relation_scope": {
+      "cons_pairs": 53754,
+      "possible_pairs": 72010,
+      "relation_equals_cons_pairs": true,
+      "relation_pairs": 53754
+    },
+    "sides": {
+      "bundling_cross_check_agree": 74602,
+      "bundling_cross_check_disagree": 0,
+      "indeterminate": 0,
+      "opposite_side": 0,
+      "same_side": 74602
+    },
+    "transversal": {
+      "collinear": 74602,
+      "taco_clauses": 74602,
+      "transversal": 0,
+      "unresolved": 0
+    },
+    "untouched": {
+      "mcp_harness_diff_empty": true,
+      "server_box_pleat_mentions": 0
+    }
+  },
+  "geometric_clauses": 102794,
+  "headline_comparison": {
+    "identical": true,
+    "only_oracle": 0,
+    "only_oracle_witnesses": [],
+    "only_production": 0,
+    "only_production_witnesses": [],
+    "oracle_pairs": 37301,
+    "production_pairs": 37301
+  },
+  "input_census": {
+    "edge_assignments": {
+      "M": 384,
+      "V": 361
+    },
+    "faces": 380,
+    "folded_vertices_clockwise": 190,
+    "polys_not_counter_clockwise": 0
+  },
+  "kernel": "exact",
+  "per_line": [
+    {
+      "line": "(0, 1, Fraction(-13, 17))",
+      "samples": 12,
+      "sub_segments": 12,
+      "taco_pairs": 11304
+    },
+    {
+      "line": "(0, 1, Fraction(-3, 4))",
+      "samples": 14,
+      "sub_segments": 14,
+      "taco_pairs": 13311
+    },
+    {
+      "line": "(1, -1, Fraction(37, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6
+    },
+    {
+      "line": "(1, -1, Fraction(19, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(39, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(20, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(41, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(21, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(43, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(22, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(45, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(23, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(47, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, -1, Fraction(24, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6
+    },
+    {
+      "line": "(1, 0, Fraction(11, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6216
+    },
+    {
+      "line": "(1, 0, Fraction(1, 2))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 90
+    },
+    {
+      "line": "(1, 0, Fraction(23, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6216
+    },
+    {
+      "line": "(1, 1, Fraction(-7, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6
+    },
+    {
+      "line": "(1, 1, Fraction(-13, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-6, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-11, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-5, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-9, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-4, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-7, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-3, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-5, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-2, 17))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 7
+    },
+    {
+      "line": "(1, 1, Fraction(-3, 34))",
+      "samples": 1,
+      "sub_segments": 1,
+      "taco_pairs": 6
+    }
+  ],
+  "python": "3.14.3",
+  "sat_verdict": "CERTIFIED",
+  "selftest": {
+    "checks": 18,
+    "passed": 18
+  },
+  "subject": "dense lizard (SAT-certified witness)",
+  "sys_platform": "darwin",
+  "taco_counts": {
+    "taco_entries_ordered": 74602,
+    "taco_pairs_unordered": 37301
+  },
+  "taco_share_of_geometric": 0.7257,
+  "verdict": "identical"
+}

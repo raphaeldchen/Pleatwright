@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Secrets / local env (.env.example is the committed template)
+# MUST stay a family glob, not a list of filenames: an exact-match `.env` left
+# `.env.bak-stage1` unprotected from Stage 1 until a broad `git add` committed it
+# with live keys in PR #58. Any new `.env.<anything>` is covered by default now.
+.env*
+!.env.example
+
+# Logs / scratch
+.DS_Store
+
+# Probe / suite scratch output (the probe_*.py SCRIPTS are tracked; their OUTPUT
+# is not -- tests that read a probe output skip when it is absent, by design)
+mcp_harness/probe_*.out.*
+mcp_harness/probe_*.log
+mcp_harness/suite_*.out.log
+
+# Local build scratch for the PDF/report pipeline (regenerate via scripts/)
+tmp/
+output/
+
+# Generated meshes (text-to-3D output / cache — never commit)
+mcp_harness/generated_meshes/
+
+# Playwright MCP browser session recordings (ephemeral)
+.playwright-mcp/
+
+# Local scheduled-task lock (operational scratch, not source)
+.claude/scheduled_tasks.lock
+
+# SDD progress ledger (session scratch)
+.superpowers/
+
+# A virtualenv must never be tracked. It was committed by accident in 21e316c
+# (a spec-citations commit) as a symlink to its own absolute path, and a
+# fast-forward of main checked it out OVER the real .venv directory, destroying
+# it -- the self-referential link then broke every `../.venv/bin/python3` in the
+# repo. Untracked 2026-09-28.
+.venv

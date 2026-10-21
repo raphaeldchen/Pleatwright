@@ -1,0 +1,19 @@
+{
+ "subject": "horse",
+ "sparse_compile_secs": 14.7,
+ "rejections": 1,
+ "elapsed_secs": 1249.0,
+ "clause_size_min": 2,
+ "clause_size_median": 2,
+ "clause_size_max": 2,
+ "distinct_witnesses": 1,
+ "top_witness_count": 1,
+ "witness_count_histogram": [
+  1
+ ],
+ "outcome": {
+  "kind": "assign_returned",
+  "detail": "AssignFail: AssignFail(kind='budget', site=500000)"
+ },
+ "partial": false
+}
