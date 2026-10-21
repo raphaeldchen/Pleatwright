@@ -25,7 +25,7 @@ class Ctx:
     log: object                     # events.EventLog
     client: object                  # llm_client.LLMClient (used on the loop only)
     loop: asyncio.AbstractEventLoop
-    model: str = "haiku"            # key of the VLM authoring in this action (guided.MODELS)
+    model: str = "sonnet"           # key of the VLM authoring in this action (guided.MODELS)
     cancelled: threading.Event = field(default_factory=threading.Event)
 
     @property

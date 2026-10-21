@@ -25,14 +25,14 @@ def test_from_env_defaults_to_claude(monkeypatch):
     assert cfg.temperature is None
 
 
-def test_claude_preset_defaults_to_haiku_and_an_explicit_model_beats_llm_model(monkeypatch):
+def test_claude_preset_defaults_to_sonnet_and_an_explicit_model_beats_llm_model(monkeypatch):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-test")
     monkeypatch.delenv("LLM_PROVIDER", raising=False)
     monkeypatch.delenv("LLM_MODEL", raising=False)
-    assert LLMConfig.from_env().model == "claude-haiku-5-5"
-    monkeypatch.setenv("LLM_MODEL", "claude-sonnet-5")
     assert LLMConfig.from_env().model == "claude-sonnet-5"
-    assert LLMConfig.from_env("claude-haiku-5-5").model == "claude-haiku-5-5"
+    monkeypatch.setenv("LLM_MODEL", "claude-haiku-5-5")
+    assert LLMConfig.from_env().model == "claude-haiku-5-5"
+    assert LLMConfig.from_env("claude-sonnet-5").model == "claude-sonnet-5"
 
 
 def test_from_env_groq_resolves_preset(monkeypatch):

@@ -32,9 +32,9 @@ def test_a_whole_run_over_the_websocket_and_replay(offline):
     with TestClient(_app(offline)) as c:
         st = c.get("/status").json()
         assert {k: st[k] for k in ("llm_ok", "llm_error", "busy")} == {"llm_ok": True, "llm_error": None, "busy": None}
-        assert st["default_model"] == "haiku"
-        assert st["models"] == [{"key": "haiku", "id": "claude-haiku-5-5", "label": "Haiku 5.5"},
-                                {"key": "sonnet", "id": "claude-sonnet-5", "label": "Sonnet 5"}]
+        assert st["default_model"] == "sonnet"
+        assert st["models"] == [{"key": "sonnet", "id": "claude-sonnet-5", "label": "Sonnet 5"},
+                                {"key": "haiku", "id": "claude-haiku-5-5", "label": "Haiku 5.5"}]
         rid = c.post("/runs", json={"prompt": "a bird"}).json()["id"]
         with c.websocket_connect(f"/ws/runs/{rid}?after=-1") as ws:
             _until(ws, lambda m: m.get("type") == "awaiting_review")
@@ -216,15 +216,15 @@ def test_a_run_and_a_revision_can_choose_their_model(offline):
         return FakeClient([BIRD])
     with TestClient(_app(offline, factory)) as c:
         assert c.post("/runs", json={"prompt": "a bird", "model": "nope"}).status_code == 409
-        rid = c.post("/runs", json={"prompt": "a bird", "model": "sonnet"}).json()["id"]
+        rid = c.post("/runs", json={"prompt": "a bird", "model": "haiku"}).json()["id"]
         with c.websocket_connect(f"/ws/runs/{rid}?after=-1") as ws:
             _until(ws, lambda m: m.get("type") == "awaiting_review")
-            ws.send_json({"type": "approve", "model": "sonnet"})
+            ws.send_json({"type": "approve", "model": "haiku"})
             _until(ws, lambda m: m.get("type") == "awaiting_review" and m.get("stage") == "tree")
-            ws.send_json({"type": "message", "text": "longer tail", "model": "haiku"})
+            ws.send_json({"type": "message", "text": "longer tail", "model": "sonnet"})
             seen = _until(ws, lambda m: m.get("type") == "awaiting_review")
-    assert [m["summary"]["model"] for m in seen if m.get("type") == "stage_output"] == ["haiku"]
-    assert asked == ["claude-haiku-5-5", "claude-sonnet-5"]    # haiku built at startup, sonnet on demand
+    assert [m["summary"]["model"] for m in seen if m.get("type") == "stage_output"] == ["sonnet"]
+    assert asked == ["claude-sonnet-5", "claude-haiku-5-5"]    # sonnet built at startup, haiku on demand
 
 
 def test_delete_a_run(offline):

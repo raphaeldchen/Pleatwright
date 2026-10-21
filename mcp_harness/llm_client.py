@@ -76,10 +76,11 @@ PROVIDERS: dict[str, dict] = {
     },
     "claude": {
         "base_url": "https://api.anthropic.com/v1/",
-        # Haiku 5.5 since 2026-10-10: 51/51 trees folded on the 17 original meshes at
-        # $0.003/tree (~/Desktop/origami_samples_haiku_work/README.md). The app offers
-        # claude-sonnet-5 per action; LLM_MODEL still overrides this default.
-        "default_model": "claude-haiku-5-5",
+        # Sonnet 5: it authored the 51 artifact trees (fixtures/full17_v3_sticks)
+        # and the first end-to-end run. Haiku 5.5 was the default from 2026-10-10
+        # (51/51 folded at $0.003/tree) but did worse in the owner's manual tests;
+        # the app still offers it per action. LLM_MODEL overrides this default.
+        "default_model": "claude-sonnet-5",
         "api_key_env": "ANTHROPIC_API_KEY",
     },
 }

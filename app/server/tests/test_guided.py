@@ -288,7 +288,7 @@ def test_the_runner_still_logs_a_terminal_event_when_its_bookkeeping_raises(offl
     assert "mesh exploded" in last["error"] and last["stage"] == "image"
 
 
-def test_haiku_is_the_default_and_each_authoring_action_can_pick_sonnet(offline):
+def test_sonnet_is_the_default_and_each_authoring_action_can_pick_haiku(offline):
     asked = []
 
     def factory(model):
@@ -299,15 +299,15 @@ def test_haiku_is_the_default_and_each_authoring_action_can_pick_sonnet(offline)
         m = Manager(RunStore(str(offline / "runs")), factory, certify_global=False)
         rid = await m.create("a bird")                         # no model: the default
         await approve_first_mesh(m, rid)
-        await m.message(rid, "make the tail longer", model="sonnet")
+        await m.message(rid, "make the tail longer", model="haiku")
         await m.wait_idle()
         return m, rid
     m, rid = asyncio.run(main())
-    assert asked == ["claude-haiku-5-5", "claude-sonnet-5"]    # one client per model, built once
+    assert asked == ["claude-sonnet-5", "claude-haiku-5-5"]    # one client per model, built once
     log = m.store.log(rid)
     trees = [e for e in log.events if e["type"] == "stage_output" and e["stage"] == "tree"]
-    assert [t["summary"]["model"] for t in trees] == ["haiku", "sonnet"]
-    assert [e.get("model") for e in log.events if e["type"] == "user_message" and e["text"] != "Approve"] == ["haiku", "sonnet"]
+    assert [t["summary"]["model"] for t in trees] == ["sonnet", "haiku"]
+    assert [e.get("model") for e in log.events if e["type"] == "user_message" and e["text"] != "Approve"] == ["sonnet", "haiku"]
 
 
 def test_an_unknown_model_is_refused_before_a_run_exists(offline):

@@ -70,7 +70,7 @@ def test_author_then_revise_then_approve(offline):
     rounds = [e for e in ev if e["type"] == "stage_output" and e["stage"] == "tree"]
     assert [r["round"] for r in rounds] == [0, 1, 1]
     assert rounds[0]["summary"] == {"flaps": len(BIRD["leaves"]), "pairs": len(BIRD["pairs"]),
-                                    "model": "haiku"}
+                                    "model": "sonnet"}
     assert rounds[0]["files"][0] == "author/tree_round0.png"
     assert rounds[-1]["summary"] == {"approved": True}
     assert [e["can_approve"] for e in ev if e["type"] == "awaiting_review"] == [True, True]

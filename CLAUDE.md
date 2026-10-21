@@ -105,10 +105,11 @@ every variable the code reads.
   (`docs/superpowers/specs/2026-10-19-nano-banana-image-stage-design.md`).
 * **VLM.** `llm_client` reads `LLM_PROVIDER` (default `claude`, which needs
   `ANTHROPIC_API_KEY`) and `LLM_MODEL` (the `claude` preset defaults to
-  `claude-haiku-5-5`: 51/51 trees folded on the 17 original meshes on 2026-10-10 at
-  about $0.003 a tree); `env_config` loads the repo-root `.env` without overriding
-  the shell. The app ignores `LLM_MODEL`: its composer's model pill picks Haiku 5.5
-  (default) or Sonnet 5 (`claude-sonnet-5`) for each authoring action
+  `claude-sonnet-5`, which authored the 51 artifact trees; `claude-haiku-5-5` folded
+  51/51 on the 17 original meshes on 2026-10-10 at about $0.003 a tree but did worse
+  in the owner's manual tests); `env_config` loads the repo-root `.env` without
+  overriding the shell. The app ignores `LLM_MODEL`: its composer's model pill picks
+  Sonnet 5 (default) or Haiku 5.5 for each authoring action
   (`pleatwright_app/guided.py` `MODELS`). Authoring refuses to run with
   `LLM_MAX_TOKENS` below 64000 (`gated_pipeline.REQUIRED_MAX_TOKENS`); the CLI
   sets 64000 when it is unset. The live path needs a working `ANTHROPIC_API_KEY`;

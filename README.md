@@ -48,10 +48,25 @@ which returns a specific error, instead of becoming a broken crease pattern.
 
 ## Measured results
 
-These figures come from the evidence folders under `docs/superpowers/evidence/`:
+The default authoring model is Claude Sonnet 5 (`claude-sonnet-5`). These figures
+come from the evidence folders under `docs/superpowers/evidence/`, plus a re-fold of
+all 51 trees on this snapshot:
 
-* **Tree authoring:** Claude Haiku authored trees for all 17 original subject
-  meshes, three rolls each, and **51/51 folded**, at about $0.003 per tree.
+* **Tree authoring (Sonnet 5):** across 17 photo-derived meshes, three rolls each,
+  Sonnet 5 authored 57 trees through the production review loop. **55/57 passed the
+  tree contract**, and the 51 trees kept from that run are the test corpus
+  (`mcp_harness/fixtures/full17_v3_sticks/`; `2026-09-08-vlm-tree-authoring/`).
+* **Tree to folded model:** all **51/51** of those Sonnet-authored trees fold.
+
+  | | |
+  |---|---|
+  | solving CP, every vertex locally flat-foldable | **51/51** |
+  | shaping CP, every vertex locally flat-foldable | **51/51** |
+  | global layer order certified by SAT | **44/51** (the 7 largest grids, 60–136, exceed the SAT size guard and are solved locally) |
+  | grid size | 10–136, median 50 |
+  | tree similarity, folded model vs. authored tree (Procrustes) | median 0.996, min 0.938 |
+  | fold time per tree (laptop, 6 trees in parallel) | median 46 s, max 5.7 min |
+
 * **Concept image:** Nano Banana 2.1 concept images gave meshes with correct anatomy
   on **33/34** owner-scored subjects, against 21/34 for FLUX.1-schnell
   (`2026-10-16-concept-image/`).

@@ -12,12 +12,12 @@ from . import tools as T
 
 _TERMINAL = ("run_finished", "stage_failed", "awaiting_review")
 
-#: The VLMs a run may author with: key -> (model id, label). Haiku is the default
-#: (51/51 trees folded on the 17 original meshes at $0.003/tree, 2026-10-10);
-#: Sonnet 5 is the model the pipeline was first run end to end with.
-MODELS = {"haiku": ("claude-haiku-5-5", "Haiku 5.5"),
-          "sonnet": ("claude-sonnet-5", "Sonnet 5")}
-DEFAULT_MODEL = "haiku"
+#: The VLMs a run may author with: key -> (model id, label). Sonnet 5 is the
+#: default: it authored the 51 artifact trees and the first end-to-end run, and
+#: Haiku 5.5 (cheaper, about $0.003/tree) did worse in the owner's manual tests.
+MODELS = {"sonnet": ("claude-sonnet-5", "Sonnet 5"),
+          "haiku": ("claude-haiku-5-5", "Haiku 5.5")}
+DEFAULT_MODEL = "sonnet"
 _log = logging.getLogger(__name__)
 
 

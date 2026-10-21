@@ -33,7 +33,7 @@ export function App() {
   const [picked, setPicked] = useState<string | null>(null);
   const models = status?.models ?? [];
   const model = picked && models.some((m) => m.key === picked)
-    ? picked : readModel(safeStorage(), models, status?.default_model ?? "haiku");
+    ? picked : readModel(safeStorage(), models, status?.default_model ?? "sonnet");
   const pickModel = (k: string) => { setPicked(k); saveModel(safeStorage(), k); };
   const sock = useRef<ReturnType<typeof connectRun> | null>(null);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
