@@ -93,6 +93,38 @@ def test_draw_model_ignores_matplotlib_ragged_padding(monkeypatch):
         plt.close(fig)
 
 
+def test_draw_model_shows_a_sheet_seen_edge_on():
+    """A flat body folded into the mirror plane x = 0 (crab_1's spine) is seen
+    edge-on by the top view, VIEWS[2]. Unstroked faces of zero projected width
+    draw nothing, so the body vanished from overview View 3; a sheet seen
+    edge-on must still draw as a line, as real paper does."""
+    import matplotlib.pyplot as plt
+    from pleatwright import render as R
+
+    sheet = [np.array([[0, -1, -2], [0, 0, -2], [0, 0, 2], [0, -1, 2]], float)]
+    # the legs span the sheet's bounding box, so adding the sheet leaves the
+    # panel's limits (and scale) unchanged and the sheet is one thin feature
+    legs = [np.array([[-2, -1, z], [2, 0, z], [2, -1, z + 0.4]], float) for z in (-2, 1.6)]
+    fig = plt.figure(figsize=(3, 3), dpi=100)
+
+    def ink(polys):
+        fig.clf()
+        ax = fig.add_subplot(projection="3d")
+        R.draw_model(ax, polys, R.VIEWS[2])
+        fig.canvas.draw()
+        rgb = np.asarray(fig.canvas.buffer_rgba())[..., :3].astype(int)
+        # the middle third of the rows lies between the legs: only the sheet
+        # can ink it (whole-image counts move with the legs' antialiasing)
+        h = rgb.shape[0]
+        return int((rgb[h // 3: 2 * h // 3].sum(axis=2) < 3 * 250).sum())
+
+    try:
+        assert ink(legs) == 0
+        assert ink(legs + sheet) >= 50
+    finally:
+        plt.close(fig)
+
+
 def test_run_has_the_keyword_signature_of_its_stages(tmp_path):
     """`run(**kw)` used to forward blindly into `_run`, so a mistyped keyword
     raised TypeError INSIDE the stage guard and came back as StageError('load'),

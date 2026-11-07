@@ -108,9 +108,13 @@ def _fit_box(ax, P, margin=0.06):
 def draw_model(ax, polys, view, *, lims=None):
     polys = [to_plot(P) for P in polys]
     # matplotlib 3.11 autoscales over uninitialized ragged padding; we set
-    # limits explicitly in _fit_box below, so disable autolim
-    ax.add_collection3d(Poly3DCollection(polys, facecolors=_shade(polys),
-                                         edgecolors="none", linewidths=0),
+    # limits explicitly in _fit_box below, so disable autolim.
+    # Each face is stroked in its own shade: a flat stack seen edge-on (a body
+    # folded into the mirror plane, viewed from the top) has zero projected
+    # area and would otherwise vanish; stroked, it draws as a line like paper.
+    cols = _shade(polys)
+    ax.add_collection3d(Poly3DCollection(polys, facecolors=cols,
+                                         edgecolors=cols, linewidths=0.6),
                         autolim=False)
     _fit_box(ax, np.vstack(polys))
     ax.view_init(elev=view[0], azim=view[1])
