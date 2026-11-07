@@ -19,9 +19,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # 51 native folds, 3 at a time, on a 4-core runner: about 20-25 minutes of folding,
-    # allowing for dog_1's large certification and for the runner being slower than the
-    # evidence's Mac. A gallery cache hit skips all of it.
+    # 49 native folds (the demo scorpion, and the 51 rolls but the 3 starfish), 3 at a
+    # time, on a 4-core runner: about 20-25 minutes of folding, allowing for dog_1's large
+    # certification and for the runner being slower than the evidence's Mac. A gallery
+    # cache hit skips all of it.
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -52,8 +53,8 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ runner.temp }}/gallery
-          key: gallery-${{ runner.os }}-${{ hashFiles('mcp_harness/pleatwright/**', 'mcp_harness/*.py', 'mcp_harness/fixtures/full17_v3_sticks/**', 'app/browser/build_gallery.py', 'app/browser/browser_heap.json', 'app/server/pleatwright_app/**', '.github/workflows/pages.yml') }}
-      - name: Fold the 51 example trees natively
+          key: gallery-${{ runner.os }}-${{ hashFiles('mcp_harness/pleatwright/**', 'mcp_harness/*.py', 'mcp_harness/fixtures/full17_v3_sticks/**', 'app/browser/gallery_trees/**', 'app/browser/build_gallery.py', 'app/browser/browser_heap.json', 'app/server/pleatwright_app/**', '.github/workflows/pages.yml') }}
+      - name: Fold the example trees natively
         # --jobs 3, not 4: dog_1 alone peaks near 4.6 GB and the runner has 16 GB.
         # build_gallery.py exits 1 if any roll fails to fold, which fails the workflow.
         if: steps.gallery.outputs.cache-hit != 'true'

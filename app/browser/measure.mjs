@@ -1,4 +1,4 @@
-// Measure the 51 artifact rolls folded in real browsers (spec §7.3, §7.5).
+// Measure the gallery's rolls (gallery/index.json) folded in real browsers (spec §7.3, §7.5).
 //
 //   node app/browser/measure.mjs --browsers chromium,webkit --rolls all --results RESULTS.jsonl
 //        [--gallery DIR] [--timeout-min 15] [--retry-failed] [--keep DIR]
@@ -18,7 +18,7 @@
 // The heap is read without touching the site: an init script wraps `Worker` and records each
 // job message's `heap_mb` on the page (the jobRelay's own `heaps()` is not exposed).
 import { spawn } from "node:child_process";
-import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createRequire } from "node:module";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -28,8 +28,6 @@ const web = join(here, "..", "web");
 const { chromium, firefox, webkit } = createRequire(join(web, "package.json"))("@playwright/test");
 const ENGINES = { chromium, firefox, webkit };
 
-/** The 51 artifact trees. */
-const FIXTURES = join(here, "..", "..", "mcp_harness", "fixtures", "full17_v3_sticks");
 const PORT = 4179;
 const BASE = `http://127.0.0.1:${PORT}/Pleatwright/`;
 /** A fold that peaked above this does not fit a browser tab (build_gallery.HEAP_LIMIT_MB). */
@@ -58,11 +56,10 @@ function parseArgs(argv) {
   return a;
 }
 
-/** The sidebar label of a roll, as build_gallery.label(): dog_0 -> "dog roll 0". */
-const labelOf = (roll) => {
-  const i = roll.lastIndexOf("_");
-  return `${roll.slice(0, i).replaceAll("_", " ")} roll ${roll.slice(i + 1)}`;
-};
+/** roll -> its sidebar label (build_gallery.label()), from the gallery's index.json:
+ *  dog_0 -> "dog roll 0", demo_scorpion -> "demo scorpion". */
+const galleryLabels = (gallery) => Object.fromEntries(
+  JSON.parse(readFileSync(join(gallery, "index.json"), "utf8")).map((row) => [row.id.replace(/^gallery-/, ""), row.prompt]));
 
 function readResults(path) {
   if (!existsSync(path)) return [];
@@ -177,7 +174,8 @@ async function foldOne(engine, roll, opts) {
 
     await page.goto(BASE);
     await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 60_000 });
-    const label = labelOf(roll);
+    const label = opts.labels[roll];
+    if (!label) throw new Error(`${roll} is not in the gallery`);
     const row = page.locator(".sidebar .run").filter({ has: page.getByText(label, { exact: true }) });
     await row.click({ timeout: 30_000 });
     await page.getByRole("button", { name: "07 MODEL: done", exact: true }).waitFor({ timeout: 30_000 });
@@ -312,8 +310,8 @@ async function main() {
     console.log(`${Object.keys(map).length} rolls -> ${a.heapOut}; above ${HEAP_LIMIT_MB} MB: ${Object.entries(map).filter(([, v]) => v > HEAP_LIMIT_MB).map(([k]) => k).join(", ") || "none"}`);
     return;
   }
-  const allRolls = readdirSync(FIXTURES).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5)).sort();
-  const rolls = a.rolls === "all" ? allRolls : a.rolls.split(",").filter(Boolean);
+  a.labels = galleryLabels(a.gallery);
+  const rolls = a.rolls === "all" ? Object.keys(a.labels) : a.rolls.split(",").filter(Boolean);
   const server = await ensureServer();
   try {
     for (const roll of rolls) {

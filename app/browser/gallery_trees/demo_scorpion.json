@@ -1,0 +1,443 @@
+{
+ "roll": "scorpion",
+ "subject": "scorpion",
+ "subject_guess": "scorpion",
+ "nodes": [
+  {
+   "name": "body_root",
+   "parent": null,
+   "length": 0,
+   "direction": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "carapace_front",
+   "parent": "body_root",
+   "length": 3,
+   "direction": [
+    -1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "carapace_back",
+   "parent": "body_root",
+   "length": 3,
+   "direction": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail_base",
+   "parent": "carapace_back",
+   "length": 2,
+   "direction": [
+    1,
+    0.3,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg1",
+   "parent": "tail_base",
+   "length": 2,
+   "direction": [
+    0.8,
+    0.6,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg2",
+   "parent": "tail_seg1",
+   "length": 2,
+   "direction": [
+    0.5,
+    0.8,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg3",
+   "parent": "tail_seg2",
+   "length": 2,
+   "direction": [
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "tail_seg4",
+   "parent": "tail_seg3",
+   "length": 2,
+   "direction": [
+    -0.3,
+    0.9,
+    0
+   ]
+  },
+  {
+   "name": "tail_tip",
+   "parent": "tail_seg4",
+   "length": 2,
+   "direction": [
+    -0.6,
+    0.6,
+    0
+   ]
+  },
+  {
+   "name": "claw_shoulder_L",
+   "parent": "carapace_front",
+   "length": 2,
+   "direction": [
+    -0.5,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "claw_elbow_L",
+   "parent": "claw_shoulder_L",
+   "length": 3,
+   "direction": [
+    -1,
+    0,
+    0.3
+   ]
+  },
+  {
+   "name": "claw_tip_L",
+   "parent": "claw_elbow_L",
+   "length": 3,
+   "direction": [
+    -1,
+    0.1,
+    -0.2
+   ]
+  },
+  {
+   "name": "claw_shoulder_R",
+   "parent": "carapace_front",
+   "length": 2,
+   "direction": [
+    -0.5,
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "claw_elbow_R",
+   "parent": "claw_shoulder_R",
+   "length": 3,
+   "direction": [
+    -1,
+    0,
+    -0.3
+   ]
+  },
+  {
+   "name": "claw_tip_R",
+   "parent": "claw_elbow_R",
+   "length": 3,
+   "direction": [
+    -1,
+    0.1,
+    0.2
+   ]
+  },
+  {
+   "name": "leg1_hip_L",
+   "parent": "carapace_front",
+   "length": 2,
+   "direction": [
+    0.2,
+    -0.3,
+    1
+   ]
+  },
+  {
+   "name": "leg1_knee_L",
+   "parent": "leg1_hip_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0.5
+   ]
+  },
+  {
+   "name": "leg1_foot_L",
+   "parent": "leg1_knee_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg1_hip_R",
+   "parent": "carapace_front",
+   "length": 2,
+   "direction": [
+    0.2,
+    -0.3,
+    -1
+   ]
+  },
+  {
+   "name": "leg1_knee_R",
+   "parent": "leg1_hip_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    -0.5
+   ]
+  },
+  {
+   "name": "leg1_foot_R",
+   "parent": "leg1_knee_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg2_hip_L",
+   "parent": "body_root",
+   "length": 2,
+   "direction": [
+    0.3,
+    -0.3,
+    1
+   ]
+  },
+  {
+   "name": "leg2_knee_L",
+   "parent": "leg2_hip_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0.5
+   ]
+  },
+  {
+   "name": "leg2_foot_L",
+   "parent": "leg2_knee_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg2_hip_R",
+   "parent": "body_root",
+   "length": 2,
+   "direction": [
+    0.3,
+    -0.3,
+    -1
+   ]
+  },
+  {
+   "name": "leg2_knee_R",
+   "parent": "leg2_hip_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    -0.5
+   ]
+  },
+  {
+   "name": "leg2_foot_R",
+   "parent": "leg2_knee_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg3_hip_L",
+   "parent": "body_root",
+   "length": 2,
+   "direction": [
+    -0.4,
+    -0.3,
+    1
+   ]
+  },
+  {
+   "name": "leg3_knee_L",
+   "parent": "leg3_hip_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0.5
+   ]
+  },
+  {
+   "name": "leg3_foot_L",
+   "parent": "leg3_knee_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg3_hip_R",
+   "parent": "body_root",
+   "length": 2,
+   "direction": [
+    -0.4,
+    -0.3,
+    -1
+   ]
+  },
+  {
+   "name": "leg3_knee_R",
+   "parent": "leg3_hip_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    -0.5
+   ]
+  },
+  {
+   "name": "leg3_foot_R",
+   "parent": "leg3_knee_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg4_hip_L",
+   "parent": "carapace_back",
+   "length": 2,
+   "direction": [
+    -0.2,
+    -0.3,
+    1
+   ]
+  },
+  {
+   "name": "leg4_knee_L",
+   "parent": "leg4_hip_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0.5
+   ]
+  },
+  {
+   "name": "leg4_foot_L",
+   "parent": "leg4_knee_L",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  },
+  {
+   "name": "leg4_hip_R",
+   "parent": "carapace_back",
+   "length": 2,
+   "direction": [
+    -0.2,
+    -0.3,
+    -1
+   ]
+  },
+  {
+   "name": "leg4_knee_R",
+   "parent": "leg4_hip_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    -0.5
+   ]
+  },
+  {
+   "name": "leg4_foot_R",
+   "parent": "leg4_knee_R",
+   "length": 2,
+   "direction": [
+    0,
+    -1,
+    0
+   ]
+  }
+ ],
+ "pairs": [
+  [
+   "claw_tip_L",
+   "claw_tip_R"
+  ],
+  [
+   "leg1_foot_L",
+   "leg1_foot_R"
+  ],
+  [
+   "leg2_foot_L",
+   "leg2_foot_R"
+  ],
+  [
+   "leg3_foot_L",
+   "leg3_foot_R"
+  ],
+  [
+   "leg4_foot_L",
+   "leg4_foot_R"
+  ]
+ ],
+ "leaves": [
+  "tail_tip",
+  "claw_tip_L",
+  "claw_tip_R",
+  "leg1_foot_L",
+  "leg1_foot_R",
+  "leg2_foot_L",
+  "leg2_foot_R",
+  "leg3_foot_L",
+  "leg3_foot_R",
+  "leg4_foot_L",
+  "leg4_foot_R"
+ ],
+ "readings": [
+  "head/claws at -x: XY panel is the profile, ZY is the front",
+  "carapace spans x~6 to x~15 in XY panel",
+  "tail root at (15,13), curling up and back over to tip at (19,4)",
+  "claws: shoulder at (13,14) to tip at (3,14) in XY panel",
+  "legs attach along carapace underside y~15-16 in XY panel",
+  "in ZY panel, body centered at z~12, legs splay to z~2 (left) and z~22 (right)",
+  "leg1 (front pair) at carapace x~13, leg2 and leg3 (middle pairs) previously overlapped near x~9-10, now spaced to x~10.5 and x~8.5",
+  "leg4 (back pair) at carapace_back x~7"
+ ],
+ "source": "python -m pleatwright author 'scorpion'"
+}

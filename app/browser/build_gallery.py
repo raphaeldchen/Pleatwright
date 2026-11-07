@@ -1,6 +1,7 @@
-"""Fold the 51 example trees into the browser site's gallery: one run folder
-per roll, written by the app's own run manager (same event log, same files the
-UI renders), and gallery/index.json, the rows the site lists.
+"""Fold the example trees into the browser site's gallery: one run folder per
+roll, written by the app's own run manager (same event log, same files the UI
+renders), and gallery/index.json, the rows the site lists. The examples are the
+demo trees in gallery_trees/, then the artifact rolls but the starfish.
 
     python app/browser/build_gallery.py OUT_DIR [--rolls dog_0,ant_1|all] [--jobs N] [--heap PATH]
 
@@ -28,7 +29,19 @@ from pleatwright_app import guided, runs, tools  # noqa: E402  (puts mcp_harness
 from pleatwright.__main__ import ConfigError  # noqa: E402
 
 FIXTURES = os.path.join(_REPO, "mcp_harness", "fixtures", "full17_v3_sticks")
-ROLLS = sorted(os.path.splitext(os.path.basename(p))[0] for p in glob.glob(os.path.join(FIXTURES, "*.json")))
+#: demo trees, listed first: demo_scorpion is the tree of the owner's 2026-10-12 scorpion
+#: run (approved after one revision; grid 40, CERTIFIED)
+DEMOS_DIR = os.path.join(_HERE, "gallery_trees")
+#: artifact subjects the owner took out of the gallery (2026-11-07)
+OMITTED_SUBJECTS = {"starfish"}
+
+
+def _names(directory: str) -> list[str]:
+    return sorted(os.path.splitext(os.path.basename(p))[0] for p in glob.glob(os.path.join(directory, "*.json")))
+
+
+DEMOS = _names(DEMOS_DIR)
+ROLLS = DEMOS + [r for r in _names(FIXTURES) if r.rpartition("_")[0] not in OMITTED_SUBJECTS]
 #: a fold that peaked above this in Pyodide does not fit a browser tab
 HEAP_LIMIT_MB = 3500
 
@@ -38,9 +51,15 @@ def run_id(roll: str) -> str:
 
 
 def label(roll: str) -> str:
-    """"dog roll 0" for dog_0: the sidebar label of the imported runs."""
+    """The sidebar label: "dog roll 0" for dog_0, "demo scorpion" for demo_scorpion."""
+    if roll in DEMOS:
+        return roll.replace("_", " ")
     subject, _, n = roll.rpartition("_")
     return f"{subject.replace('_', ' ')} roll {n}"
+
+
+def tree_path(roll: str) -> str:
+    return os.path.join(DEMOS_DIR if roll in DEMOS else FIXTURES, f"{roll}.json")
 
 
 def _no_client(_model: str):
@@ -50,7 +69,7 @@ def _no_client(_model: str):
 async def _fold_one(store: runs.RunStore, roll: str) -> None:
     """Fold `roll`'s raw tree, answering the layout card with the rule's
     recommendation as a user's choice (as the app logs it)."""
-    with open(os.path.join(FIXTURES, f"{roll}.json")) as f:
+    with open(tree_path(roll)) as f:
         tree = json.load(f)
     rid = run_id(roll)
     if os.path.exists(os.path.join(store.root, rid)):
@@ -108,7 +127,7 @@ def build(out_dir: str, rolls: list[str], heap: dict[str, float] | None = None,
     partial run rewrites it with only those."""
     unknown = [r for r in rolls if r not in ROLLS]
     if unknown:
-        raise ValueError(f"not an artifact tree: {', '.join(unknown)}")
+        raise ValueError(f"not a gallery roll: {', '.join(unknown)}")
     os.makedirs(out_dir, exist_ok=True)
     errors: dict[str, str] = {}
     if jobs > 1 and len(rolls) > 1:
