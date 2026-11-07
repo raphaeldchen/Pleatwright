@@ -32,6 +32,7 @@ textarea { font:inherit }
 .sidebar .new { display:flex; justify-content:space-between; width:100%; margin-bottom:4px; padding:6px 8px;
                 border:1px solid var(--line); background:var(--raise); text-align:left; text-transform:uppercase }
 .sidebar .new .hint { color:var(--muted) }
+.sidebar .group { margin:14px 0 3px; color:var(--muted); font-size:10px; text-transform:uppercase; letter-spacing:.06em }
 .sidebar .day { margin:12px 0 3px; color:var(--muted); font-size:10px }
 .sidebar .run { display:flex; justify-content:space-between; gap:6px; width:100%; padding:4px 8px; border:none;
                 background:none; color:var(--muted); text-align:left; box-shadow:inset 2px 0 0 transparent }
@@ -113,6 +114,13 @@ textarea { font:inherit }
 .vh-title { font-weight:600 }
 .vh-pair .muted { margin-right:5px }
 .vh-follow { flex:none; padding:0; border:none; background:none; color:var(--accent) }
+.vh-label { flex:none; color:var(--muted) }
+.vh-run { flex:none; display:flex; align-self:stretch }
+.vh-run button { padding:0 10px; border:none; border-left:1px solid var(--line); background:none; color:var(--accent);
+                 font-size:11px; text-transform:uppercase }
+.vh-run button:hover:not(:disabled) { background:var(--accent); color:var(--accent-fg) }
+.vh-run button:disabled { color:var(--muted); opacity:.6; cursor:not-allowed }
+.vh-why { align-self:center; padding-right:10px; color:var(--muted); font-size:11px }
 .vh-tools { flex:none; display:flex; align-self:stretch; max-width:70%; overflow-x:auto }
 .vh-tools button { padding:0 10px; border:none; border-left:1px solid var(--line); background:none; color:var(--muted);
                    font-size:11px; text-transform:uppercase }

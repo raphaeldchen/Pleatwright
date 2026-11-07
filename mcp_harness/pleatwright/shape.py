@@ -514,6 +514,7 @@ def shape(sf, con, base: Base, solved, sigma, sense=None, plan=None,
                                                "narrowings": len(narrowings)})
     sh.G0 = G[None]
     sh.seglab = seglab
+    sh.seglab_extra = _off_cell_index(seglab)
     sh.base = base
     sh.narrowings = list(narrowings)
     relabel(sh)
@@ -540,7 +541,8 @@ def relabel(sh: "Shaped", sense=None):
         return cache[applied]
     pieces = [(poly, W, ti, ge(app), B, hist) for poly, W, ti, app, B, hist in sh.pieces]
     sh.cp = CP(sh.base.N, _crease_edges(sh.base, pieces, sh.seglab,
-                                        getattr(sh, "narrowings", [])))
+                                        getattr(sh, "narrowings", []),
+                                        getattr(sh, "seglab_extra", None)))
     return sh
 
 
@@ -575,7 +577,7 @@ def _rel_angle(W1, W2, a, b):
     return math.degrees(math.atan2(sinv, cosv))
 
 
-def _crease_edges(base, pieces, seglab, narrowings=()):
+def _crease_edges(base, pieces, seglab, narrowings=(), extra=None):
     N = base.N
     emap = defaultdict(list)
     for pi, (poly, W, ti, _g, _b, _h_) in enumerate(pieces):
@@ -609,7 +611,7 @@ def _crease_edges(base, pieces, seglab, narrowings=()):
             # fold (solved label, or 0 where the base was flat) and the shaping
             # rotation between the two pieces' groups, seen through piece 1's
             # own layer orientation.
-            blab = _label_for(a, b, seglab)
+            blab = _label_for(a, b, seglab, extra)
             base_ang = 0.0 if blab is None else (180.0 if blab == "V" else -180.0)
             G1, B1 = pieces[p1][3], pieces[p1][4]
             G2 = pieces[p2][3]
@@ -640,9 +642,12 @@ def _crease_edges(base, pieces, seglab, narrowings=()):
     return _merge_float(edges, N)
 
 
-def _label_for(a, b, seglab):
+def _label_for(a, b, seglab, extra=None):
     """Label of a base unit crease containing segment a-b (pieces may be
-    sub-segments of a unit crease)."""
+    sub-segments of a unit crease).  `extra` (`_off_cell_index`) holds the
+    creases that are not an edge of a unit cell's quarter triangles (a
+    stretched base's, spec 2026-10-22 §4.4): searched only when no quarter
+    edge contains a-b, and empty on every base without a stretch."""
     m = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
     i, j = math.floor(m[0]), math.floor(m[1])
     for k in _cands(i, j):
@@ -650,7 +655,27 @@ def _label_for(a, b, seglab):
             p, q = k
             if _between(m, p, q):
                 return seglab[k]
+    for k in (extra or {}).get((i, j), ()):
+        p, q = k
+        if _between(m, p, q):
+            return seglab[k]
     return None
+
+
+def _off_cell_index(seglab) -> dict:
+    """{cell (i, j): [crease key, ...]} for the labelled base creases that are
+    not among `_cands` of the cell holding their midpoint (tilted creases
+    and split cell edges of a stretched base), under every cell their
+    bounding box touches."""
+    out = defaultdict(list)
+    for k in seglab:
+        (px, py), (qx, qy) = k
+        if k in _cands(math.floor((px + qx) / 2), math.floor((py + qy) / 2)):
+            continue
+        for i in range(math.floor(min(px, qx)), math.floor(max(px, qx)) + 1):
+            for j in range(math.floor(min(py, qy)), math.floor(max(py, qy)) + 1):
+                out[(i, j)].append(k)
+    return dict(out)
 
 
 def _cands(i, j):

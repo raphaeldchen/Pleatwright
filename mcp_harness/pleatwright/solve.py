@@ -32,10 +32,11 @@ import math
 import time
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
+from fractions import Fraction
 
 import numpy as np
 
-from .base import Base, merged_segments, border_edges
+from .base import MAX_DENOMINATOR, Base, merged_segments, border_edges
 from .cp import CP, Edge
 
 
@@ -143,7 +144,27 @@ def local_count(segs, labels, N):
 
 
 # ------------------------------------------------------------- heuristic M/V
-def heuristic_labels(segs, N):
+def _axis(seg):
+    """'v' or 'h' for a vertical or horizontal segment, else None (tilted)."""
+    (p, q), _ = seg
+    if p[0] == q[0]:
+        return "v"
+    if p[1] == q[1]:
+        return "h"
+    return None
+
+
+def heuristic_labels(segs, N, w_level: dict | None = None):
+    """COrigami's labelling (module docstring).  `w_level` maps a tilted pleat
+    segment (a Pythagorean stretch's, spec 2026-10-22 §4.4) to its accordion
+    level w in {0, 1}, read off the base map (`_tilted_w_levels`).  Tilted
+    pleats never enter the F.2 unit-adjacency lines; a pleat path with no axis
+    pleat in it is labelled by its w-level, with the sign under which most
+    axis pleats' F.2 labels agree with their own level (an axis pleat's level
+    is its line's coordinate mod 2: w = tri(x) on a vertical pleat, tri(y) on
+    a horizontal one); a tie takes the sign that labels w = 1 "M" (COrigami's
+    elevation 1).  A path that contains an axis pleat keeps its F.2 label.
+    Without tilted pleats the result is exactly COrigami's labelling."""
     kinds = {i: lab for i, (_, lab) in enumerate(segs)}
     inc = _incidence(segs, N)
     labels = {}
@@ -191,9 +212,10 @@ def heuristic_labels(segs, N):
     by_line = defaultdict(list)
     for i in pleats:
         (p, q), _ = segs[i]
-        if p[0] == q[0]:
+        ax = _axis(segs[i])
+        if ax == "v":
             by_line[("v", p[0])].append(i)
-        else:
+        elif ax == "h":
             by_line[("h", p[1])].append(i)
     adj = defaultdict(set)
     for (o, c), lst in by_line.items():
@@ -222,6 +244,7 @@ def heuristic_labels(segs, N):
     for r, lst in paths.items():
         for i in lst:
             labels[i] = plab[r]
+    _label_tilted_paths(segs, paths, labels, w_level or {})
 
     # F.3: ridges.  Anchors: Y-shape vertices (pleat tip + two perpendicular
     # ridges) take the pleat's label; border ridges default to M.
@@ -325,8 +348,81 @@ def heuristic_labels(segs, N):
     return labels
 
 
+def _label_tilted_paths(segs, paths, labels, w_level) -> None:
+    """Relabel, in place, every pleat path without an axis pleat by w-level
+    (`heuristic_labels`).  F.2 gave such a path an arbitrary "M": it has no
+    unit-adjacent neighbour, since tilted pleats are in no F.2 line."""
+    tilted = [lst for lst in paths.values() if all(_axis(segs[i]) is None for i in lst)]
+    if not tilted:
+        return
+    agree = disagree = 0
+    for lst in paths.values():
+        for i in lst:
+            ax = _axis(segs[i])
+            if ax is None:
+                continue
+            (p, _), _ = segs[i]
+            c = p[0] if ax == "v" else p[1]
+            lev = int(round(c)) % 2
+            if (labels[i] == "M") == (lev == 1):
+                agree += 1
+            else:
+                disagree += 1
+    top = "M" if agree >= disagree else "V"         # the label of w = 1
+    low = "V" if top == "M" else "M"
+    for lst in tilted:
+        levs = [w_level[i] for i in lst if i in w_level]
+        if not levs:
+            continue
+        # a path keeps its level across the ridges it turns at; the majority
+        # guards a mixed one
+        lab = top if 2 * sum(levs) > len(levs) else low
+        for i in lst:
+            labels[i] = lab
+
+
+def _tilted_w_levels(base: Base, segs) -> dict:
+    """{segment index: w-level} for the tilted pleats of `segs`: the accordion
+    coordinate w of the base map (`base.build`, second row of each triangle's
+    affine map) at the segment's end, 0 or 1 on a pleat.  The map is
+    continuous, so any triangle at the point gives the same w."""
+    want = [i for i, (_, k) in enumerate(segs) if k == "P" and _axis(segs[i]) is None]
+    if not want:
+        return {}
+    need = {segs[i][0][0] for i in want}
+    w_at = {}
+    for t in base.tris:
+        for p in t.pts:
+            if p in need and p not in w_at:
+                w_at[p] = float(t.A[1] @ np.asarray(p, float) + t.b[1])
+    out = {}
+    for i in want:
+        w = w_at[segs[i][0][0]]
+        lev = int(round(w))
+        assert lev in (0, 1) and abs(w - lev) < 1e-6, (segs[i], w)
+        out[i] = lev
+    return out
+
+
 # ------------------------------------------------------------- global (SAT)
+def _assert_small_denominators(cp: CP) -> None:
+    """Spec 2026-10-22 §4.4: every CP vertex is a rational of denominator
+    <= `base.MAX_DENOMINATOR` (3000), to within 1e-9.  Two distinct such
+    rationals are at least 1/3000² ≈ 1.1e-7 apart, so `cp.fold_input`'s
+    9-decimal rounding and its 1e-7 collinear split never merge or split
+    vertices wrongly."""
+    seen = set()
+    for e in cp.edges:
+        for v in (*e.a, *e.b):
+            if v in seen or v == int(v) or 2 * v == int(2 * v):
+                continue
+            seen.add(v)
+            f = Fraction(v).limit_denominator(MAX_DENOMINATOR)
+            assert abs(float(f) - v) < 1e-9, f"CP vertex coordinate {v!r} is not a small rational"
+
+
 def to_fold(cp: CP) -> tuple:
+    _assert_small_denominators(cp)
     V, raw = cp.fold_input()
     N = cp.N
     fold = {"file_spec": 1.1, "file_creator": "pleatwright",
@@ -337,9 +433,12 @@ def to_fold(cp: CP) -> tuple:
     return fold, V, raw
 
 
-def certify(cp: CP, seg_of_edge, prefs: dict, *, timeout_hint: float = 120.0):
+def certify(cp: CP, seg_of_edge, prefs: dict, *, timeout_hint: float = 120.0,
+            max_clauses: int | None = None):
     """Global flat-foldability via SAT over layer order + labels, phase-seeded
-    with `prefs` (crease index -> label).  Returns (verdict, labels|None)."""
+    with `prefs` (crease index -> label).  Returns (verdict, labels|None).
+    `max_clauses` overrides the encoder's streaming ceiling
+    (`sat_order.MAX_CLAUSES`) when given."""
     from pleatwright.certify import flat_fold, layer_certify, layers as L, sat_order
     from pysat.solvers import Solver
 
@@ -351,7 +450,8 @@ def certify(cp: CP, seg_of_edge, prefs: dict, *, timeout_hint: float = 120.0):
     s = Solver(name=sat_order.SOLVER)
     try:
         try:
-            st = sat_order.encode(g.cons, g.slots, s.add_clause)
+            st = sat_order.encode(g.cons, g.slots, s.add_clause,
+                                  **({} if max_clauses is None else {"max_clauses": max_clauses}))
         except sat_order.ClauseBudgetExceeded:
             # the encoder's exact streaming backstop: too large to decide
             return "OVERSIZE", None, {"pairs": len(g.cons.pairs)}
@@ -415,11 +515,14 @@ def local_sat(segs, prefs: dict, N):
     return {i: ("V" if (i + 1) in model else "M") for i in range(len(segs))}
 
 
-def solve(base: Base, *, certify_global: bool = True) -> Solved:
+def solve(base: Base, *, certify_global: bool = True, max_clauses: int | None = None) -> Solved:
+    """Label the base (heuristic, then the global certificate, else
+    `local_sat`).  `max_clauses` is passed to `certify` (None: the
+    encoder's own ceiling)."""
     N = base.N
     t0 = time.perf_counter()
     segs = _segments(base)
-    heur = heuristic_labels(segs, N)
+    heur = heuristic_labels(segs, N, _tilted_w_levels(base, segs))
     t_heur = time.perf_counter() - t0
     hgood, htotal, _ = local_count(segs, heur, N)
 
@@ -452,7 +555,7 @@ def solve(base: Base, *, certify_global: bool = True) -> Solved:
                 if _on_seg(pa, p, q) and _on_seg(pb, p, q):
                     seg_of_edge[(min(a, b), max(a, b))] = i
                     break
-        verdict, labels, info = certify(cp, seg_of_edge, heur)
+        verdict, labels, info = certify(cp, seg_of_edge, heur, max_clauses=max_clauses)
     t_glob = time.perf_counter() - t1
     final = labels if labels is not None else heur
     if labels is None:

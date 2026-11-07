@@ -1,7 +1,7 @@
 """Pleatwright from the command line.
 
     python -m pleatwright author "a dog" --out DIR [--open]
-    python -m pleatwright fold DIR/tree.json --out DIR [--layout auto|symmetric|smaller]
+    python -m pleatwright fold DIR/tree.json --out DIR [--layout auto|symmetric|smaller|stretched]
     python -m pleatwright run "a dog" --out DIR [--open]
 
 `author`: text -> concept image -> mesh (mesh_acquire) -> VLM tree
@@ -156,26 +156,48 @@ async def _review(prompt, out_dir, work, *, client, ask, open_images):
         state = await GP.resume(state, "revise", answer, client=client, out_dir=work)
 
 
+_WORDS = {"symmetric": ("s", "symmetric"), "stretched": ("t", "stretched"),
+          "smaller": ("m", "smaller")}
+
+
+def layout_prompt(opts) -> str:
+    """The layout question's prompt: one key per option that exists."""
+    keys = "   ".join(f"[{_WORDS[k][0]}] {k}" for k in ("symmetric", "stretched", "smaller")
+                      if opts.option(k) is not None)
+    return f"\n[a] accept recommendation   {keys}   [q] quit: "
+
+
 def choose_layout(opts, explanation: str, ask=input) -> str | None:
-    """Show both packed layouts and ask which to fold; None = quit (or EOF)."""
-    print(f"\nTwo layouts fit this model on the sheet:\n"
-          f"  symmetric: grid {opts.symmetric.layout.N}\n"
-          f"  smaller:   grid {opts.smaller.layout.N}  "
-          f"(folds a model {float(opts.gain):.2f}x larger from the same sheet)\n"
-          f"Recommended: {opts.recommended}\n\n{explanation}")
+    """Show the packed layouts (each with its size gain over the symmetric one)
+    and ask which to fold; None = quit (or EOF)."""
+    have = [k for k in ("symmetric", "stretched", "smaller") if opts.option(k) is not None]
+    n_s = opts.symmetric.layout.N
+    lines = [f"\n{('Two', 'Three')[len(have) - 2]} layouts fit this model on the sheet:"]
+    for k in have:
+        n = opts.option(k).layout.N
+        line = f"  {k + ':':<10} grid {n}"
+        if k != "symmetric" and n < n_s:
+            # without a stretched option the smaller layout's gain is `opts.gain`, as before
+            g = float(opts.gain) if k == "smaller" and opts.stretched is None \
+                and opts.gain is not None else n_s / n
+            line += f"  (folds a model {g:.2f}x larger from the same sheet"
+            line += ("; some creases are off the grid, at angles below 45 degrees)"
+                     if k == "stretched" else ")")
+        lines.append(line)
+    print("\n".join(lines) + f"\nRecommended: {opts.recommended}\n\n{explanation}")
+    prompt = layout_prompt(opts)
     while True:
         try:
-            answer = ask(LAYOUT_PROMPT).strip().lower()
+            answer = ask(prompt).strip().lower()
         except EOFError:
             return None
         if answer in ("a", "y", "yes", "approve"):
             return opts.recommended
-        if answer in ("s", "symmetric"):
-            return "symmetric"
-        if answer in ("m", "smaller"):
-            return "smaller"
         if answer in ("q", "quit"):
             return None
+        for k in have:
+            if answer in _WORDS[k]:
+                return k
 
 
 def _layout_explanation(opts) -> str:
@@ -189,6 +211,11 @@ def _layout_explanation(opts) -> str:
     except ConfigError:
         return layout_explain.template_explanation(summary, subject, pairs)
     return asyncio.run(layout_explain.explain(client, summary, subject, pairs))
+
+
+def _fallback_note(rec: dict) -> str | None:
+    import layout_explain
+    return layout_explain.fallback_note(rec.get("layout"))
 
 
 def fold(tree_path: str, out_dir: str, *, layout: str = "auto",
@@ -205,6 +232,9 @@ def fold(tree_path: str, out_dir: str, *, layout: str = "auto",
     if "failure" in rec:
         print(f"pleatwright failed at stage '{rec['failure']}'", file=sys.stderr)
         return 1
+    note = _fallback_note(rec)
+    if note:
+        print(f"\n{note}")
     print(f"\nmodel written: {rec['folder']}")
     return 0
 
@@ -220,9 +250,12 @@ def main(argv=None, *, ask=input, client=None) -> int:
     p = sub.add_parser("fold")
     p.add_argument("tree")
     p.add_argument("--out", required=True)
-    p.add_argument("--layout", choices=("auto", "symmetric", "smaller"), default="auto",
-                   help="auto folds the smaller unmirrored layout only when it makes "
-                        "the model at least 10%% larger; it never asks")
+    p.add_argument("--layout", choices=("auto", "symmetric", "smaller", "stretched"), default="auto",
+                   help="auto folds the layout the rule recommends and never asks: the "
+                        "stretched layout (mirror-symmetric, some creases off the grid) or the "
+                        "smaller unmirrored one, each only when it makes the model at least 10%% "
+                        "larger than the symmetric layout; stretched folds the stretched layout "
+                        "when it exists")
     a = ap.parse_args(argv)
     if a.cmd == "fold":
         return fold(a.tree, a.out, layout=a.layout)

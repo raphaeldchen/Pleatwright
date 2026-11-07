@@ -37,7 +37,7 @@ import itertools
 import math
 from dataclasses import asdict, dataclass, field
 
-from .stick import Contracted
+from .stick import Chain, Contracted
 
 
 @dataclass
@@ -51,6 +51,12 @@ class Region:
     u_line: float | None = None  # river: y of its proximal (u) hinge
     virtual: list = field(default_factory=list)
     more: list = field(default_factory=list)   # further rectangles of the SAME region
+    # Pythagorean stretches (kamiya.py, spec 2026-10-22 §4): tilted hinge lines
+    # [a, b, c_num, c_den] (the line a*x + b*y = c, (a, b) a primitive normal),
+    # and exact convex polygons [[x_num, x_den, y_num, y_den], ...] this region
+    # owns inside the layout's patches.  Empty for every layout of today's.
+    lines: list = field(default_factory=list)
+    pieces: list = field(default_factory=list)
 
     @property
     def rects(self) -> list:
@@ -68,6 +74,9 @@ class Layout:
     score: float = 0.0
     pockets: list = field(default_factory=list)   # nested layouts: [(hub, rect, sides)]
     family: str = "today"       # 'today' | 'beside' (nest.beside_candidates, river routing)
+    # integer rects (x0, y0, x1, y1) inside which cells are not atomic: they are
+    # owned by the regions' `pieces` (a stretch gadget, kamiya.py)
+    patches: list = field(default_factory=list)
 
 
 def layout_to_dict(lay: Layout) -> dict:
@@ -77,7 +86,9 @@ def layout_to_dict(lay: Layout) -> dict:
 
 def layout_from_dict(d: dict) -> Layout:
     """Inverse of layout_to_dict: JSON turns every tuple into a list, so put
-    back the ones the builder relies on (rects, bands, slabs, pockets)."""
+    back the ones the builder relies on (rects, bands, slabs, pockets,
+    patches).  A dict saved before stretches (no `lines`, `pieces` or
+    `patches`) gets their empty defaults."""
     regions = [Region(**{**r, "rect": tuple(r["rect"]),
                          "more": [tuple(m) for m in r["more"]]})
                for r in d["regions"]]
@@ -85,7 +96,7 @@ def layout_from_dict(d: dict) -> Layout:
                   [tuple(b) for b in d["bands"]], [tuple(s) for s in d["slabs"]],
                   d["score"],
                   [(h, tuple(rect), tuple(sides)) for h, rect, sides in d["pockets"]],
-                  d.get("family", "today"))
+                  d.get("family", "today"), [tuple(p) for p in d.get("patches", [])])
 
 
 # ------------------------------------------------------------------ App. E.1
@@ -847,6 +858,92 @@ def _parity_ok(reg: Region) -> bool:
 
 
 # ------------------------------------------------------------------ search
+# The slab stack of a path-shaped tree, shared by `candidates` and the
+# stretched search (`kamiya._complete`), which packs its non-Kamiya slabs
+# exactly as `candidates` does.
+def slab_heights(N: int, bandW: list, feasible):
+    """At most 6 lists of slab heights [H_0 .. H_k-1] that fill a grid of N
+    rows with river bands of widths `bandW` between consecutive slabs (k =
+    len(bandW) + 1 slabs, each at least 1 row), from a dynamic programme over
+    the slab start positions.  `feasible(i, y0, H)` says whether slab i packs
+    in rows [y0, y0 + H); it is asked once per (i, H, y0 % 2), as feasibility
+    depends only on slab, height and start parity.  At most 4 predecessors of
+    each start position are followed."""
+    k = len(bandW) + 1
+    if N - sum(bandW) < k:
+        return
+    fcache = {}
+
+    def ok(i, y0, H):
+        key = (i, H, y0 % 2)
+        if key not in fcache:
+            fcache[key] = feasible(i, y0, H)
+        return fcache[key]
+
+    reach = [dict() for _ in range(k + 1)]     # position -> list of (prev_pos, H)
+    reach[0][0] = []
+    for i in range(k):
+        rest = sum(bandW[i:]) if i < k - 1 else 0
+        for y in list(reach[i]):
+            if i == k - 1:
+                H = N - y
+                if H >= 1 and ok(i, y, H):
+                    reach[k].setdefault(N, []).append((y, H))
+                continue
+            for H in range(1, N - y - rest - (k - 1 - i) + 1):
+                if ok(i, y, H):
+                    ny = y + H + bandW[i]
+                    reach[i + 1].setdefault(ny, []).append((y, H))
+
+    def heights_rec(i, y, acc):
+        # backtrack from (slab i ending at y) to slab 0
+        if i == 0:
+            yield acc[::-1]
+            return
+        for py, H in reach[i].get(y, [])[:4]:
+            yield from heights_rec(i - 1, py, acc + [H])
+    yield from itertools.islice(heights_rec(k, N, []), 6)
+
+
+def stack(order: list, heights: list, rivers: list) -> tuple[list, list]:
+    """(slabs [(hub, y0, y1)], bands [(river chain id, y0, y1)]) of hubs
+    `order` with slab `heights`, the river chains `rivers` between them."""
+    y = 0
+    slabs, bands = [], []
+    for i in range(len(order)):
+        slabs.append((order[i], y, y + heights[i]))
+        y += heights[i]
+        if i < len(order) - 1:
+            bands.append((rivers[i].id, y, y + rivers[i].length))
+            y += rivers[i].length
+    return slabs, bands
+
+
+def slab_solutions(items, N: int, pocket) -> list:
+    """At most 8 of `_pocket_solutions(items, N, *pocket)`; [[]] for no items."""
+    if not items:
+        return [[]]
+    return list(itertools.islice(_pocket_solutions(items, N, *pocket), 8))
+
+
+def solution_regions(N: int, rows) -> list:
+    """The regions of one pocket solution (its rows, `_row_regions`)."""
+    return [r for ry0, ry1, sol, t, bb in rows for r in _row_regions(N, ry0, ry1, sol, t, bb)]
+
+
+def regions_ok(regs) -> bool:
+    """Every region reaches exactly its L (`_max_d`) with its hinge corners on
+    the even lattice (`_parity_ok`)."""
+    return all(abs(_max_d(r) - r.L) < 1e-9 and _parity_ok(r) for r in regs)
+
+
+def river_region(N: int, c: Chain, y0: int, y1: int, u_top: bool) -> Region:
+    """The full-width river band [0, N] x [y0, y1] of chain `c`, its hinge on
+    the side of hub c.u (the top, y0, when `u_top`)."""
+    u = y0 if u_top else y1
+    return Region(c.id, (0, y0, N, y1), [], [u], "river", c.length, u_line=u)
+
+
 def candidates(con: Contracted, *, N_min=None, N_max=160, per_N=60, symmetric=True):
     """Yield candidate Layouts in increasing grid size.  `symmetric=False`
     packs unmirrored rows (for figures whose declared pairs differ).  A
@@ -871,79 +968,29 @@ def candidates(con: Contracted, *, N_min=None, N_max=160, per_N=60, symmetric=Tr
         produced = 0
         for order in orders:
             k = len(order)
-            bandW = [rivers[frozenset((order[i], order[i + 1]))].length for i in range(k - 1)]
-            free = N - sum(bandW)
-            if free < k:
-                continue
+            between = [rivers[frozenset((order[i], order[i + 1]))] for i in range(k - 1)]
             items = [_items(con, h, symmetric) for h in order]
             sides = [("paper" if i == 0 else "hinge", "paper" if i == k - 1 else "hinge")
                      for i in range(k)]
-            fcache = {}
 
             def feasible(i, y0, H):
-                key = (i, H, y0 % 2)
-                if key not in fcache:
-                    if not items[i]:
-                        fcache[key] = True
-                    else:
-                        g = _pocket_solutions(items[i], N, y0, y0 + H, *sides[i], limit=1)
-                        fcache[key] = next(g, None) is not None
-                return fcache[key]
+                if not items[i]:
+                    return True
+                g = _pocket_solutions(items[i], N, y0, y0 + H, *sides[i], limit=1)
+                return next(g, None) is not None
 
-            # slab heights: dynamic programme over the slab start positions
-            # (feasibility depends only on slab, height and start parity)
-            reach = [dict() for _ in range(k + 1)]     # position -> list of (prev_pos, H)
-            reach[0][0] = []
-            for i in range(k):
-                rest = sum(bandW[i:]) if i < k - 1 else 0
-                for y in list(reach[i]):
-                    if i == k - 1:
-                        H = N - y
-                        if H >= 1 and feasible(i, y, H):
-                            reach[k].setdefault(N, []).append((y, H))
-                        continue
-                    for H in range(1, N - y - rest - (k - 1 - i) + 1):
-                        if feasible(i, y, H):
-                            ny = y + H + bandW[i]
-                            reach[i + 1].setdefault(ny, []).append((y, H))
-
-            def heights_rec(i, y, acc):
-                # backtrack from (slab i ending at y) to slab 0
-                if i == 0:
-                    yield acc[::-1]
-                    return
-                for py, H in reach[i].get(y, [])[:4]:
-                    yield from heights_rec(i - 1, py, acc + [H])
-            for heights in itertools.islice(heights_rec(k, N, []), 6):
-                y = 0
-                slabs, bands = [], []
-                for i in range(k):
-                    slabs.append((order[i], y, y + heights[i]))
-                    y += heights[i]
-                    if i < k - 1:
-                        bands.append((rivers[frozenset((order[i], order[i + 1]))].id, y, y + bandW[i]))
-                        y += bandW[i]
-                pocket_sols = []
-                for i in range(k):
-                    hub, a_, b_ = slabs[i]
-                    if not items[i]:
-                        pocket_sols.append([[]])
-                        continue
-                    pocket_sols.append(list(itertools.islice(
-                        _pocket_solutions(items[i], N, a_, b_, *sides[i]), 8)))
+            for heights in slab_heights(N, [c.length for c in between], feasible):
+                slabs, bands = stack(order, heights, between)
+                pocket_sols = [slab_solutions(items[i], N, (a_, b_, *sides[i]))
+                               for i, (hub, a_, b_) in enumerate(slabs)]
                 for combo in itertools.product(*pocket_sols):
                     tick()
-                    regs = []
-                    for rows in combo:
-                        for ry0, ry1, sol, t, bb in rows:
-                            regs += _row_regions(N, ry0, ry1, sol, t, bb)
-                    if not all(abs(_max_d(r) - r.L) < 1e-9 and _parity_ok(r) for r in regs):
+                    regs = [r for rows in combo for r in solution_regions(N, rows)]
+                    if not regions_ok(regs):
                         continue
                     for i, (cid, a_, b_) in enumerate(bands):
-                        c = con.chains[cid]
-                        u_top = c.u == order[i]
-                        regs.append(Region(cid, (0, a_, N, b_), [], [a_ if u_top else b_], "river",
-                                           c.length, u_line=a_ if u_top else b_))
+                        regs.append(river_region(N, con.chains[cid], a_, b_,
+                                                 con.chains[cid].u == order[i]))
                     lay = Layout(N, regs, order, bands, slabs)
                     lay.score = _score(lay)
                     yield lay

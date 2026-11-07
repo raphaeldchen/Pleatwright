@@ -8,6 +8,7 @@ import os
 import random
 import shutil
 import threading
+from contextlib import aclosing
 from dataclasses import dataclass, field
 
 from pleatwright.__main__ import _dump, tree_file
@@ -44,6 +45,27 @@ class Ctx:
                 self.log.append(type, **f)
         if not self.cancelled.is_set():
             self.loop.call_soon_threadsafe(go)
+
+    async def to_thread(self, fn, /, *args, **kwargs):
+        """`asyncio.to_thread` that returns, or raises, only once every
+        `emit_threadsafe` that `fn` made is in the log. A bare `await to_thread`
+        can resume ahead of them: when the job ends before asyncio chains its
+        future, Python 3.14 sets the result at once on the loop thread and the
+        `await` never yields, so a later direct `emit` would land first."""
+        try:
+            result = await asyncio.to_thread(fn, *args, **kwargs)
+        except Exception:
+            await self._drain()
+            raise
+        await self._drain()
+        return result
+
+    async def _drain(self) -> None:
+        # The job's call_soon_threadsafe handles were queued before it ended;
+        # one queued now runs after them (the loop's ready queue is FIFO).
+        done = self.loop.create_future()
+        self.loop.call_soon(done.set_result, None)
+        await done
 
 
 TOOL_SCHEMAS = {
@@ -126,7 +148,7 @@ async def make_mesh(ctx: Ctx, prompt: str) -> str:
                                 summary=_mesh_summary(dest, provider))
 
     try:
-        await asyncio.to_thread(mesh_acquire.acquire_mesh, prompt, progress=progress)
+        await ctx.to_thread(mesh_acquire.acquire_mesh, prompt, progress=progress)
     except (RuntimeError, TimeoutError, ValueError, OSError) as e:
         ctx.emit("stage_failed", stage=stage[0], error=str(e), reason="error",
                  retry="make_mesh")
@@ -217,10 +239,10 @@ async def _draw_round(ctx: Ctx, prompt: str, ms: dict, *, description=None, seed
 
     try:
         if best_dir:
-            await asyncio.to_thread(serve_cached)
+            await ctx.to_thread(serve_cached)
         else:
-            await asyncio.to_thread(mesh_acquire.acquire_mesh, prompt, progress=progress,
-                                    description=description, seed=seed)
+            await ctx.to_thread(mesh_acquire.acquire_mesh, prompt, progress=progress,
+                                description=description, seed=seed)
     except (RuntimeError, TimeoutError, ValueError, OSError) as e:
         ctx.emit("stage_failed", stage=stage[0], error=str(e), reason="error", retry="make_mesh")
         raise ToolFailed(str(e)) from e
@@ -451,66 +473,74 @@ async def fold(ctx: Ctx, *, certify_global: bool = True, layout: str = "auto",
     """Fold tree.json, from the layouts saved in `layout/` when they are there
     (`pack_and_fold`; nothing is searched twice). A failed fold of a chosen
     layout retries back to the layout card (spec 2026-10-16 §5.2a)."""
-    from .foldproc import FoldJob
+    from .foldproc import make_job
     if not _packing_started:
         ctx.emit("stage_started", stage="packing")
     current = "packing"                  # the UI stage last started
     options_dir = os.path.join(ctx.run_dir, LAYOUT_DIR)
     if not os.path.isfile(os.path.join(options_dir, "options.json")):
         options_dir = None
-    job = FoldJob(os.path.join(ctx.run_dir, "tree.json"), ctx.run_dir,
-                  certify_global=certify_global, layout=layout, chosen_by=chosen_by,
-                  options_dir=options_dir)
-    job.start()
+    job = make_job("fold", os.path.join(ctx.run_dir, "tree.json"), ctx.run_dir,
+                   certify_global=certify_global, layout=layout, chosen_by=chosen_by,
+                   options_dir=options_dir)
     try:
-        async for kind, stage, info in job.messages():
-            if kind == "stage":
-                files = [ctx.rel(p) for p in info.pop("files")]
-                info.pop("folder", None)
-                if stage == "output":
-                    files = model_files(ctx.run_dir, *files)
-                ctx.emit("stage_output", stage=_UI_STAGE[stage], files=files, summary=info)
-                if stage in _NEXT:
-                    current = _NEXT[stage]
-                    ctx.emit("stage_started", stage=current)
-            elif kind == "failed":
-                # stage None = the child died without a message: blame the stage it was in
-                ctx.emit("stage_failed", stage=_UI_STAGE.get(stage, "packing") if stage else current,
-                         error=info, reason="error",
-                         retry="fold" if layout == "auto" else "layout")
-                raise ToolFailed(info)
-            else:
-                info["folder"] = ctx.rel(info["folder"])
-                ctx.emit("run_finished", **info)
-                return info
+        job.start()
+        async with aclosing(job.messages()) as msgs:
+            async for kind, stage, info in msgs:
+                if kind == "stage":
+                    files = [ctx.rel(p) for p in info.pop("files")]
+                    info.pop("folder", None)
+                    if stage == "output":
+                        files = model_files(ctx.run_dir, *files)
+                    ctx.emit("stage_output", stage=_UI_STAGE[stage], files=files, summary=info)
+                    if stage in _NEXT:
+                        current = _NEXT[stage]
+                        ctx.emit("stage_started", stage=current)
+                elif kind == "failed":
+                    # stage None = the child died without a message: blame the stage it was in
+                    ctx.emit("stage_failed", stage=_UI_STAGE.get(stage, "packing") if stage else current,
+                             error=info, reason="error",
+                             retry="fold" if layout == "auto" else "layout")
+                    raise ToolFailed(info)
+                else:
+                    info["folder"] = ctx.rel(info["folder"])
+                    ctx.emit("run_finished", **info)
+                    return info
         raise ToolFailed("the fold ended without a result")
     finally:
-        await asyncio.to_thread(job.cancel)   # idempotent; its join must not block the loop
+        await job.aclose()
 
 
 # ---- the packing layout choice (spec 2026-10-16 §7, §8.1) ------------------------
 #: the user's words for each layout on the card (logged as their message)
-LAYOUT_LABELS = {"smaller": "Smaller grid", "symmetric": "Mirror-symmetric"}
+def _labels() -> dict:
+    import layout_explain
+    return {k: layout_explain.LABELS[k] for k in ("smaller", "symmetric", "stretched")}
+
+
+
+LAYOUT_LABELS = _labels()      # one source with the card's option labels (`layout_explain.LABELS`)
 
 
 async def pack_and_fold(ctx: Ctx, *, certify_global: bool = True) -> dict:
-    """Pack both layouts in a child process. When the 10% rule asks, stop at the
+    """Pack the layouts in a child process. When the rule asks, stop at the
     layout card and return the card; otherwise fold the rule's layout and return
     its result."""
-    from .foldproc import PackJob
+    from .foldproc import make_job
     ctx.emit("stage_started", stage="packing")
-    job = PackJob(os.path.join(ctx.run_dir, "tree.json"), ctx.run_dir)
-    job.start()
+    job = make_job("pack", os.path.join(ctx.run_dir, "tree.json"), ctx.run_dir)
     summary = None
     try:
-        async for kind, _stage, info in job.messages():
-            if kind == "failed":
-                ctx.emit("stage_failed", stage="packing", error=info, reason="error", retry="fold")
-                raise ToolFailed(info)
-            if kind == "done":
-                summary = info
+        job.start()
+        async with aclosing(job.messages()) as msgs:
+            async for kind, _stage, info in msgs:
+                if kind == "failed":
+                    ctx.emit("stage_failed", stage="packing", error=info, reason="error", retry="fold")
+                    raise ToolFailed(info)
+                if kind == "done":
+                    summary = info
     finally:
-        await asyncio.to_thread(job.cancel)
+        await job.aclose()
     if summary is None:
         raise ToolFailed("packing ended without a result")
     if summary["verdict"] == "ask":
@@ -530,6 +560,41 @@ def layout_summary(run_dir: str) -> dict | None:
     """The saved `pack_options` summary of the run's last packing."""
     doc = _read_json(os.path.join(run_dir, LAYOUT_DIR, "options.json"))
     return doc["summary"] if doc else None
+
+
+def saved_options(run_dir: str) -> dict | None:
+    """The summary of the layouts saved in `layout/` if they were packed from
+    the current tree.json: options.json parses (`save_options` writes it after
+    the packing CPs, and the pack child deletes it first) and is strictly newer
+    than tree.json (a re-approval rewrites it). None means pack again."""
+    path = os.path.join(run_dir, LAYOUT_DIR, "options.json")
+    doc = _read_json(path)
+    try:
+        fresh = os.stat(path).st_mtime_ns > os.stat(os.path.join(run_dir, "tree.json")).st_mtime_ns
+    except OSError:
+        return None
+    if not fresh or not isinstance(doc, dict) or "summary" not in doc:
+        return None
+    for name in doc.get("options") or {}:
+        if name != "doubled" and not os.path.isfile(
+                os.path.join(run_dir, LAYOUT_DIR, f"{name}_packing_cp.svg")):
+            return None
+    return doc["summary"]
+
+
+async def refold(ctx: Ctx, *, choice: str | None = None, certify_global: bool = True) -> dict:
+    """A `fold` retry. tree.json is unchanged and packing is deterministic, so
+    the layouts saved for it are reused: the user's `choice` at the card folds,
+    an unanswered card is shown again (from card.json), else the rule's layout
+    folds. Without saved layouts, pack again."""
+    summary = saved_options(ctx.run_dir)
+    if summary is None:
+        return await pack_and_fold(ctx, certify_global=certify_global)
+    if summary["verdict"] == "ask":
+        if choice in LAYOUT_LABELS:
+            return await fold(ctx, certify_global=certify_global, layout=choice, chosen_by="user")
+        return await present_layout(ctx, summary)
+    return await fold(ctx, certify_global=certify_global, layout="auto")
 
 
 def _subject_and_pairs(run_dir: str) -> tuple[str, list]:
@@ -557,7 +622,8 @@ async def present_layout(ctx: Ctx, summary: dict, *, note: str | None = None) ->
         os.makedirs(os.path.dirname(path), exist_ok=True)
         _dump({**key, "card": card, "explanation": text}, path + ".tmp")
         os.replace(path + ".tmp", path)
-    files = [f"{LAYOUT_DIR}/{name}_packing_cp.svg" for name in ("smaller", "symmetric")]
+    files = [f"{LAYOUT_DIR}/{name}_packing_cp.svg" for name in ("smaller", "symmetric", "stretched")
+             if os.path.isfile(os.path.join(ctx.run_dir, LAYOUT_DIR, f"{name}_packing_cp.svg"))]
     ctx.emit("stage_output", stage="packing", files=files,
              summary={"layout_choice": card, "explanation": text, "note": note})
     ctx.emit("awaiting_review", stage="packing", round=0, can_approve=True, card=card,

@@ -10,11 +10,13 @@ import multiprocessing as mp
 import os
 import queue as _queue
 import sys
+from typing import AsyncIterator, Literal, Protocol
 
 #: where the packed layouts live in a run (spec 2026-10-16 §8.1): options.json,
 #: one packing CP per layout, and card.json (the question and its explanation)
 LAYOUT_DIR = "layout"
-_LAYOUT_FILES = ("options.json", "symmetric_packing_cp.svg", "smaller_packing_cp.svg")
+_LAYOUT_FILES = ("options.json", "symmetric_packing_cp.svg", "smaller_packing_cp.svg",
+                 "stretched_packing_cp.svg")
 
 
 def _safe(x):
@@ -68,7 +70,7 @@ def _child(tree_path: str, out_dir: str, q, certify_global: bool, layout: str = 
 
 
 def _pack_child(tree_path: str, out_dir: str, q) -> None:
-    """Pack both layouts (`pipeline.pack_options`) into `out_dir/layout`; send
+    """Pack the layouts (`pipeline.pack_options`) into `out_dir/layout`; send
     the summary. An earlier packing's files go first, so none can outlive it."""
     import pleatwright_app  # noqa: F401  -- puts mcp_harness on sys.path in the child
     layout_dir = os.path.join(out_dir, LAYOUT_DIR)
@@ -123,9 +125,15 @@ class _Job:
                 return
 
     def cancel(self) -> None:
+        if self.proc.pid is None:          # never started (`start` raised): nothing to kill or join
+            return
         if self.proc.is_alive():
             self.proc.kill()
         self.proc.join(5)
+
+    async def aclose(self) -> None:
+        """Idempotent; the join must not block the loop."""
+        await asyncio.to_thread(self.cancel)
 
 
 class FoldJob(_Job):
@@ -145,3 +153,29 @@ class PackJob(_Job):
 
     def __init__(self, tree_path: str, out_dir: str):
         super().__init__(_pack_child, tree_path, out_dir)
+
+
+class Job(Protocol):
+    """What `tools.fold` and `tools.pack_and_fold` need of a job."""
+
+    def start(self) -> None: ...
+
+    def messages(self) -> AsyncIterator[tuple[str, str | None, object]]: ...
+
+    async def aclose(self) -> None: ...
+
+
+#: Replaces the spawned-process jobs when set: called as
+#: `JOB_FACTORY(kind, tree_path, out_dir, **kw)`, it returns an object with
+#: `start()`, `messages()` and `async aclose()` (the browser build's worker jobs).
+JOB_FACTORY = None
+
+
+def make_job(kind: Literal["fold", "pack"], tree_path: str, out_dir: str, **kw) -> Job:
+    """The job for `kind` ("fold" | "pack"): a `FoldJob` or `PackJob`, or the
+    `JOB_FACTORY`'s."""
+    if kind not in ("fold", "pack"):
+        raise ValueError(f"unknown job kind {kind!r}")
+    if JOB_FACTORY is not None:
+        return JOB_FACTORY(kind, tree_path, out_dir, **kw)
+    return FoldJob(tree_path, out_dir, **kw) if kind == "fold" else PackJob(tree_path, out_dir, **kw)

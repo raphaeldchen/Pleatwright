@@ -23,15 +23,23 @@ reads the crease set off it: two neighbouring triangles whose maps differ by
 a reflection across their shared edge meet at a crease.  Each crease is
 classified as a hinge (region boundary), ridge (gradient switches: the
 straight skeleton) or pleat (accordion line).
+
+A stretched layout (one with `patches`: a Pythagorean-stretch gadget,
+kamiya.py, spec 2026-10-22 §4.3) is built by `_build_patched`: the same map
+with tilted hinge lines (d = distance to the nearest line, w = tri of the
+coordinate along a tilted one) on a finer triangulation computed in exact
+rationals.  A layout without patches takes the code above, unchanged.
 """
 from __future__ import annotations
 
 import math
 from collections import defaultdict
 from dataclasses import dataclass, field
+from fractions import Fraction
 
 import numpy as np
 
+from . import exact2d as E
 from .cp import CP, Edge
 from .pack import Layout
 
@@ -93,6 +101,8 @@ def strip_positions(con, sigma) -> dict:
 
 
 def build(lay: Layout, con, sigma: dict) -> Base:
+    if lay.patches:                     # a stretched layout (kamiya.py): the generalised map
+        return _build_patched(lay, con, sigma)
     N = lay.N
     strip = strip_positions(con, sigma)
     owner = {}
@@ -206,12 +216,387 @@ def _affine(P, Q):
     return A, b
 
 
+# ------------------------------------------------------------------ stretched layouts
+# A layout with `patches` (a Pythagorean stretch, kamiya.py; spec 2026-10-22
+# §4.3) is built by the same strip map on a finer triangulation, in exact
+# rational arithmetic; only `Tri.pts`, `A`, `b` and `d` are floats.
+#
+# * Tiling: cells outside the patches are owned once by rects, as today;
+#   inside each patch the pieces (with any whole cells rects own there)
+#   cover every cell exactly once, by exact area.
+# * Outside the patches every owned cell gets today's four quarter triangles,
+#   cut further only by a kink line of its region that is not a cell edge or
+#   diagonal (Kamiya's one-row hub-slack strip folds along its middle,
+#   y = k + 1/2); no layout of today's has one.  Inside a patch the paper is
+#   each region's pieces (and whole cells) cut by the unit cells, then by
+#   every line where the map can bend in that region: the cell diagonals,
+#   the region's hinge lines, the bisectors of every pair of them
+#   (`exact2d.cut_lines`) and, for each tilted hinge line, the lines of
+#   integer accordion coordinate.  d and w are affine on every face.
+# * Conforming pass: every vertex lying inside another polygon's edge is
+#   inserted into that edge, and every polygon of more than three vertices
+#   is fanned from its vertex centroid (faces are convex), so neighbouring
+#   triangles share whole edges (checked: "t_junction" errors).
+# * The map: zone = the nearest hinge line (vlines, hlines, then lines; the
+#   first wins a tie, as `_zone`; a tilted zone's key is ("l", (a, b, c_num,
+#   c_den))), d = the distance to it, s = strip(u) + sigma * d, w = tri(x)
+#   in an 'h' zone, tri(y) in a 'v' zone and tri(t) in an 'l' zone.  t is
+#   the coordinate along the tilted line, shifted so that the region's
+#   farthest vertex q from the line (the GOPS piece corner on the tip's
+#   diagonal, P0 or P2) gets t = q.x: there the flap's axis zones give
+#   w = tri(q.x) = tri(q.y).  (Anchoring t = 0 at the tip, w = 0, breaks
+#   continuity when the tip's x is odd: dog_1's head tip x = 31.)  With q
+#   integral the line's orientation does not matter: tri(k + u) = tri(k - u).
+# * Isometry, continuity (exact) and crease extraction as today.  One
+#   departure: Task 3 gives each zone kind of a flap its own region, so two
+#   regions of ONE chain meeting where d > 0 meet at a ridge (or a pleat),
+#   not at a hinge; only edges at d = 0 or between chains are hinges.
+
+_QH = Fraction(1, 2)
+
+
+def _num(v: Fraction):
+    """int when integral, else float: the types today's Tri.pts carry."""
+    return int(v) if v.denominator == 1 else float(v)
+
+
+def _tri_q(t: Fraction) -> Fraction:
+    m = t % 2
+    return m if m <= 1 else 2 - m
+
+
+def _hinges(r) -> list:
+    """[(zone key, Line, |normal|)] of a region, in `_zone`'s tie order."""
+    out = [(("v", v), E.Line(1, 0, Fraction(v)), 1) for v in r.vlines]
+    out += [(("h", h), E.Line(0, 1, Fraction(h)), 1) for h in r.hlines]
+    for e in r.lines:
+        ln = E.line_of(e)
+        out.append((("l", tuple(e)), ln, ln.h))
+    return out
+
+
+def _dist_q(hs, p) -> Fraction:
+    return min(abs(ln.a * p[0] + ln.b * p[1] - ln.c) / h for _, ln, h in hs)
+
+
+def _zone_q(hs, p):
+    best = None
+    for key, ln, h in hs:
+        d = abs(ln.a * p[0] + ln.b * p[1] - ln.c) / h
+        if best is None or d < best[0]:
+            best = (d, key, ln, h)
+    return best
+
+
+def _along(ln, h, p) -> Fraction:
+    return (-ln.b * p[0] + ln.a * p[1]) / h
+
+
+def _affine_q(P, Q):
+    """Exact (A, b) with A @ P[k] + b = Q[k]; A = [[ds/dx, ds/dy], [dw/dx, dw/dy]]."""
+    (x0, y0), (x1, y1), (x2, y2) = P
+    det = (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0)
+    A, b = [], []
+    for c in (0, 1):
+        f0, f1, f2 = Q[0][c], Q[1][c], Q[2][c]
+        ax = ((f1 - f0) * (y2 - y0) - (f2 - f0) * (y1 - y0)) / det
+        ay = ((x1 - x0) * (f2 - f0) - (x2 - x0) * (f1 - f0)) / det
+        A.append((ax, ay))
+        b.append(f0 - ax * x0 - ay * y0)
+    return tuple(A), tuple(b)
+
+
+def _clip_cell(poly, i, j) -> list:
+    """poly ∩ the closed unit cell (i, j), or [] when that has no area."""
+    for ln, keep in ((E.Line(1, 0, Fraction(i)), 1), (E.Line(1, 0, Fraction(i + 1)), 0),
+                     (E.Line(0, 1, Fraction(j)), 1), (E.Line(0, 1, Fraction(j + 1)), 0)):
+        poly = E.halves(poly, ln)[keep]
+        if len(poly) < 3:
+            return []
+    return poly if E.area2(poly) != 0 else []
+
+
+def _closure_cells(p):
+    """The unit cells whose closed square contains p."""
+    out = []
+    for v in p:
+        f = math.floor(v)
+        out.append((f - 1, f) if v == f else (f,))
+    return [(i, j) for i in out[0] for j in out[1]]
+
+
+def _conform(poly, cands) -> list:
+    """`poly` with every point of `cands` that lies inside one of its edges inserted."""
+    out = []
+    n = len(poly)
+    for k in range(n):
+        p, q = poly[k], poly[(k + 1) % n]
+        ex, ey = q[0] - p[0], q[1] - p[1]
+        ll = ex * ex + ey * ey
+        ins = []
+        for v in cands:
+            vx, vy = v[0] - p[0], v[1] - p[1]
+            if ex * vy - ey * vx == 0:
+                t = ex * vx + ey * vy
+                if 0 < t < ll:
+                    ins.append((t, v))
+        out.append(p)
+        out += [v for _, v in sorted(ins)]
+    return out
+
+
+def _on_quarter_edges(ln) -> bool:
+    """`ln` is a cell edge or cell diagonal line: x or y = k, or x +- y = k."""
+    return (abs(ln.a), abs(ln.b)) in ((1, 0), (0, 1), (1, 1)) and ln.c.denominator == 1
+
+
+def _fan(poly) -> list:
+    if len(poly) == 3:
+        return [tuple(poly)]
+    n = len(poly)
+    c = (sum(p[0] for p in poly) / n, sum(p[1] for p in poly) / n)
+    return [(poly[k], poly[(k + 1) % n], c) for k in range(n)]
+
+
+def _build_patched(lay: Layout, con, sigma: dict) -> Base:
+    N = lay.N
+    strip = strip_positions(con, sigma)
+    patches = [tuple(p) for p in lay.patches]
+    pcell = {}
+    for k, (a0, b0, a1, b1) in enumerate(patches):
+        for i in range(max(0, a0), min(N, a1)):
+            for j in range(max(0, b0), min(N, b1)):
+                if (i, j) in pcell:
+                    raise BaseError(f"patches {pcell[(i, j)]} and {k} overlap at cell {(i, j)}")
+                pcell[(i, j)] = k
+    # 1. ownership: cells outside the patches as today; inside, seed polygons
+    owner, seeds = {}, []                       # seeds: (region, cell, exact convex polygon)
+    for ri, r in enumerate(lay.regions):
+        for x0, y0, x1, y1 in r.rects:
+            for i in range(max(0, x0), min(N, x1)):
+                for j in range(max(0, y0), min(N, y1)):
+                    if (i, j) in pcell:
+                        seeds.append((ri, (i, j), E.rect_poly((i, j, i + 1, j + 1))))
+                    elif (i, j) in owner:
+                        raise BaseError(f"cell {(i, j)} owned twice")
+                    else:
+                        owner[(i, j)] = ri
+    if len(owner) != N * N - len(pcell):
+        raise BaseError(f"tiling incomplete: {N * N - len(pcell) - len(owner)} cells uncovered")
+    for ri, r in enumerate(lay.regions):
+        for pc in r.pieces:
+            poly = E.poly_of(pc)
+            xs, ys = [p[0] for p in poly], [p[1] for p in poly]
+            for i in range(math.floor(min(xs)), math.ceil(max(xs))):
+                for j in range(math.floor(min(ys)), math.ceil(max(ys))):
+                    part = _clip_cell(poly, i, j)
+                    if not part:
+                        continue
+                    if (i, j) not in pcell:
+                        raise BaseError(f"a piece of region {ri} leaves the patches at cell {(i, j)}")
+                    seeds.append((ri, (i, j), part))
+    cover = defaultdict(Fraction)
+    for _, c, poly in seeds:
+        cover[c] += abs(E.area2(poly)) / 2
+    for k, (a0, b0, a1, b1) in enumerate(patches):
+        got = sum(cover[c] for c, kk in pcell.items() if kk == k)
+        if got != (a1 - a0) * (b1 - b0):
+            raise BaseError(f"tiling incomplete: patch {k} pieces cover {got} of {(a1 - a0) * (b1 - b0)}")
+    bad = sorted(c for c in pcell if cover[c] != 1)
+    if bad:
+        raise BaseError(f"tiling incomplete: patch cell {bad[0]} covered {cover[bad[0]]} of 1")
+
+    # 2. each region's hinge lines, kink lines and tilted-zone anchors
+    hs_of, cuts_of, anchor = {}, {}, {}
+    for ri, r in enumerate(lay.regions):
+        hs = _hinges(r)
+        if not hs:
+            raise BaseError(f"region {ri} has no hinge line")
+        hs_of[ri] = hs
+        cuts_of[ri] = E.cut_lines([(ln, h) for _, ln, h in hs])
+        verts = [p for pc in r.pieces for p in E.poly_of(pc)]
+        verts += [p for rect in r.rects if rect[0] < rect[2] and rect[1] < rect[3]
+                  for p in E.rect_poly(rect)]
+        for key, ln, h in hs:
+            if key[0] == "l" and verts:
+                # the anchor q (module comment above) is a lattice point with
+                # q.x = q.y (mod 2): it lies on the flap tip's 45-degree
+                # diagonal, where the axis zones give w = tri(q.x) = tri(q.y),
+                # and the tilted zone's w = tri(t) must equal both there
+                q = min(verts, key=lambda p: (-abs(ln.a * p[0] + ln.b * p[1] - ln.c), p))
+                assert q[0].denominator == q[1].denominator == 1 and (q[0] - q[1]) % 2 == 0, \
+                    f"region {ri}: tilted-zone anchor {q} is not a lattice point with x = y (mod 2)"
+                anchor[(ri, key)] = _along(ln, h, q) - q[0]
+
+    def along_cuts(ri, parts):
+        """`parts` cut by the lines of integer t of the region's tilted lines."""
+        for key, ln, h in hs_of[ri]:
+            if key[0] != "l":
+                continue
+            t0 = anchor[(ri, key)]
+            out = []
+            for part in parts:
+                ts = [_along(ln, h, p) - t0 for p in part]
+                pieces = [part]
+                for m in range(math.ceil(min(ts)), math.floor(max(ts)) + 1):
+                    pieces = E.cut(pieces, E.canon(-ln.b, ln.a, h * (t0 + m)))
+                out += pieces
+            parts = out
+        return parts
+
+    faces = []
+    for ri, (i, j), poly in seeds:
+        parts = [poly]
+        for ln in [E.Line(1, -1, Fraction(i - j)), E.Line(1, 1, Fraction(i + j + 1)), *cuts_of[ri]]:
+            parts = E.cut(parts, ln)
+        faces += [(ri, (i, j), part) for part in along_cuts(ri, parts)]
+
+    # 3. quarter cells outside the patches, cut where the region's map bends
+    #    off the quarter-cell edges (a one-row hub-slack strip: its ridge runs
+    #    along the row's middle); today's regions never are
+    off_grid = {ri: [ln for ln in cuts_of[ri] if not _on_quarter_edges(ln)] for ri in cuts_of}
+    dirty = set(pcell) | {c for c, ri in owner.items() if off_grid[ri]}
+    near = {c for c in owner
+            if any((c[0] + di, c[1] + dj) in dirty for di in (-1, 0, 1) for dj in (-1, 0, 1))}
+    quarters = {}
+    for c in near:
+        i, j = c
+        corners = [(Fraction(i), Fraction(j)), (Fraction(i + 1), Fraction(j)),
+                   (Fraction(i + 1), Fraction(j + 1)), (Fraction(i), Fraction(j + 1))]
+        ctr = (i + _QH, j + _QH)
+        qs = [[corners[k], corners[(k + 1) % 4], ctr] for k in range(4)]
+        for ln in off_grid[owner[c]]:
+            qs = E.cut(qs, ln)
+        quarters[c] = along_cuts(owner[c], qs)
+
+    # 4. conforming pass over the patch faces and the quarter cells near them
+    reg = defaultdict(set)
+    for polys in [quarters.values(), ([poly] for _, _, poly in faces)]:
+        for group in polys:
+            for poly in group:
+                for p in poly:
+                    for cc in _closure_cells(p):
+                        reg[cc].add(p)
+    cand = {c: sorted(v) for c, v in reg.items()}
+
+    # 5. triangles: (region, exact points), today's order outside, then the faces
+    tris_q = []
+    for (i, j), ri in owner.items():
+        if (i, j) in quarters:
+            for qd in quarters[(i, j)]:
+                tris_q += [(ri, t) for t in _fan(_conform(qd, cand[(i, j)]))]
+        else:
+            corners = [(i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1)]
+            ctr = (i + _QH, j + _QH)
+            for k in range(4):
+                tris_q.append((ri, tuple((Fraction(x), Fraction(y))
+                                         for x, y in (corners[k], corners[(k + 1) % 4], ctr))))
+    for ri, c, poly in faces:
+        tris_q += [(ri, t) for t in _fan(_conform(poly, cand[c]))]
+
+    conv = {}
+
+    def fl(p):
+        got = conv.get(p)
+        if got is None:
+            got = conv[p] = (_num(p[0]), _num(p[1]))
+        return got
+
+    dist = {}                                   # (region, point) -> d, shared by its triangles
+
+    def d_at(ri, p):
+        got = dist.get((ri, p))
+        if got is None:
+            got = dist[(ri, p)] = _dist_q(hs_of[ri], p)
+        return got
+
+    tris, exact = [], []
+    for ri, P in tris_q:
+        r = lay.regions[ri]
+        c = con.chains[r.chain]
+        u_pos = Fraction(strip[c.u])
+        sg = sigma[c.id]
+        cen = ((P[0][0] + P[1][0] + P[2][0]) / 3, (P[0][1] + P[1][1] + P[2][1]) / 3)
+        _, zone, zln, zh = _zone_q(hs_of[ri], cen)
+        ds, sw = [], []
+        for p in P:
+            d = d_at(ri, p)
+            ds.append(d)
+            if zone[0] == "h":
+                w = _tri_q(p[0])
+            elif zone[0] == "v":
+                w = _tri_q(p[1])
+            else:
+                w = _tri_q(_along(zln, zh, p) - anchor[(ri, zone)])
+            sw.append((u_pos + sg * d, w))
+        A, b = _affine_q(P, sw)
+        exact.append((P, A, b, ds))
+        tris.append(Tri(tuple(fl(p) for p in P), c.id, ri, zone,
+                        np.array([[float(A[0][0]), float(A[0][1])], [float(A[1][0]), float(A[1][1])]]),
+                        np.array([float(b[0]), float(b[1])]), tuple(_num(d) for d in ds)))
+
+    errors = []
+    for t in tris:
+        if np.abs(t.A.T @ t.A - np.eye(2)).max() > 1e-9:
+            errors.append(("not_isometric", t.pts, t.chain))
+            break
+    img = defaultdict(set)
+    for P, A, b, _ in exact:
+        for p in P:
+            img[p].add((A[0][0] * p[0] + A[0][1] * p[1] + b[0], A[1][0] * p[0] + A[1][1] * p[1] + b[1]))
+    for p, vals in img.items():
+        if len(vals) > 1:
+            errors.append(("discontinuous", fl(p), sorted((float(s), float(w)) for s, w in vals)[:3]))
+            if len(errors) > 20:
+                break
+    edge_tris = defaultdict(list)
+    for ti, (P, _, _, _) in enumerate(exact):
+        for a in range(3):
+            edge_tris[_key(P[a], P[(a + 1) % 3])].append(ti)
+    for (p, q), lst in edge_tris.items():
+        if len(lst) > 2 or (len(lst) == 1 and not any(p[k] == q[k] and p[k] in (0, N) for k in (0, 1))):
+            errors.append(("t_junction", (fl(p), fl(q)), len(lst)))
+            if len(errors) > 20:
+                break
+    if errors:
+        return Base(N, lay, sigma, strip, tris, {}, set(), errors)
+
+    creases, bnd = {}, set()
+    for (p, q), lst in edge_tris.items():
+        if len(lst) != 2:
+            continue
+        i, j = lst
+        ti, tj = tris[i], tris[j]
+        k = _key(fl(p), fl(q))
+        same = exact[i][1] == exact[j][1] and exact[i][2] == exact[j][2]
+        ridge = ti.chain == tj.chain and d_at(ti.region, p) + d_at(ti.region, q) > 0
+        diff_region = ti.region != tj.region and not ridge
+        if diff_region:
+            bnd.add(k)
+        if same:
+            continue
+        if diff_region:
+            kind = "H"
+        elif ti.zone == tj.zone:
+            kind = "P"
+        else:
+            kind = "R"
+        creases[k] = {"kind": kind, "tris": (i, j)}
+    return Base(N, lay, sigma, strip, tris, creases, bnd, [])
+
+
 # ------------------------------------------------------------------ CP views
 def merged_segments(N, keys_kinds, extra=()):
     """Merge unit segments (with a label) into maximal collinear runs that
     never pass THROUGH a vertex another drawn segment touches (so every
     crossing stays a vertex, as COrigami's face finder requires).  `extra`
-    are further unit segments (e.g. the border) that count for degree."""
+    are further unit segments (e.g. the border) that count for degree.
+
+    A line is keyed by its exact primitive integer direction and its exact
+    offset, each coordinate recovered as a rational of denominator <=
+    MAX_DENOMINATOR (`_rational`; a stretch's vertices are rationals, spec
+    2026-10-22 §4.4); on the half-unit grid this is today's key, value for
+    value."""
     deg = defaultdict(int)
     for (p, q), _ in keys_kinds:
         deg[p] += 1
@@ -223,25 +608,38 @@ def merged_segments(N, keys_kinds, extra=()):
         for y in (0, N):
             deg[(x, y)] += 2
             deg[(y, x)] += 2
+    # exact coordinates, scaled by the lcm D of their denominators to integers
+    # (D = 2 on today's half-unit grid): directions, offsets and positions
+    # along a line are then integer arithmetic
+    val = {}
+    for (p, q), _ in keys_kinds:
+        for v in (*p, *q):
+            if v not in val:
+                val[v] = _rational(v)
+    D = math.lcm(*(f.denominator for f in val.values())) if val else 1
+    scaled = {v: f.numerator * (D // f.denominator) for v, f in val.items()}
     lines = defaultdict(list)
     for (p, q), lab in keys_kinds:
-        dx, dy = q[0] - p[0], q[1] - p[1]
-        g = math.gcd(int(round(2 * dx)), int(round(2 * dy))) or 1
-        dirv = (round(2 * dx) // g, round(2 * dy) // g)
+        px, py, qx, qy = scaled[p[0]], scaled[p[1]], scaled[q[0]], scaled[q[1]]
+        dx, dy = qx - px, qy - py
+        g = math.gcd(dx, dy) or 1
+        dirv = (dx // g, dy // g)
         if dirv < (0, 0):
             dirv = (-dirv[0], -dirv[1])
-        # line id: direction + offset (cross product with direction)
-        off = round(2 * (p[0] * dirv[1] - p[1] * dirv[0]), 6)
+        # line id: direction + offset (cross product with direction), exact;
+        # an int whenever it is integral, as on the half-unit grid
+        num = 2 * (px * dirv[1] - py * dirv[0])
+        off = num // D if num % D == 0 else Fraction(num, D)
         lines[(dirv, off, lab)].append((p, q))
     out = []
     for (dirv, off, lab), segs in lines.items():
-        def tpar(pt):
-            return pt[0] * dirv[0] + pt[1] * dirv[1]
+        def tpar(pt):                       # position along the line, times D
+            return scaled[pt[0]] * dirv[0] + scaled[pt[1]] * dirv[1]
         iv = sorted((min(tpar(p), tpar(q)), max(tpar(p), tpar(q)), p, q) for p, q in segs)
         cur = None
         for a, b, p, q in iv:
             pa, pb = (p, q) if tpar(p) <= tpar(q) else (q, p)
-            if cur and abs(a - cur[1]) < 1e-9 and deg[pa] == 2:
+            if cur and a == cur[1] and deg[pa] == 2:
                 cur = (cur[0], b, cur[2], pb)
             else:
                 if cur:
@@ -250,6 +648,29 @@ def merged_segments(N, keys_kinds, extra=()):
         if cur:
             out.append(((cur[2], cur[3]), lab))
     return out
+
+
+#: the largest denominator a crease coordinate may have (spec 2026-10-22
+#: §4.4).  Two distinct rationals of denominator <= 3000 differ by at least
+#: 1/3000² ≈ 1.1e-7, more than `cp.fold_input`'s 1e-7 collinear split and far
+#: more than its 9-decimal rounding, so neither can merge two vertices; 10**6
+#: allowed pairs 1e-12 apart.  Measured: <= 17 on the 51 trees' stretched
+#: layouts (GOPS hypotenuses are small).
+MAX_DENOMINATOR = 3000
+
+
+def _rational(v) -> Fraction:
+    """A crease coordinate as the rational it stands for (denominators <=
+    MAX_DENOMINATOR, to within 1e-12)."""
+    if isinstance(v, int):
+        return Fraction(v)
+    t = 2 * v
+    if t == int(t):                         # the half-unit grid: exact as it is
+        return Fraction(int(t), 2)
+    f = Fraction(v).limit_denominator(MAX_DENOMINATOR)
+    assert abs(float(f) - v) < 1e-12, \
+        f"crease coordinate {v!r} is not a rational of denominator <= {MAX_DENOMINATOR}"
+    return f
 
 
 def border_edges(N, touch=()):

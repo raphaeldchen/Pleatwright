@@ -5,7 +5,7 @@ import type { Output } from "../types";
 import { CPView } from "./CPView";
 import { Tools } from "./ViewerHeader";
 
-/** The packing stage while a layout is being chosen: both packings side by side, and the folded
+/** The packing stage while a layout is being chosen: each packing side by side, and the folded
  *  size each gives from the same sheet (a smaller grid has bigger cells, so a bigger model). */
 export function LayoutCompare({ runId, output }: { runId: string; output: Output }) {
   const [hinges, setHinges] = useState(true);

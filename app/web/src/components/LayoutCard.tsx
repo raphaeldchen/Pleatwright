@@ -7,7 +7,7 @@ export const optionName = (o: Card["options"][number]): string =>
 /** One card per review: a new run, or a new event in the same run, remounts the card. */
 export const layoutCardKey = (runId: string, lastSeq: number): string => `${runId}:${lastSeq}`;
 
-/** The packing stage's question: two layouts, each a button, the recommended one first. The VLM's
+/** The packing stage's question: up to three layouts, each a button, the recommended one first. The VLM's
  *  explanation and the note come from a model and from the server: they are untrusted, so they are
  *  rendered only as React text nodes. */
 export function LayoutCard({ card, explanation, note, canChoose = true, onChoose }: {

@@ -44,18 +44,30 @@ class RunStore:
             self._logs[run_id] = EV.EventLog(os.path.join(self.dir(run_id), "events.jsonl"))
         return self._logs[run_id]
 
-    def create(self, prompt: str, now: dt.datetime | None = None) -> str:
+    def create(self, prompt: str, now: dt.datetime | None = None,
+               run_id: str | None = None, subject: str | None = None) -> str:
+        """A new run folder. `run_id` names it (FileNotFoundError if it is not a
+        valid id, FileExistsError if taken); else it is dated and named by the
+        prompt's subject. `subject`, the name the run is listed under, is kept
+        verbatim when given (it never names the folder), else the prompt's."""
         from pleatwright.__main__ import _subject
-        subject = _subject(prompt, None)
-        base = f"{(now or dt.datetime.now()):%Y-%m-%d-%H%M}-{subject}"
-        run_id, n = base, 1
-        while os.path.exists(os.path.join(self.root, run_id)):
-            n += 1
-            run_id = f"{base}-{n}"
+        slug = _subject(prompt, None)
+        if run_id is not None:
+            if not _ID.match(run_id) or run_id in (".", ".."):
+                raise FileNotFoundError(run_id)
+            if os.path.exists(os.path.join(self.root, run_id)):
+                raise FileExistsError(run_id)
+        else:
+            base = f"{(now or dt.datetime.now()):%Y-%m-%d-%H%M}-{slug}"
+            run_id, n = base, 1
+            while os.path.exists(os.path.join(self.root, run_id)):
+                n += 1
+                run_id = f"{base}-{n}"
         d = os.path.join(self.root, run_id)
         os.makedirs(d)
         open(os.path.join(d, "events.jsonl"), "w").close()
-        self.log(run_id).append("run_created", prompt=prompt, subject=subject)
+        self.log(run_id).append("run_created", prompt=prompt,
+                                subject=slug if subject is None else subject)
         return run_id
 
     def list(self) -> list[dict]:

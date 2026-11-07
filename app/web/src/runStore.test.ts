@@ -280,3 +280,36 @@ describe("layout card over a recorded dolphin run (paused at packing)", () => {
     for (const bad of [null, undefined, "x", {}, { options: "no" }]) expect(isCard(bad)).toBe(false);
   });
 });
+
+describe("layout card over a recorded dog run with the stretched option (spec 2026-10-22 §8.2)", () => {
+  const dog: PwEvent[] = readFileSync(
+    new URL("./__fixtures__/dog_three_layouts.events.jsonl", import.meta.url), "utf8")
+    .trim().split("\n").map((l) => JSON.parse(l));
+  const play = (evs: PwEvent[]) => evs.reduce((acc, e) => reduce(acc, { type: "event", event: e }), emptyView("d"));
+
+  it("waits at packing with three options, the stretched one recommended", () => {
+    const v = play(dog);
+    expect(v.review?.stage).toBe("packing");
+    expect(v.review?.card?.options.map((o) => o.id)).toEqual(["stretched", "smaller", "symmetric"]);
+    expect(v.review?.card?.options.map((o) => o.grid)).toEqual([62, 68, 72]);
+    expect(v.review?.card?.options[0]).toMatchObject({ label: "Mirror-symmetric, stretched", recommended: true });
+    expect(v.review?.card?.options.filter((o) => o.recommended)).toHaveLength(1);
+  });
+
+  it("the card's output carries the three packings and its lines count three layouts", () => {
+    const out = latestByStage(play(dog)).packing!;
+    expect(out.files).toEqual(["layout/smaller_packing_cp.svg", "layout/symmetric_packing_cp.svg",
+                               "layout/stretched_packing_cp.svg"]);
+    expect(summaryLine(out)).toBe("3 layouts to choose from");
+    expect(summaryPairs(out)).toEqual([["grids", "62 or 68 or 72"]]);
+  });
+
+  it("a stretched fold's packing line names the choice", () => {
+    const fold: Output = { key: "packing", stage: "packing", files: [], seq: 0, summary: {
+      grid: 62, rung: "symmetric+stretch", tried: 1,
+      layout: { chosen: "stretched", reason: "user", n_symmetric: 72, n_smaller: 68, gain: 1.0588,
+                threshold: 1.1, n_stretched: 62 },
+      efficiency: { grid: 62, slack_fraction: 0.4, mean_layers: 50 } } };
+    expect(summaryLine(fold)).toBe("grid 62 · stretched (user) · slack 40% · ~50.0 layers");
+  });
+});

@@ -4,7 +4,9 @@ restart loses nothing but the work in flight."""
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
+import os
 
 from pleatwright.__main__ import ConfigError
 
@@ -19,6 +21,17 @@ MODELS = {"sonnet": ("claude-sonnet-5", "Sonnet 5"),
           "haiku": ("claude-haiku-5-5", "Haiku 5.5")}
 DEFAULT_MODEL = "sonnet"
 _log = logging.getLogger(__name__)
+_CACHED = object()      # `_start`'s default: use the client cached for the model
+
+
+def layout_failed_note(chosen: str | None, error: str | None) -> str:
+    """The note on the layout card shown again after the user's chosen layout
+    failed to fold.  A stretched layout that could not be certified gets the
+    spec 2026-10-22 §6.4 wording: an explicit choice has no fallback."""
+    import layout_explain
+    if chosen == "stretched" and "StretchUncertified" in str(error):
+        return layout_explain.STRETCH_FAILED_NOTE
+    return f"The {chosen or 'smaller'} layout failed: {error}"
 
 
 class Refused(Exception):
@@ -88,15 +101,15 @@ class Manager:
             return self._active[0]
         return None
 
-    def recover(self) -> None:
+    def recover(self, reason: str = "interrupted",
+                error: str = "the server stopped while this stage was running") -> None:
         for row in self.store.list():
             try:
                 log = self.store.log(row["id"])
                 if log.last and log.last["type"] not in _TERMINAL:
                     stage = current_stage(log) or T.stage_from_disk(self.store.dir(row["id"]))
                     log.append("stage_failed", stage=stage,
-                               error="the server stopped while this stage was running",
-                               reason="interrupted",
+                               error=error, reason=reason,
                                retry=T.retry_for(stage, self.store.dir(row["id"])))
             except Exception:                          # noqa: BLE001 -- one bad run must not stop the server
                 _log.exception("could not recover run %s", row["id"])
@@ -114,6 +127,21 @@ class Manager:
         self._start(rid, flow, key)
         return rid
 
+    async def fold_tree(self, tree: dict, label: str, run_id: str | None = None) -> str:
+        """Start a run from an approved `tree` (the free tier's gallery trees):
+        no mesh, no authoring, so no LLM client; straight to packing and folding."""
+        self._refuse_if_busy()
+        rid = self.store.create(label, run_id=run_id, subject=label)
+        with open(os.path.join(self.store.dir(rid), "tree.json"), "w") as f:
+            json.dump(tree, f, indent=2)
+        log = self.store.log(rid)
+        log.append("user_message", text=label)
+        log.append("stage_output", stage="tree", files=["tree.json"],
+                   summary={"approved": True, "source": "gallery"})
+        self._start(rid, lambda ctx: T.pack_and_fold(ctx, certify_global=self.certify_global),
+                    client=None)                       # never a cached client: the card uses its template
+        return rid
+
     def _try_client(self, key: str) -> None:
         """Build `key`'s client if it can be; without one a flow uses no VLM
         (the layout card falls back to its template explanation)."""
@@ -123,13 +151,20 @@ class Manager:
             pass
 
     @staticmethod
-    def _chosen_layout(log) -> str:
-        """The layout the user last chose at the card."""
+    def _chosen_layout(log) -> str | None:
+        """The layout the user chose at the current packing's card, if any. A
+        choice stands only until the next card or tree approval (which packs
+        again). Logs from before the `choice` field are matched by label."""
         names = {label: name for name, label in T.LAYOUT_LABELS.items()}
         for e in reversed(log.events):
-            if e["type"] == "user_message" and e.get("text") in names:
-                return names[e["text"]]
-        return "smaller"
+            if e["type"] == "user_message" and (e.get("choice") or e.get("text") in names):
+                return e.get("choice") or names[e["text"]]
+            if e["type"] == "awaiting_review" and e.get("stage") == "packing":
+                return None
+            if e["type"] == "stage_output" and e.get("stage") == "tree" \
+                    and (e.get("summary") or {}).get("approved"):
+                return None
+        return None
 
     def _require_llm(self, key: str = DEFAULT_MODEL) -> None:
         try:
@@ -146,7 +181,7 @@ class Manager:
         if ph["phase"] != "review":
             raise Refused("nothing is waiting for review")
         if ph["stage"] == "packing":
-            raise Refused("choose the smaller or the symmetric layout")
+            raise Refused("choose one of the layouts on the card")
         log.append("user_message", text=text, model=key)
         if ph["stage"] == "mesh":
             prompt = log.events[0]["prompt"]
@@ -164,9 +199,11 @@ class Manager:
             raise Refused("there is nothing to approve: this round produced no tree")
         prompt = log.events[0]["prompt"]
         if ph["stage"] == "packing":
-            if choice not in T.LAYOUT_LABELS:
-                raise Refused("choose the smaller or the symmetric layout")
-            log.append("user_message", text=T.LAYOUT_LABELS[choice])
+            summary = T.layout_summary(self.store.dir(rid))
+            on_card = [k for k in T.LAYOUT_LABELS if summary is None or summary.get(k)]
+            if choice not in on_card:
+                raise Refused("choose one of the layouts on the card")
+            log.append("user_message", text=T.LAYOUT_LABELS[choice], choice=choice)
             self._start(rid, lambda ctx: T.fold(ctx, certify_global=self.certify_global,
                                                 layout=choice, chosen_by="user"))
             return
@@ -198,7 +235,7 @@ class Manager:
             raise Refused("there is nothing to retry")
         prompt = log.events[0]["prompt"]
         tool = ph["retry"]
-        error, failed_layout = log.last.get("error"), self._chosen_layout(log)
+        error, chosen = log.last.get("error"), self._chosen_layout(log)
         if tool in ("make_mesh", "author_tree"):
             self._require_llm(key)
         elif tool in ("approve_tree", "fold", "layout"):
@@ -219,12 +256,11 @@ class Manager:
             elif tool == "layout":
                 summary = T.layout_summary(ctx.run_dir)
                 if summary and summary.get("verdict") == "ask":
-                    await T.present_layout(ctx, summary,
-                                           note=f"The {failed_layout} layout failed: {error}")
+                    await T.present_layout(ctx, summary, note=layout_failed_note(chosen, error))
                 else:                                  # options.json is gone or unreadable: pack again
                     await T.pack_and_fold(ctx, certify_global=self.certify_global)
-            else:
-                await T.pack_and_fold(ctx, certify_global=self.certify_global)
+            else:                                      # fold: reuse this tree's packing
+                await T.refold(ctx, choice=chosen, certify_global=self.certify_global)
         self._start(rid, flow, key)
 
     async def cancel(self, rid: str) -> None:
@@ -249,10 +285,13 @@ class Manager:
         if b:
             raise Refused(f"another run is already running ({b}); wait or cancel it")
 
-    def _start(self, rid: str, flow, model: str = DEFAULT_MODEL) -> None:
+    def _start(self, rid: str, flow, model: str = DEFAULT_MODEL, *, client=_CACHED) -> None:
         """`model` picks the VLM for any authoring the flow does; a flow that never
-        authors (approve, fold) ignores it."""
-        ctx = T.Ctx(self.store.dir(rid), self.store.log(rid), self.clients.get(model),
+        authors (approve, fold) ignores it. `client=None` runs the flow with no VLM
+        even if one is cached."""
+        if client is _CACHED:
+            client = self.clients.get(model)
+        ctx = T.Ctx(self.store.dir(rid), self.store.log(rid), client,
                     asyncio.get_running_loop(), model=model)
 
         def fail(error: str, reason: str) -> None:

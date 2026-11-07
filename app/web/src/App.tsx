@@ -1,10 +1,10 @@
 import { useEffect, useReducer, useRef, useState } from "react";
-import { connectRun, createRun, deleteRun, getStatus, listRuns, type Command } from "./api";
+import { connectRun, createRun, deleteRun, downloadRun, foldTree, getStatus, listRuns, type Command } from "./api";
 import { Chat } from "./components/Chat";
 import { RunsSidebar, removeRun } from "./components/RunsSidebar";
 import { Stepper } from "./components/Stepper";
 import { Viewer } from "./components/Viewer";
-import { ToolSlot, ViewerHeader } from "./components/ViewerHeader";
+import { ToolSlot, ViewerHeader, runActions } from "./components/ViewerHeader";
 import { emptyView, reduce, selectedOutput } from "./runStore";
 import { isNewRunKey } from "./shortcuts";
 import { readModel, saveModel } from "./model";
@@ -77,6 +77,16 @@ export function App() {
     try { const { id } = await createRun(prompt, model); open(id); refresh(); }
     catch (e) { flash((e as Error).message); }
   };
+  // "Fold it here" on an example: the new run opens like a created one.
+  const [folding, setFolding] = useState(false);
+  const foldHere = async (galleryId: string) => {
+    setFolding(true);
+    try { const { id } = await foldTree(galleryId); open(id); refresh(); }
+    catch (e) { flash((e as Error).message); }
+    finally { setFolding(false); }
+  };
+  const download = (id: string) => downloadRun(id).catch((e) => flash((e as Error).message));
+  const current = runs.find((r) => r.id === runId) ?? null;
   const select = (key: string) => dispatch({ type: "select", key });
   // "N" starts a new run (see shortcuts.ts). A ref so the once-registered listener calls the current `open`.
   const openRef = useRef(open);
@@ -89,10 +99,12 @@ export function App() {
 
   return (
     <div className="shell">
-      {status && !status.llm_ok &&
-        <div className="banner">{status.llm_error
-          ? `Authoring is disabled: ${status.llm_error} — fix .env and restart the app.`
-          : "Authoring is disabled — fix .env and restart the app."}</div>}
+      {status?.banner
+        ? <div className="banner">{status.banner}</div>
+        : status && !status.llm_ok && import.meta.env.VITE_PW_TARGET !== "site" &&   // the site has no .env
+          <div className="banner">{status.llm_error
+            ? `Authoring is disabled: ${status.llm_error} — fix .env and restart the app.`
+            : "Authoring is disabled — fix .env and restart the app."}</div>}
       <div className="app">
         <RunsSidebar runs={runs} current={runId} onOpen={open} onNew={() => open(null)}
                      onDelete={(r) => removeRun(r, runId, { confirm: (m) => window.confirm(m), del: deleteRun,
@@ -103,7 +115,9 @@ export function App() {
         <div className="out">
           <div className="viewer">
             <ViewerHeader output={view ? selectedOutput(view) : null} following={!view || view.followLatest}
-                          onFollow={() => dispatch({ type: "follow" })} slotRef={setSlot} />
+                          onFollow={() => dispatch({ type: "follow" })} slotRef={setSlot}
+                          actions={runActions(current, !!status?.read_only, folding, !!status?.busy)}
+                          onFold={() => runId && foldHere(runId)} onDownload={() => runId && download(runId)} />
             <div className="canvas">
               <ToolSlot.Provider value={slot}>
                 {view

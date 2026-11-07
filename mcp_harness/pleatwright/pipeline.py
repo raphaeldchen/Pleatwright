@@ -25,7 +25,7 @@ import os
 import shutil
 import sys
 import time
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from fractions import Fraction
 
 import numpy as np
@@ -33,6 +33,7 @@ import numpy as np
 from . import base as B
 from . import efficiency as EF
 from . import fold as F
+from . import kamiya as KA
 from . import nest as NE
 from . import pack as PK
 from . import render as R
@@ -194,6 +195,14 @@ def _source(tree: str) -> str:
     return os.path.join(STICKS, f"{tree}.json")
 
 
+class StretchUncertified(RuntimeError):
+    """Folding a stretched option gave a global verdict it may not ship with
+    (spec 2026-10-22 §6.4): a rule-chosen one anything but CERTIFIED, an
+    explicitly chosen one anything but CERTIFIED or OVERSIZE+LOCAL_SAT.
+    Raised after solving, so a rule-chosen stretched layout falls back like
+    any failed fold."""
+
+
 class StageError(RuntimeError):
     """An exception escaped a pipeline stage; `.stage` names it (load, packing,
     solving, shaping, output) and `__cause__` is the original exception."""
@@ -225,14 +234,15 @@ def run(tree: str, out_dir: str, *, scale: float = 1.0, certify_global: bool = T
     `on_stage(stage, info)`, if given, is called after each stage's file is on
     disk (packing, solving, shaping, output); see the app spec §4.3.
 
-    `layout` ("auto" | "symmetric" | "smaller") picks which packed layout is
-    folded (spec §4, §5.1): "auto" applies the 10% rule, an explicit name folds
-    that layout and records `chosen_by` ("flag" | "user") as the reason.
+    `layout` ("auto" | "symmetric" | "smaller" | "stretched") picks which
+    packed layout is folded (spec §4, §5.1; stretched: spec 2026-10-22 §5):
+    "auto" applies the rule, an explicit name folds that layout and records
+    `chosen_by` ("flag" | "user") as the reason.
     `options` are the already packed layouts (`pack_options`); without them
     `run` packs `tree` itself.  `max_candidates` is kept for callers; the
     packing search uses `MAX_CANDIDATES`."""
-    if layout not in ("auto", "symmetric", "smaller"):
-        raise ValueError(f"layout must be auto, symmetric or smaller, not {layout!r}")
+    if layout not in LAYOUTS:
+        raise ValueError(f"layout must be auto, symmetric, smaller or stretched, not {layout!r}")
     stage = ["load"]
     try:
         return _run(tree, out_dir, _stage=stage, scale=scale,
@@ -246,28 +256,51 @@ def run(tree: str, out_dir: str, *, scale: float = 1.0, certify_global: bool = T
         raise StageError(stage[0], e) from e
 
 
+LAYOUTS = ("auto", "symmetric", "smaller", "stretched")
+
+
 def _choose(opts: PackOptions, layout: str, chosen_by: str) -> tuple:
-    """(option, reason) for a requested `layout` (spec §4, §5.1)."""
+    """(option, reason) for a requested `layout` (spec §4, §5.1; the rule of
+    spec 2026-10-22 §5).  A requested stretched layout that does not exist
+    gets what the rule picks (review focus 4); a requested smaller one, as
+    before, the first option that exists."""
     if layout == "auto":
         if opts.verdict == "ask":
-            return opts.smaller, "rule"
+            return opts.option(opts.recommended), "rule"
         if opts.verdict == "symmetric":
             return opts.symmetric, "rule"
     else:
         want = opts.option(layout)
         if want is not None:
             return want, chosen_by
+        if layout == "stretched":
+            return _choose(opts, "auto", chosen_by)
     only = opts.symmetric or opts.smaller or opts.doubled
     return only, "only_option"
 
 
+def _chain(opts: PackOptions, chosen: Option, reason: str, layout: str) -> list:
+    """The fallback options `_run` folds when `chosen` fails in solving or
+    shaping: a chain for an auto choice, and for a choice the rule made while
+    filling in a requested layout that does not exist (`--layout stretched`
+    with no T); none for an explicit choice that exists, as for every explicit
+    choice today.  Today a missing `smaller` gets "only_option" and no chain,
+    but it yields the symmetric layout, whose chain is empty anyway."""
+    return _fallbacks(opts, chosen) if layout == "auto" or reason == "rule" else []
+
+
 def _layout_record(opts: PackOptions, chosen: Option, reason: str) -> dict:
-    return {"chosen": chosen.name, "reason": reason,
-            "n_symmetric": None if opts.symmetric is None else opts.symmetric.layout.N,
-            "n_smaller": opts.n_smaller,
-            "gain": None if opts.gain is None else float(opts.gain),
-            "threshold": float(GAIN_THRESHOLD),
-            "family": chosen.family, "beside": opts.beside}
+    rec = {"chosen": chosen.name, "reason": reason,
+           "n_symmetric": None if opts.symmetric is None else opts.symmetric.layout.N,
+           "n_smaller": opts.n_smaller,
+           "gain": None if opts.gain is None else float(opts.gain),
+           "threshold": float(GAIN_THRESHOLD),
+           "family": chosen.family, "beside": opts.beside,
+           "n_stretched": opts.n_stretched,     # spec 2026-10-22 §8.1
+           # the §5 steps 1-2 pick (`_recommend`), whether or not the card
+           # was shown; None without a symmetric option
+           "recommended": _recommend(opts.symmetric, opts.stretched, opts.smaller)}
+    return rec
 
 
 def _fallbacks(opts: PackOptions, chosen: Option) -> list:
@@ -277,7 +310,14 @@ def _fallbacks(opts: PackOptions, chosen: Option) -> list:
     tree never folds on a grid larger than today's (river-routing spec §2);
     a choice of today's family keeps today's rule: the smaller layout falls
     back to the symmetric one, S', and then, when S' is a beside layout, to
-    today's symmetric one."""
+    today's symmetric one.  A stretched choice falls back to the rule's pick
+    without it, then to that pick's own fallbacks (spec 2026-10-22 §6.4)."""
+    if chosen.name == "stretched":
+        # spec 2026-10-22 §6.4: what the rule recommends without T (slice
+        # 1's choice), then that option's own fallbacks
+        verdict, _ = _verdict(opts.symmetric, opts.smaller, opts.doubled)
+        c = _choose(replace(opts, stretched=None, verdict=verdict), "auto", "flag")[0]
+        return [c] + _fallbacks(opts, c)
     if chosen.family == "beside" and opts.today_fallback:
         return list(opts.today_fallback)
     if chosen.name == "smaller" and opts.symmetric is not None:
@@ -323,7 +363,7 @@ def _run(tree: str, out_dir: str, *, _stage: list, scale: float = 1.0, certify_g
             except BaseException:
                 callback_failed.append(stage)
                 raise
-    chain = _fallbacks(opts, chosen) if layout == "auto" else []
+    chain = _chain(opts, chosen, reason, layout)
     try:
         _fold_option(rec, opts, chosen, out_dir, _stage, certify_global, verbose,
                      orchestrate, orchestrate_k, on_stage, t_all)
@@ -364,6 +404,10 @@ def _fold_option(rec, opts, opt, out_dir, _stage, certify_global, verbose, orche
                  orchestrate_k, on_stage, t_all) -> None:
     """Packing output, solving, shaping and the overview for one packed
     option; fills `rec` in place."""
+    if opt.base is None:
+        raise ValueError(f"the {opt.name} option (grid {opt.layout.N}) has no built base "
+                         "(packed with STRETCH_REQUIRE_BUILD off, a Phase 0a probe "
+                         "setting); it cannot be folded")
     sf, con, sigma, base, lay = opts.sf, opts.con, opts.sigma, opt.base, opt.layout
     _stage[0] = "packing"
     rec["stick_figure"] = sf.to_corigami_json()
@@ -386,13 +430,23 @@ def _fold_option(rec, opts, opt, out_dir, _stage, certify_global, verbose, orche
     # ---- solving (§3.3)
     _stage[0] = "solving"
     t = time.perf_counter()
-    sv = SV.solve(base, certify_global=certify_global)
+    stretched = opt.name == "stretched"
+    sv = SV.solve(base, certify_global=certify_global,
+                  **({"max_clauses": STRETCH_MAX_CLAUSES} if stretched else {}))
     rec["solve_secs"] = round(time.perf_counter() - t, 2)
     rec["solving_flat_foldable"] = list(sv.ff_local)
     rec["solving_heuristic_local"] = list(sv.stats["heuristic_local"])
     rec["global_verdict"] = sv.global_verdict
     rec["relabelled_by_certificate"] = sv.relabelled
     rec["solve_stats"] = {k: v for k, v in sv.stats.items()}
+    if stretched and certify_global:
+        # ruling 20: a T the rule chose must be CERTIFIED; an explicit choice
+        # (flag or the user's card pick) may also ship OVERSIZE+LOCAL_SAT
+        explicit = rec["layout"]["reason"] in ("flag", "user")
+        accepted = STRETCH_ACCEPTED if explicit else STRETCH_ACCEPTED_RULE
+        if sv.global_verdict not in accepted:
+            raise StretchUncertified(f"the stretched layout (grid {N}) could not be certified "
+                                     f"flat-foldable: global verdict {sv.global_verdict}")
     p = _write(folder, "solving_cp.svg", _pretty(sv.cp.svg(precision=5)))
     _emit(on_stage, "solving", files=[p], flat_foldable=list(sv.ff_local),
           global_verdict=sv.global_verdict)
@@ -468,16 +522,50 @@ BESIDE = True
 BESIDE_WORK_BUDGET = 9_300_000
 BESIDE_MAX_BUILDS = 11
 
+# Spec docs/superpowers/specs/2026-10-22-pythagorean-stretch-design.md §6-7.
+#: the switch for the stretched search (Kamiya-row layouts) after today's and
+#: the beside searches; on since Phase 0 passed (7/51 trees, Task 7).
+STRETCH = True
+#: per stretched search: packer work (pack.tick units) and builds it may
+#: spend.  Calibrated on all 51 trees (budget_probe.py, 50M ticks / 100 builds):
+#: a found T needed at most 572 ticks (dog_1) and 1 build, so 1.2 x 572 would be
+#: 700 ticks and builds + 2 is 3; the budget is instead floored at 10,000, 2.5 x
+#: the 3,980 ticks the largest search that found nothing (scorpion_0) spent
+#: exhausting the generator, so no complete negative is cut short.  A tick here
+#: is a whole exact-Fraction `kamiya._violations` call.  No stretched search on
+#: the 51 trees took more than 10.18 s (dog_1); the searches that found T ran
+#: at 13-42 ms per tick including the build.  What a runaway search that spends
+#: the whole budget costs is an extrapolation, not a measurement.  See
+#: docs/superpowers/evidence/2026-10-21-pythagorean-stretch/README.md "Calibration".
+STRETCH_WORK_BUDGET = 10_000
+STRETCH_MAX_BUILDS = 3
+#: probe only (Phase 0a); production requires True.  False takes the first
+#: candidate that passes `kamiya.check` without building it (base None, which
+#: `_fold_option` refuses); True needs `base.build` to succeed.
+STRETCH_REQUIRE_BUILD = True
+#: the global verdicts an explicitly chosen stretched option (`--layout
+#: stretched`, the app's card pick: reason "flag" | "user") may fold with
+#: (spec §6.4, ruling 20); any other raises StretchUncertified after solving.
+#: SKIPPED (certify_global off) is never checked.
+STRETCH_ACCEPTED = ("CERTIFIED", "OVERSIZE+LOCAL_SAT")
+#: the same for a stretched option the rule chose (reason "rule"): CERTIFIED
+#: only, so an undecided T falls back to slice 1's choice (ruling 20).
+STRETCH_ACCEPTED_RULE = ("CERTIFIED",)
+#: the SAT encoder's clause ceiling for stretched options only (ruling 14):
+#: dog_1's T emits 25,768,354 clauses (S: 15.9M), over sat_order.MAX_CLAUSES
+#: (20M); certified in 178 s, peak RSS 3.96 GB.  Other options keep 20M.
+STRETCH_MAX_CLAUSES = 30_000_000
+
 
 @dataclass
 class Option:
-    name: str            # "symmetric" | "smaller" | "doubled"
+    name: str            # "symmetric" | "smaller" | "doubled" | "stretched"
     rung: str            # the ladder rung that produced it
     scale: float         # length multiplier of the run (2x for "doubled")
     layout: PK.Layout
-    base: B.Base
+    base: B.Base | None      # None only for an unbuilt stretched option (STRETCH_REQUIRE_BUILD off)
     metrics: dict
-    family: str = "today"   # the packer family of `layout`: "today" | "beside"
+    family: str = "today"   # the packer family of `layout`: "today" | "beside" | "stretched"
 
 
 @dataclass
@@ -504,13 +592,24 @@ class PackOptions:
     #: smaller layout; for today's smaller layout with a beside S', today's
     #: symmetric one (folded after S').
     today_fallback: list = field(default_factory=list)
+    #: the stretched search's layout, T, if it found one below S (spec
+    #: 2026-10-22 §5-6), and its outcome: a grid, or none_below_cap | budget |
+    #: builds | no_pair | branching | no_symmetric | beside_symmetric | off | error.
+    stretched: Option | None = None
+    n_stretched: int | str = "off"
+    #: {"ticks": packer work the stretched search spent, "taken": candidates it
+    #: took from the generator}; empty when it did not run.
+    stretch_stats: dict = field(default_factory=dict)
 
     @property
     def recommended(self) -> str | None:
-        return "smaller" if self.verdict == "ask" else None
+        """The option the layout card marks (`_recommend`), when it is shown."""
+        if self.verdict != "ask":
+            return None
+        return _recommend(self.symmetric, self.stretched, self.smaller)
 
     def option(self, name: str) -> Option | None:
-        return getattr(self, name, None) if name in ("symmetric", "smaller", "doubled") else None
+        return getattr(self, name, None) if name in OPTION_NAMES else None
 
     def summary(self) -> dict:
         def one(o):
@@ -521,7 +620,11 @@ class PackOptions:
                 "n_smaller": self.n_smaller,
                 "symmetric": one(self.symmetric), "smaller": one(self.smaller),
                 "doubled": one(self.doubled), "recommended": self.recommended,
-                "beside": self.beside}
+                "beside": self.beside, "n_stretched": self.n_stretched,
+                "stretched": one(self.stretched)}
+
+
+OPTION_NAMES = ("symmetric", "smaller", "doubled", "stretched")
 
 
 def _context(src: str, scale: float):
@@ -544,14 +647,36 @@ def _search(con, sigma, *, symmetric: bool, n_max: int, tried: int = 0):
     return None, None, tried
 
 
-def _verdict(sym, small, doubled) -> tuple:
-    """(verdict, gain) by the rule of spec §4; the comparison is exact."""
+def _recommend(sym, stretched, small) -> str | None:
+    """Spec 2026-10-22 §5 steps 1-2, exact: "smaller" when even the smallest
+    symmetric option is at least G larger than U; else "stretched" when T is
+    at least G smaller than S, or when S alone would have lost to U (T keeps
+    the tree symmetric); else "symmetric".  None without S (step 4: no T)."""
+    if sym is None:
+        return None
+    G, n_s = GAIN_THRESHOLD, sym.layout.N
+    n_t = None if stretched is None else stretched.layout.N
+    n_u = None if small is None else small.layout.N
+    if n_u is not None and min(n_s, n_s if n_t is None else n_t) >= G * n_u:
+        return "smaller"
+    if n_t is not None and (n_s >= G * n_t or (n_u is not None and n_s >= G * n_u)):
+        return "stretched"
+    return "symmetric"
+
+
+def _verdict(sym, small, doubled, *, stretched=None) -> tuple:
+    """(verdict, gain) by the rule of spec §4, extended by spec 2026-10-22 §5;
+    the comparison is exact.  "ask" (the layout card) exactly when §5 step 3
+    shows it: the recommended option is not S, or an option other than S is
+    at least G smaller than S.  Without `stretched` this is slice 1's rule;
+    `gain` stays S over U."""
     if sym is not None:
-        if small is not None:
-            n_sym, n_small = sym.layout.N, small.layout.N
-            gain = Fraction(n_sym, n_small)
-            return ("ask" if n_sym >= GAIN_THRESHOLD * n_small else "symmetric"), gain
-        return "symmetric", None
+        n_sym = sym.layout.N
+        gain = None if small is None else Fraction(n_sym, small.layout.N)
+        others = [o.layout.N for o in (stretched, small) if o is not None]
+        card = _recommend(sym, stretched, small) != "symmetric" or \
+            any(n_sym >= GAIN_THRESHOLD * n for n in others)
+        return ("ask" if card else "symmetric"), gain
     if small is not None:
         return "only_unmirrored", None
     return ("doubled" if doubled is not None else "none"), None
@@ -577,8 +702,8 @@ def _search_beside(con, sigma, *, symmetric: bool, n_max: int):
     return None, None
 
 
-def pack_options(tree: str, *, scale: float = 1.0, work_budget: int | None = None,
-                 beside: bool | None = None) -> PackOptions:
+def _pack_options_beside(tree: str, *, scale: float = 1.0, work_budget: int | None = None,
+                         beside: bool | None = None) -> PackOptions:
     """Pack the symmetric and the unmirrored layout of `tree` (packing only:
     no solving, nothing written) and apply the 10% rule.  The unmirrored
     search runs under a grid cap (`N_sym*10//11`) and a deterministic work
@@ -650,6 +775,102 @@ def pack_options(tree: str, *, scale: float = 1.0, work_budget: int | None = Non
     return new
 
 
+def _has_kamiya_row(items) -> bool:
+    """Whether a hub's `items` hold a Kamiya row's contents, by the test
+    `kamiya._build` applies to the row's axial item and pair: an axial item
+    that is not `single`, and a non-axial item of two chains."""
+    return any(it.axial and not it.single for it in items) and \
+        any(not it.axial and len(it.chains) == 2 for it in items)
+
+
+def _stretch_precheck(con) -> str | None:
+    """Why the stretched search cannot apply to `con`, or None: `branching`
+    (a hub with three or more neighbours) or `no_pair` (neither end hub of the
+    hub path has the Kamiya row's contents, `_has_kamiya_row`, as
+    `kamiya.candidates` / `kamiya._build` require)."""
+    _, nb = PK._hub_graph(con)
+    if any(len(v) > 2 for v in nb.values()):
+        return "branching"
+    order = PK.hub_path(con)
+    for h in {order[0], order[-1]}:
+        if _has_kamiya_row(PK._items_sym(con, h)):
+            return None
+    return "no_pair"
+
+
+def _search_stretched(con, sigma, *, n_max: int, stats: dict | None = None):
+    """First stretched layout (`kamiya.candidates`, which are `kamiya.check`ed)
+    on a grid <= n_max, as (layout, base), or (None, None).  With
+    STRETCH_REQUIRE_BUILD off the first candidate is returned unbuilt (base
+    None) and counts as taken; with it on the first whose `base.build` has no
+    errors is returned, and _BuildCap is raised after STRETCH_MAX_BUILDS failed
+    builds.  Spends packer ticks, so the caller's `pack.work_budget` bounds it.
+    `stats["taken"]` counts the candidates taken from the generator."""
+    taken = failed = 0
+    for lay in KA.candidates(con, N_min=PK.grid_init(con), N_max=n_max):
+        taken += 1
+        if stats is not None:
+            stats["taken"] = taken
+        if not STRETCH_REQUIRE_BUILD:
+            return lay, None
+        b = B.build(lay, con, sigma)
+        if not b.errors:
+            return lay, b
+        failed += 1
+        if failed >= STRETCH_MAX_BUILDS:
+            raise _BuildCap(f"{failed} stretched builds")
+    return None, None
+
+
+def _add_stretched(opts: PackOptions, scale: float, on: bool) -> PackOptions:
+    """`opts` (today's and the beside searches' result, left untouched) with
+    the stretched search's outcome.  The search never replaces S, U or D and
+    never kills packing: any failure keeps today's options."""
+    if not on:
+        return replace(opts, n_stretched="off")
+    sym = opts.symmetric
+    if sym is None:
+        return replace(opts, n_stretched="no_symmetric")
+    if sym.family != "today":           # spec 2026-10-22 §6.1, ruling 11
+        return replace(opts, n_stretched="beside_symmetric")
+    con, sigma = opts.con, opts.sigma
+    stats: dict = {}
+    t0 = time.perf_counter()
+    try:
+        why = _stretch_precheck(con)
+        if why is not None:
+            return replace(opts, n_stretched=why)
+        with PK.work_budget(STRETCH_WORK_BUDGET):
+            try:
+                lay, b = _search_stretched(con, sigma, n_max=sym.layout.N - 2, stats=stats)
+            finally:
+                stats["ticks"] = PK.work_used()
+                stats["secs"] = round(time.perf_counter() - t0, 2)
+        if lay is None:
+            return replace(opts, n_stretched="none_below_cap", stretch_stats=stats)
+        opt = Option("stretched", "symmetric+stretch", scale, lay, b,
+                     EF.metrics(lay, con, b, scale), family="stretched")
+        verdict, gain = _verdict(sym, opts.smaller, opts.doubled, stretched=opt)
+    except PK.BudgetExhausted:
+        return replace(opts, n_stretched="budget", stretch_stats=stats)
+    except _BuildCap:
+        return replace(opts, n_stretched="builds", stretch_stats=stats)
+    except Exception:               # a stretched search must never kill packing
+        return replace(opts, n_stretched="error", stretch_stats=stats)
+    return replace(opts, stretched=opt, n_stretched=lay.N, stretch_stats=stats,
+                   verdict=verdict, gain=gain)
+
+
+def pack_options(tree: str, *, scale: float = 1.0, work_budget: int | None = None,
+                 beside: bool | None = None, stretched: bool | None = None) -> PackOptions:
+    """`_pack_options_beside` (today's search, then the beside searches), then,
+    if `stretched` (None: the `STRETCH` switch), the stretched search on grids
+    below the symmetric layout's (spec 2026-10-22 §6).  It stores its layout
+    in `PackOptions.stretched`, and the verdict is the §5 rule's with it."""
+    opts = _pack_options_beside(tree, scale=scale, work_budget=work_budget, beside=beside)
+    return _add_stretched(opts, scale, STRETCH if stretched is None else stretched)
+
+
 def _pack_options_today(tree: str, *, scale: float = 1.0,
                         work_budget: int | None = None) -> PackOptions:
     """Today's search (slice 1, unchanged): the symmetric rung, the capped and
@@ -707,16 +928,17 @@ def _option_dict(o: Option) -> dict:
 def save_options(opts: PackOptions, directory: str) -> list:
     """Write options.json (the summary, the candidates tried, each option's
     layout and, when a beside layout replaced one of today's, today's fallback options)
-    and the packing CP of the symmetric and smaller layouts; return the paths."""
+    and the packing CP of the symmetric, smaller and stretched layouts; return
+    the paths."""
     os.makedirs(directory, exist_ok=True)
     doc = {"summary": opts.summary(), "tried": opts.tried, "options": {}}
     paths = []
-    for name in ("symmetric", "smaller", "doubled"):
+    for name in OPTION_NAMES:
         o = opts.option(name)
         if o is None:
             continue
         doc["options"][name] = _option_dict(o)
-        if name != "doubled":
+        if name != "doubled" and o.base is not None:     # an unbuilt T has no CP
             pcp, _ = B.packing_cp(o.base)
             paths.append(_write(directory, f"{name}_packing_cp.svg",
                                 _pretty(pcp.svg(packing=True, precision=0))))
@@ -728,7 +950,8 @@ def save_options(opts: PackOptions, directory: str) -> list:
 
 def load_options(tree: str, directory: str) -> PackOptions:
     """Inverse of save_options: rebuild each base from its saved layout
-    (`B.build`, no search)."""
+    (`B.build`, no search).  A file written before stretched layouts existed
+    (no `stretched` option, no `n_stretched`) loads with none, outcome "off"."""
     with open(os.path.join(directory, "options.json")) as f:
         doc = json.load(f)
     src = _source(tree)
@@ -754,7 +977,8 @@ def load_options(tree: str, directory: str) -> PackOptions:
     gain = Fraction(sym.layout.N, small.layout.N) if sym and small else None
     return PackOptions(sf, con, sigma, sym, small, opts.get("doubled"),
                        sm["n_smaller"], gain, sm["verdict"], doc.get("tried", {}),
-                       beside=sm.get("beside", {}), today_fallback=fallback)
+                       beside=sm.get("beside", {}), today_fallback=fallback,
+                       stretched=opts.get("stretched"), n_stretched=sm.get("n_stretched", "off"))
 
 
 def main(argv=None):
@@ -764,9 +988,13 @@ def main(argv=None):
     ap.add_argument("--scale", type=float, default=1.0)
     ap.add_argument("--no-certify", action="store_true")
     ap.add_argument("--record", default=None, help="append JSON lines here")
-    ap.add_argument("--layout", choices=("auto", "symmetric", "smaller"), default="auto",
-                    help="auto folds the smaller unmirrored layout only when it makes the "
-                         "model at least 10%% larger (spec 2026-10-16-packing-layout-choice)")
+    ap.add_argument("--layout", choices=LAYOUTS, default="auto",
+                    help="auto folds the layout the rule recommends: the stretched layout "
+                         "(mirror-symmetric, with some creases off the grid) or the smaller "
+                         "unmirrored one, each only when it makes the model at least 10%% "
+                         "larger than the symmetric layout (specs 2026-10-16-packing-layout-"
+                         "choice, 2026-10-22-pythagorean-stretch); stretched folds the "
+                         "stretched layout, or what the rule picks when there is none")
     ap.add_argument("--orchestrate", action="store_true",
                     help="LLM tool-use shaping + VLM selection (needs a working Anthropic key)")
     a = ap.parse_args(argv)

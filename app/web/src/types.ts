@@ -26,10 +26,10 @@ export type ChatItem =
   | { kind: "failed"; stage: StageId; error: string; reason: string; retry: string | null; seq: number };
 
 export interface LayoutOption {
-  id: "smaller" | "symmetric"; label: string; grid: number; recommended: boolean;
+  id: "smaller" | "symmetric" | "stretched"; label: string; grid: number; recommended: boolean;
   pros: string[]; cons: string[];
 }
-/** The packing stage's question: which of two layouts to fold (server: tools.present_layout). */
+/** The packing stage's question: which of up to three layouts to fold (server: tools.present_layout). */
 export interface LayoutCard { question: string; options: LayoutOption[] }
 
 export interface Review {
@@ -62,11 +62,19 @@ export type Action =
 export interface RunSummary {
   id: string; prompt: string; subject: string; created: string;
   status: "new" | "running" | "waiting" | "done" | "failed";
+  /** Site build only: a pre-built example, or a run folded in this browser. */
+  kind?: "gallery" | "browser";
+  /** Site build, gallery rows: false when the example is too large to re-fold in a browser. */
+  browser_foldable?: boolean;
 }
 export interface ModelOption { key: string; id: string; label: string }
 export interface Status {
   llm_ok: boolean; llm_error: string | null; busy: string | null;
   default_model?: string; models?: ModelOption[];
+  /** Site build: why this tab cannot fold or save runs, shown in place of the .env text. */
+  banner?: string;
+  /** Site build: another tab holds the engine, so this one only browses. */
+  read_only?: boolean;
 }
 
 /** "01" … "07": a stage's position in STAGES. */
