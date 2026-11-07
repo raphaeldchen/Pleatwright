@@ -704,7 +704,9 @@ def border_edges(N, touch=()):
 
 def packing_cp(base: Base) -> tuple:
     """Hinges (all region boundaries, green) + ridges (red) + border."""
-    items = [(k, "H") for k in base.boundary_edges]
+    # sorted: a set iterates in hash order, which is 64-bit on Linux and macOS
+    # but 32-bit in Pyodide, so the SVG's line order would follow the platform
+    items = [(k, "H") for k in sorted(base.boundary_edges)]
     items += [(k, "R") for k, v in base.creases.items() if v["kind"] == "R"]
     segs = merged_segments(base.N, items)
     edges = border_edges(base.N, [p for (a, b), _ in segs for p in (a, b)])

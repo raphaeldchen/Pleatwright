@@ -127,6 +127,14 @@ test("fold_here_finishes_and_matches_gallery", async ({ page }, info) => {
   expect(mine.type).toContain("image/svg+xml");
   expect(mine.b64.length).toBeGreaterThan(1000);
   expect(Buffer.from(mine.b64, "base64").equals(Buffer.from(theirs.b64, "base64"))).toBe(true);
+
+  // The packing CP is drawn from a set of hinges: byte-equal only if its line
+  // order does not follow the set's (platform-dependent) iteration order.
+  const packing = (base: string) => pageFile(page, `${base}/Dog%20roll%200_46/packing_cp.svg`);
+  const minePack = await packing(`/Pleatwright/runs/${id}/files`);
+  const theirPack = await packing(GALLERY_CP.split("/").slice(0, 2).join("/"));
+  expect(minePack.status).toBe(200);
+  expect(Buffer.from(minePack.b64, "base64").equals(Buffer.from(theirPack.b64, "base64"))).toBe(true);
 });
 
 test("cancel_mid_fold_then_retry_finishes", async ({ page }) => {
