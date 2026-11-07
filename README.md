@@ -13,11 +13,11 @@ long each one is. Deterministic computational-origami algorithms do the rest:
 packing, crease assignment, flat-foldability checks and shaping. A SAT solver
 certifies that the result folds. The LLM never draws a crease.
 
-![Pleatwright output for a dog: stick figure, packing, solving and shaping crease patterns, and the folded model](examples/dog_0_46/overview.png)
+![Pleatwright output for a crab: stick figure, packing, solving and shaping crease patterns, and the folded model](examples/crab_1_50/overview.png)
 
-*`examples/dog_0_46/`: one of the 51 committed stick-figure trees, folded on a
-46×46 grid. All 262 solving creases are flat-foldable, and the global layer order
-is SAT-certified. Folding it takes about 10 s on a laptop.*
+*`examples/crab_1_50/`: one of the 51 committed stick-figure trees, folded on a
+50×50 grid. All 455 solving creases are flat-foldable, and the global layer order
+is SAT-certified. Folding it takes about 50 s on a laptop.*
 
 ## How it works
 
