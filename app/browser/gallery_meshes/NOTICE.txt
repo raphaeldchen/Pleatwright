@@ -1,0 +1,10 @@
+The gallery's meshes, one per subject.
+
+Each was generated from a photograph by tencent/Hunyuan3D-2
+(https://huggingface.co/spaces/tencent/Hunyuan3D-2; /shape_generation, steps 30,
+guidance 5.0, seed 1234, octree resolution 256, background removal on), then
+lightened for the web: connected pieces under 50 faces dropped and the rest
+decimated to about 100,000 faces by quadric edge collapse. The source
+photographs are not included.
+
+Hunyuan3D-2 is released under the Tencent Hunyuan 3D 2.0 Community License.

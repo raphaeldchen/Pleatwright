@@ -53,7 +53,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ${{ runner.temp }}/gallery
-          key: gallery-${{ runner.os }}-${{ hashFiles('mcp_harness/pleatwright/**', 'mcp_harness/*.py', 'mcp_harness/fixtures/full17_v3_sticks/**', 'app/browser/gallery_trees/**', 'app/browser/build_gallery.py', 'app/browser/browser_heap.json', 'app/server/pleatwright_app/**', '.github/workflows/pages.yml') }}
+          key: gallery-${{ runner.os }}-${{ hashFiles('mcp_harness/pleatwright/**', 'mcp_harness/*.py', 'mcp_harness/fixtures/full17_v3_sticks/**', 'app/browser/gallery_trees/**', 'app/browser/gallery_meshes/**', 'app/browser/build_gallery.py', 'app/browser/browser_heap.json', 'app/server/pleatwright_app/**', '.github/workflows/pages.yml') }}
       - name: Fold the example trees natively
         # --jobs 3, not 4: dog_1 alone peaks near 4.6 GB and the runner has 16 GB.
         # build_gallery.py exits 1 if any roll fails to fold, which fails the workflow.

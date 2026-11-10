@@ -127,19 +127,29 @@ class Manager:
         self._start(rid, flow, key)
         return rid
 
-    async def fold_tree(self, tree: dict, label: str, run_id: str | None = None) -> str:
+    async def fold_tree(self, tree: dict, label: str, run_id: str | None = None,
+                        mesh: str | None = None) -> str:
         """Start a run from an approved `tree` (the free tier's gallery trees):
-        no mesh, no authoring, so no LLM client; straight to packing and folding."""
+        no authoring, so no LLM client; straight to packing and folding. With
+        `mesh` (the mesh the tree was read from; the gallery build passes it)
+        the run first shows that mesh and the tree drawn beside its render."""
         self._refuse_if_busy()
         rid = self.store.create(label, run_id=run_id, subject=label)
         with open(os.path.join(self.store.dir(rid), "tree.json"), "w") as f:
             json.dump(tree, f, indent=2)
         log = self.store.log(rid)
         log.append("user_message", text=label)
-        log.append("stage_output", stage="tree", files=["tree.json"],
-                   summary={"approved": True, "source": "gallery"})
-        self._start(rid, lambda ctx: T.pack_and_fold(ctx, certify_global=self.certify_global),
-                    client=None)                       # never a cached client: the card uses its template
+        approved = {"approved": True, "source": "gallery"}
+        if mesh is None:
+            log.append("stage_output", stage="tree", files=["tree.json"], summary=approved)
+
+        async def flow(ctx):
+            if mesh is not None:
+                sheet = await T.show_mesh_and_tree(ctx, mesh, tree)
+                ctx.emit("stage_output", stage="tree", round=0,
+                         files=[ctx.rel(sheet), "tree.json"], summary=approved)
+            await T.pack_and_fold(ctx, certify_global=self.certify_global)
+        self._start(rid, flow, client=None)            # never a cached client: the card uses its template
         return rid
 
     def _try_client(self, key: str) -> None:

@@ -413,6 +413,42 @@ async def author_tree(ctx: Ctx) -> dict:
     return state
 
 
+async def show_mesh_and_tree(ctx: Ctx, mesh: str, tree: dict) -> str:
+    """A gallery run's mesh and tree stages, with no VLM: `mesh` shown as an
+    approved mesh, then `tree` drawn as an authoring round draws it, beside the
+    render of that mesh. Returns the tree sheet's path."""
+    import gated_pipeline as GP
+    import tree_authoring as TA
+    import vlm_render
+    os.makedirs(ctx.work, exist_ok=True)
+    ctx.emit("stage_started", stage="mesh")
+    dest = os.path.join(ctx.work, "mesh_r0.glb")
+    shutil.copyfile(mesh, dest)
+    ctx.emit("stage_output", stage="mesh", round=0, files=[ctx.rel(dest)],
+             summary={**_mesh_summary(dest, "Hunyuan3D-2, lightened"), "approved": True})
+    ctx.emit("stage_started", stage="tree")
+    sheet = os.path.join(ctx.work, "tree_round0.png")
+    views = os.path.join(ctx.work, "mesh_views.png")
+
+    def draw() -> list[str]:
+        vlm_render.render_mesh_views(dest, views)
+        nodes = TA.to_tuples(tree)
+        vlm_render.render_tree_sheet(GP._topo(GP._authored_tuples(nodes)), sheet,
+                                     title=f"{tree.get('subject_guess', '')}  —  round 0")
+        return TA.leaves_of(nodes)
+
+    try:
+        leaves = await ctx.to_thread(draw)
+    except Exception as e:                             # noqa: BLE001 -- e.g. the mesh renderer
+        ctx.emit("stage_failed", stage="tree", error=f"{type(e).__name__}: {e}", reason="error")
+        raise ToolFailed(str(e)) from e
+    ctx.emit("stage_output", stage="tree", round=0, files=[ctx.rel(sheet), ctx.rel(views)],
+             summary={"flaps": len(leaves), "pairs": len(tree.get("pairs") or [])})
+    ctx.emit("assistant_message", text=f"Read as: {tree.get('subject_guess') or tree.get('subject', '')}\n"
+                                       f"{len(leaves)} flaps: {', '.join(leaves)}")
+    return sheet
+
+
 async def revise_tree(ctx: Ctx, feedback: str) -> dict:
     import gated_pipeline as GP
     state = load_state(ctx.run_dir)

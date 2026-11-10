@@ -1,7 +1,9 @@
 """Fold the example trees into the browser site's gallery: one run folder per
 roll, written by the app's own run manager (same event log, same files the UI
 renders), and gallery/index.json, the rows the site lists. The examples are the
-demo trees in gallery_trees/, then the artifact rolls but the starfish.
+demo trees in gallery_trees/, then the artifact rolls but the starfish. Each run
+shows its subject's mesh from gallery_meshes/ (lightened by
+scripts/lighten_gallery_meshes.py) and its tree drawn beside that mesh's render.
 
     python app/browser/build_gallery.py OUT_DIR [--rolls dog_0,ant_1|all] [--jobs N] [--heap PATH]
 
@@ -42,6 +44,8 @@ def _names(directory: str) -> list[str]:
 
 DEMOS = _names(DEMOS_DIR)
 ROLLS = DEMOS + [r for r in _names(FIXTURES) if r.rpartition("_")[0] not in OMITTED_SUBJECTS]
+#: <subject>.glb per gallery subject: the offline mesh its trees were read from, lightened
+MESHES_DIR = os.path.join(_HERE, "gallery_meshes")
 #: a fold that peaked above this in Pyodide does not fit a browser tab
 HEAP_LIMIT_MB = 3500
 
@@ -62,6 +66,19 @@ def tree_path(roll: str) -> str:
     return os.path.join(DEMOS_DIR if roll in DEMOS else FIXTURES, f"{roll}.json")
 
 
+def subject(roll: str) -> str:
+    """The tree's `subject` ("guinea_pig"), which names its mesh."""
+    with open(tree_path(roll)) as f:
+        return json.load(f)["subject"]
+
+
+SUBJECTS = sorted({subject(r) for r in ROLLS})
+
+
+def mesh_path(roll: str) -> str:
+    return os.path.join(MESHES_DIR, f"{subject(roll)}.glb")
+
+
 def _no_client(_model: str):
     raise ConfigError("the gallery build uses no VLM")
 
@@ -75,7 +92,7 @@ async def _fold_one(store: runs.RunStore, roll: str) -> None:
     if os.path.exists(os.path.join(store.root, rid)):
         shutil.rmtree(os.path.join(store.root, rid))              # a rebuild replaces it
     mgr = guided.Manager(store, _no_client)
-    await mgr.fold_tree(tree, label(roll), run_id=rid)
+    await mgr.fold_tree(tree, label(roll), run_id=rid, mesh=mesh_path(roll))
     await mgr.wait_idle()
     log = store.log(rid)
     ph = guided.phase(log)
